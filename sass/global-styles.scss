@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px !important;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+
+  position: relative;
+
+  background-color: $bg-body;
+  color: $text-white;
+
+  background-image: url('../img/site-bg.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (min-width: $mobile) {
+    background-size: 100% 100%;
+  }
+
+  @media (min-width: $tablets) {
+    background-size: contain;
+  }
+
+  @media (min-width: $notebooks) {
+    background-image: url('../img/site-bg-hd.jpg');
+    background-size: cover;
+  }
+
+  @media (min-width: $hd) {
+    background-size: contain;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

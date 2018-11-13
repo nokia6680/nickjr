@@ -1,0 +1,11 @@
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__description {
+    margin: 0;
+    padding: 0;
+  }
+}
