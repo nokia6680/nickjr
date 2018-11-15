@@ -1,32 +1,4 @@
 @font-face {
-  font-family: 'AristaPro';
-  src: url('../fonts/AristaPro-fat.otf') format("opentype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AristaPro-Light';
-  src: url('../fonts/AristaPro-ExtraLight.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AristaPro';
-  src: url('../fonts/AristaPro-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gotham Extra Light';
-  src: url("../fonts/GothamExtraLight.otf") format("opentype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
     font-family: 'Helvetica';
     src: url('../fonts/helveticaneuecyr-roman-webfont.eot');
     src: url('../fonts/helveticaneuecyr-roman-webfont.eot?#iefix') format('embedded-opentype'),

@@ -9,7 +9,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
@@ -118,7 +118,12 @@
 	<main class="main">
 		<!--Рекламная секция 1-->
 		<section class="main__promo main-promo main-promo--first" id="promo-1">
-
+			<div class="main-promo__wrapper">
+				<a class="main-promo__link">
+					<img class="main-promo__img" src="img/promo-2.png" />
+					<span class="main-promo__text">Реклама</span>
+				</a>
+			</div>
 		</section>
 		<!--Блоки-->
 		<div class="main__wrapper main-wrapper">
@@ -126,301 +131,207 @@
 			<section class="main-wrapper__content main-content">
 				<!--Слайдер основной-->
 				<div class="main-content__carousel content-carousel">
-					<div class="content-carousel__slider content-slider">
-						<!--Первый слайд-->
-						<ul class="content-slider__list slider-list" id="slider-list-first">
-							<!--Первый ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content item-content--text">
-									<h2 class="content-slider__title">Здесь заголовок</h2>
-									<p class="content-slider__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</li>
-							<!--Второй ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<!--Рекламный блок-->
-								<div class="slider-item__content item-content item-content--promo">
-									<a class="content-slider__link content-slider__link--promo" href="#" target="_self">
-										<img class="content-slider__preview" src="img/promo-1.png" alt="name-of-video-1" />
-										<span class="content-slider__text">Реклама</span>
-									</a>
-								</div>
-								<!--Большое изображение-->
-								<div class="slider-item__content item-content item-content--big">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Третий ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Четвертый ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Пятый ряд-->
-							<li class="slider-list__item slider-item slider-item--three">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Шестой ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-						</ul>
-						<!--Второй слайд-->
-						<ul class="content-slider__list slider-list" id="slider-list-second">
-							<!--Первый ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content item-content--text">
-									<h2 class="content-slider__title">Здесь заголовок</h2>
-									<p class="content-slider__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</li>
-							<!--Второй ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<!--Рекламный блок-->
-								<div class="slider-item__content item-content item-content--promo">
-									<a class="content-slider__link content-slider__link--promo" href="#" target="_self">
-										<img class="content-slider__preview" src="img/promo-1.png" alt="name-of-video-1" />
-										<span class="content-slider__text">Реклама</span>
-									</a>
-								</div>
-								<!--Большое изображение-->
-								<div class="slider-item__content item-content item-content--big">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Третий ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Четвертый ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Пятый ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Шестой ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-						</ul>
-						<!--Третий слайд-->
-						<ul class="content-slider__list slider-list" id="slider-list-third">
-							<!--Первый ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content item-content--text">
-									<h2 class="content-slider__title">Здесь заголовок</h2>
-									<p class="content-slider__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</li>
-							<!--Второй ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<!--Рекламный блок-->
-								<div class="slider-item__content item-content item-content--promo">
-									<a class="content-slider__link content-slider__link--promo" href="#" target="_self">
-										<img class="content-slider__preview" src="img/promo-1.png" alt="name-of-video-1" />
-										<span class="content-slider__text">Реклама</span>
-									</a>
-								</div>
-								<!--Большое изображение-->
-								<div class="slider-item__content item-content item-content--big">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Третий ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Четвертый ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Пятый ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-							<!--Шестой ряд-->
-							<li class="slider-list__item slider-item slider-item--two">
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link" href="#" target="_self">
-										<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="content-slider__link content-slider__link--big" href="#" target="_self">
-										<img class="content-slider__preview" src="img/video-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-							</li>
-						</ul>
-					</div>
+					<ul class="content-slider__list slider-list" id="slider-list-first">
+						<!--Первый ряд-->
+						<li class="slider-list__item slider-item slider-item--two">
+							<div class="slider-item__content item-content inem-content--small">
+								<a class="item-content__link" href="#" target="_self">
+									<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+							<div class="slider-item__content item-content item-content--big item-content--text">
+								<h2 class="item-content__title">Здесь заголовок</h2>
+								<p class="item-content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+						</li>
+						<!--Второй ряд-->
+						<li class="slider-list__item slider-item slider-item--two">
+							<!--Рекламный блок-->
+							<div class="slider-item__content item-content item-content--promo">
+								<a class="item-content__link item-content__link--promo" href="#" target="_self">
+									<img class="item-content__preview" src="img/promo-1.png" alt="name-of-video-1" />
+									<span class="item-content__text">Реклама</span>
+								</a>
+							</div>
+							<!--Большое изображение-->
+							<div class="slider-item__content item-content item-content--big">
+								<a class="item-content__link item-content__link--big" href="#" target="_self">
+									<img class="item-content__preview" src="img/video-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+						</li>
+						<!--Третий ряд-->
+						<li class="slider-list__item slider-item slider-item--two">
+							<div class="slider-item__content item-content">
+								<a class="item-content__link item-content__link--big" href="#" target="_self">
+									<img class="item-content__preview" src="img/video-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+							<div class="slider-item__content item-content">
+								<a class="item-content__link" href="#" target="_self">
+									<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+						</li>
+						<!--Четвертый ряд-->
+						<li class="slider-list__item slider-item slider-item--two">
+							<div class="slider-item__content item-content">
+								<a class="item-content__link" href="#" target="_self">
+									<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+							<div class="slider-item__content item-content">
+								<a class="item-content__link item-content__link--big" href="#" target="_self">
+									<img class="item-content__preview" src="img/video-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+						</li>
+						<!--Пятый ряд-->
+						<li class="slider-list__item slider-item slider-item--three">
+							<div class="slider-item__content item-content">
+								<a class="item-content__link" href="#" target="_self">
+									<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+							<div class="slider-item__content item-content">
+								<a class="item-content__link" href="#" target="_self">
+									<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+							<div class="slider-item__content item-content">
+								<a class="content-slider__link content-slider__link" href="#" target="_self">
+									<img class="content-slider__preview" src="img/game-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+						</li>
+						<!--Шестой ряд-->
+						<li class="slider-list__item slider-item slider-item--two">
+							<div class="slider-item__content item-content">
+								<a class="item-content__link item-content__link--big" href="#" target="_self">
+									<img class="item-content__preview" src="img/video-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+							<div class="slider-item__content item-content">
+								<a class="item-content__link" href="#" target="_self">
+									<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
+								</a>
+							</div>
+						</li>
+					</ul>
 				</div>
+				<!--Пагинация списка контента-->
+				<ul class="main-content__pagination content-pagination">
+					<li class="content-pagination__item pagination-item">
+						<a class="pagination-item__link" href="#">
+							<span class="pagination-item__text">1</span>
+						</a>
+					</li>
+					<li class="content-pagination__item pagination-item">
+						<a class="pagination-item__link" href="second.html">
+							<span class="pagination-item__text">2</span>
+						</a>
+					</li>
+					<li class="content-pagination__item pagination-item">
+						<a class="pagination-item__link" href="third.html">
+							<span class="pagination-item__text">3</span>
+						</a>
+					</li>
+					<li class="content-pagination__item pagination-item">
+						<a class="pagination-item__link" href="fourth.html">
+							<span class="pagination-item__text">4</span>
+						</a>
+					</li>
+				</ul>
 			</section>
 			<!--Боковая панель-->
 			<aside class="main-wrapper__sidebar main-sidebar">
 				<!--Первый вертикальный слайдер-->
 				<div class="main-sidebar__carousel sidebar-carousel sidebar-carousel--first">
-					<h2 class="sidebar-carousel__title">Видео</h2>
+					<h2 class="sidebar-carousel__title">Игры</h2>
 					<div class="sidebar-carousel__slider sidebar-slider sidebar-slider--first">
 						<div class="sidebar-slider__item" id="aside-slide-1">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/aside-1.svg" alt="name-of-aside-1" />
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-1" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
 							</a>
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-2">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/aside-2.svg" alt="name-of-aside-2" />
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
 							</a>
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-3">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/aside-3.svg" alt="name-of-aside-3" />
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
 							</a>
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-4">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/aside-4.svg" alt="name-of-aside-4" />
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-5">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-6">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-1" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-7">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-8">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-9">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-10">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
 							</a>
 						</div>
 					</div>
+					<div class="next-2"></div>
 				</div>
 				<!--Рекламный блок боковой панели-->
 				<article class="main-sidebar__promo">
@@ -430,27 +341,88 @@
 				<div class="main-sidebar__carousel sidebar-carousel sidebar-carousel--second">
 					<h2 class="sidebar-carousel__title">Видео</h2>
 					<div class="sidebar-carousel__slider sidebar-slider sidebar-slider--second">
+						<div class="sidebar-slider__item" id="aside-slide-1">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-1" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-2">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-3">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-4">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
 						<div class="sidebar-slider__item" id="aside-slide-5">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/aside-1.svg" alt="name-of-aside-1" />
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
 							</a>
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-6">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/aside-2.svg" alt="name-of-aside-2" />
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-1" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
 							</a>
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-7">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/aside-3.svg" alt="name-of-aside-3" />
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
 							</a>
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-8">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/aside-4.svg" alt="name-of-aside-4" />
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-9">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+						</div>
+						<div class="sidebar-slider__item" id="aside-slide-10">
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							</a>
+							<a class="sidebar-slider__link" href="#" target="_self">
+								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
 							</a>
 						</div>
 					</div>
+					<div class="next-3"></div>
 				</div>
 			</aside>
 		</div>

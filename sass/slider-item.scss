@@ -1,8 +1,29 @@
 .slider-item {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 
-  width: 100%;
+  width: 994px;
+
+  margin-bottom: 23px;
+
+  &--two {
+    .item-content--small {
+      width: 33%;
+      height: 300px;
+    }
+
+    .item-content--big {
+      width: 66%;
+      height: 300px;
+    }
+  }
+
+  &--three {
+    .item-content--small {
+      width: 33%;
+      height: 300px;
+    }
+  }
 }

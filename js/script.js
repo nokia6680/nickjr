@@ -47,3 +47,29 @@ $(document).ready(function() {
         self.click().mouseenter()
       }, 2)
 })});
+
+$(document).ready(function(){
+  $('.sidebar-slider--first').slick({
+    infinite: true,
+    dots: false,
+    arrows: true,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 5,
+    prevArrow: '<div class="prev-2"></div>',
+    nextArrow: '<div class="next-2"></div>',
+  });
+});
+
+$(document).ready(function(){
+  $('.sidebar-slider--second').slick({
+    infinite: true,
+    dots: false,
+    arrows: true,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 5,
+    prevArrow: '<div class="prev-3"></div>',
+    nextArrow: '<div class="next-3"></div>',
+  });
+});

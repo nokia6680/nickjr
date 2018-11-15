@@ -1,0 +1,53 @@
+.main-promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 21px;
+
+  &__wrapper {
+    width: 728px;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    background-color: $bg-black;
+    border-radius: 0 0 8px 8px;
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: -1px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    font: {
+      family: $promo-font;
+      size: 0.5em;
+      weight: 700;
+    }
+    color: $text-white;
+    line-height: 1;
+
+  }
+}
