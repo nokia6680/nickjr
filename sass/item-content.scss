@@ -20,4 +20,50 @@
   &--text {
     box-shadow: none;
   }
+
+  &--promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-radius: 0;
+    box-shadow: none;
+
+    width: 300px;
+
+    .item-content__link {
+      height: 250px;
+    }
+
+    .item-content__preview {
+      height: 250px;
+      width: 300px;
+    }
+
+    .item-content__text {
+      background-color: $bg-black;
+      border-radius: 0 0 8px 8px;
+
+      display: block;
+
+      width: 300px;
+
+      margin-top: -5px;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      padding-top: 4px;
+      padding-bottom: 4px;
+
+      font: {
+        family: $promo-font;
+        size: 0.5em;
+        weight: 700;
+      }
+      color: $text-white;
+      line-height: 1;
+    }
+  }
 }
