@@ -8,7 +8,7 @@
 
   margin-top: 32px;
   margin-bottom: 20px;
-  
+
   &__link {
     display: flex;
     flex-direction: column;
@@ -19,6 +19,8 @@
     height: 100%;
 
     background-color: #0f0f0f;
+
+    text-decoration: none;
   }
 
   &__img {
@@ -28,8 +30,6 @@
 
   &__text {
     background-color: $bg-black;
-    border-radius: 0 0 8px 8px;
-
     display: block;
 
     width: 100%;
@@ -39,8 +39,10 @@
     text-align: center;
     text-transform: uppercase;
 
-    padding-top: 4px;
+    padding-top: 5px;
     padding-bottom: 4px;
+
+    border-radius: 0 0 8px 8px;
 
     font: {
       family: $promo-font;

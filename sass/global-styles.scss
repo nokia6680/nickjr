@@ -30,27 +30,10 @@ body {
   background-color: $bg-body;
   color: $text-white;
 
-  background-image: url('../img/site-bg.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
-
-  @media (min-width: $mobile) {
-    background-size: 100% 100%;
-  }
-
-  @media (min-width: $tablets) {
-    background-size: contain;
-  }
-
-  @media (min-width: $notebooks) {
-    background-image: url('../img/site-bg-hd.jpg');
-    background-size: cover;
-  }
-
-  @media (min-width: $hd) {
-    background-size: contain;
-  }
+  background-image: url('../img/bg-tile.png');
+  background-size: 360px 360px;
+  background-repeat: repeat;
+  background-position: left top;
 }
 
 img {
