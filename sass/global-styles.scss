@@ -26,11 +26,28 @@ body {
   height: 100%;
 
   position: relative;
-
-  background-color: $bg-body;
   color: $text-white;
+}
 
+.body-index {
+  background-color: $bg-body;
   background-image: url('../img/bg-tile.png');
+  background-size: 360px 360px;
+  background-repeat: repeat;
+  background-position: left top;
+}
+
+.body-show {
+  background-color: $bg-show-body;
+  background-image: url('../img/bg-tile-show.png');
+  background-size: 360px 360px;
+  background-repeat: repeat;
+  background-position: left top;
+}
+
+.body-game {
+  background-color: $bg-show-body;
+  background-image: url('../img/bg-tile-show.png');
   background-size: 360px 360px;
   background-repeat: repeat;
   background-position: left top;

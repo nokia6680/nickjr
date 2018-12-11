@@ -1,29 +1,21 @@
 .slider-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 994px;
-
-  margin-bottom: 23px;
-
-  &--two {
-    .item-content--small {
-      width: 33%;
-      height: 300px;
-    }
-
-    .item-content--big {
-      width: 66%;
-      height: 300px;
-    }
+  display: grid;
+  grid-template-rows: 1fr;
+  width: 100%;
+  /*Грид блок для одного большого элемента*/
+  &--one {
+    grid-template-columns: 1fr;
   }
+  /*Грид блок для двух одинаковых элементов*/
+  &--two {
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    grid-gap: 6px;
+  }
+}
 
-  &--three {
-    .item-content--small {
-      width: 33%;
-      height: 300px;
-    }
+@media only screen and (min-width: $notebooks) {
+  .slider-item {
+    width: 994px;
   }
 }

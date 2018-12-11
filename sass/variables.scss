@@ -1,5 +1,6 @@
-$mobile: 480px;
-$tablets: 720px;
+$mobile: 360px;
+$mobile-hd: 414px;
+$tablets: 768px;
 $notebooks: 1152px;
 $widebooks: 1366px;
 $widebooks-hd: 1440px;
@@ -8,7 +9,9 @@ $hd: 1920px;
 
 $bg-header: #ffffff;
 $bg-body: #f6d336;
+$bg-show-body: #27c0d7;
 $bg-black: #000000;
+$bg-white: #ffffff;
 $bg-footer: #ffffff;
 $bg-gray: #eeeeee;
 $bg-red: #ed1c24;
@@ -22,17 +25,20 @@ $border-logo: #8dc63f;
 $btn-active: #ffffff;
 $btn-pressed: #000000;
 
+$pagination-btn: #3abdcb;
+$pagination-btn-active: #ff6700;
+
 $text-black: #000000;
 $text-white: #ffffff;
 $text-blue: #2aace2;
 $text-purple: #7f4796;
 
-$base-font: "Arista Pro Regular", sans-serif;
+$base-font: "Arista-regular", sans-serif;
 $light-font: "Arista Pro Light", sans-serif;
-$fat-font: "Arista Pro Fat", sans-serif;
+$fat-font: "Arista-fat", sans-serif;
 $alternate-font: "Arista Pro Alternate", sans-serif;
 $footer-font: "Gotham Extra Light", sans-serif;
-$promo-font: "Helvetica", sans-serif;
+$promo-font: "Helvetica-bold", sans-serif;
 $base-font-color: #000;
 $base-font-size: 16px;
 $base-font-weight: normal;
