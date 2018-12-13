@@ -80,7 +80,7 @@ $(document).ready(function() {
         self.click().mouseenter()
       }, 2)
 })});
-
+/*Первый слайдер на странице INDEX*/
 $(document).ready(function(){
   $('.sidebar-slider--first').slick({
     infinite: true,
@@ -106,7 +106,7 @@ $(document).ready(function(){
     ]
   });
 });
-
+/*Второй слайдер на странице INDEX*/
 $(document).ready(function(){
   $('.sidebar-slider--second').slick({
     infinite: true,
@@ -132,7 +132,7 @@ $(document).ready(function(){
     ]
   });
 });
-
+/*Слайдер на странице SHOW*/
 $(document).ready(function(){
   $('.sidebar-slider--show').slick({
     infinite: true,
