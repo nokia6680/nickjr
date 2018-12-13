@@ -7,5 +7,16 @@
   &__description {
     margin: 0;
     padding: 0;
+
+    font: {
+      size: 0.75em;
+      family: "Arial", sans-serif;
+      weight: 300;
+    }
+
+    color: $text-copyright;
+    line-height: 1;
+
+    text-align: center;
   }
 }

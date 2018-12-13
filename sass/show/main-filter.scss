@@ -1,0 +1,77 @@
+.main-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  position: absolute;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  top: 145px;
+
+  &__btn {
+    width: 130px;
+    height: 43px;
+
+    border: none;
+    border-radius: 20px;
+    padding-left: 40px;
+
+    font: {
+      size: 1.313em;
+      family: $fat-font;
+    }
+
+    color: $text-white;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &--game {
+      position: relative;
+      background-color: $btn-games;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 41px;
+        height: 27px;
+
+        background-image: url('../img/games-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 41px 27px;
+        background-position: center;
+
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--video {
+      position: relative;
+      background-color: $btn-video;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 22px;
+        height: 27px;
+
+        background-image: url('../img/play-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 22px 27px;
+        background-position: center;
+
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

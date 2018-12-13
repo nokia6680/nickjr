@@ -26,13 +26,23 @@
 	<header class="header">
 		<!--Логотип + возможная навигация-->
 		<nav class="header__nav header-nav">
+			<div class="header-nav__logo">
+				<a class="header-nav__link" href="#" target="_self">
+					<img class="header-nav__img" src="img/logo.svg" alt="NickJR Official" />
+				</a>
+			</div>
 			<ul class="header-nav__list nav-list">
 				<li class="nav-list__item nav-item">
-					<a class="nav-item__link" href="#" target="_self">
-						<img class="nav-item__logo" src="img/logo.svg" alt="NickJR Official" />
-					</a>
+
+				</li>
+				<li class="nav-list__item nav-item">
+
+				</li>
+				<li class="nav-list__item nav-item">
+
 				</li>
 			</ul>
+			<button class="header-nav__opener" type="button"></button>
 		</nav>
 		<!--Слайдер в шапке (надо чтобы переключал по наведению)-->
 		<div class="header__carousel header-carousel">
@@ -119,7 +129,7 @@
 	</header>
 	<!--Основное содержание страницы-->
   <main class="main main--show">
-    <!--Рекламная секция 1-->
+		<!--Рекламная секция 1-->
 		<section class="main__promo main-promo main-promo--first" id="promo-1">
 			<div class="main-promo__wrapper">
 				<a class="main-promo__link">
@@ -128,27 +138,28 @@
 				</a>
 			</div>
 		</section>
-    <!--Шапка с логотипом шоу-->
-    <section class="main__intro main-intro">
-			<!--Лого шоу-->
-      <div class="main-intro__logo" id="show-1">
-        <img class="main-intro__image" src="img/logo-1.svg" alt="Logo-show-name" />
-      </div>
-    </section>
 		<!--Основное содержание страницы для шоу-->
-		<div class="main__wrapper main-wrapper">
-			<section class="main-wrapper__show main-show">
-				<!--Breadcrumbs-->
-				<div class="main-show__breadcrumbs main-breadcrumbs">
-					<ul class="main-breadcrumbs__list breadcrumbs-list">
-						<li class="breadcrumbs-list__item breadcrumbs-item">
-							<a class="breadcrumbs-item__link" href="#">Главная</a>
-						</li>
-						<li class="breadcrumbs-list__item breadcrumbs-item">
-							<a class="breadcrumbs-item__link" href="#">Щенячий патруль</a>
-						</li>
-					</ul>
+		<div class="main__wrapper main-wrapper main-wrapper--show">
+			<!--Breadcrumbs-->
+			<div class="main-wrapper__breadcrumbs main-breadcrumbs">
+				<ul class="main-breadcrumbs__list breadcrumbs-list">
+					<li class="breadcrumbs-list__item breadcrumbs-item">
+						<a class="breadcrumbs-item__link" href="#">Главная</a>
+					</li>
+					<li class="breadcrumbs-list__item breadcrumbs-item">
+						<a class="breadcrumbs-item__link" href="#">Щенячий патруль</a>
+					</li>
+				</ul>
+			</div>
+			<!--Шапка с логотипом шоу-->
+			<section class="main__intro main-intro">
+				<!--Лого шоу-->
+				<div class="main-intro__logo" id="show-1">
+					<img class="main-intro__image" src="img/main-intro-bg.png" alt="Logo-show-name" />
 				</div>
+			</section>
+			<!--Разделитель-->
+			<section class="main-wrapper__show main-show">
 				<!--Title and filters-->
 				<h1 class="main-show__title" id="show-title-1">Щенячий патруль</h1>
 				<div class="main-show__filter main-filter">
@@ -157,125 +168,115 @@
 				</div>
 				<!--Description and slides-->
 				<div class="main-show__content show-content">
-					<p class="show-content__description" id="show-description-1">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-					<div class="main-content__carousel content-carousel content-carousel--show">
-						<ul class="content-slider__list slider-list" id="show-list-third">
-							<!--Первый ряд-->
-							<li class="slider-list__item slider-item slider-item--three">
+					<p class="show-content__description" id="show-description-1">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития.</p>
+					<!--Слайдер основной для конкретного шоу-->
+					<div class="main-content__carousel content-carousel" id="show-carousel">
+						<ul class="content-slider__list slider-list slider-list--show" id="show-filter">
+							<!--Single row-->
+							<li class="slider-list__item slider-item slider-item--two">
 								<div class="slider-item__content item-content item-content--small">
 									<a class="item-content__link" href="#" target="_self">
 										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
 									</a>
 								</div>
-								<div class="slider-item__content item-content">
-									<a class="item-content__link" href="#" target="_self">
-										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<!--Рекламный блок-->
-								<div class="slider-item__content item-content item-content--promo item-content--small">
-									<a class="item-content__link item-content__link--promo" href="#" target="_self">
-										<img class="item-content__preview" src="img/promo-1.png" alt="name-of-video-1" />
-										<span class="item-content__text">Реклама</span>
-									</a>
-								</div>
-							</li>
-							<!--Второй ряд-->
-							<li class="slider-list__item slider-item slider-item--three">
 								<div class="slider-item__content item-content item-content--small">
 									<a class="item-content__link" href="#" target="_self">
 										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
 									</a>
 								</div>
-								<div class="slider-item__content item-content">
-									<a class="item-content__link" href="#" target="_self">
-										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
-									<a class="item-content__link" href="#" target="_self">
-										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
 							</li>
-							<!--Третий ряд-->
-							<li class="slider-list__item slider-item slider-item--three">
+							<!--Single row-->
+							<li class="slider-list__item slider-item slider-item--two">
 								<div class="slider-item__content item-content item-content--small">
 									<a class="item-content__link" href="#" target="_self">
 										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
 									</a>
 								</div>
-								<div class="slider-item__content item-content">
-									<a class="item-content__link" href="#" target="_self">
-										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
-									</a>
-								</div>
-								<div class="slider-item__content item-content">
+								<div class="slider-item__content item-content item-content--small">
 									<a class="item-content__link" href="#" target="_self">
 										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
 									</a>
 								</div>
 							</li>
+							<!--Single row-->
+							<li class="slider-list__item slider-item slider-item--two">
+								<div class="slider-item__content item-content item-content--small">
+									<a class="item-content__link" href="#" target="_self">
+										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
+									</a>
+								</div>
+								<div class="slider-item__content item-content item-content--small">
+									<a class="item-content__link" href="#" target="_self">
+										<img class="item-content__preview" src="img/game-1.png" alt="name-of-video-1" />
+									</a>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<!--pagination and rating-->
 				<div class="main-show__service main-service">
 					<!--Пагинация списка контента-->
-					<ul class="main-content__pagination content-pagination content-pagination--service">
-						<li class="content-pagination__item pagination-item">
+					<ul class="main-service__pagination main-content__pagination content-pagination content-pagination--service">
+						<li class="content-pagination__item pagination-item pagination-item--white">
 							<a class="pagination-item__link" href="#">
-								<span class="pagination-item__text">1</span>
+								<span class="pagination-item__text pagination-item__text--white">1</span>
 							</a>
 						</li>
-						<li class="content-pagination__item pagination-item">
+						<li class="content-pagination__item pagination-item pagination-item--white">
 							<a class="pagination-item__link" href="second.html">
-								<span class="pagination-item__text">2</span>
+								<span class="pagination-item__text pagination-item__text--white">2</span>
 							</a>
 						</li>
-						<li class="content-pagination__item pagination-item">
+						<li class="content-pagination__item pagination-item pagination-item--white">
 							<a class="pagination-item__link" href="third.html">
-								<span class="pagination-item__text">3</span>
+								<span class="pagination-item__text pagination-item__text--white">3</span>
 							</a>
 						</li>
-						<li class="content-pagination__item pagination-item">
+						<li class="content-pagination__item pagination-item pagination-item--white">
 							<a class="pagination-item__link" href="fourth.html">
-								<span class="pagination-item__text">4</span>
+								<span class="pagination-item__text pagination-item__text--white">4</span>
 							</a>
 						</li>
 					</ul>
 					<div class="main-service__rating main-rating">
 						<b class="main-rating__final" id="rating-result">4.1</b>
 						<div id="main-rating__stars reviewStars-input">
-						  <input id="star-4" type="radio" name="reviewStars"/>
-						  <label title="gorgeous" for="star-4"></label>
+						  <input class="reviewStars-input__input" id="star-4" type="radio" name="reviewStars"/>
+						  <label class="reviewStars-input__label" title="gorgeous" for="star-4"></label>
 
-						  <input id="star-3" type="radio" name="reviewStars"/>
-						  <label title="good" for="star-3"></label>
+						  <input class="reviewStars-input__input" id="star-3" type="radio" name="reviewStars"/>
+						  <label class="reviewStars-input__label" title="good" for="star-3"></label>
 
-						  <input id="star-2" type="radio" name="reviewStars"/>
-						  <label title="regular" for="star-2"></label>
+						  <input class="reviewStars-input__input" id="star-2" type="radio" name="reviewStars"/>
+						  <label class="reviewStars-input__label" title="regular" for="star-2"></label>
 
-						  <input id="star-1" type="radio" name="reviewStars"/>
-						  <label title="poor" for="star-1"></label>
+						  <input class="reviewStars-input__input" id="star-1" type="radio" name="reviewStars"/>
+						  <label class="reviewStars-input__label" title="poor" for="star-1"></label>
 
-						  <input id="star-0" type="radio" name="reviewStars"/>
-						  <label title="bad" for="star-0"></label>
+						  <input class="reviewStars-input__input" id="star-0" type="radio" name="reviewStars"/>
+						  <label class="reviewStars-input__label" title="bad" for="star-0"></label>
 						</div>
 						<b class="main-rating__quantity">(<span class="main-rating__nr" id="rating-counter">14</span>&nbsp;оценок)</b>
 					</div>
 				</div>
 				<!--VK comments block-->
-				<div id="vk_comments"></div>
-				<script type="text/javascript">
-					VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
-				</script>
+				<!--Рекламный блок, есть только в мобильной версии-->
+				<section class="main__promo main-promo main-promo--mobile" id="promo-2">
+					<div class="main-promo__wrapper">
+						<a class="main-promo__link">
+							<img class="main-promo__img" src="img/promo-2.png" />
+							<span class="main-promo__text">Реклама</span>
+						</a>
+					</div>
+				</section>
 			</section>
 			<!--Боковая панель-->
 			<aside class="main-wrapper__sidebar main-sidebar main-sidebar--show">
 				<!--Первый вертикальный слайдер-->
-				<div class="main-sidebar__carousel sidebar-carousel sidebar-carousel--third">
-					<h2 class="sidebar-carousel__title">Другие игры и видео</h2>
-					<div class="sidebar-carousel__slider sidebar-slider sidebar-slider--third">
+				<div class="main-sidebar__carousel sidebar-carousel sidebar-carousel--show">
+					<h2 class="sidebar-carousel__title">Другие игры и видео:</h2>
+					<div class="sidebar-carousel__slider sidebar-slider sidebar-slider--show">
 						<div class="sidebar-slider__item" id="aside-slide-1">
 							<a class="sidebar-slider__link" href="#" target="_self">
 								<img class="sidebar-slider__preview" src="img/aside-1.png" alt="name-of-aside-1" />
@@ -367,6 +368,14 @@
 					</a>
 				</article>
 			</aside>
+			<!--VK-->
+			<div class="main-wrapper__vk main-vk">
+				<h3 class="main-vk__title">Комментарии:</h3>
+				<div id="vk_comments"></div>
+				<script type="text/javascript">
+					VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
+				</script>
+			</div>
 		</div>
   </main>
   <!--Подвал страницы-->

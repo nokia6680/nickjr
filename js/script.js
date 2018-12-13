@@ -132,3 +132,29 @@ $(document).ready(function(){
     ]
   });
 });
+
+$(document).ready(function(){
+  $('.sidebar-slider--show').slick({
+    infinite: true,
+    dots: false,
+    arrows: true,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 3,
+    prevArrow: '<div class="prev-3"></div>',
+    nextArrow: '<div class="next-3"></div>',
+
+    responsive: [
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+          dots: false
+        }
+      }
+    ]
+  });
+});

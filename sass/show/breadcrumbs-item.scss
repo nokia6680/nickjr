@@ -1,0 +1,47 @@
+.breadcrumbs-item {
+  position: relative;
+  padding-right: 8px;
+
+  &::after {
+    position: absolute;
+    content: '/';
+
+    text-decoration: none;
+
+    font: {
+      size: 0.75em;
+      family: $fat-font;
+    }
+
+    text-transform: uppercase;
+    color: $text-white;
+    line-height: 1;
+
+    width: 10px;
+    height: 0.75em;
+
+    right: -3px;
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    font: {
+      size: 0.75em;
+      family: $fat-font;
+    }
+
+    text-transform: uppercase;
+    color: $text-white;
+    line-height: 1;
+  }
+}

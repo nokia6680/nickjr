@@ -1,0 +1,23 @@
+.main-vk {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  width: 100%;
+
+  &__title {
+    font: {
+      size: 1.375em;
+      family: $fat-font;
+    }
+
+    color: $text-white;
+    line-height: 1;
+
+    text-transform: uppercase;
+    text-align: left;
+
+    margin-top: 0;
+  }
+}

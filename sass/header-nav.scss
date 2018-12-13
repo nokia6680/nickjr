@@ -19,4 +19,17 @@
     width: 98px;
     height: auto;
   }
+
+  &__opener {
+    background-image: url('../img/burger-btn.svg');
+    background-size: 33px 30px;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    width: 33px;
+    height: 30px;
+
+    background-color: transparent;
+    border: none;
+  }
 }

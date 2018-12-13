@@ -1,0 +1,26 @@
+.show-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+
+  &__description {
+    font: {
+      size: 0.75em;
+      family: $fat-font;
+    }
+
+    color: $text-white;
+    line-height: 1;
+    text-transform: uppercase;
+
+    display: block;
+    max-height: 112px;
+    overflow-y: scroll;
+    
+    margin-top: 0;
+    margin-bottom: 70px;
+  }
+}

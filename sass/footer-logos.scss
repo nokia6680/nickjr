@@ -1,0 +1,28 @@
+.footer-logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    text-align: center;
+
+    &--nick {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__img--nick {
+    width: 149px;
+    height: auto;
+  }
+
+  &__img--nickjr {
+    width: 83px;
+    height: auto;
+  }
+}
