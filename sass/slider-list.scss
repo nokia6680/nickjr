@@ -21,7 +21,9 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
-
+  .slider-list {
+    grid-gap: 21px;
+  }
 }
 
 @media only screen and (min-width: $tablets) {

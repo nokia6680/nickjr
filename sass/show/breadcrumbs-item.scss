@@ -50,16 +50,33 @@
 
 @media only screen and (min-width: $mobile) {
   .breadcrumbs-item {
+    padding-right: 12px;
+
     &__link {
       font: {
         size: 0.75em;
       }
     }
+
+    &:after {
+      font-size: 0.75em;
+    }
   }
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .breadcrumbs-item {
+    &__link {
+      font: {
+        size: 1em;
+      }
+    }
 
+    &:after {
+      font-size: 1em;
+      right: -1px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

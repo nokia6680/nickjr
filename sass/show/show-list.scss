@@ -21,7 +21,9 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
-
+  .show-list {
+    grid-gap: 18px;
+  }
 }
 
 @media only screen and (min-width: $tablets) {

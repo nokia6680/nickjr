@@ -138,7 +138,6 @@
 
     &__description {
       font: {
-        family: $fat-font;
         size: 0.813em;
       }
     }
@@ -146,7 +145,21 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .item-content {
+    &__title {
+      font: {
+        size: 2.125em;
+      }
+    }
 
+    &__description {
+      font: {
+        size: 1em;
+      }
+
+      max-height: 150px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

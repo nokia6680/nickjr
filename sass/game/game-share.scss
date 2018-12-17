@@ -39,7 +39,16 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .game-share {
+    &__title {
+      font: {
+        size: 1.188em;
+      }
 
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

@@ -51,7 +51,14 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .game-slider {
+    &__item {
+      margin-bottom: 16px;
 
+      padding-left: 17.5px;
+      padding-right: 17.5px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

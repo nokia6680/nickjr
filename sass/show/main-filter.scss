@@ -83,7 +83,40 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .main-filter {
+    top: 200px;
+    padding-left: 24px;
+    padding-right: 24px;
 
+    &__btn {
+      width: 139px;
+      height: 46px;
+
+      border-radius: 25px;
+
+      font: {
+        size: 1.438em;
+      }
+
+      &--game {
+        &::after {
+          width: 43px;
+          height: 28px;
+
+          background-size: 43px 28px;
+        }
+      }
+
+      &--video {
+        &::after {
+          width: 22px;
+          height: 28px;
+
+          background-size: 22px 28px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

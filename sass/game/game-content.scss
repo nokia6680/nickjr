@@ -6,6 +6,10 @@
 
   width: 100%;
 
+  &__promo {
+    display: none;
+  }
+
   &__wrapper {
     order: 1;
 
@@ -41,7 +45,29 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .game-content {
+    &__promo {
+      display: flex;
+      order: 4;
+    }
 
+    &__frame {
+      width: 100%;
+      min-height: 240px;
+    }
+
+    &__wrapper {
+      order: 1;
+    }
+
+    &__controls {
+      order: 2;
+    }
+
+    &__share {
+      order: 3;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

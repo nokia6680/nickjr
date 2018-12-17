@@ -39,8 +39,24 @@
   }
 }
 
-@media only screen and (min-width: $mobile-hd) {
+@media only screen and (min-width: $iphone) {
+  .footer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
 
+@media only screen and (min-width: $mobile-hd) {
+  .footer {
+    padding-left: 38px;
+    padding-right: 38px;
+
+    padding-bottom: 7px;
+
+    &__metric {
+      margin-bottom: 7px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

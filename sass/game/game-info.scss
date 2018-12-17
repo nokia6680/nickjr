@@ -62,7 +62,21 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .game-info {
+    &__title {
+      font: {
+        size: 2.125em;
+      }
+    }
 
+    &__description {
+      font: {
+        size: 1em;
+      }
+
+      max-height: 150px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

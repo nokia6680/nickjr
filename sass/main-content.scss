@@ -14,7 +14,9 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
-
+  .main-content {
+    padding-bottom: 25px;
+  }
 }
 
 @media only screen and (min-width: $tablets) {

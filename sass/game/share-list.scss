@@ -15,7 +15,9 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
-
+  .share-list {
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (min-width: $tablets) {

@@ -42,7 +42,8 @@
     padding-top: 2px;
     padding-bottom: 2px;
 
-    border-radius: 0 0 8px 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 
     font: {
       family: $promo-font;
@@ -51,6 +52,10 @@
     }
     color: $text-white;
     line-height: 1;
+  }
+
+  &--hdmob {
+    display: none;
   }
 }
 
@@ -62,7 +67,17 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .sidebar-promo {
+    margin-top: 14px;
+    margin-bottom: 20px;
 
+    &--hdmob {
+      display: flex;
+
+      margin-top: 0;
+      margin-bottom: 32px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

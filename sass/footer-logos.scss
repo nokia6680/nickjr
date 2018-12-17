@@ -38,7 +38,29 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .footer-logos {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 
+    &__link {
+      &--nick {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__img--nick {
+      min-width: 131px;
+      height: auto;
+
+      margin-bottom: 0;
+    }
+
+    &__img--nickjr {
+      width: 71px;
+      max-height: 20px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

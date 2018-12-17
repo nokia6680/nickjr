@@ -15,7 +15,17 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
-
+  .slider-item {
+    /*Грид блок для одного большого элемента*/
+    &--one {
+      grid-template-columns: 1fr;
+    }
+    /*Грид блок для двух одинаковых элементов*/
+    &--two {
+      padding-left: 17.5px;
+      padding-right: 17.5px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

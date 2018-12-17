@@ -13,7 +13,13 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .footer-metric {
 
+    &__logo {
+      width: 101px;
+      height: 33px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

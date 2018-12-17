@@ -43,16 +43,16 @@ $(document).ready(function() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 5,
+          slidesToScroll: 1,
           infinite: true,
           arrows: true
         }
       },
       {
-        breakpoint: 414,
+        breakpoint: 480,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           arrows: true

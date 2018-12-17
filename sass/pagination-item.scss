@@ -113,7 +113,21 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .pagination-item {
+    width: 48px;
+    height: 48px;
 
+    margin-right: 11px;
+    /*Тень*/
+    &::before {
+      width: 54px;
+      height: 54px;
+    }
+
+    &__link {
+      padding-top: 10px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

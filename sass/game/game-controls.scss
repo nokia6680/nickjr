@@ -166,7 +166,6 @@
         width: 28px;
         height: 30px;
 
-        background-image: url('../img/expand.svg');
         background-size: 28px 30px;
       }
     }
@@ -174,7 +173,65 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .game-controls {
+    padding-top: 18px;
 
+    &__btn {
+      border-radius: 25px;
+
+      padding-top: 6px;
+      padding-bottom: 3px;
+
+      height: 35px;
+
+      font-size: 1.063em;
+      /*Кнопка отправки проблемы*/
+      &--report {
+        font-size: 0.938em;
+        padding-top: 5px;
+
+        width: 138px;
+
+        &::before {
+          width: 25px;
+          height: 27px;
+
+          background-size: 25px 27px;
+        }
+      }
+      /*Кнопка - назад*/
+      &--prev {
+        width: 99px;
+
+        &::before {
+          width: 12px;
+          height: 18px;
+
+          background-size: 12px 18px;
+        }
+      }
+
+      &--next {
+        width: 99px;
+
+        &::before {
+          width: 12px;
+          height: 18px;
+
+          background-size: 12px 18px;
+        }
+      }
+
+      &--expand {
+        border-radius: 0;
+
+        width: 33px;
+        height: 35px;
+
+        background-size: 33px 35px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

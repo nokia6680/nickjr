@@ -22,6 +22,10 @@
 
     margin-top: 0;
     margin-bottom: 70px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
@@ -31,14 +35,23 @@
       font: {
         size: 0.813em;
       }
-      
-      max-height: 120px;
+
+      max-height: 140px;
+      min-height: 140px;
     }
   }
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .show-content {
+    &__description {
+      font: {
+        size: 1em;
+      }
 
+      max-height: 150px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

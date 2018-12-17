@@ -8,15 +8,28 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  padding-left: 7px;
-  padding-right: 7px;
-
   overflow: hidden;
 }
 
-@media only screen and (min-width: $mobile) {
+@media only screen and (min-width: $mobile-hd) {
   .header {
-    padding-left: 11px;
-    padding-right: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
   }
+}
+
+@media only screen and (min-width: $tablets) {
+
+}
+
+@media only screen and (min-width: $notebooks) {
+
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
 }

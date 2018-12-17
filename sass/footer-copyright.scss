@@ -22,7 +22,13 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
-
+  .footer-copyright {
+    &__description {
+      &--reserve {
+        width: 350px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

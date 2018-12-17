@@ -21,7 +21,16 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .main-intro {
+    &__logo {
+      min-width: 433px;
+    }
 
+    &__img {
+      min-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

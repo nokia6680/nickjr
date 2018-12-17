@@ -10,7 +10,9 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
-
+  .content-carousel {
+    margin-bottom: 26px;
+  }
 }
 
 @media only screen and (min-width: $tablets) {

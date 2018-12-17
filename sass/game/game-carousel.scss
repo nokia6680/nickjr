@@ -30,7 +30,15 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .game-carousel {
+    &__title {
+      margin-bottom: 13px;
 
+      font: {
+        size: 1.875em;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

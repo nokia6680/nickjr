@@ -23,7 +23,9 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
-
+  .links-item {
+    margin-right: 12px;
+  }
 }
 
 @media only screen and (min-width: $tablets) {

@@ -9,7 +9,7 @@
   &__wrapper {
     width: 100%;
     min-width: 320px;
-    max-width: 728px;
+    max-width: 320px;
     min-height: 115px;
   }
 
@@ -43,8 +43,8 @@
     text-align: center;
     text-transform: uppercase;
 
-    padding-top: 2px;
-    padding-bottom: 1px;
+    padding-top: 4px;
+    padding-bottom: 3px;
 
     font: {
       family: $promo-font;
@@ -53,6 +53,13 @@
     }
     color: $text-white;
     line-height: 1;
+  }
+
+  /*Скрытый промоблок*/
+
+  &--hdmob,
+  &--hdmob2 {
+    display: none;
   }
 
   /*Промоблок-2 только для мобильных*/
@@ -66,7 +73,7 @@
     .main-promo__wrapper {
       width: 100%;
       min-width: 320px;
-      max-width: 728px;
+      max-width: 320px;
       min-height: 65px;
     }
 
@@ -100,7 +107,43 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .main-promo {
+    /*Промоблок-2 только для мобильных*/
+    &--mobile {
+      display: none;
+    }
 
+    /*Рекламный блок только для размера 480px*/
+    &--hdmob {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .main-promo__wrapper {
+        width: 100%;
+        min-width: 320px;
+        max-width: 320px;
+        min-height: 65px;
+      }
+
+      .main-promo__link {
+        height: 65px;
+      }
+
+      .main-promo__img {
+        height: 50px;
+      }
+    }
+
+    &--hdmob2 {
+
+    }
+
+    &--show {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {

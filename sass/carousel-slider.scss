@@ -26,7 +26,7 @@
     z-index: 10;
 
     top: 0;
-    left: -60px;
+    left: -50px;
 
     background-image: url('../img/arrow-left.png');
     background-size: 14px 21px;
@@ -36,7 +36,7 @@
     transition: 0.2s ease-in;
 
     &:hover {
-      left: -45px;
+      left: -40px;
       transition: 0.2s ease-in;
     }
   }
@@ -55,7 +55,7 @@
     z-index: 10;
 
     top: 0;
-    right: -60px;
+    right: -50px;
 
     background-image: url('../img/arrow-right.png');
     background-size: 14px 21px;
@@ -65,7 +65,7 @@
     transition: 0.2s ease-in;
 
     &:hover {
-      right: -45px;
+      right: -40px;
       transition: 0.2s ease-in;
     }
   }
@@ -74,6 +74,94 @@
     height: 85px;
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .carousel-slider {
+    .prev-1 {
+      left: -45px;
+
+      &:hover {
+        left: -35px;
+      }
+    }
+
+    .next-1 {
+      right: -45px;
+
+      &:hover {
+        right: -35px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $iphone) {
+  .carousel-slider {
+    .prev-1 {
+      left: -45px;
+
+      &:hover {
+        left: -35px;
+      }
+    }
+
+    .next-1 {
+      right: -45px;
+
+      &:hover {
+        right: -35px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+  .carousel-slider {
+    width: 100% !important;
+
+    &__cartoon {
+      width: 70px !important;
+      height: 70px;
+
+      margin-left: 10px;
+    }
+
+    .prev-1 {
+      width: 98px;
+      height: 78px;
+
+      left: -60px;
+
+      &:hover {
+        left: -50px;
+      }
+    }
+
+    .next-1 {
+      width: 98px;
+      height: 78px;
+
+      right: -60px;
+
+      &:hover {
+        right: -50px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+
+}
+
+@media only screen and (min-width: $notebooks) {
+
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
+}
+
 
 @media only screen and (min-width: $notebooks) {
   .carousel-slider {

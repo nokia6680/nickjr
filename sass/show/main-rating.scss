@@ -115,7 +115,47 @@
 }
 
 @media only screen and (min-width: $mobile-hd) {
+  .main-rating {
+    &__final {
+      font: {
+        size: 2.375em;
+      }
+    }
 
+    /*Стилизация для звезд*/
+    .reviewStars-input__input:checked ~ label,
+    .reviewStars-input__label,
+    .reviewStars-input__label:hover,
+    .reviewStars-input__label:hover ~ label {
+      background: url('../img/rating-sprite-480.png') no-repeat;
+    }
+    .reviewStars-input {
+      &__input {
+        width: 32px;
+        height: 30px;
+      }
+
+      &__input:checked ~ label {
+        background-position: 0 -30px;
+        width: 32px;
+        height: 30px;
+      }
+
+      &__label {
+        width: 32px;
+        height: 30px;
+
+        margin-right: 5px;
+      }
+
+      &__label:hover,
+      &__label:hover ~ label {
+        background-position: 0 -30px;
+        width: 32px;
+        height: 30px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $tablets) {
