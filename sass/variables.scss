@@ -1,7 +1,7 @@
 $mobile: 360px;
-$mobile-hd: 414px;
+$mobile-hd: 480px;
 $tablets: 768px;
-$notebooks: 1152px;
+$notebooks: 1024px;
 $widebooks: 1366px;
 $widebooks-hd: 1440px;
 $large-widebooks: 1600px;
@@ -28,6 +28,9 @@ $btn-pressed: #000000;
 $btn-games: #ff6700;
 $btn-video: #45ab34;
 
+$controls-bg: #ffffff;
+$controls-text: #3abdcb;
+
 $pagination-btn: #3abdcb;
 $pagination-btn-active: #ff6700;
 $text-pagination-white: #3abdcb;
@@ -38,6 +41,7 @@ $text-blue: #2aace2;
 $text-purple: #7f4796;
 $text-link: #561786;
 $text-copyright: #9b9b9b;
+$social-bg: #27c0d7;
 
 $base-font: "Arista-regular", sans-serif;
 $light-font: "Arista Pro Light", sans-serif;
@@ -51,3 +55,23 @@ $base-font-weight: normal;
 
 $baseFontColor: $text-black;
 $baseFontFamily: $base-font;
+
+@media only screen and (min-width: $mobile) {
+
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
+}
+
+@media only screen and (min-width: $notebooks) {
+
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
+}

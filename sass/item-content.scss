@@ -1,6 +1,7 @@
 .item-content {
   width: 100%;
   text-align: center;
+
   /*Блок с текстом*/
   &--text {
     box-shadow: none;
@@ -11,8 +12,6 @@
   &--small {
     width: 150px;
     height: 150px;
-
-    display: grid;
   }
 
   &--big {
@@ -127,6 +126,31 @@
       line-height: 1;
     }
   }
+}
+
+@media only screen and (min-width: $mobile) {
+  .item-content {
+    &__title {
+      font: {
+        size: 1.875em;
+      }
+    }
+
+    &__description {
+      font: {
+        family: $fat-font;
+        size: 0.813em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
 }
 
 @media only screen and (min-width: $notebooks) {

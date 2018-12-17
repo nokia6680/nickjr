@@ -20,7 +20,7 @@
     width: 10px;
     height: 0.75em;
 
-    right: -3px;
+    right: -4px;
     top: 50%;
 
     transform: translateY(-50%);
@@ -43,5 +43,33 @@
     text-transform: uppercase;
     color: $text-white;
     line-height: 1;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+}
+
+@media only screen and (min-width: $mobile) {
+  .breadcrumbs-item {
+    &__link {
+      font: {
+        size: 0.75em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
+}
+
+@media only screen and (min-width: $notebooks) {
+
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
 }

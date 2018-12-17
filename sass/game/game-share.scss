@@ -1,40 +1,39 @@
-.footer {
+.game-share {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
   width: 100%;
-  background-color: $bg-footer;
 
-  margin-bottom: 0;
-  margin-top: auto;
+  &__title {
+    font: {
+      size: 0.875em;
+      family: $fat-font;
+    }
 
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+    color: $text-white;
+    line-height: 1;
 
-  &__logos {
-    margin-bottom: 10px;
-  }
+    text-align: left;
+    text-transform: uppercase;
 
-  &__links {
-    margin-bottom: 10px;
-  }
+    width: 100%;
 
-  &__metric {
+    margin-top: 15px;
     margin-bottom: 10px;
   }
 }
 
 @media only screen and (min-width: $mobile) {
-  .footer {
-    padding-left: 11px;
-    padding-right: 11px;
+  .game-share {
+    &__title {
+      font: {
+        size: 1em;
+      }
 
-    &__metric {
-      margin-bottom: 13px;
+      margin-top: 8px;
+      margin-bottom: 5px;
     }
   }
 }

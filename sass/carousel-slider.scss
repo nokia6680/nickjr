@@ -21,8 +21,7 @@
     border: none;
     border-radius: 35px;
 
-    background-color: #7dd9e7;
-    opacity: 0.7;
+    background-color: rgba(39, 192, 215, 0.6);
 
     z-index: 10;
 
@@ -33,6 +32,8 @@
     background-size: 14px 21px;
     background-repeat: no-repeat;
     background-position: right 10px center;
+
+    transition: 0.2s ease-in;
 
     &:hover {
       left: -45px;
@@ -49,8 +50,7 @@
     border: none;
     border-radius: 35px;
 
-    background-color: #7dd9e7;
-    opacity: 0.7;
+    background-color: rgba(39, 192, 215, 0.6);
 
     z-index: 10;
 
@@ -61,6 +61,8 @@
     background-size: 14px 21px;
     background-repeat: no-repeat;
     background-position: left 10px center;
+
+    transition: 0.2s ease-in;
 
     &:hover {
       right: -45px;

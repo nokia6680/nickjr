@@ -26,13 +26,23 @@
 	<header class="header">
 		<!--Логотип + возможная навигация-->
 		<nav class="header__nav header-nav">
+			<div class="header-nav__logo">
+				<a class="header-nav__link" href="#" target="_self">
+					<img class="header-nav__img" src="img/logo.svg" alt="NickJR Official" />
+				</a>
+			</div>
 			<ul class="header-nav__list nav-list">
 				<li class="nav-list__item nav-item">
-					<a class="nav-item__link" href="#" target="_self">
-						<img class="nav-item__logo" src="img/logo.svg" alt="NickJR Official" />
-					</a>
+
+				</li>
+				<li class="nav-list__item nav-item">
+
+				</li>
+				<li class="nav-list__item nav-item">
+
 				</li>
 			</ul>
+			<button class="header-nav__opener" type="button"></button>
 		</nav>
 		<!--Слайдер в шапке (надо чтобы переключал по наведению)-->
 		<div class="header__carousel header-carousel">
@@ -130,23 +140,23 @@
     </section>
 		<!---->
 		<div class="main__wrapper main-wrapper main-wrapper--game">
+			<!--Breadcrumbs-->
+			<div class="main-wrapper__breadcrumbs main-breadcrumbs">
+				<ul class="main-breadcrumbs__list breadcrumbs-list">
+					<li class="breadcrumbs-list__item breadcrumbs-item">
+						<a class="breadcrumbs-item__link" href="#">Главная</a>
+					</li>
+					<li class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--game" id="game-1">
+						<a class="breadcrumbs-item__link" href="#">Игра Щенячий патруль</a>
+					</li>
+				</ul>
+			</div>
 			<!--Контентная область-->
 			<section class="main-wrapper__game game-main">
-				<!--Breadcrumbs-->
-				<div class="game-main__breadcrumbs main-breadcrumbs">
-					<ul class="main-breadcrumbs__list breadcrumbs-list">
-						<li class="breadcrumbs-list__item breadcrumbs-item">
-							<a class="breadcrumbs-item__link" href="#">Главная</a>
-						</li>
-						<li class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--game" id="game-1">
-							<a class="breadcrumbs-item__link" href="#">Игра Щенячий патруль на помощь друзьям</a>
-						</li>
-					</ul>
-				</div>
 				<!--Инфо шапка-->
 				<header class="game-main__header game-header">
 					<div class="game-header__info game-info">
-						<h1 class="game-info__title"></h1>
+						<h1 class="game-info__title" id="game-title-1">Щенячий патруль</h1>
 						<p class="game-info__description">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
 					</div>
 					<!--Rating and bookmark-->
@@ -154,20 +164,20 @@
 						<div class="game-service__rating main-rating">
 							<b class="main-rating__final" id="rating-result">4.1</b>
 							<div id="main-rating__stars reviewStars-input">
-							  <input id="star-4" type="radio" name="reviewStars"/>
-							  <label title="gorgeous" for="star-4"></label>
+								<input class="reviewStars-input__input" id="star-4" type="radio" name="reviewStars"/>
+								<label class="reviewStars-input__label" title="gorgeous" for="star-4"></label>
 
-							  <input id="star-3" type="radio" name="reviewStars"/>
-							  <label title="good" for="star-3"></label>
+								<input class="reviewStars-input__input" id="star-3" type="radio" name="reviewStars"/>
+								<label class="reviewStars-input__label" title="good" for="star-3"></label>
 
-							  <input id="star-2" type="radio" name="reviewStars"/>
-							  <label title="regular" for="star-2"></label>
+								<input class="reviewStars-input__input" id="star-2" type="radio" name="reviewStars"/>
+								<label class="reviewStars-input__label" title="regular" for="star-2"></label>
 
-							  <input id="star-1" type="radio" name="reviewStars"/>
-							  <label title="poor" for="star-1"></label>
+								<input class="reviewStars-input__input" id="star-1" type="radio" name="reviewStars"/>
+								<label class="reviewStars-input__label" title="poor" for="star-1"></label>
 
-							  <input id="star-0" type="radio" name="reviewStars"/>
-							  <label title="bad" for="star-0"></label>
+								<input class="reviewStars-input__input" id="star-0" type="radio" name="reviewStars"/>
+								<label class="reviewStars-input__label" title="bad" for="star-0"></label>
 							</div>
 							<b class="main-rating__quantity">(<span class="main-rating__nr" id="rating-counter">14</span>&nbsp;оценок)</b>
 						</div>
@@ -178,221 +188,334 @@
 				<div class="game-main__content game-content">
 					<!--Окно самой игры-->
 					<div class="game-content__wrapper">
+						<iframe class="game-content__frame" frameborder="none" align="center">
 
+						</iframe>
 					</div>
-					<!--Боковой блок с рекламой и шарингом-->
+					<!--Боковой блок с рекламой-->
 					<div class="game-content__promo game-promo">
-						<div class="slider-item__content item-content item-content--promo item-content--small">
+						<div class="game-promo__content item-content item-content--promo item-content--small">
 							<a class="item-content__link item-content__link--promo" href="#" target="_self">
 								<img class="item-content__preview" src="img/promo-1.png" alt="name-of-video-1" />
 								<span class="item-content__text">Реклама</span>
 							</a>
 						</div>
-						<div class="slider-item__content item-content item-content--promo item-content--small">
+						<div class="game-promo__content item-content item-content--promo item-content--small">
 							<a class="item-content__link item-content__link--promo" href="#" target="_self">
 								<img class="item-content__preview" src="img/promo-1.png" alt="name-of-video-1" />
 								<span class="item-content__text">Реклама</span>
 							</a>
 						</div>
-						<!--Share block-->
-						<div class="game-promo__share game-share">
-							<h3 class="game-share__title">Поделись игрой с</h3>
-							<ul class="game-share__list share-list">
-								<li class="share-list__item share-item share-item--ok">
-									<span class="share-item__counter share-item__counter--ok" id="share-ok">386</span>
-								</li>
-								<li class="share-list__item share-item share-item--vk">
-									<span class="share-item__counter share-item__counter--vk" id="share-vk">123</span>
-								</li>
-								<li class="share-list__item share-item share-item--fb">
-									<span class="share-item__counter share-item__counter--fb" id="share-fb">456</span>
-								</li>
-								<li class="share-list__item share-item share-item--tw">
-									<span class="share-item__counter share-item__counter--tw" id="share-tw">789</span>
-								</li>
-							</ul>
-						</div>
+					</div>
+					<!--Share block-->
+					<div class="game-content__share game-share">
+						<h3 class="game-share__title">Поделись игрой с</h3>
+						<ul class="game-share__list share-list">
+							<li class="share-list__item share-item share-item--ok">
+								<span class="share-item__counter share-item__counter--ok" id="share-ok"><i class="fab fa-odnoklassniki"></i>386</span>
+							</li>
+							<li class="share-list__item share-item share-item--vk">
+								<span class="share-item__counter share-item__counter--vk" id="share-vk"><i class="fab fa-vk"></i>123</span>
+							</li>
+							<li class="share-list__item share-item share-item--fb">
+								<span class="share-item__counter share-item__counter--fb" id="share-fb"><i class="fab fa-facebook-f"></i>456</span>
+							</li>
+							<li class="share-list__item share-item share-item--tw">
+								<span class="share-item__counter share-item__counter--tw" id="share-tw"><i class="fab fa-twitter"></i>789</span>
+							</li>
+						</ul>
+					</div>
+					<!--Управляющие элементы игры-->
+					<div class="game-content__controls game-controls">
+						<button class="game-controls__btn game-controls__btn--report" type="button">Сообщить<br />о проблеме</button>
+						<button class="game-controls__btn game-controls__btn--prev" type="button">Назад</button>
+						<button class="game-controls__btn game-controls__btn--next" type="button">Вперед</button>
+						<button class="game-controls__btn game-controls__btn--expand" type="button"></button>
 					</div>
 				</div>
-				<!--Управляющие элементы игры-->
-				<div class="game-main__controls game-controls">
-					<button class="game-controls__btn game-controls__btn--report" type="button">Сообщить о проблеме</button>
-					<button class="game-controls__btn game-controls__btn--prev" type="button">Назад</button>
-					<button class="game-controls__btn game-controls__btn--next" type="button">Вперед</button>
-					<button class="game-controls__btn game-controls__btn--expand" type="button"></button>
+			</section>
+			<!--Рекламный блок, есть только в мобильной версии-->
+			<section class="main__promo main-promo main-promo--mobile" id="promo-2">
+				<div class="main-promo__wrapper">
+					<a class="main-promo__link">
+						<img class="main-promo__img" src="img/promo-2.png" />
+						<span class="main-promo__text">Реклама</span>
+					</a>
 				</div>
 			</section>
 			<!--Слайдер с похожими играми-->
-			<div class="main-wrapper__carousel game-carousel">
+			<div class="main-wrapper__carousel game-carousel game-carousel--similar">
 				<h2 class="game-carousel__title">Похожие игры:</h2>
 				<!--Slider of similar games-->
 				<div class="prev-4"></div>
-				<div class="game-carousel__slider game-slider">
-					<ul class="game-slider__list game-list" id="game-list">
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-1" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-2" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-3" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-4" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-5" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-6" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-7" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-8" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-9" />
-							</a>
-						</li>
-						<li class="game-list__item game-item">
-							<a class="game-item__link" href="#" target="_self">
-								<img class="game-item__preview" src="img/game-1.png" alt="name-of-video-10" />
-							</a>
-						</li>
-					</ul>
+				<div class="game-carousel__slider game-slider game-slider--similar">
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
+					<div class="game-slider__item" id="similar-game-1">
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+						</a>
+						<a class="game-slider__link" href="#" target="_self">
+							<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+						</a>
+					</div>
 				</div>
 				<div class="next-4"></div>
 			</div>
-			<!--Comments and other games-slider-->
+			<!--Рекламный блок боковой панели ( моб версия )-->
+			<article class="main-sidebar__promo sidebar-promo">
+				<a class="sidebar-promo__link" href="#" target="_blank">
+					<img class="sidebar-promo__img" src="img/promo-3.png" alt="Promo-3" />
+					<span class="sidebar-promo__text">Реклама</span>
+				</a>
+			</article>
+			<!--Слайдер с другими играми-->
 			<div class="main-wrapper__bottom game-bottom">
-				<!--VK comments block-->
-				<div id="vk_comments"></div>
-				<script type="text/javascript">
-					VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
-				</script>
 				<!--Vertical slider of games-->
 				<!--Первый вертикальный слайдер-->
-				<div class="game-bottom__carousel bottom-carousel">
-					<h2 class="bottom-carousel__title">Другие игры и видео</h2>
-					<div class="bottom-carousel__slider bottom-slider">
-						<div class="bottom-slider__item" id="bottom-slide-1">
-							<a class="bottom-slider__link" href="#" target="_self">
-								<img class="bottom-slider__preview" src="img/aside-1.png" alt="name-of-aside-1" />
+				<div class="game-bottom__carousel game-carousel game-carousel--other">
+					<h2 class="game-carousel__title">Другие игры и видео:</h2>
+					<div class="game-carousel__slider game-slider game-slider--other">
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
 							</a>
-							<a class="bottom-slider__link" href="#" target="_self">
-								<img class="bottom-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
 							</a>
 						</div>
-						<div class="bottom-slider__item" id="bottom-slide-2">
-							<a class="bottom-slider__link" href="#" target="_self">
-								<img class="bottom-slider__preview" src="img/aside-1.png" alt="name-of-aside-1" />
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
 							</a>
-							<a class="bottom-slider__link" href="#" target="_self">
-								<img class="bottom-slider__preview" src="img/aside-1.png" alt="name-of-aside-2" />
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+						</div>
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+						</div>
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+						</div>
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+						</div>
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+						</div>
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+						</div>
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+						</div>
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+						</div>
+						<div class="game-slider__item" id="other-game-1">
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+							</a>
+							<a class="game-slider__link" href="#" target="_self">
+								<img class="game-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
 							</a>
 						</div>
 					</div>
 					<div class="next-5"></div>
 				</div>
 			</div>
+			<!--VK-->
+			<div class="main-wrapper__vk main-vk">
+				<h3 class="main-vk__title">Комментарии:</h3>
+				<div id="vk_comments"></div>
+				<script type="text/javascript">
+					VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
+				</script>
+			</div>
 		</div>
   </main>
-<!--Подвал страницы-->
-<footer class="footer">
-  <!--Блок с логотипами-->
-  <div class="footer__logos footer-logos">
-    <a class="footer-logos__link footer-logos__link--nick" href="#" target="_blank">
-      <img class="footer-logos__img footer-logos__img--nick" src="img/nick.svg" alt="Nickelodeon"/>
-    </a>
-    <a class="footer-logos__link footer-logos__link--nickjr" href="#" target="_blank">
-      <img class="footer-logos__img footer-logos__img--nickjr" src="img/nickjr.svg" alt="Nickelodeon Junior"/>
-    </a>
-  </div>
-  <!--Блок ссылок на правила и тд-->
-  <div class="footer__links footer-links">
-    <ul class="footer-links__list links-list">
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 1</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 2</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 3</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 4</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 5</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 6</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 7</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 8</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 9</span>
-        </a>
-      </li>
-      <li class="links-list__item links-item">
-        <a class="links-item__link" href="#" target="_blank">
-          <span class="links-item__text">Ссылка 10</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <!--Странный блок какой-то-->
-  <div class="footer__metric footer-metric">
-
-  </div>
-  <!--Блок копирайта-->
-  <div class="footer__copyright footer-copyright">
-    <p class="footer-copyright__description footer-copyright__description--copy">&copy;&nbsp;2018 Viacom International Inc. Все права защищены.</p>
-    <p class="footer-copyright__description footer-copyright__description--reserve">Nick and all related titles, logos and characters are trademarks of Viacom International Inc.</p>
-  </div>
-</footer>
+	<!--Подвал страницы-->
+	<footer class="footer">
+		<!--Блок с логотипами-->
+		<div class="footer__logos footer-logos">
+			<a class="footer-logos__link footer-logos__link--nick" href="#" target="_blank">
+				<img class="footer-logos__img footer-logos__img--nick" src="img/nick.svg" alt="Nickelodeon"/>
+			</a>
+			<a class="footer-logos__link footer-logos__link--nickjr" href="#" target="_blank">
+				<img class="footer-logos__img footer-logos__img--nickjr" src="img/nickjr.svg" alt="Nickelodeon Junior"/>
+			</a>
+		</div>
+		<!--Блок ссылок на правила и тд-->
+		<div class="footer__links footer-links">
+			<ul class="footer-links__list links-list">
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Privacy Policy (updated 6/21/2017)</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Terms of Use</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Safety</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Closed Captioning Contact</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Copyright Compliance</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Grownups</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">TV Schedule</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Sitemap</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Work With Us</span>
+					</a>
+				</li>
+				<li class="links-list__item links-item">
+					<a class="links-item__link" href="#" target="_blank">
+						<span class="links-item__text">Ad Choicess</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--Странный блок какой-то-->
+		<div class="footer__metric footer-metric">
+			<img class="footer-metric__logo" src="img/nick-logo-footer.png" alt="Nickelodeon Kids & Teens" />
+		</div>
+		<!--Блок копирайта-->
+		<div class="footer__copyright footer-copyright">
+			<p class="footer-copyright__description footer-copyright__description--copy">&copy;&nbsp;2018 Viacom International Inc. Все права защищены.</p>
+			<p class="footer-copyright__description footer-copyright__description--reserve">Nick and all related titles, logos and characters are trademarks of Viacom International Inc.</p>
+		</div>
+	</footer>
 <script src="js/script.js"></script>
 </body>
 

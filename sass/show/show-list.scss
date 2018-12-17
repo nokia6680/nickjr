@@ -1,22 +1,22 @@
-.main-intro {
+.show-list {
+  list-style: none;
+
+  display: grid;
+
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+
+  grid-gap: 6px;
+
   width: 100%;
 
-  &__logo {
-    width: 100%;
-    height: auto;
-  }
-
-  &__img {
-    width: 320px;
-    height: auto;
-  }
+  padding: 0;
+  margin: 0;
 }
 
 @media only screen and (min-width: $mobile) {
-  .main-intro {
-    &__img {
-      width: 100%;
-    }
+  .show-list {
+    grid-gap: 14px;
   }
 }
 

@@ -13,3 +13,10 @@
 
   overflow: hidden;
 }
+
+@media only screen and (min-width: $mobile) {
+  .header {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}

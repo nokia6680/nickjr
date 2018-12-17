@@ -1,7 +1,8 @@
-.slider-item {
+.show-item {
   display: grid;
   grid-template-rows: 1fr;
   width: 100%;
+
   /*Грид блок для одного большого элемента*/
   &--one {
     grid-template-columns: 1fr;
@@ -11,20 +12,5 @@
     grid-template-columns: 150px 150px;
     justify-content: space-between;
     grid-gap: unset;
-  }
-}
-
-@media only screen and (min-width: $mobile-hd) {
-
-}
-
-@media only screen and (min-width: $tablets) {
-
-}
-
-
-@media only screen and (min-width: $notebooks) {
-  .slider-item {
-    width: 994px;
   }
 }

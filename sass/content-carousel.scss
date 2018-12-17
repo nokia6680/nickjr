@@ -1,5 +1,20 @@
 .content-carousel {
+  width: 100%;
   margin-bottom: 28px;
+}
+
+@media only screen and (min-width: $mobile) {
+  .content-carousel {
+    margin-bottom: 31px;
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
 }
 
 @media only screen and (min-width: $notebooks) {

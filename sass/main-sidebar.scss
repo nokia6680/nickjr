@@ -8,3 +8,17 @@
 
   padding-bottom: 12px;
 }
+
+@media only screen and (min-width: $mobile) {
+  .main-sidebar {
+    padding-bottom: 16px;
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
+}

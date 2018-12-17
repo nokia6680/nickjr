@@ -158,3 +158,57 @@ $(document).ready(function(){
     ]
   });
 });
+
+/*Первый слайдер на странице Game*/
+$(document).ready(function(){
+  $('.game-slider--similar').slick({
+    infinite: true,
+    dots: false,
+    arrows: true,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 3,
+    prevArrow: '<div class="prev-4"></div>',
+    nextArrow: '<div class="next-4"></div>',
+
+    responsive: [
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+          dots: false
+        }
+      }
+    ]
+  });
+});
+
+/*Второй слайдер на странице Game*/
+$(document).ready(function(){
+  $('.game-slider--other').slick({
+    infinite: true,
+    dots: false,
+    arrows: true,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 3,
+    prevArrow: '<div class="prev-5"></div>',
+    nextArrow: '<div class="next-5"></div>',
+
+    responsive: [
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+          dots: false
+        }
+      }
+    ]
+  });
+});

@@ -1,22 +1,11 @@
-.main-intro {
+.show-carousel {
   width: 100%;
-
-  &__logo {
-    width: 100%;
-    height: auto;
-  }
-
-  &__img {
-    width: 320px;
-    height: auto;
-  }
+  margin-bottom: 28px;
 }
 
 @media only screen and (min-width: $mobile) {
-  .main-intro {
-    &__img {
-      width: 100%;
-    }
+  .show-carousel {
+    margin-bottom: 31px;
   }
 }
 

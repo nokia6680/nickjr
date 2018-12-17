@@ -2,7 +2,7 @@
   width: 36px;
   height: 36px;
 
-  border-radius: 18px;
+  border-radius: 50%;
   border: none;
 
   background-color: $pagination-btn;
@@ -44,7 +44,7 @@
     top: -2px;
     left: -2px;
 
-    border-radius: 20px;
+    border-radius: 50%;
     border: none;
     background-color: rgba(155, 155, 155, 0.23);
   }
@@ -57,23 +57,17 @@
 
     border-radius: 50%;
 
-    font: {
-      size: 1.875em;
-      family: $fat-font;
-    }
+    padding-top: 5px;
 
-    color: $text-white;
-    line-height: 1;
-
-    padding-top: 2px;
-
+    cursor: pointer;
     outline: none;
+
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   &__text {
     font: {
-      size: 1.25em;
+      size: 1.875em;
       family: $fat-font;
     }
 
@@ -92,6 +86,38 @@
       color: $text-pagination-white;
     }
   }
+}
+
+@media only screen and (min-width: $mobile) {
+  .pagination-item {
+    width: 39px;
+    height: 39px;
+
+    /*Тень*/
+    &::before {
+      width: 45px;
+      height: 45px;
+
+      top: -3px;
+      left: -3px;
+
+      border-radius: 50%;
+    }
+
+    &__text {
+      font: {
+        size: 1.875em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
 }
 
 @media only screen and (min-width: $notebooks) {

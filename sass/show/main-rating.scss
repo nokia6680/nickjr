@@ -8,6 +8,8 @@
 
   flex-wrap: wrap;
 
+  position: relative;
+
   &__final {
     font: {
       size: 2.125em;
@@ -44,7 +46,7 @@
   .reviewStars-input__label,
   .reviewStars-input__label:hover,
   .reviewStars-input__label:hover ~ label {
-    background: url('https://www.giftofspeed.com/sprite-generator/sprites/faefa6ef6ae62112419038a819170a7a.png') no-repeat;
+    background: url('../img/rating-sprite.png') no-repeat;
   }
   .reviewStars-input {
     width: 50%;
@@ -110,4 +112,20 @@
       left: 265px;
     }
   }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
+}
+
+@media only screen and (min-width: $notebooks) {
+
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
 }

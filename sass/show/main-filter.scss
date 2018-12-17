@@ -75,3 +75,25 @@
     }
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .main-filter {
+    top: 155px;
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
+}
+
+@media only screen and (min-width: $notebooks) {
+
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
+}

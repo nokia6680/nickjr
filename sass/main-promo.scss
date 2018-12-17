@@ -80,6 +80,33 @@
   }
 }
 
+@media only screen and (min-width: $mobile) {
+  .main-promo {
+    &__wrapper {
+      max-width: 320px;
+    }
+
+    /*Промоблок-2 только для мобильных*/
+    &--mobile {
+      .main-promo__wrapper {
+        max-width: 320px;
+      }
+    }
+
+    &--show {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
+}
+
 @media only screen and (min-width: $notebooks) {
   .main-promo {
     display: flex;

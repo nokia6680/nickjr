@@ -1,0 +1,115 @@
+.share-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  background-color: $bg-white;
+
+  margin-right: 40px;
+
+  &__counter {
+    padding-left: 30px;
+    padding-top: 5px;
+
+    font: {
+      size: 1em;
+      family: $fat-font;
+    }
+
+    color: $text-white;
+    line-height: 1;
+  }
+
+  .fa-facebook-f::before {
+    position: absolute;
+    content: '\f39e';
+    font-size: 1.25em;
+    color: $social-bg;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fa-vk::before {
+    position: absolute;
+    content: '\f189';
+    font-size: 1.25em;
+    color: $social-bg;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fa-twitter::before {
+    position: absolute;
+    content: '\f099';
+    font-size: 1.25em;
+    color: $social-bg;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fa-odnoklassniki::before {
+    position: absolute;
+    content: '\f263';
+    font-size: 1.25em;
+    color: $social-bg;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .share-item {
+    width: 26px;
+    height: 26px;
+
+    margin-right: 40px;
+
+    &__counter {
+      padding-left: 30px;
+      padding-top: 5px;
+    }
+
+    .fa-facebook-f::before {
+      font-size: 1.25em;
+    }
+
+    .fa-vk::before {
+      font-size: 1.25em;
+    }
+
+    .fa-twitter::before {
+      font-size: 1.25em;
+    }
+
+    .fa-odnoklassniki::before {
+      font-size: 1.25em;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+
+}
+
+@media only screen and (min-width: $tablets) {
+
+}
+
+@media only screen and (min-width: $notebooks) {
+
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
+}
