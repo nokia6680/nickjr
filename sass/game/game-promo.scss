@@ -73,7 +73,41 @@
 }
 
 @media only screen and (min-width: $notebooks) {
+  .game-promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
+    width: 300px;
+    margin: 0;
+
+    position: absolute;
+
+    right: 0;
+    bottom: 16px;
+
+    &__content {
+      display: flex;
+
+      width: 300px;
+      height: 265px;
+
+      &--first {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__link {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

@@ -56,7 +56,10 @@
 }
 
 @media only screen and (min-width: $notebooks) {
-
+  .main-service {
+    align-items: flex-start;
+    padding-bottom: 20px;
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

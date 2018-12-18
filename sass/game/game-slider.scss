@@ -76,7 +76,26 @@
 }
 
 @media only screen and (min-width: $notebooks) {
+  .game-slider {
+    &__item {
+      flex-direction: column !important;
+      justify-content: space-between;
 
+      margin-bottom: 0;
+      margin-right: 0;
+
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__link:nth-of-type(odd) {
+      margin-right: 0;
+    }
+
+    &__link:first-of-type {
+      margin-bottom: 23px;
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

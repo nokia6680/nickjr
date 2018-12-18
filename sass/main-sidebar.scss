@@ -34,3 +34,28 @@
     }
   }
 }
+
+@media only screen and (min-width: $notebooks) {
+  .main-sidebar {
+    position: absolute;
+
+    width: 320px;
+
+    top: 328px;
+    right: 0;
+
+    &__promo {
+      display: none;
+    }
+
+    &--show {
+      position: relative;
+      top: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
+}

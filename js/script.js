@@ -41,6 +41,15 @@ $(document).ready(function() {
 
     responsive: [
       {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 8,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true
+        }
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 6.5,
@@ -102,6 +111,18 @@ $(document).ready(function(){
     nextArrow: '<div class="next-2"></div>',
 
     responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: false,
+          vertical: true,
+          verticalSwiping: true
+        }
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -178,6 +199,18 @@ $(document).ready(function(){
     nextArrow: '<div class="next-3"></div>',
 
     responsive: [
+        {
+          breakpoint: 1449,
+          settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+          dots: false,
+          vertical: false,
+          verticalSwiping: false
+        }
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -256,6 +289,18 @@ $(document).ready(function(){
     nextArrow: '<div class="next-5"></div>',
 
     responsive: [
+          {
+            breakpoint: 1440,
+            settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: false,
+            dots: false,
+            vertical: false,
+            verticalSwiping: false
+          }
+        },
         {
           breakpoint: 1024,
           settings: {

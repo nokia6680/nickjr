@@ -1,5 +1,6 @@
 .slider-item {
   display: grid;
+
   grid-template-rows: 1fr;
   width: 100%;
   /*Грид блок для одного большого элемента*/
@@ -37,6 +38,7 @@
     /*Грид блок для двух одинаковых элементов*/
     &--two {
       grid-template-columns: 300px 300px;
+
       justify-content: space-between;
       grid-gap: unset;
 
@@ -53,6 +55,32 @@
 
 @media only screen and (min-width: $notebooks) {
   .slider-item {
-    width: 994px;
+    width: 100%;
+
+    &--lefttwo {
+      grid-template-columns: 300px 596px;
+      justify-content: space-between;
+
+      padding: 0;
+    }
+
+    &--righttwo {
+      grid-template-columns: 596px 300px;
+      justify-content: space-between;
+
+      padding: 0;
+    }
+
+    &--one {
+      grid-template-columns: 596px;
+      justify-content: flex-start;
+      padding: 0;
+    }
+
+    &--three {
+      grid-template-columns: 300px 300px 300px;
+      justify-content: space-between;
+      padding: 0;
+    }
   }
 }

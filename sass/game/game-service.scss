@@ -76,7 +76,32 @@
 }
 
 @media only screen and (min-width: $notebooks) {
+  .game-service {
+    width: 40%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
 
+    &__mark {
+      width: 224px;
+      height: 50px;
+
+      font: {
+        size: 1.625em;
+      }
+
+      padding-left: 40px;
+
+      &::after {
+        width: 32px;
+        height: 29px;
+
+        left: 15px;
+
+        background-size: 32px 29px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

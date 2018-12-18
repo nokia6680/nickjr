@@ -16,6 +16,10 @@
   &--tablets {
     display: none;
   }
+
+  &--desktop {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -45,7 +49,17 @@
 }
 
 @media only screen and (min-width: $notebooks) {
+  .slider-list {
+    grid-gap: 30px;
 
+    &--tablets {
+      display: none;
+    }
+
+    &--desktop {
+      display: grid;
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

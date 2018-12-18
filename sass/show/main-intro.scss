@@ -36,7 +36,7 @@
 @media only screen and (min-width: $tablets) {
   .main-intro {
     margin-bottom: 10px;
-    
+
     &__logo {
       min-width: 581px;
       text-align: center;
@@ -47,10 +47,6 @@
       height: auto;
     }
   }
-}
-
-@media only screen and (min-width: $notebooks) {
-
 }
 
 @media only screen and (min-width: $widebooks-hd) {

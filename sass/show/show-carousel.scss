@@ -22,7 +22,9 @@
 }
 
 @media only screen and (min-width: $notebooks) {
-
+  .show-carousel {
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

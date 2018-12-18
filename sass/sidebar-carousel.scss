@@ -44,7 +44,7 @@
 @media only screen and (min-width: $tablets) {
   .sidebar-carousel {
     max-width: 660px;
-    
+
     &__title {
       margin-bottom: 11px;
 
@@ -55,8 +55,30 @@
   }
 }
 
-
 @media only screen and (min-width: $notebooks) {
+  .sidebar-carousel {
+    width: 320px;
+
+    &__title {
+      margin-bottom: 9px;
+
+      font: {
+        size: 1.875em;
+      }
+    }
+    /*Скрывается один из слайдеров*/
+    &--second {
+      display: none;
+    }
+    /*На странице шоу включается обратно*/
+    &--show {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
   .sidebar-carousel {
     display: flex;
     flex-direction: column;

@@ -34,9 +34,9 @@
 
   @media only screen and (min-width: $notebooks) {
     width: auto;
-    max-width: 100%;
+    max-width: 940px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0;
   }
 
   @media only screen and (min-width: $widebooks-hd) {

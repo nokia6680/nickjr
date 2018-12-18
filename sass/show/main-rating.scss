@@ -257,7 +257,50 @@
 }
 
 @media only screen and (min-width: $notebooks) {
+  .main-rating {
+    padding-top: 0;
+  }
 
+  .main-rating--game {
+    .main-rating__final {
+      font: {
+        size: 3em;
+      }
+    }
+
+    .reviewStars-input__input:checked ~ label,
+    .reviewStars-input__label,
+    .reviewStars-input__label:hover,
+    .reviewStars-input__label:hover ~ label {
+      background: url('../img/rating-sprite-768.png') no-repeat;
+    }
+    .reviewStars-input {
+      &__input {
+        width: 41px;
+        height: 40px;
+      }
+
+      &__input:checked ~ label {
+        background-position: 0 -40px;
+        width: 41px;
+        height: 40px;
+      }
+
+      &__label {
+        width: 41px;
+        height: 40px;
+
+        margin-right: 5px;
+      }
+
+      &__label:hover,
+      &__label:hover ~ label {
+        background-position: 0 -40px;
+        width: 41px;
+        height: 40px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

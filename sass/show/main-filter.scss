@@ -128,14 +128,47 @@
 
     top: -15px;
     right: 0;
-    
+
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 @media only screen and (min-width: $notebooks) {
+  .main-filter {
+    width: 326px;
 
+    top: -10px;
+
+    &__btn {
+      width: 150px;
+      height: 50px;
+
+      font: {
+        size: 1.625em;
+      }
+
+      &--game {
+        padding-left: 50px;
+
+        &::after {
+          width: 47px;
+          height: 30px;
+
+          background-size: 47px 30px;
+        }
+      }
+
+      &--video {
+        &::after {
+          width: 24px;
+          height: 30px;
+
+          background-size: 24px 30px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

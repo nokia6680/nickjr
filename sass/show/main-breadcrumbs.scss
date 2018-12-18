@@ -17,7 +17,9 @@
 }
 
 @media only screen and (min-width: $notebooks) {
-
+  .main-breadcrumbs {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

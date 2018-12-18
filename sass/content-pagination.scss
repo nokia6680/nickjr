@@ -16,5 +16,23 @@
     justify-content: flex-start;
 
     max-width: 330px;
+
+    &--index {
+      justify-content: center;
+      max-width: 660px;
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .content-pagination {
+    justify-content: flex-start;
+
+    max-width: 660px;
+
+    &--index {
+      justify-content: center;
+      max-width: 940px;
+    }
   }
 }

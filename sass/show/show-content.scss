@@ -65,7 +65,16 @@
 }
 
 @media only screen and (min-width: $notebooks) {
-
+  .show-content {
+    &__description {
+      font: {
+        size: 1.188em;
+      }
+      min-height: auto;
+      max-height: 150px;
+      margin-bottom: 13px;
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

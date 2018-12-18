@@ -9,6 +9,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/grid-layout-polyfill.min.js"></script>
 	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
 	<script type="text/javascript">
 		VK.init({apiId: API_ID, onlyWidgets: true});
@@ -199,28 +200,6 @@
 
 						</iframe>
 					</div>
-					<!--Боковой блок с рекламой-->
-					<div class="game-content__promo game-promo" id="promo-7">
-						<div class="game-promo__wrapper">
-							<a class="game-promo__link">
-								<img class="game-promo__img" src="img/promo-2.png" />
-								<span class="game-promo__text">Реклама</span>
-							</a>
-						</div>
-						<!---->
-						<div class="game-promo__content item-content item-content--promo item-content--small">
-							<a class="item-content__link item-content__link--promo" href="#" target="_self">
-								<img class="item-content__preview" src="img/promo-1.png" alt="name-of-video-1" />
-								<span class="item-content__text">Реклама</span>
-							</a>
-						</div>
-						<div class="game-promo__content item-content item-content--promo item-content--small">
-							<a class="item-content__link item-content__link--promo" href="#" target="_self">
-								<img class="item-content__preview" src="img/promo-1.png" alt="name-of-video-1" />
-								<span class="item-content__text">Реклама</span>
-							</a>
-						</div>
-					</div>
 					<!--Share block-->
 					<div class="game-content__share game-share">
 						<h3 class="game-share__title">Поделись игрой с</h3>
@@ -245,6 +224,28 @@
 						<button class="game-controls__btn game-controls__btn--prev" type="button">Назад</button>
 						<button class="game-controls__btn game-controls__btn--next" type="button">Вперед</button>
 						<button class="game-controls__btn game-controls__btn--expand" type="button"></button>
+					</div>
+				</div>
+				<!--Боковой блок с рекламой-->
+				<div class="game-content__promo game-promo" id="promo-7">
+					<div class="game-promo__wrapper">
+						<a class="game-promo__link">
+							<img class="game-promo__img" src="img/promo-2.png" />
+							<span class="game-promo__text">Реклама</span>
+						</a>
+					</div>
+					<!---->
+					<div class="game-promo__content game-promo__content--first">
+						<a class="game-promo__link" href="#" target="_self">
+							<img class="game-promo__preview" src="img/promo-1.png" alt="name-of-video-1" />
+							<span class="game-promo__text">Реклама</span>
+						</a>
+					</div>
+					<div class="game-promo__content">
+						<a class="game-promo__link" href="#" target="_self">
+							<img class="game-promo__preview" src="img/promo-1.png" alt="name-of-video-1" />
+							<span class="game-promo__text">Реклама</span>
+						</a>
 					</div>
 				</div>
 			</section>

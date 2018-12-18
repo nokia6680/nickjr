@@ -52,7 +52,31 @@
 }
 
 @media only screen and (min-width: $notebooks) {
+  .show-item {
+    /*Грид блок для одного большого элемента*/
+    &--one {
+      grid-template-columns: 1fr;
+    }
+    /*Грид блок для двух одинаковых элементов*/
+    &--two {
+      grid-template-columns: 300px 300px;
+      justify-content: space-between;
+      grid-gap: unset;
 
+      padding-left: 0;
+      padding-right: 0;
+    }
+    /*Грид блок для блока с рекламой*/
+    &--center {
+      align-items: center;
+    }
+    /*Грид блок для 3х блоков*/
+    &--three {
+      grid-template-columns: 300px 300px 300px;
+      justify-content: space-between;
+      padding: 0;
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

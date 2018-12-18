@@ -56,7 +56,11 @@
 }
 
 @media only screen and (min-width: $notebooks) {
-
+  .main-show {
+    &__title {
+      font-size: 2.875em;
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {

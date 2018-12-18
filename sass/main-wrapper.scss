@@ -68,6 +68,12 @@
 
 @media only screen and (min-width: $notebooks) {
   .main-wrapper {
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .main-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

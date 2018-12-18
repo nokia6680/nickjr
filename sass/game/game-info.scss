@@ -89,7 +89,25 @@
 }
 
 @media only screen and (min-width: $notebooks) {
+  .game-info {
+    width: 60%;
+    
+    &__title {
+      font: {
+        size: 2.875em;
+      }
 
+      margin-top: 0;
+    }
+    &__description {
+      font: {
+        size: 1.188em;
+      }
+
+      min-height: auto;
+      max-height: 150px;
+    }
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {
