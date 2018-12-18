@@ -167,7 +167,7 @@
 
 @media only screen and (min-width: $widebooks-hd) {
   .sidebar-slider {
-    width: 100%;
+    width: 246px;
 
     &__item {
       display: flex !important;
@@ -176,6 +176,12 @@
       align-items: center;
 
       margin-bottom: 23px;
+      margin-left: 0;
+
+      &:not(:nth-of-type(4n)) {
+        margin-right: 0px !important;
+        margin-left: 0px;
+      }
     }
 
     &__link {
@@ -183,17 +189,20 @@
       width: 100px !important;
       height: 100px;
 
-      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.65);
+      margin-bottom: 0;
+    }
 
-      border-radius: 15px;
+    &__preview {
+      width: 100px;
+      height: 100px;
     }
 
     &__link:nth-of-type(odd) {
       margin-right: 38px;
     }
 
-    &--first {
-      .next-2 {
+    &--second {
+      .next-3 {
         width: 138px;
         height: 54px;
 
@@ -220,24 +229,51 @@
       }
     }
 
-    &--second {
+    &--show {
+      max-width: 100%;
+
+      .sidebar-slider__item {
+        width: 100% !important;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        margin-bottom: 22px;
+
+        padding-left: 0;
+        padding-right: 0px;
+
+        &:not(:nth-of-type(4n)) {
+          margin-right: 0;
+          margin-left: 0;
+        }
+
+        &:not(:nth-of-type(2n)) {
+          margin-right: 20px !important;
+          margin-left: 0 !important;
+        }
+      }
+
       .next-3 {
         width: 138px;
         height: 54px;
 
         box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.27);
         border-radius: 27px;
-        background-color: #3abdcb;
+        background-color: #ffffff;
 
         margin: 0 auto;
         position: relative;
 
-        background-image: url('../img/arrow-down.svg');
+        background-image: url('../img/arrow-down-blue.svg');
         background-repeat: no-repeat;
         background-size: 36px 24px;
         background-position: center center;
 
         text-align: center;
+
+        display: block;
 
         &:hover {
           box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.27);

@@ -30,3 +30,15 @@
     margin-bottom: 15px;
   }
 }
+
+@media only screen and (min-width: $widebooks-hd) {
+  .game-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    max-width: 1280px;
+
+    margin-bottom: 24px;
+  }
+}

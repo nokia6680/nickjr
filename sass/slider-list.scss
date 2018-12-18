@@ -20,6 +20,10 @@
   &--desktop {
     display: none;
   }
+
+  &--hd {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -63,5 +67,19 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
+  .slider-list {
+    grid-gap: 28px;
 
+    &--tablets {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+    }
+
+    &--hd {
+      display: grid;
+    }
+  }
 }

@@ -63,5 +63,8 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
-
+  .main-service {
+    width: 994px;
+    align-self: flex-start;
+  }
 }

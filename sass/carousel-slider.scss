@@ -199,29 +199,51 @@
   }
 }
 
-@media only screen and (min-width: $notebooks) {
-
-}
-
 @media only screen and (min-width: $widebooks-hd) {
   .carousel-slider {
+    width: 100% !important;
+
     &__cartoon {
       width: 100px !important;
       height: 100px;
+
+      margin-left: 10px;
     }
 
     .prev-1 {
-      width: 100px;
-      height: 10px;
+      width: 118px;
+      height: 98px;
+
+      left: -80px;
+
+      border-radius: 40px;
+
+      background-image: url('../img/arrow-left.png');
+      background-size: 18px 29px;
+
+      &:hover {
+        left: -70px;
+      }
     }
 
     .next-1 {
-      width: 100px;
-      height: 10px;
+      width: 118px;
+      height: 98px;
+
+      right: -80px;
+
+      border-radius: 40px;
+
+      background-image: url('../img/arrow-right.png');
+      background-size: 18px 29px;
+
+      &:hover {
+        right: -70px;
+      }
     }
 
     .slick-list {
-      height: 120px;
+      height: 130px;
     }
   }
 }

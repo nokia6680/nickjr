@@ -64,5 +64,7 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
-
+  .main-show {
+    position: relative;
+  }
 }

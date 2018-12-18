@@ -87,5 +87,12 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
+  .game-content {
+    width: 930px;
+    align-self: flex-start;
 
+    &__frame {
+      min-height: 555px;
+    }
+  }
 }

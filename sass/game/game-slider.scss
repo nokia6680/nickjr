@@ -99,5 +99,125 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
+  .game-slider {
+    &--similar {
+      .prev-4 {
+        position: absolute;
 
+        width: 43px;
+        height: 66px;
+        z-index: 10;
+
+        top: 50%;
+        left: -50px;
+
+        transform: translateY(-50%);
+
+        background-image: url('../img/arrow-game-left.png');
+        background-size: 43px 66px;
+        background-repeat: no-repeat;
+      }
+
+      .next-4 {
+        position: absolute;
+
+        width: 43px;
+        height: 66px;
+        z-index: 10;
+
+        top: 50%;
+        right: -50px;
+
+        transform: translateY(-50%);
+
+        background-image: url('../img/arrow-game-right.png');
+        background-size: 43px 66px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--other {
+      .next-5 {
+        width: 138px;
+        height: 54px;
+
+        box-shadow: inset 0 -6px 5px rgba(0, 0, 0, 0.27);
+        border-radius: 27px;
+        background-color: #ffffff;
+
+        margin: 0 auto;
+        position: relative;
+
+        background-image: url('../img/arrow-down-blue.svg');
+        background-repeat: no-repeat;
+        background-size: 36px 24px;
+        background-position: center center;
+
+        text-align: center;
+
+        display: block;
+
+        &:hover {
+          box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.27);
+
+          transform: translate(0, 3px);
+          transition: 0.1s ease-in;
+        }
+      }
+    }
+
+    &__item {
+      flex-direction: row !important;
+      justify-content: space-between;
+
+      margin: 0;
+
+      padding: 0;
+    }
+
+    .slick-track {
+      height: 310px;
+    }
+
+    &__link:first-of-type {
+      margin: 0;
+    }
+
+    &__item--similar {
+      width: 627px !important;
+      height: 300px;
+
+      justify-content: center;
+    }
+
+    &__link--similar {
+      width: 300px !important;
+      height: 300px;
+      min-width: 300px;
+
+      &:first-of-type {
+        margin-right: 20px;
+      }
+    }
+
+    &__preview--similar {
+      width: 300px;
+      height: 300px;
+    }
+
+    &__item--other {
+      width: 330px;
+      height: 150px;
+
+      flex-direction: row !important;
+      justify-content: space-between;
+
+      margin-bottom: 23px;
+    }
+
+    &__link--other {
+      width: 150px !important;
+      height: 150px;
+    }
+  }
 }

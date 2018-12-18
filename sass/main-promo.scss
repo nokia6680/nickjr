@@ -187,5 +187,13 @@
     &--mobile {
       display: none;
     }
+
+    &--first {
+      margin-bottom: 0;
+    }
+
+    &--game {
+      margin-bottom: 32px;
+    }
   }
 }

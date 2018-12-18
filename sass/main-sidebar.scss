@@ -57,5 +57,21 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
+  .main-sidebar {
+    position: relative;
 
+    width: 246px;
+
+    top: auto;
+
+    &__promo {
+      display: flex;
+    }
+
+    &--show {
+      position: absolute;
+      top: 360px;
+      right: 0;
+    }
+  }
 }

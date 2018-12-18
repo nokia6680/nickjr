@@ -50,5 +50,9 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
-
+  .main-intro {
+    &--game {
+      display: none;
+    }
+  }
 }

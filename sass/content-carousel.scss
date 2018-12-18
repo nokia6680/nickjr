@@ -27,3 +27,10 @@
     margin-bottom: 38px;
   }
 }
+
+@media only screen and (min-width: $widebooks-hd) {
+  .content-carousel {
+    width: 994px;
+    margin-bottom: 48px;
+  }
+}

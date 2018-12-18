@@ -307,5 +307,8 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
-
+  .game-controls {
+    width: 640px;
+    align-self: flex-start;
+  }
 }

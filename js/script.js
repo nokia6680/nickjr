@@ -32,7 +32,7 @@ $(document).ready(function(){
 $(document).ready(function() {
   $(".carousel-slider").slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 11,
     slidesToScroll: 1,
     arrows: true,
 
@@ -106,7 +106,7 @@ $(document).ready(function(){
     arrows: true,
     vertical: true,
     verticalSwiping: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     prevArrow: '<div class="prev-2"></div>',
     nextArrow: '<div class="next-2"></div>',
 
@@ -156,7 +156,7 @@ $(document).ready(function(){
     arrows: true,
     vertical: true,
     verticalSwiping: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     prevArrow: '<div class="prev-3"></div>',
     nextArrow: '<div class="next-3"></div>',
 
@@ -194,13 +194,13 @@ $(document).ready(function(){
     arrows: true,
     vertical: true,
     verticalSwiping: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     prevArrow: '<div class="prev-3"></div>',
     nextArrow: '<div class="next-3"></div>',
 
     responsive: [
         {
-          breakpoint: 1449,
+          breakpoint: 1440,
           settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
@@ -243,9 +243,9 @@ $(document).ready(function(){
     infinite: true,
     dots: false,
     arrows: true,
-    vertical: true,
-    verticalSwiping: true,
-    slidesToShow: 3,
+    vertical: false,
+    verticalSwiping: false,
+    slidesToShow: 2,
     prevArrow: '<div class="prev-4"></div>',
     nextArrow: '<div class="next-4"></div>',
 
@@ -284,7 +284,7 @@ $(document).ready(function(){
     arrows: true,
     vertical: true,
     verticalSwiping: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     prevArrow: '<div class="prev-5"></div>',
     nextArrow: '<div class="next-5"></div>',
 

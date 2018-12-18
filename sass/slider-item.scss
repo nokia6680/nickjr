@@ -84,3 +84,29 @@
     }
   }
 }
+
+@media only screen and (min-width: $widebooks-hd) {
+  .slider-item {
+    width: 100%;
+
+    &--lefttwo {
+      grid-template-columns: 300px 646px;
+      justify-content: space-between;
+
+      padding: 0;
+    }
+
+    &--righttwo {
+      grid-template-columns: 646px 300px;
+      justify-content: space-between;
+
+      padding: 0;
+    }
+
+    &--three {
+      grid-template-columns: 300px 300px 300px;
+      justify-content: space-between;
+      padding: 0;
+    }
+  }
+}
