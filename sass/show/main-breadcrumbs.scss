@@ -10,12 +10,10 @@
   margin-bottom: 10px;
 }
 
-@media only screen and (min-width: $mobile-hd) {
-
-}
-
 @media only screen and (min-width: $tablets) {
-
+  .main-breadcrumbs {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

@@ -159,7 +159,101 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .main-rating {
+    padding-top: 15px;
 
+    &--game {
+      padding-top: 0;
+    }
+
+    &__final {
+      font: {
+        size: 3em;
+      }
+    }
+
+    &__quantity {
+      font: {
+        size: 0.875em;
+      }
+
+      margin-right: 10px;
+      margin-bottom: 14px;
+    }
+
+    /*Стилизация для звезд*/
+    .reviewStars-input__input:checked ~ label,
+    .reviewStars-input__label,
+    .reviewStars-input__label:hover,
+    .reviewStars-input__label:hover ~ label {
+      background: url('../img/rating-sprite-768.png') no-repeat;
+    }
+    .reviewStars-input {
+      &__input {
+        width: 41px;
+        height: 40px;
+      }
+
+      &__input:checked ~ label {
+        background-position: 0 -40px;
+        width: 41px;
+        height: 40px;
+      }
+
+      &__label {
+        width: 41px;
+        height: 40px;
+
+        margin-right: 5px;
+      }
+
+      &__label:hover,
+      &__label:hover ~ label {
+        background-position: 0 -40px;
+        width: 41px;
+        height: 40px;
+      }
+    }
+  }
+
+  .main-rating--game {
+    .main-rating__final {
+      font-size: 2.563em;
+    }
+    /*Стилизация для звезд*/
+    .reviewStars-input__input:checked ~ label,
+    .reviewStars-input__label,
+    .reviewStars-input__label:hover,
+    .reviewStars-input__label:hover ~ label {
+      background: url('../img/rating-sprite-game.png') no-repeat;
+    }
+    .reviewStars-input {
+      &__input {
+        width: 38px;
+        height: 35px;
+      }
+
+      &__input:checked ~ label {
+        background-position: 0 -35px;
+        width: 38px;
+        height: 35px;
+      }
+
+      &__label {
+        width: 38px;
+        height: 35px;
+
+        margin-right: 5px;
+      }
+
+      &__label:hover,
+      &__label:hover ~ label {
+        background-position: 0 -35px;
+        width: 38px;
+        height: 35px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

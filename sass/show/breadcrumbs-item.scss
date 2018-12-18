@@ -80,7 +80,18 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .breadcrumbs-item {
+    &__link {
+      font: {
+        size: 1.125em;
+      }
+    }
 
+    &:after {
+      font-size: 1.125em;
+      right: -1px;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

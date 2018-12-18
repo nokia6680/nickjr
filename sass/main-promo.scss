@@ -147,7 +147,37 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .main-promo {
+    margin-bottom: 5px;
 
+    &--first {
+      margin-bottom: 32px;
+    }
+
+    &__wrapper {
+      width: 100%;
+      min-width: 728px;
+      max-width: 728px;
+      min-height: 105px;
+    }
+
+    /*Рекламный блок только для размера 480px*/
+    &--hdmob {
+      display: none;
+    }
+
+    &--show {
+      margin-bottom: 15px;
+    }
+
+    &--tabshow {
+      margin-bottom: 0;
+    }
+
+    &--tabgame {
+      margin-bottom: 0;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

@@ -1,3 +1,21 @@
 .header-carousel {
   width: 100%;
 }
+
+
+@media only screen and (min-width: $tablets) {
+  .header-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+
+}

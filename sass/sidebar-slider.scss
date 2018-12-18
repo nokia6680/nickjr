@@ -62,7 +62,32 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .sidebar-slider {
+    width: 100%;
+    max-width: 660px;
 
+    &__item {
+      width: 150px !important;
+
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      margin-bottom: 0;
+
+      padding-left: 0;
+      padding-right: 0px;
+
+      &:not(:nth-of-type(4n)) {
+        margin-right: 20px !important;
+        margin-left: 5px;
+      }
+    }
+
+    &__link {
+      margin-bottom: 26px;
+    }
+  }
 }
 
 

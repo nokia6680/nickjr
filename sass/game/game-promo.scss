@@ -67,7 +67,9 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .game-promo {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

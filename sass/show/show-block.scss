@@ -84,7 +84,86 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .show-block {
+    height: 300px;
 
+    &--small {
+      width: 300px;
+      height: 300px;
+    }
+
+    &--large {
+      width: 100%;
+      height: 300px;
+    }
+
+    &--center {
+      align-content: center;
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    &__preview {
+      width: 300px;
+      height: 300px;
+
+      &--big {
+        width: 660px;
+      }
+    }
+
+    /*Стилизация для блока с рекламой*/
+    &--promo {
+      height: 265px;
+      width: 300px;
+
+      border-radius: 0;
+
+      .show-block__link {
+        width: 300px;
+        height: 250px;
+
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .show-block__preview {
+        height: 250px;
+        width: 300px;
+
+        border-radius: 0;
+      }
+
+      .show-block__text {
+        width: 300px;
+
+        background-color: $bg-black;
+        border-radius: 0 0 8px 8px;
+
+        display: block;
+        margin-top: -4px;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        font: {
+          family: $promo-font;
+          size: 0.5em;
+          weight: 700;
+        }
+        color: $text-white;
+        line-height: 1;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

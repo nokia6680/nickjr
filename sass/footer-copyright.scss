@@ -32,7 +32,13 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .footer-copyright {
+    &__description {
+      &--reserve {
+        width: 658px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

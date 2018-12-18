@@ -33,7 +33,13 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .main-vk {
+    &__title {
+      font: {
+        size: 1.875em;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

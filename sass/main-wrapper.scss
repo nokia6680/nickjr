@@ -5,10 +5,65 @@
   align-items: center;
 
   width: 100%;
+
+  &__intro--game {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $tablets) {
+  .main-wrapper {
+    &__breadcrumbs {
+      order: 2;
+    }
 
+    &__intro {
+      order: 1;
+    }
+
+    &__show {
+      order: 3;
+    }
+
+    &__sidebar {
+      order: 4;
+    }
+
+    &__vk {
+      order: 5;
+    }
+    /*Порядок в контейнере для страницы с игрой*/
+    &--game {
+      .main__promo {
+        display: none;
+      }
+
+      .main-sidebar__promo {
+        display: none;
+      }
+
+      .main-wrapper__intro--game {
+        display: block;
+        order: 1;
+      }
+
+      .main-wrapper__game {
+        order: 3;
+      }
+
+      .main-wrapper__breadcrumbs {
+        order: 2;
+      }
+
+      .main-wrapper__carousel {
+        order: 4;
+      }
+
+      .main-wrapper__bottom {
+        order: 5;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

@@ -6,3 +6,15 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+@media only screen and (min-width: $tablets) {
+  .game-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    max-width: 660px;
+
+    margin-bottom: 22px;
+  }
+}

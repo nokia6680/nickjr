@@ -48,7 +48,11 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .main-show {
+    &__title {
+      margin-top: 0;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

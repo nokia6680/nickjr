@@ -16,7 +16,9 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .show-carousel {
+    margin-bottom: 22px;
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

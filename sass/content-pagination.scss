@@ -10,3 +10,11 @@
   margin: 0;
   padding: 0;
 }
+
+@media only screen and (min-width: $tablets) {
+  .content-pagination {
+    justify-content: flex-start;
+
+    max-width: 330px;
+  }
+}

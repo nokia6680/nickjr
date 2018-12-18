@@ -29,7 +29,9 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .links-item {
+    margin-right: 10px;
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

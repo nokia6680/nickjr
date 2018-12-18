@@ -30,7 +30,25 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .show-item {
+    /*Грид блок для одного большого элемента*/
+    &--one {
+      grid-template-columns: 1fr;
+    }
+    /*Грид блок для двух одинаковых элементов*/
+    &--two {
+      grid-template-columns: 300px 300px;
+      justify-content: space-between;
+      grid-gap: unset;
 
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &--center {
+      align-items: center;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

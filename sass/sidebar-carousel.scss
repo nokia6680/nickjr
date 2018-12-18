@@ -42,7 +42,17 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .sidebar-carousel {
+    max-width: 660px;
+    
+    &__title {
+      margin-bottom: 11px;
 
+      font: {
+        size: 2.188em;
+      }
+    }
+  }
 }
 
 

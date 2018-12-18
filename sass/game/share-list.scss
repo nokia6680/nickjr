@@ -21,7 +21,9 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .share-list {
+    margin-bottom: 25px;
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

@@ -130,7 +130,7 @@
 	<!--Основное содержание страницы-->
   <main class="main main--show">
 		<!--Рекламная секция 1-->
-		<section class="main__promo main-promo main-promo--first" id="promo-1">
+		<section class="main__promo main-promo main-promo--first main-promo--tabshow" id="promo-1">
 			<div class="main-promo__wrapper">
 				<a class="main-promo__link">
 					<img class="main-promo__img" src="img/promo-2.png" />
@@ -152,7 +152,7 @@
 				</ul>
 			</div>
 			<!--Шапка с логотипом шоу-->
-			<section class="main__intro main-intro">
+			<section class="main-wrapper__intro main-intro">
 				<!--Лого шоу-->
 				<div class="main-intro__logo" id="show-1">
 					<img class="main-intro__image" src="img/main-intro-bg.png" alt="Logo-show-name" />
@@ -171,7 +171,8 @@
 					<p class="show-content__description" id="show-description-1">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития.</p>
 					<!--Слайдер основной для конкретного шоу-->
 					<div class="main-content__carousel show-carousel" id="show-carousel">
-						<ul class="content-slider__list show-list" id="show-content">
+						<!--Список контента для мобильных-->
+						<ul class="content-slider__list show-list show-list--mobile" id="show-content">
 							<!--Single row-->
 							<li class="show-list__item show-item show-item--two">
 								<div class="show-item__content show-block show-block--small">
@@ -195,6 +196,49 @@
 								<div class="show-item__content show-block show-block--small">
 									<a class="show-block__link" href="game.html" target="_self" id="game">
 										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
+									</a>
+								</div>
+							</li>
+							<!--Single row-->
+							<li class="show-list__item show-item show-item--two">
+								<div class="show-item__content show-block show-block--small">
+									<a class="show-block__link" href="game.html" target="_self" id="game">
+										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
+									</a>
+								</div>
+								<div class="show-item__content show-block show-block--small">
+									<a class="show-block__link" href="game.html" target="_self" id="game">
+										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
+									</a>
+								</div>
+							</li>
+						</ul>
+						<!--Список контента для планшета-->
+						<ul class="content-slider__list show-list show-list--tablet" id="show-content">
+							<!--Single row-->
+							<li class="show-list__item show-item show-item--two">
+								<div class="show-item__content show-block show-block--small">
+									<a class="show-block__link" href="game.html" target="_self" id="game">
+										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
+									</a>
+								</div>
+								<div class="show-item__content show-block show-block--small">
+									<a class="show-block__link" href="game.html" target="_self" id="game">
+										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
+									</a>
+								</div>
+							</li>
+							<!--Single row-->
+							<li class="show-list__item show-item show-item--two show-item--center">
+								<div class="show-item__content show-block show-block--small">
+									<a class="show-block__link" href="game.html" target="_self" id="game">
+										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
+									</a>
+								</div>
+								<div class="show-item__content show-block show-block--promo">
+									<a class="show-block__link" href="game.html" target="_self" id="game">
+										<img class="show-block__preview" src="img/promo-1.png" alt="name-of-game-1" />
+										<span class="show-block__text">Реклама</span>
 									</a>
 								</div>
 							</li>
@@ -360,7 +404,7 @@
 					<div class="next-3"></div>
 				</div>
 				<!--Рекламный блок боковой панели-->
-				<article class="main-sidebar__promo sidebar-promo">
+				<article class="main-sidebar__promo sidebar-promo sidebar-promo--tabbottom">
 					<a class="sidebar-promo__link" href="#" target="_blank">
 						<img class="sidebar-promo__img" src="img/promo-3.png" alt="Promo-3" />
 						<span class="sidebar-promo__text">Реклама</span>

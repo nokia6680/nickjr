@@ -60,7 +60,16 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .footer {
+    padding-left: 54px;
+    padding-right: 54px;
 
+    padding-bottom: 26px;
+
+    &__metric {
+      margin-bottom: 13px;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

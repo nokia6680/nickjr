@@ -235,7 +235,71 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .game-controls {
+    padding-top: 23px;
+    margin-bottom: 23px;
 
+    &__btn {
+      padding-top: 6px;
+      padding-bottom: 3px;
+
+      height: 50px;
+
+      font-size: 1.625em;
+      /*Кнопка отправки проблемы*/
+      &--report {
+        font-size: 1.438em;
+        padding-top: 5px;
+        padding-left: 50px;
+
+        width: 209px;
+
+        &::before {
+          width: 37px;
+          height: 37px;
+
+          background-size: 37px 37px;
+
+          left: 10px;
+        }
+      }
+      /*Кнопка - назад*/
+      &--prev {
+        width: 150px;
+        padding-right: 0;
+
+        &::before {
+          width: 17px;
+          height: 25px;
+
+          background-size: 17px 25px;
+          left: 10px;
+        }
+      }
+
+      &--next {
+        width: 150px;
+        padding-left: 0;
+
+        &::before {
+          width: 17px;
+          height: 25px;
+
+          background-size: 17px 25px;
+          right: 10px;
+        }
+      }
+
+      &--expand {
+        border-radius: 0;
+
+        width: 50px;
+        height: 50px;
+
+        background-size: 50px 50px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

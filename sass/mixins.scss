@@ -27,9 +27,9 @@
 
   @media only screen and (min-width: $tablets) {
     width: auto;
-    max-width: 100%;
+    max-width: 660px;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0;
   }
 
   @media only screen and (min-width: $notebooks) {

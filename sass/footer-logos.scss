@@ -64,7 +64,19 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .footer-logos {
+    &__img--nick {
+      min-width: 190px;
+      max-height: 27px;
 
+      margin-right: 50px;
+    }
+
+    &__img--nickjr {
+      width: 100px;
+      max-height: 27px;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

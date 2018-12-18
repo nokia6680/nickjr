@@ -62,7 +62,17 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .game-slider {
+    &__item {
+      justify-content: space-around;
 
+      margin-bottom: 0;
+      margin-right: 0;
+
+      padding-left: 10px;
+      padding-right: 5px;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

@@ -42,7 +42,19 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .game-carousel {
+    &__title {
+      margin-bottom: 14px;
+    }
 
+    &--similar {
+      margin-bottom: 22px;
+    }
+
+    &--other {
+      margin-bottom: 22px;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

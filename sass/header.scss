@@ -13,17 +13,14 @@
 
 @media only screen and (min-width: $mobile-hd) {
   .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-
-    overflow: hidden;
   }
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .header {
+    align-items: flex-start;
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

@@ -12,6 +12,10 @@
 
   padding: 0;
   margin: 0;
+
+  &--tablet {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -27,7 +31,17 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .show-list {
+    grid-gap: 28px;
 
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: grid;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

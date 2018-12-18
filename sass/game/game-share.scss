@@ -52,7 +52,15 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .game-share {
+    &__title {
+      font: {
+        size: 1.25em;
+      }
 
+      margin-top: 0;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

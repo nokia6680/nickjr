@@ -80,7 +80,12 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .game-info {
+    &__description {
+      min-height: auto;
+      max-height: 165px;
+    }
+  }
 }
 
 @media only screen and (min-width: $notebooks) {

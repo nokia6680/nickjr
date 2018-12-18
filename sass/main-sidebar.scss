@@ -26,5 +26,11 @@
 }
 
 @media only screen and (min-width: $tablets) {
+  .main-sidebar {
+    padding-bottom: 26px;
 
+    &--show {
+      padding-bottom: 0;
+    }
+  }
 }

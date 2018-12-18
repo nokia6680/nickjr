@@ -20,7 +20,9 @@
 }
 
 @media only screen and (min-width: $tablets) {
-
+  .main-content {
+    padding-bottom: 12px;
+  }
 }
 
 @media only screen and (min-width: $notebooks) {
