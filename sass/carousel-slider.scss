@@ -1,17 +1,172 @@
 .carousel-slider {
   position: relative;
-
+  /*Изображения*/
   &__cartoon {
     width: 70px !important;
     height: 70px;
-
-    background-color: $bg-gray;
 
     border-radius: 50%;
 
     margin-left: 10px;
   }
+  /*Ссылки с изображениями*/
+  &__link {
+    display: block;
 
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+    outline: none;
+
+    &--blaze {
+      background-image: url('../img/buttons/blaze_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/blaze_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--doraexp {
+      background-image: url('../img/buttons/dora_exp1_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/dora_exp1_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--dorafriends {
+      background-image: url('../img/buttons/dora_friends_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/dora_friends_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--guppies {
+      background-image: url('../img/buttons/guppies_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/guppies_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--nella {
+      background-image: url('../img/buttons/nella_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/nella_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--nickjr {
+      background-image: url('../img/buttons/nickjr_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/nickjr_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--paw {
+      background-image: url('../img/buttons/paw_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/paw_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--rusty {
+      background-image: url('../img/buttons/rusty_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/rusty_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--shs {
+      background-image: url('../img/buttons/shs_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/shs_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--sunny {
+      background-image: url('../img/buttons/sunny_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/sunny_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--topwing {
+      background-image: url('../img/buttons/topwing_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/topwing_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--umizoomi {
+      background-image: url('../img/buttons/umizoomi_normal.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+
+      &:active {
+        background-image: url('../img/buttons/umizoomi_pushed.png');
+        background-size: 70px 70px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  /*Кнопки*/
   .prev-1 {
     position: absolute;
 
@@ -159,6 +314,115 @@
       height: 100px;
 
       margin-left: 10px;
+    }
+
+    /*Ссылки с изображениями*/
+    &__link {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      border-radius: 50%;
+
+      cursor: pointer;
+      outline: none;
+
+      &--blaze {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--doraexp {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--dorafriends {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--guppies {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--nella {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--nickjr {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--paw {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--rusty {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--shs {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--sunny {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--topwing {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
+
+      &--umizoomi {
+        background-size: 100px 100px;
+
+        &:active {
+          background-size: 100px 100px;
+        }
+      }
     }
 
     .prev-1 {
