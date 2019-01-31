@@ -35,8 +35,7 @@
     text-transform: uppercase;
 
     display: block;
-    max-height: 112px;
-    overflow-y: scroll;
+    max-height: auto;
 
     margin-top: 0;
     margin-bottom: 10px;
@@ -55,8 +54,6 @@
       font: {
         size: 0.813em;
       }
-
-      max-height: 120px;
     }
   }
 }
@@ -73,8 +70,6 @@
       font: {
         size: 1em;
       }
-
-      max-height: 150px;
     }
   }
 }
@@ -83,7 +78,6 @@
   .game-info {
     &__description {
       min-height: auto;
-      max-height: 165px;
     }
   }
 }
@@ -103,9 +97,6 @@
       font: {
         size: 1.188em;
       }
-
-      min-height: auto;
-      max-height: 150px;
     }
   }
 }
@@ -113,9 +104,5 @@
 @media only screen and (min-width: $widebooks-hd) {
   .game-info {
     width: 930px;
-
-    &__description {
-      max-height: 180px;
-    }
   }
 }

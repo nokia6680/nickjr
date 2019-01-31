@@ -458,7 +458,7 @@
     }
 
     .slick-list {
-      height: 130px;
+      height: 110px;
     }
   }
 }
@@ -468,10 +468,109 @@
     width: 100% !important;
 
     &__cartoon {
-      width: 100px !important;
-      height: 100px;
+      width: 120px !important;
+      height: 120px;
 
       margin-left: 10px;
+    }
+
+    /*Ссылки с изображениями*/
+    &__link {
+      &--blaze {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--doraexp {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--dorafriends {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--guppies {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--nella {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--nickjr {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--paw {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--rusty {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--shs {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--sunny {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--topwing {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
+
+      &--umizoomi {
+        background-size: 120px 120px;
+
+        &:active {
+          background-size: 120px 120px;
+        }
+      }
     }
 
     .prev-1 {
@@ -507,7 +606,7 @@
     }
 
     .slick-list {
-      height: 130px;
+      height: 120px;
     }
   }
 }

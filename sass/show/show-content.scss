@@ -17,8 +17,7 @@
     text-transform: uppercase;
 
     display: block;
-    max-height: 112px;
-    overflow-y: scroll;
+    max-height: auto;
 
     margin-top: 0;
     margin-bottom: 70px;
@@ -36,7 +35,7 @@
         size: 0.813em;
       }
 
-      max-height: 140px;
+      max-height: auto;
       min-height: 140px;
     }
   }
@@ -48,8 +47,6 @@
       font: {
         size: 1em;
       }
-
-      max-height: 150px;
     }
   }
 }
@@ -58,8 +55,7 @@
   .show-content {
     &__description {
       min-height: auto;
-      max-height: 200px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
 }
@@ -71,8 +67,7 @@
         size: 1.188em;
       }
       min-height: auto;
-      max-height: 150px;
-      margin-bottom: 13px;
+      margin-bottom: 45px;
     }
   }
 }

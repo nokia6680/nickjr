@@ -302,13 +302,12 @@
   }
 }
 
-@media only screen and (min-width: $notebooks) {
-
-}
-
 @media only screen and (min-width: $widebooks-hd) {
   .game-controls {
     width: 640px;
     align-self: flex-start;
+
+    padding-top: 40px;
+    margin-bottom: 40px;
   }
 }

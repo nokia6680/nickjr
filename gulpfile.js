@@ -22,9 +22,7 @@ gulp.task("style", function() {
   gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
+    .pipe(postcss([autoprefixer({ grid: 'autoplace' })]))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream())
     .pipe(minify())
