@@ -9,7 +9,6 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/grid-layout-polyfill.min.js"></script>
 	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
 	<script type="text/javascript">
 		VK.init({apiId: API_ID, onlyWidgets: true});
@@ -227,7 +226,10 @@
     <section class="main__promo main-promo main-promo--game main-promo--tabgame" id="promo-1">
       <div class="main-promo__wrapper">
         <a class="main-promo__link">
-          <img class="main-promo__img" src="img/promo-2.png" />
+					<picture class="main-promo__frame">
+						<source srcset="img/promo-2.webp" type="image/webp">
+						<img class="main-promo__img" src="img/promo-2.png" />
+					</picture>
           <span class="main-promo__text">Реклама</span>
         </a>
       </div>
@@ -238,7 +240,10 @@
 			<section class="main-wrapper__intro main-intro main-wrapper__intro--game main-intro--game">
 				<!--Лого шоу-->
 				<div class="main-intro__logo" id="show-1">
-					<img class="main-intro__image" src="img/main-intro-bg.png" alt="Logo-show-name" />
+					<picture class="main-intro__frame">
+						<source srcset="img/main-intro-bg.webp" type="image/webp">
+						<img class="main-intro__image" src="img/main-intro-bg.png" alt="Logo-show-name" />
+					</picture>
 				</div>
 			</section>
 			<!--Breadcrumbs-->
@@ -265,19 +270,19 @@
 						<div class="game-service__rating main-rating main-rating--game">
 							<b class="main-rating__final" id="rating-result">4.1</b>
 							<div id="main-rating__stars reviewStars-input">
-								<input class="reviewStars-input__input" id="star-4" type="radio" name="reviewStars"/>
+								<input class="reviewStars-input__input" id="star-4" type="radio" name="reviewStars" />
 								<label class="reviewStars-input__label" title="gorgeous" for="star-4"></label>
 
-								<input class="reviewStars-input__input" id="star-3" type="radio" name="reviewStars"/>
+								<input class="reviewStars-input__input" id="star-3" type="radio" name="reviewStars" />
 								<label class="reviewStars-input__label" title="good" for="star-3"></label>
 
-								<input class="reviewStars-input__input" id="star-2" type="radio" name="reviewStars"/>
+								<input class="reviewStars-input__input" id="star-2" type="radio" name="reviewStars" />
 								<label class="reviewStars-input__label" title="regular" for="star-2"></label>
 
-								<input class="reviewStars-input__input" id="star-1" type="radio" name="reviewStars"/>
+								<input class="reviewStars-input__input" id="star-1" type="radio" name="reviewStars" />
 								<label class="reviewStars-input__label" title="poor" for="star-1"></label>
 
-								<input class="reviewStars-input__input" id="star-0" type="radio" name="reviewStars"/>
+								<input class="reviewStars-input__input" id="star-0" type="radio" name="reviewStars" />
 								<label class="reviewStars-input__label" title="bad" for="star-0"></label>
 							</div>
 							<b class="main-rating__quantity">(<span class="main-rating__nr" id="rating-counter">14</span>&nbsp;оценок)</b>
@@ -321,32 +326,35 @@
 				</div>
 				<!--Боковой блок с рекламой-->
 				<div class="game-content__promo game-promo" id="promo-7">
-					<div class="game-promo__wrapper">
-						<a class="game-promo__link">
-							<img class="game-promo__img" src="img/promo-2.png" />
-							<span class="game-promo__text">Реклама</span>
-						</a>
-					</div>
 					<!---->
 					<div class="game-promo__content game-promo__content--first">
 						<a class="game-promo__link" href="#" target="_self">
-							<img class="game-promo__preview" src="img/promo-1.png" alt="name-of-video-1" />
+							<picture class="game-promo__frame">
+								<source srcset="img/promo-1.webp" type="image/webp">
+								<img class="game-promo__img" src="img/promo-1.png" />
+							</picture>
 							<span class="game-promo__text">Реклама</span>
 						</a>
 					</div>
-					<div class="game-promo__content">
+					<div class="game-promo__content game-promo__content--second">
 						<a class="game-promo__link" href="#" target="_self">
-							<img class="game-promo__preview" src="img/promo-1.png" alt="name-of-video-1" />
+							<picture class="game-promo__frame">
+								<source srcset="img/promo-1.webp" type="image/webp">
+								<img class="game-promo__img" src="img/promo-1.png" />
+							</picture>
 							<span class="game-promo__text">Реклама</span>
 						</a>
 					</div>
 				</div>
 			</section>
 			<!--Рекламный блок, есть только в мобильной версии-->
-			<section class="main__promo main-promo main-promo--mobile" id="promo-2">
+			<section class="main__promo main-promo main-promo--game" id="promo-2">
 				<div class="main-promo__wrapper">
 					<a class="main-promo__link">
-						<img class="main-promo__img" src="img/promo-2.png" />
+						<picture class="main-promo__frame">
+							<source srcset="img/promo-2.webp" type="image/webp">
+							<img class="main-promo__img" src="img/promo-2.png" />
+						</picture>
 						<span class="main-promo__text">Реклама</span>
 					</a>
 				</div>
@@ -359,7 +367,10 @@
 				<div class="game-carousel__slider game-slider game-slider--similar">
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-1">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -368,7 +379,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -379,7 +393,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-2">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -388,7 +405,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -399,7 +419,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-3">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -408,7 +431,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -419,7 +445,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-4">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -428,7 +457,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -439,7 +471,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-5">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -448,7 +483,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -459,7 +497,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-6">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -468,7 +509,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -479,7 +523,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-7">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -488,7 +535,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -499,7 +549,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-8">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -508,7 +561,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -519,7 +575,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-9">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -528,7 +587,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -539,7 +601,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--similar" id="similar-game-10">
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -548,7 +613,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--similar" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name-of-aside" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--similar" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -573,7 +641,10 @@
 				<div class="game-carousel__slider game-slider game-slider--other">
 					<div class="game-slider__item game-slider__item--other" id="other-game-1">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -582,7 +653,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -593,7 +667,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-2">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -602,7 +679,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -613,7 +693,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-3">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -622,7 +705,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -633,7 +719,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-4">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -642,7 +731,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -653,7 +745,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-5">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -662,7 +757,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -673,7 +771,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-6">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -682,7 +783,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -693,7 +797,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-7">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -702,7 +809,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -713,7 +823,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-8">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -722,7 +835,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -733,7 +849,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-9">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -742,7 +861,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -753,7 +875,10 @@
 					</div>
 					<div class="game-slider__item game-slider__item--other" id="other-game-10">
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->
@@ -762,7 +887,10 @@
 							</div>
 						</a>
 						<a class="game-slider__link game-slider__link--other" href="#" target="_self">
-							<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name-of-other" />
+							<picture class="game-slider__frame">
+								<source srcset="img/other-game.webp" type="image/webp">
+								<img class="game-slider__preview game-slider__preview--other" src="img/other-game.png" alt="name" />
+							</picture>
 							<!--Нижний ряд с планками-->
 							<div class="game-slider__bottom">
 								<!--Значки-->

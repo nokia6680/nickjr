@@ -27,10 +27,6 @@
     color: $text-white;
     line-height: 1;
   }
-
-  &--similar {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: $mobile-hd) {
@@ -52,7 +48,6 @@
     }
 
     &--similar {
-      display: flex;
       margin-bottom: 22px;
     }
 
@@ -69,8 +64,7 @@
     }
 
     &--similar {
-      margin-bottom: 22px;
-      display: none;
+      margin-bottom: 28px;
     }
 
     &--other {
@@ -89,11 +83,9 @@
 
     &--similar {
       margin-bottom: 22px;
-      display: flex;
     }
 
     &--other {
-      margin-bottom: 28px;
       position: absolute;
 
       width: 330px;

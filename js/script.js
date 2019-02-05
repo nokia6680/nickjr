@@ -250,6 +250,18 @@ $(document).ready(function(){
     nextArrow: '<div class="next-4"></div>',
 
     responsive: [
+          {
+            breakpoint: 1440,
+            settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: false,
+            dots: false,
+            vertical: false,
+            verticalSwiping: false
+          }
+        },
         {
           breakpoint: 1024,
           settings: {
@@ -269,7 +281,9 @@ $(document).ready(function(){
           slidesToScroll: 1,
           infinite: true,
           arrows: false,
-          dots: false
+          dots: false,
+          vertical: true,
+          verticalSwiping: true
         }
       }
     ]
@@ -320,7 +334,9 @@ $(document).ready(function(){
           slidesToScroll: 1,
           infinite: true,
           arrows: false,
-          dots: false
+          dots: false,
+          vertical: true,
+          verticalSwiping: true
         }
       }
     ]

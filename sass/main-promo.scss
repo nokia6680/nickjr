@@ -97,6 +97,35 @@
       min-height: 50px;
     }
   }
+
+  &--game {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .main-promo__wrapper {
+      width: 100%;
+      min-width: 320px;
+      max-width: 320px;
+      min-height: 65px;
+    }
+
+    .main-promo__link {
+      height: 65px;
+    }
+
+    .main-promo__frame {
+      height: 50px;
+      max-height: 50px;
+      min-height: 50px;
+    }
+
+    .main-promo__img {
+      max-height: 50px;
+      min-height: 50px;
+    }
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -106,7 +135,8 @@
     }
 
     /*Промоблок-2 только для мобильных*/
-    &--mobile {
+    &--mobile,
+    &--game {
       .main-promo__wrapper {
         max-width: 320px;
       }
@@ -186,6 +216,10 @@
       display: none;
     }
 
+    &--game {
+      display: none;
+    }
+
     &--show {
       display: none;
       margin-bottom: 15px;
@@ -196,7 +230,7 @@
     }
 
     &--tabgame {
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
   }
 }
