@@ -32,7 +32,7 @@ $(document).ready(function(){
 $(document).ready(function() {
   $(".carousel-slider").slick({
     infinite: true,
-    slidesToShow: 11,
+    slidesToShow: 18,
     slidesToScroll: 1,
     arrows: true,
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 8,
+          slidesToShow: 12,
           slidesToScroll: 1,
           infinite: true,
           arrows: true
@@ -52,7 +52,7 @@ $(document).ready(function() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 6.5,
+          slidesToShow: 10,
           slidesToScroll: 1,
           infinite: true,
           arrows: true
@@ -61,7 +61,7 @@ $(document).ready(function() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 6,
           slidesToScroll: 1,
           infinite: true,
           arrows: true
@@ -70,7 +70,7 @@ $(document).ready(function() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
           slidesToScroll: 1,
           infinite: true,
           arrows: true
@@ -79,7 +79,7 @@ $(document).ready(function() {
       {
         breakpoint: 360,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
           arrows: true

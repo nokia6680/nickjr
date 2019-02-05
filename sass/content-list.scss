@@ -25,6 +25,10 @@
 
     &--first {
       order: 2;
+
+      .content-list__frame--big {
+        display: none;
+      }
     }
 
     &--second {
@@ -37,7 +41,7 @@
     &--third {
       order: 3;
 
-      .content-list__preview--big {
+      .content-list__frame--big {
         display: none;
       }
     }
@@ -45,7 +49,7 @@
     &--four {
       order: 4;
 
-      .content-list__preview--big {
+      .content-list__frame--big {
         display: none;
       }
     }
@@ -53,7 +57,7 @@
     &--five {
       order: 5;
 
-      .content-list__preview--big {
+      .content-list__frame--big {
         display: none;
       }
     }
@@ -61,7 +65,7 @@
     &--six {
       order: 6;
 
-      .content-list__preview--big {
+      .content-list__frame--big {
         display: none;
       }
     }
@@ -69,7 +73,7 @@
     &--seven {
       order: 7;
 
-      .content-list__preview--big {
+      .content-list__frame--big {
         display: none;
       }
     }
@@ -77,7 +81,7 @@
     &--eight {
       order: 8;
 
-      .content-list__preview--big {
+      .content-list__frame--big {
         display: none;
       }
     }
@@ -85,7 +89,7 @@
     &--nine {
       order: 9;
 
-      .content-list__preview--big {
+      .content-list__frame--big {
         display: none;
       }
     }
@@ -93,13 +97,23 @@
     &--ten {
       order: 10;
 
-      .content-list__preview--big {
+      .content-list__frame--big {
         display: none;
       }
     }
 
     &--eleven {
       order: 11;
+
+      .content-list__frame--big {
+        display: none;
+      }
+    }
+  }
+
+  &__frame {
+    &--promo {
+      display: none;
     }
   }
 
@@ -115,6 +129,16 @@
     border-radius: 15px;
 
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.65);
+  }
+
+  &__frame {
+    width: 150px;
+    height: 150px;
+
+    font-size: 0;
+    line-height: 0;
+
+    border-radius: 15px;
   }
 
   &__preview {
@@ -271,6 +295,8 @@
 
 @media only screen and (min-width: $tablets) {
   .content-list {
+    margin-top: 20px;
+
     &__item {
       width: 300px;
       height: 300px;
@@ -284,421 +310,16 @@
       &--second {
         order: 2;
         width: 300px;
-
-        text-align: left;
-      }
-
-      &--third {
-        order: 3;
-
-        width: 100%;
-
-        .content-list__preview--small {
-          display: none;
-        }
-
-        .content-list__preview--big {
-          display: block;
-        }
-      }
-
-      &--four {
-        order: 4;
-      }
-
-      &--five {
-        order: 5;
-      }
-
-      &--six {
-        order: 6;
-      }
-
-      &--seven {
-        order: 7;
-      }
-
-      &--eight {
-        order: 8;
-      }
-
-      &--nine {
-        order: 9;
-      }
-
-      &--ten {
-        order: 10;
-      }
-
-      &--eleven {
-        order: 11;
-      }
-    }
-
-    &__link {
-      width: 100%;
-      height: 100%;
-    }
-
-    &__preview {
-      width: 300px;
-      height: 300px;
-
-
-      &--big {
-        width: 100%;
-      }
-    }
-
-    &__title {
-      font: {
-        size: 2.125em;
-      }
-    }
-
-    &__description {
-      font: {
-        size: 1em;
-      }
-
-      max-height: 250px;
-    }
-
-    /*Планка со временем*/
-    &__duration {
-      position: absolute;
-
-      top: 8px;
-      left: 8px;
-
-      width: 42px;
-      height: 24px;
-
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-
-      font: {
-        size: 0.875em;
-        family: $footer-font;
-        weight: 100;
-      }
-
-      color: $text-white;
-      line-height: 1;
-
-      padding-top: 5px;
-    }
-
-    /*Низ слайда*/
-    &__bottom {
-      bottom: 0px;
-    }
-
-    /*Плашки "новинка" и "полная серия"*/
-    &__notes {
-      padding-bottom: 22px;
-      padding-left: 0;
-    }
-
-    &__sign {
-      font: {
-        size: 1em;
-      }
-
-      padding-left: 2px;
-      padding-right: 2px;
-
-      &--new {
-        padding-top: 4px;
-
-        width: 77px;
-        height: 23px;
-        background-size: 77px 23px;
-      }
-
-      &--full {
-        padding-top: 5px;
-
-        text-align: center;
-
-        width: 163px;
-        height: 23px;
-        background-size: 163px 23px;
-      }
-    }
-
-    &__icon {
-      &--game {
-        width: 47px;
-        height: 47px;
-
-        padding-right: 8px;
-        padding-bottom: 8px;
-
-        display: none;
-      }
-
-      &--video {
-        width: 47px;
-        height: 47px;
-
-        padding-right: 6px;
-        padding-bottom: 6px;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $notebooks) {
-  .content-list {
-    justify-content: flex-start;
-
-    &__item {
-      width: 300px;
-      height: 300px;
-
-      margin-bottom: 26px;
-
-      &--first {
-        order: 1;
-
-        margin-right: 20px;
-      }
-
-      &--second {
-        order: 2;
-        width: 620px;
-      }
-
-      &--third {
-        order: 3;
-
-        width: 596px;
-        margin-right: 100px;
-
-        .content-list__preview--small {
-          display: none;
-        }
-
-        .content-list__preview--big {
-          display: block;
-        }
-      }
-
-      &--four {
-        order: 4;
-
-        width: 596px;
-        margin-right: 100px;
-
-        .content-list__preview--small {
-          display: none;
-        }
-
-        .content-list__preview--big {
-          display: block;
-        }
-      }
-
-      &--five {
-        order: 5;
-        width: 596px;
-
-        .content-list__preview--small {
-          display: none;
-        }
-
-        .content-list__preview--big {
-          display: block;
-        }
-
-        margin-right: 44px;
-      }
-
-      &--six {
-        order: 6;
-      }
-
-      &--seven {
-        order: 7;
-
-        margin-right: 44px;
-      }
-
-      &--eight {
-        order: 8;
-
-        width: 596px;
-
-        .content-list__preview--small {
-          display: none;
-        }
-
-        .content-list__preview--big {
-          display: block;
-        }
-      }
-
-      &--nine {
-        order: 9;
-        display: none;
-      }
-
-      &--ten {
-        order: 10;
-        display: none;
-      }
-
-      &--eleven {
-        order: 11;
-      }
-    }
-
-    &__link {
-      width: 100%;
-      height: 100%;
-    }
-
-    &__preview {
-      width: 300px;
-      height: 300px;
-
-
-      &--big {
-        width: 100%;
-      }
-    }
-
-    &__title {
-      font: {
-        size: 2.125em;
-      }
-    }
-
-    &__description {
-      font: {
-        size: 1em;
-      }
-
-      max-height: 250px;
-    }
-
-    /*Планка со временем*/
-    &__duration {
-      position: absolute;
-
-      top: 8px;
-      left: 8px;
-
-      width: 42px;
-      height: 24px;
-
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-
-      font: {
-        size: 0.875em;
-        family: $footer-font;
-        weight: 100;
-      }
-
-      color: $text-white;
-      line-height: 1;
-
-      padding-top: 5px;
-    }
-
-    /*Низ слайда*/
-    &__bottom {
-      bottom: 0px;
-    }
-
-    /*Плашки "новинка" и "полная серия"*/
-    &__notes {
-      padding-bottom: 22px;
-      padding-left: 0;
-    }
-
-    &__sign {
-      font: {
-        size: 1em;
-      }
-
-      padding-left: 2px;
-      padding-right: 2px;
-
-      &--new {
-        padding-top: 4px;
-
-        width: 77px;
-        height: 23px;
-        background-size: 77px 23px;
-      }
-
-      &--full {
-        padding-top: 5px;
-
-        text-align: center;
-
-        width: 163px;
-        height: 23px;
-        background-size: 163px 23px;
-      }
-    }
-
-    &__icon {
-      &--game {
-        width: 47px;
-        height: 47px;
-
-        padding-right: 8px;
-        padding-bottom: 8px;
-
-        display: none;
-      }
-
-      &--video {
-        width: 47px;
-        height: 47px;
-
-        padding-right: 6px;
-        padding-bottom: 6px;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $widebooks-hd) {
-  .content-list {
-    justify-content: flex-start;
-
-    &__item {
-      width: 300px;
-      height: 300px;
-
-      margin-bottom: 26px;
-
-      &--first {
-        order: 1;
-
-        margin-right: 48px;
-      }
-
-      &--second {
-        order: 2;
-        width: 620px;
       }
 
       &--promo {
         display: block;
 
-        order: 3;
+        order: 5;
 
         height: 265px;
         width: 300px;
 
-        margin-right: 48px;
-        margin-bottom: 0;
         margin-top: 16px;
 
         .content-list__link {
@@ -710,6 +331,13 @@
           text-decoration: none;
 
           border-radius: 15px;
+        }
+
+        .content-list__frame {
+          display: block;
+          width: 300px;
+          height: 250px;
+          border-radius: 15px 15px 0 0;
         }
 
         .content-list__preview {
@@ -745,17 +373,292 @@
       }
 
       &--third {
+        order: 3;
+
+        width: 100%;
+
+        .content-list__frame--small {
+          display: none;
+        }
+
+        .content-list__frame--big {
+          display: block;
+
+          width: 100%;
+        }
+      }
+
+      &--four {
+        order: 4;
+        margin-right: 59px;
+      }
+
+      &--five {
+        order: 6;
+      }
+
+      &--six {
+        order: 7;
+      }
+
+      &--seven {
+        order: 8;
+
+        width: 100%;
+
+        .content-list__frame--small {
+          display: none;
+        }
+
+        .content-list__frame--big {
+          display: block;
+
+          width: 100%;
+        }
+      }
+
+      &--eight {
+        order: 9;
+      }
+
+      &--nine {
+        order: 10;
+      }
+
+      &--ten {
+        order: 11;
+      }
+
+      &--eleven {
+        order: 12;
+      }
+    }
+
+    &__link {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__preview {
+      width: 300px;
+      height: 300px;
+
+      &--big {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      font: {
+        size: 2.125em;
+      }
+    }
+
+    &__description {
+      font: {
+        size: 1em;
+      }
+
+      max-height: 250px;
+    }
+
+    /*Низ слайда*/
+    &__bottom {
+      bottom: 0px;
+    }
+
+    /*Плашки "новинка" и "полная серия"*/
+    &__notes {
+      padding-bottom: 22px;
+    }
+
+    &__sign {
+      font: {
+        size: 1em;
+      }
+
+      &--new {
+        padding-top: 4px;
+
+        width: 77px;
+        height: 23px;
+        background-size: 77px 23px;
+      }
+
+      &--full {
+        padding-top: 5px;
+
+        text-align: center;
+
+        width: 163px;
+        height: 23px;
+        background-size: 163px 23px;
+      }
+    }
+
+    &__icon {
+      &--game {
+        width: 47px;
+        height: 47px;
+
+        padding-right: 8px;
+        padding-bottom: 8px;
+      }
+
+      &--video {
+        width: 47px;
+        height: 47px;
+
+        padding-right: 6px;
+        padding-bottom: 6px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .content-list {
+    justify-content: flex-start;
+    margin-top: 30px;
+
+    &__item {
+      &--first {
+        order: 1;
+
+        margin-right: 20px;
+      }
+
+      &--second {
+        order: 2;
+        width: 620px;
+      }
+
+      &--promo {
+        display: none;
+      }
+
+      &--third {
+        order: 3;
+
+        width: 596px;
+        margin-right: 100px;
+      }
+
+      &--four {
+        order: 4;
+
+        width: 596px;
+        margin-right: 100px;
+
+        .content-list__frame--small {
+          display: none;
+        }
+
+        .content-list__frame--big {
+          display: block;
+
+          width: 100%;
+        }
+      }
+
+      &--five {
+        order: 5;
+        width: 596px;
+
+        .content-list__frame--small {
+          display: none;
+        }
+
+        .content-list__frame--big {
+          display: block;
+
+          width: 100%;
+        }
+
+        margin-right: 44px;
+      }
+
+      &--six {
+        order: 6;
+      }
+
+      &--seven {
+        order: 7;
+
+        margin-right: 44px;
+      }
+
+      &--eight {
+        order: 8;
+
+        width: 596px;
+
+        .content-list__frame--small {
+          display: none;
+        }
+
+        .content-list__frame--big {
+          display: block;
+
+          width: 100%;
+        }
+      }
+
+      &--nine {
+        order: 9;
+        display: none;
+      }
+
+      &--ten {
+        order: 10;
+        display: none;
+      }
+
+      &--eleven {
+        order: 11;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .content-list {
+    margin-top: 0;
+
+    &__item {
+      &--first {
+        order: 1;
+
+        margin-right: 48px;
+      }
+
+      &--second {
+        order: 2;
+      }
+
+      &--promo {
+        display: block;
+        order: 3;
+
+        margin-right: 48px;
+        margin-bottom: 0;
+        margin-top: 16px;
+      }
+
+      &--third {
         order: 4;
 
         width: 646px;
         margin-right: 0;
 
-        .content-list__preview--small {
+        .content-list__frame--small {
           display: none;
         }
 
-        .content-list__preview--big {
+        .content-list__frame--big {
           display: block;
+
+          width: 100%;
         }
       }
 
@@ -764,25 +667,18 @@
 
         width: 646px;
         margin-right: 48px;
-
-        .content-list__preview--small {
-          display: none;
-        }
-
-        .content-list__preview--big {
-          display: block;
-        }
       }
 
       &--five {
         order: 6;
         width: 300px;
 
-        .content-list__preview--small {
+        .content-list__frame--small {
           display: block;
+          width: 100%;
         }
 
-        .content-list__preview--big {
+        .content-list__frame--big {
           display: none;
         }
 
@@ -802,12 +698,14 @@
 
         margin-right: 0;
 
-        .content-list__preview--small {
+        .content-list__frame--small {
           display: none;
         }
 
-        .content-list__preview--big {
+        .content-list__frame--big {
           display: block;
+
+          width: 100%;
         }
       }
 
@@ -818,11 +716,12 @@
 
         margin-right: 48px;
 
-        .content-list__preview--small {
+        .content-list__frame--small {
           display: block;
+          width: 100%;
         }
 
-        .content-list__preview--big {
+        .content-list__frame--big {
           display: none;
         }
       }
@@ -836,11 +735,12 @@
 
         margin-right: 48px;
 
-        .content-list__preview--small {
+        .content-list__frame--small {
           display: block;
+          width: 100%;
         }
 
-        .content-list__preview--big {
+        .content-list_frame--big {
           display: none;
         }
       }
@@ -852,11 +752,12 @@
 
         width: 300px;
 
-        .content-list__preview--small {
+        .content-list__frame--small {
           display: block;
+          width: 100%;
         }
 
-        .content-list__preview--big {
+        .content-list__frame--big {
           display: none;
         }
       }
@@ -893,89 +794,6 @@
       }
 
       max-height: 250px;
-    }
-
-    /*Планка со временем*/
-    &__duration {
-      position: absolute;
-
-      top: 8px;
-      left: 8px;
-
-      width: 42px;
-      height: 24px;
-
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-
-      font: {
-        size: 0.875em;
-        family: $footer-font;
-        weight: 100;
-      }
-
-      color: $text-white;
-      line-height: 1;
-
-      padding-top: 5px;
-    }
-
-    /*Низ слайда*/
-    &__bottom {
-      bottom: 0px;
-    }
-
-    /*Плашки "новинка" и "полная серия"*/
-    &__notes {
-      padding-bottom: 22px;
-      padding-left: 0;
-    }
-
-    &__sign {
-      font: {
-        size: 1em;
-      }
-
-      padding-left: 2px;
-      padding-right: 2px;
-
-      &--new {
-        padding-top: 4px;
-
-        width: 77px;
-        height: 23px;
-        background-size: 77px 23px;
-      }
-
-      &--full {
-        padding-top: 5px;
-
-        text-align: center;
-
-        width: 163px;
-        height: 23px;
-        background-size: 163px 23px;
-      }
-    }
-
-    &__icon {
-      &--game {
-        width: 47px;
-        height: 47px;
-
-        padding-right: 8px;
-        padding-bottom: 8px;
-
-        display: none;
-      }
-
-      &--video {
-        width: 47px;
-        height: 47px;
-
-        padding-right: 6px;
-        padding-bottom: 6px;
-      }
     }
   }
 }

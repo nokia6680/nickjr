@@ -8,8 +8,21 @@
     border-radius: 50%;
 
     margin-left: 10px;
+    margin-top: 10px;
   }
   /*Ссылки с изображениями*/
+  &__image img {
+    width: 70px;
+    height: 100%;
+  }
+
+  &__image--hover {
+    display: none;
+
+    width: 70px;
+    height: auto;
+  }
+
   &__link {
     display: block;
 
@@ -21,147 +34,13 @@
     cursor: pointer;
     outline: none;
 
-    &--blaze {
-      background-image: url('../img/buttons/blaze_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/blaze_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
+    &:active {
+      .carousel-slider__image--original {
+        display: none;
       }
-    }
 
-    &--doraexp {
-      background-image: url('../img/buttons/dora_exp1_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/dora_exp1_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--dorafriends {
-      background-image: url('../img/buttons/dora_friends_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/dora_friends_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--guppies {
-      background-image: url('../img/buttons/guppies_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/guppies_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--nella {
-      background-image: url('../img/buttons/nella_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/nella_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--nickjr {
-      background-image: url('../img/buttons/nickjr_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/nickjr_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--paw {
-      background-image: url('../img/buttons/paw_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/paw_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--rusty {
-      background-image: url('../img/buttons/rusty_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/rusty_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--shs {
-      background-image: url('../img/buttons/shs_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/shs_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--sunny {
-      background-image: url('../img/buttons/sunny_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/sunny_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--topwing {
-      background-image: url('../img/buttons/topwing_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/topwing_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--umizoomi {
-      background-image: url('../img/buttons/umizoomi_normal.png');
-      background-size: 70px 70px;
-      background-repeat: no-repeat;
-
-      &:active {
-        background-image: url('../img/buttons/umizoomi_pushed.png');
-        background-size: 70px 70px;
-        background-repeat: no-repeat;
+      .carousel-slider__image--hover {
+        display: block;
       }
     }
   }
@@ -274,13 +153,6 @@
   .carousel-slider {
     width: 100% !important;
 
-    &__cartoon {
-      width: 70px !important;
-      height: 70px;
-
-      margin-left: 10px;
-    }
-
     .prev-1 {
       width: 98px;
       height: 78px;
@@ -307,122 +179,9 @@
 
 @media only screen and (min-width: $tablets) {
   .carousel-slider {
-    width: 100% !important;
-
     &__cartoon {
-      width: 100px !important;
-      height: 100px;
-
-      margin-left: 10px;
-    }
-
-    /*Ссылки с изображениями*/
-    &__link {
-      display: block;
-
-      width: 100%;
-      height: 100%;
-
-      border-radius: 50%;
-
-      cursor: pointer;
-      outline: none;
-
-      &--blaze {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--doraexp {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--dorafriends {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--guppies {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--nella {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--nickjr {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--paw {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--rusty {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--shs {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--sunny {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--topwing {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
-
-      &--umizoomi {
-        background-size: 100px 100px;
-
-        &:active {
-          background-size: 100px 100px;
-        }
-      }
+      margin-left: 0;
+      margin-top: 20px;
     }
 
     .prev-1 {
@@ -433,7 +192,6 @@
 
       border-radius: 40px;
 
-      background-image: url('../img/arrow-left.png');
       background-size: 18px 29px;
 
       &:hover {
@@ -449,7 +207,6 @@
 
       border-radius: 40px;
 
-      background-image: url('../img/arrow-right.png');
       background-size: 18px 29px;
 
       &:hover {
@@ -458,155 +215,37 @@
     }
 
     .slick-list {
-      height: 110px;
+      height: 100px;
+      width: auto;
+    }
+
+    .slick-slide {
+      width: 70px;
+      height: 70px;
     }
   }
 }
 
 @media only screen and (min-width: $widebooks-hd) {
   .carousel-slider {
-    width: 100% !important;
+    margin-top: 0;
 
     &__cartoon {
-      width: 120px !important;
-      height: 120px;
-
-      margin-left: 10px;
-    }
-
-    /*Ссылки с изображениями*/
-    &__link {
-      &--blaze {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--doraexp {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--dorafriends {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--guppies {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--nella {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--nickjr {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--paw {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--rusty {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--shs {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--sunny {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--topwing {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-
-      &--umizoomi {
-        background-size: 120px 120px;
-
-        &:active {
-          background-size: 120px 120px;
-        }
-      }
-    }
-
-    .prev-1 {
-      width: 118px;
-      height: 98px;
-
-      left: -80px;
-
-      border-radius: 40px;
-
-      background-image: url('../img/arrow-left.png');
-      background-size: 18px 29px;
-
-      &:hover {
-        left: -70px;
-      }
-    }
-
-    .next-1 {
-      width: 118px;
-      height: 98px;
-
-      right: -80px;
-
-      border-radius: 40px;
-
-      background-image: url('../img/arrow-right.png');
-      background-size: 18px 29px;
-
-      &:hover {
-        right: -70px;
-      }
+      margin-left: 0;
+      margin-top: 0;
     }
 
     .slick-list {
-      height: 120px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: auto;
+      max-width: 1440px;
+
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

@@ -24,9 +24,21 @@
 }
 
 @media only screen and (min-width: $notebooks) {
+  .header {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: $widebooks-hd) {
+  .header {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
+    width: 100%;
+  }
 }

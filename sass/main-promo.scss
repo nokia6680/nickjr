@@ -24,10 +24,15 @@
 
     text-decoration: none;
   }
+  /*Контейнер для WebP*/
+  &__frame {
+    width: 100%;
+    min-height: 100px;
+  }
 
   &__img {
     width: 100%;
-    height: 100px;
+    min-height: 100px;
   }
 
   &__text {
@@ -159,6 +164,17 @@
       min-width: 728px;
       max-width: 728px;
       min-height: 105px;
+    }
+
+    /*Контейнер для WebP*/
+    &__frame {
+      width: 100%;
+      height: 105px;
+    }
+
+    &__img {
+      width: 100%;
+      height: 105px;
     }
 
     /*Рекламный блок только для размера 480px*/
