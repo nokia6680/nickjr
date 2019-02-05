@@ -22,6 +22,16 @@
     position: relative;
   }
 
+  &__frame {
+    width: 150px;
+    height: 150px;
+  }
+
+  &__preview {
+    width: 150px;
+    height: 150px;
+  }
+
   /*Планка со временем*/
   &__duration {
     position: absolute;
@@ -123,11 +133,6 @@
     }
   }
 
-  &__preview {
-    width: 150px;
-    height: 150px;
-  }
-
   &__link:nth-of-type(odd) {
     margin-right: auto;
   }
@@ -195,7 +200,6 @@
 
 @media only screen and (min-width: $notebooks) {
   .sidebar-slider {
-    width: 100%;
     max-width: 320px;
 
     &__item {
@@ -295,6 +299,11 @@
       margin-bottom: 0;
     }
 
+    &__frame {
+      width: 100px;
+      height: 100px;
+    }
+
     &__preview {
       width: 100px;
       height: 100px;
@@ -339,21 +348,14 @@
         width: 100% !important;
 
         flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
 
         margin-bottom: 22px;
 
-        padding-left: 0;
-        padding-right: 0px;
-
         &:not(:nth-of-type(4n)) {
-          margin-right: 0;
           margin-left: 0;
         }
 
         &:not(:nth-of-type(2n)) {
-          margin-right: 20px !important;
           margin-left: 0 !important;
         }
       }

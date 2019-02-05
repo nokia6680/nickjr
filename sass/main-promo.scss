@@ -86,8 +86,15 @@
       height: 65px;
     }
 
-    .main-promo__img {
+    .main-promo__frame {
       height: 50px;
+      max-height: 50px;
+      min-height: 50px;
+    }
+
+    .main-promo__img {
+      max-height: 50px;
+      min-height: 50px;
     }
   }
 }
@@ -141,11 +148,8 @@
       }
     }
 
-    &--hdmob2 {
-
-    }
-
     &--show {
+      display: block;
       margin-bottom: 15px;
     }
   }
@@ -183,6 +187,7 @@
     }
 
     &--show {
+      display: none;
       margin-bottom: 15px;
     }
 
@@ -199,10 +204,6 @@
 @media only screen and (min-width: $widebooks-hd) {
   .main-promo {
     margin-bottom: 21px;
-
-    &--mobile {
-      display: none;
-    }
 
     &--first {
       margin-bottom: 30px;

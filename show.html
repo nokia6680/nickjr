@@ -10,7 +10,6 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
-	<script src="js/grid-layout-polyfill.min.js"></script>
 	<script type="text/javascript">
 		VK.init({apiId: API_ID, onlyWidgets: true});
 	</script>
@@ -227,7 +226,10 @@
 		<section class="main__promo main-promo main-promo--first main-promo--tabshow" id="promo-1">
 			<div class="main-promo__wrapper">
 				<a class="main-promo__link">
-					<img class="main-promo__img" src="img/promo-2.png" />
+					<picture class="main-promo__frame">
+						<source srcset="img/promo-2.webp" type="image/webp">
+						<img class="main-promo__img" src="img/promo-2.png" />
+					</picture>
 					<span class="main-promo__text">Реклама</span>
 				</a>
 			</div>
@@ -249,7 +251,10 @@
 			<section class="main-wrapper__intro main-intro">
 				<!--Лого шоу-->
 				<div class="main-intro__logo" id="show-1">
-					<img class="main-intro__image" src="img/main-intro-bg.png" alt="Logo-show-name" />
+					<picture class="main-intro__frame">
+						<source srcset="img/main-intro-bg.webp" type="image/webp">
+						<img class="main-intro__image" src="img/main-intro-bg.png" alt="Logo-show-name" />
+					</picture>
 				</div>
 			</section>
 			<!--Разделитель-->
@@ -263,382 +268,200 @@
 				<!--Description and slides-->
 				<div class="main-show__content show-content">
 					<p class="show-content__description" id="show-description-1">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития.</p>
-					<!--Слайдер основной для конкретного шоу-->
-					<div class="main-content__carousel show-carousel" id="show-carousel">
-						<!--Список контента для мобильных-->
-						<ul class="content-slider__list show-list show-list--mobile" id="show-content">
-							<!--Single row-->
-							<li class="show-list__item show-item show-item--two">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+					<!--Список игр основной для конкретного шоу-->
+					<ul class="show-content__list show-list" id="show-list-1">
+						<li class="show-list__item show-list__item--first">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
 										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
 							</li>
-							<!--Single row-->
-							<li class="show-list__item show-item show-item--two">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+						<li class="show-list__item show-list__item--second">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
 										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
 							</li>
-							<!--Single row-->
-							<li class="show-list__item show-item show-item--two">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+						<li class="show-list__item show-list__item--third">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
 										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
 							</li>
-						</ul>
-						<!--Список контента для планшета-->
-						<ul class="content-slider__list show-list show-list--tablet" id="show-content">
-							<!--Single row-->
-							<li class="show-list__item show-item show-item--two">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
+						<li class="show-list__item show-list__item--promo">
+								<a class="show-list__link" href="#" target="_self">
+									<picture class="show-list__frame show-list__frame--promo">
+										<source srcset="img/promo-1.webp" type="image/webp">
+										<img class="show-list__preview show-list__preview--promo" src="img/promo-1.png" alt="promo-1"/>
+									</picture>
+									<span class="show-list__text">Реклама</span>
+								</a>
 							</li>
-							<!--Single row-->
-							<li class="show-list__item show-item show-item--two show-item--center">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+						<li class="show-list__item show-list__item--four">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
 										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--promo">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<img class="show-block__preview" src="img/promo-1.png" alt="name-of-game-1" />
-										<span class="show-block__text">Реклама</span>
-									</a>
-								</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
 							</li>
-							<!--Single row-->
-							<li class="show-list__item show-item show-item--two">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+						<li class="show-list__item show-list__item--five">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
 										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
 							</li>
-						</ul>
-						<!--Список контента для десктопа-->
-						<ul class="content-slider__list show-list show-list--desktop" id="show-content">
-							<!--Single row with three elems-->
-							<li class="show-list__item show-item show-item--three show-item--center">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+						<li class="show-list__item show-list__item--six">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
 										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--promo">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<img class="show-block__preview" src="img/promo-1.png" alt="name-of-game-1" />
-										<span class="show-block__text">Реклама</span>
-									</a>
-								</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
 							</li>
-							<!--Single row with three elems-->
-							<li class="show-list__item show-item show-item--three">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+						<li class="show-list__item show-list__item--seven">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
 										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
 							</li>
-							<!--Single row with three elems-->
-							<li class="show-list__item show-item show-item--three">
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+						<li class="show-list__item show-list__item--eight">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
 										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
-								<div class="show-item__content show-block show-block--small">
-									<a class="show-block__link" href="game.html" target="_self" id="game">
-										<span class="show-block__duration">24:24</span>
-										<img class="show-block__preview" src="img/game-1.png" alt="name-of-game-1" />
-										<!--Нижний ряд с планками-->
-										<div class="show-block__bottom">
-											<!---->
-											<div class="show-block__notes">
-												<span class="show-block__sign show-block__sign--new">Новинка</span>
-												<span class="show-block__sign show-block__sign--full">Полная серия</span>
-											</div>
-											<!--Значки-->
-											<img class="show-block__icon show-block__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-											<img class="show-block__icon show-block__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
-										</div>
-									</a>
-								</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
 							</li>
-						</ul>
-					</div>
+						<li class="show-list__item show-list__item--nine">
+								<a class="show-list__link" href="game.html" target="_self" id="game">
+									<span class="show-list__duration">24:24</span>
+									<picture class="show-list__frame">
+										<source srcset="img/video-1.webp" type="image/webp">
+										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+									</picture>
+									<!--Нижний ряд с планками-->
+									<div class="show-list__bottom">
+										<!---->
+										<div class="show-list__notes">
+											<span class="show-list__sign show-list__sign--new">Новинка</span>
+											<span class="show-list__sign show-list__sign--full">Полная серия</span>
+										</div>
+										<!--Значки-->
+										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+									</div>
+								</a>
+							</li>
+					</ul>
 				</div>
-				<!--pagination and rating-->
+				<!--Pagination and rating-->
 				<div class="main-show__service main-service">
 					<!--Пагинация списка контента-->
 					<ul class="main-service__pagination main-content__pagination content-pagination content-pagination--service">
@@ -688,7 +511,10 @@
 				<section class="main__promo main-promo main-promo--mobile main-promo--show" id="promo-2">
 					<div class="main-promo__wrapper">
 						<a class="main-promo__link">
-							<img class="main-promo__img" src="img/promo-2.png" />
+							<picture class="main-promo__frame">
+								<source srcset="img/promo-2.webp" type="image/webp">
+								<img class="main-promo__img" src="img/promo-2.png" />
+							</picture>
 							<span class="main-promo__text">Реклама</span>
 						</a>
 					</div>
@@ -702,7 +528,10 @@
 					<div class="sidebar-carousel__slider sidebar-slider sidebar-slider--show">
 						<div class="sidebar-slider__item" id="aside-slide-1">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -711,7 +540,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -722,7 +554,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-2">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -731,7 +566,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -742,7 +580,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-3">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -751,7 +592,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -762,7 +606,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-4">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -771,7 +618,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -782,7 +632,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-5">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -791,7 +644,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -802,7 +658,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-6">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -811,7 +670,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -822,7 +684,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-7">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -831,7 +696,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -842,7 +710,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-8">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -851,7 +722,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -862,7 +736,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-9">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -871,7 +748,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -882,7 +762,10 @@
 						</div>
 						<div class="sidebar-slider__item" id="aside-slide-10">
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-1" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -891,7 +774,10 @@
 								</div>
 							</a>
 							<a class="sidebar-slider__link" href="#" target="_self">
-								<img class="sidebar-slider__preview" src="img/other-game.png" alt="name-of-aside-2" />
+								<picture class="sidebar-slider__frame">
+									<source srcset="img/other-game.webp" type="image/webp">
+									<img class="sidebar-slider__preview" src="img/other-game.png" alt="name" />
+								</picture>
 								<!--Нижний ряд с планками-->
 								<div class="sidebar-slider__bottom sidebar-slider__bottom--double">
 									<!--Значки-->
@@ -906,7 +792,10 @@
 				<!--Рекламный блок боковой панели-->
 				<article class="main-sidebar__promo sidebar-promo sidebar-promo--tabbottom">
 					<a class="sidebar-promo__link" href="#" target="_blank">
-						<img class="sidebar-promo__img" src="img/promo-3.png" alt="Promo-3" />
+						<picture class="sidebar-promo__frame">
+							<source srcset="img/promo-3.webp" type="image/webp">
+							<img class="sidebar-promo__img" src="img/promo-3.png" />
+						</picture>
 						<span class="sidebar-promo__text">Реклама</span>
 					</a>
 				</article>

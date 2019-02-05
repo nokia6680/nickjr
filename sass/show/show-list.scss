@@ -1,17 +1,205 @@
 .show-list {
-  list-style: none;
-
-  display: grid;
-
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-
-  grid-gap: 6px;
-
   width: 100%;
 
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+
+  &__item {
+    width: 150px;
+    height: 150px;
+
+    text-align: center;
+
+    position: relative;
+
+    margin-bottom: 7px;
+
+    &--first {
+      order: 1;
+    }
+
+    &--second {
+      order: 2;
+    }
+
+    &--third {
+      order: 3;
+    }
+
+    &--promo {
+      display: none;
+    }
+
+    &--four {
+      order: 4;
+    }
+
+    &--five {
+      order: 5;
+    }
+
+    &--six {
+      order: 6;
+    }
+
+    &--seven {
+      order: 7;
+    }
+
+    &--eight {
+      order: 8;
+    }
+
+    &--nine {
+      order: 9;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 15px;
+
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.65);
+  }
+
+  &__frame {
+    width: 150px;
+    height: 150px;
+
+    font-size: 0;
+    line-height: 0;
+
+    border-radius: 15px;
+  }
+
+  &__preview {
+    width: 150px;
+    height: 150px;
+
+    font-size: 0;
+    line-height: 0;
+
+    border-radius: 15px;
+  }
+
+  /*Планка со временем*/
+  &__duration {
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+
+    width: 42px;
+    height: 24px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+    font: {
+      size: 0.875em;
+      family: $footer-font;
+      weight: 100;
+    }
+
+    color: $text-white;
+    line-height: 1;
+
+    padding-top: 5px;
+  }
+
+  /*Низ слайда*/
+  &__bottom {
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    bottom: 2px;
+    left: 0;
+  }
+
+  /*Плашки "новинка" и "полная серия"*/
+  &__notes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-bottom: 8px;
+    padding-left: 0;
+  }
+
+  &__sign {
+    font: {
+      size: 0.5em;
+      family: $fat-font;
+    }
+
+    color: $text-white;
+    line-height: 1;
+
+    text-transform: uppercase;
+    text-align: left;
+
+    display: block;
+
+    padding-left: 2px;
+    padding-right: 2px;
+
+    &--new {
+      background-image: url('../img/new-bg.png');
+      background-size: 38.5px 11.5px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--full {
+      background-image: url('../img/full-bg.png');
+      background-size: 81.5px 11.5px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__icon {
+    &--game {
+      width: 19px;
+      height: 19px;
+
+      margin-right: 8px;
+      margin-bottom: 8px;
+
+      display: none;
+    }
+
+    &--video {
+      width: 25px;
+      height: 25px;
+
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &--mobile {
+    display: none;
+  }
 
   &--tablet {
     display: none;
@@ -22,35 +210,179 @@
   }
 }
 
-@media only screen and (min-width: $mobile) {
-  .show-list {
-    grid-gap: 14px;
-  }
-}
-
-@media only screen and (min-width: $mobile-hd) {
-  .show-list {
-    grid-gap: 18px;
-  }
-}
-
 @media only screen and (min-width: $tablets) {
   .show-list {
-    grid-gap: 28px;
+    margin-bottom: 20px;
 
-    &--mobile {
-      display: none;
+    &__item {
+      width: 300px;
+      height: 300px;
+
+      margin-bottom: 25px;
+
+      &--first {
+        order: 1;
+      }
+
+      &--second {
+        order: 2;
+      }
+
+      &--third {
+        order: 3;
+      }
+
+      &--promo {
+        display: block;
+
+        order: 4;
+
+        height: 265px;
+        width: 300px;
+
+        margin-top: 16px;
+
+        .show-list__link {
+          width: 300px;
+          height: 250px;
+
+          box-shadow: none;
+
+          text-decoration: none;
+
+          border-radius: 15px;
+        }
+
+        .show-list__frame {
+          display: block;
+          width: 300px;
+          height: 250px;
+          border-radius: 15px 15px 0 0;
+        }
+
+        .show-list__preview {
+          height: 250px;
+          width: 300px;
+          border-radius: 15px 15px 0 0;
+        }
+
+        .show-list__text {
+          width: 300px;
+
+          background-color: $bg-black;
+          border-radius: 0 0 8px 8px;
+
+          display: block;
+
+          margin-top: -4px;
+
+          text-align: center;
+          text-transform: uppercase;
+
+          padding-top: 4px;
+          padding-bottom: 4px;
+
+          font: {
+            family: $promo-font;
+            size: 0.5em;
+            weight: 700;
+          }
+          color: $text-white;
+          line-height: 1;
+        }
+      }
+
+      &--four {
+        order: 4;
+      }
+
+      &--five {
+        order: 5;
+      }
+
+      &--six {
+        order: 6;
+      }
+
+      &--seven {
+        order: 7;
+      }
+
+      &--eight {
+        order: 8;
+      }
+
+      &--nine {
+        order: 9;
+      }
     }
 
-    &--tablet {
-      display: grid;
+    &__link {
+      width: 300px;
+      height: 300px;
     }
-  }
-}
 
-@media only screen and (min-width: $notebooks) {
-  .show-list {
-    grid-gap: 18px;
+    &__frame {
+      width: 300px;
+      height: 300px;
+    }
+
+    &__preview {
+      width: 300px;
+      height: 300px;
+    }
+
+    /*Низ слайда*/
+    &__bottom {
+      bottom: 0px;
+    }
+
+    /*Плашки "новинка" и "полная серия"*/
+    &__notes {
+      padding-bottom: 22px;
+    }
+
+    &__sign {
+      font: {
+        size: 1em;
+      }
+
+      &--new {
+        padding-top: 4px;
+
+        width: 77px;
+        height: 23px;
+        background-size: 77px 23px;
+      }
+
+      &--full {
+        padding-top: 5px;
+
+        text-align: center;
+
+        width: 163px;
+        height: 23px;
+        background-size: 163px 23px;
+      }
+    }
+
+    &__icon {
+      &--game {
+        width: 47px;
+        height: 47px;
+
+        padding-right: 8px;
+        padding-bottom: 8px;
+      }
+
+      &--video {
+        width: 47px;
+        height: 47px;
+
+        padding-right: 6px;
+        padding-bottom: 6px;
+      }
+    }
 
     &--mobile {
       display: none;
@@ -61,11 +393,49 @@
     }
 
     &--desktop {
-      display: grid;
+      display: none;
     }
   }
 }
 
-@media only screen and (min-width: $widebooks-hd) {
+@media only screen and (min-width: $notebooks) {
+  .show-list {
+    &__item {
+      margin-bottom: 18px;
 
+      &--third {
+        order: 4;
+      }
+
+      &--promo {
+        display: block;
+
+        order: 3;
+      }
+
+      &--four {
+        order: 5;
+      }
+
+      &--five {
+        order: 6;
+      }
+
+      &--six {
+        order: 7;
+      }
+
+      &--seven {
+        order: 8;
+      }
+
+      &--eight {
+        order: 9;
+      }
+
+      &--nine {
+        order: 10;
+      }
+    }
+  }
 }
