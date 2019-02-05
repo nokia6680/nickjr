@@ -94,6 +94,7 @@
   .header-nav {
     width: 114px;
     height: 31px;
+
     padding-top: 11px;
     padding-bottom: 17px;
     margin-left: 30px;
@@ -113,14 +114,13 @@
 
 @media only screen and (min-width: $widebooks-hd) {
   .header-nav {
-    width: 10%;
+    width: 114px;
     height: 31px;
 
-    max-width: 100%;
     padding-left: 0;
     padding-right: 0;
 
-    margin-left: 30px;
+    margin-left: 0;
 
     &__logo {
       width: 114px;

@@ -32,7 +32,7 @@ $(document).ready(function(){
 $(document).ready(function() {
   $(".carousel-slider").slick({
     infinite: true,
-    slidesToShow: 18,
+    slidesToShow: 16,
     slidesToScroll: 1,
     arrows: true,
 
