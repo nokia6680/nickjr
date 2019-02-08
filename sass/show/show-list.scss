@@ -242,53 +242,54 @@
 
         margin-top: 16px;
 
-        .show-list__link {
+        .show-list__wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+
           width: 300px;
-          height: 250px;
+          min-width: 300px;
+          max-width: 300px;
 
-          box-shadow: none;
+          min-height: 265px;
+          max-height: 265px;
 
-          text-decoration: none;
+          &--desktop {
+            .show-list__content {
+              width: 300px;
+              min-width: 300px;
+              max-width: 300px;
 
-          border-radius: 15px;
-        }
+              min-height: 250px;
+              max-height: 250px;
+            }
 
-        .show-list__frame {
-          display: block;
-          width: 300px;
-          height: 250px;
-          border-radius: 15px 15px 0 0;
-        }
+            .show-list__text {
+              width: 300px;
 
-        .show-list__preview {
-          height: 250px;
-          width: 300px;
-          border-radius: 15px 15px 0 0;
-        }
+              background-color: $bg-black;
+              border-radius: 0 0 8px 8px;
 
-        .show-list__text {
-          width: 300px;
+              display: block;
 
-          background-color: $bg-black;
-          border-radius: 0 0 8px 8px;
+              margin-top: 0;
 
-          display: block;
+              text-align: center;
+              text-transform: uppercase;
 
-          margin-top: -4px;
+              padding-top: 4px;
+              padding-bottom: 4px;
 
-          text-align: center;
-          text-transform: uppercase;
-
-          padding-top: 4px;
-          padding-bottom: 4px;
-
-          font: {
-            family: $promo-font;
-            size: 0.5em;
-            weight: 700;
+              font: {
+                family: $promo-font;
+                size: 0.5em;
+                weight: 700;
+              }
+              color: $text-white;
+              line-height: 1;
+            }
           }
-          color: $text-white;
-          line-height: 1;
         }
       }
 

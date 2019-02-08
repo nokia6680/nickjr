@@ -28,14 +28,23 @@
       }
     }
 
-    &__link {
+    &__item {
       display: flex;
-      height: 100%;
-      width: 100%;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: flex-start;
-      text-decoration: none;
+      align-items: stretch;
+
+      min-width: 300px;
+      max-width: 300px;
+      min-height: 265px;
+      max-height: 265px;
+    }
+
+    &__wrapper {
+      min-width: 300px;
+      max-width: 300px;
+      min-height: 250px;
+      max-height: 250px;
     }
 
     &__text {
@@ -46,7 +55,7 @@
 
       width: 100%;
 
-      margin-top: -5px;
+      margin-top: 0;
 
       text-align: center;
       text-transform: uppercase;

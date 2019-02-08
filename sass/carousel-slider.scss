@@ -226,6 +226,15 @@
   }
 }
 
+@media only screen and (min-width: $notebooks) {
+  .carousel-slider {
+    .next-1,
+    .prev-1 {
+      display: none;
+    }
+  }
+}
+
 @media only screen and (min-width: $widebooks-hd) {
   .carousel-slider {
     margin-top: 0;

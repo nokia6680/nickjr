@@ -34,7 +34,7 @@ $(document).ready(function() {
     infinite: true,
     slidesToShow: 16,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
 
     prevArrow: '<div class="prev-1"></div>',
     nextArrow: '<div class="next-1"></div>',
@@ -46,7 +46,7 @@ $(document).ready(function() {
           slidesToShow: 12,
           slidesToScroll: 1,
           infinite: true,
-          arrows: true
+          arrows: false
         }
       },
       {

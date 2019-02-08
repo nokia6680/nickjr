@@ -223,15 +223,20 @@
 	<!--Основное содержание страницы-->
   <main class="main main--show">
 		<!--Рекламная секция 1-->
-		<section class="main__promo main-promo main-promo--first main-promo--tabshow" id="promo-1">
-			<div class="main-promo__wrapper">
-				<a class="main-promo__link">
-					<picture class="main-promo__frame">
-						<source srcset="img/promo-2.webp" type="image/webp">
-						<img class="main-promo__img" src="img/promo-2.png" />
-					</picture>
-					<span class="main-promo__text">Реклама</span>
-				</a>
+		<section class="main__promo main-promo main-promo--first" id="promo-1">
+			<!--320x100-->
+			<div class="main-promo__wrapper main-promo__wrapper--mobile">
+				<div class="main-promo__content">
+
+				</div>
+				<span class="main-promo__text">Реклама</span>
+			</div>
+			<!--728x90-->
+			<div class="main-promo__wrapper main-promo__wrapper--desktop">
+				<div class="main-promo__content">
+
+				</div>
+				<span class="main-promo__text">Реклама</span>
 			</div>
 		</section>
 		<!--Основное содержание страницы для шоу-->
@@ -331,14 +336,14 @@
 								</a>
 							</li>
 						<li class="show-list__item show-list__item--promo">
-								<a class="show-list__link" href="#" target="_self">
-									<picture class="show-list__frame show-list__frame--promo">
-										<source srcset="img/promo-1.webp" type="image/webp">
-										<img class="show-list__preview show-list__preview--promo" src="img/promo-1.png" alt="promo-1"/>
-									</picture>
-									<span class="show-list__text">Реклама</span>
-								</a>
-							</li>
+							<!--300x250-->
+							<div class="show-list__wrapper show-list__wrapper--desktop">
+								<div class="show-list__content">
+
+								</div>
+								<span class="show-list__text">Реклама</span>
+							</div>
+						</li>
 						<li class="show-list__item show-list__item--four">
 								<a class="show-list__link" href="game.html" target="_self" id="game">
 									<span class="show-list__duration">24:24</span>
@@ -508,17 +513,22 @@
 					</div>
 				</div>
 				<!--Рекламный блок, есть только в мобильной версии-->
-				<section class="main__promo main-promo main-promo--mobile main-promo--show" id="promo-2">
-					<div class="main-promo__wrapper">
-						<a class="main-promo__link">
-							<picture class="main-promo__frame">
-								<source srcset="img/promo-2.webp" type="image/webp">
-								<img class="main-promo__img" src="img/promo-2.png" />
-							</picture>
-							<span class="main-promo__text">Реклама</span>
-						</a>
+				<div class="main-show__promo main-promo main-promo--secondshow" id="promo-2">
+					<!--320x50 не показывается на 480px-->
+					<div class="main-promo__wrapper main-promo__wrapper--mobile">
+						<div class="main-promo__content">
+
+						</div>
+						<span class="main-promo__text">Реклама</span>
 					</div>
-				</section>
+					<!--728x90-->
+					<div class="main-promo__wrapper main-promo__wrapper--desktop">
+						<div class="main-promo__content">
+
+						</div>
+						<span class="main-promo__text">Реклама</span>
+					</div>
+				</div>
 			</section>
 			<!--Боковая панель-->
 			<aside class="main-wrapper__sidebar main-sidebar main-sidebar--show">
@@ -790,14 +800,28 @@
 					<div class="next-3"></div>
 				</div>
 				<!--Рекламный блок боковой панели-->
-				<article class="main-sidebar__promo sidebar-promo sidebar-promo--tabbottom">
-					<a class="sidebar-promo__link" href="#" target="_blank">
-						<picture class="sidebar-promo__frame">
-							<source srcset="img/promo-3.webp" type="image/webp">
-							<img class="sidebar-promo__img" src="img/promo-3.png" />
-						</picture>
-						<span class="sidebar-promo__text">Реклама</span>
-					</a>
+				<article class="main-sidebar__promo main-promo main-promo--third main-promo--thirdshow" id="promo-3">
+					<!--От 320px до 768px 300х250px-->
+					<div class="main-promo__wrapper main-promo__wrapper--mobile">
+						<div class="main-promo__content">
+
+						</div>
+						<span class="main-promo__text">Реклама</span>
+					</div>
+					<!--От 768 до конца, 728х90-->
+					<div class="main-promo__wrapper main-promo__wrapper--desktop">
+						<div class="main-promo__content">
+
+						</div>
+						<span class="main-promo__text">Реклама</span>
+					</div>
+					<!--240x400-->
+					<div class="main-promo__wrapper main-promo__wrapper--hd">
+						<div class="main-promo__content">
+
+						</div>
+						<span class="main-promo__text">Реклама</span>
+					</div>
 				</article>
 			</aside>
 			<!--VK-->

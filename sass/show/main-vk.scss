@@ -6,6 +6,8 @@
 
   width: 100%;
 
+  margin-bottom: 50px;
+
   &__title {
     font: {
       size: 1.375em;
@@ -24,6 +26,8 @@
 
 @media only screen and (min-width: $mobile-hd) {
   .main-vk {
+    margin-bottom: 50px;
+
     &__title {
       font: {
         size: 1.875em;
@@ -34,6 +38,9 @@
 
 @media only screen and (min-width: $tablets) {
   .main-vk {
+    width: 50%;
+    margin-bottom: 50px;
+
     &__title {
       font: {
         size: 1.875em;
@@ -44,6 +51,9 @@
 
 @media only screen and (min-width: $widebooks-hd) {
   .main-vk {
+    width: 50%;
+    margin-bottom: 70px;
+
     &__title {
       font: {
         size: 2.188em;

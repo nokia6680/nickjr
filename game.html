@@ -223,17 +223,22 @@
   <!--Основное содержание страницы-->
   <main class="main main--game">
     <!--Рекламная секция 1-->
-    <section class="main__promo main-promo main-promo--game main-promo--tabgame" id="promo-1">
-      <div class="main-promo__wrapper">
-        <a class="main-promo__link">
-					<picture class="main-promo__frame">
-						<source srcset="img/promo-2.webp" type="image/webp">
-						<img class="main-promo__img" src="img/promo-2.png" />
-					</picture>
-          <span class="main-promo__text">Реклама</span>
-        </a>
-      </div>
-    </section>
+		<section class="main__promo main-promo main-promo--first" id="promo-1">
+			<!--320x100-->
+			<div class="main-promo__wrapper main-promo__wrapper--mobile">
+				<div class="main-promo__content">
+
+				</div>
+				<span class="main-promo__text">Реклама</span>
+			</div>
+			<!--728x90-->
+			<div class="main-promo__wrapper main-promo__wrapper--desktop">
+				<div class="main-promo__content">
+
+				</div>
+				<span class="main-promo__text">Реклама</span>
+			</div>
+		</section>
 		<!---->
 		<div class="main__wrapper main-wrapper main-wrapper--game">
 			<!--Шапка с логотипом шоу-->
@@ -328,35 +333,38 @@
 				<div class="game-content__promo game-promo" id="promo-7">
 					<!---->
 					<div class="game-promo__content game-promo__content--first">
-						<a class="game-promo__link" href="#" target="_self">
-							<picture class="game-promo__frame">
-								<source srcset="img/promo-1.webp" type="image/webp">
-								<img class="game-promo__img" src="img/promo-1.png" />
-							</picture>
+						<div class="game-promo__item game-promo__item--note">
+							<div class="game-promo__wrapper">
+
+							</div>
 							<span class="game-promo__text">Реклама</span>
-						</a>
+						</div>
 					</div>
 					<div class="game-promo__content game-promo__content--second">
-						<a class="game-promo__link" href="#" target="_self">
-							<picture class="game-promo__frame">
-								<source srcset="img/promo-1.webp" type="image/webp">
-								<img class="game-promo__img" src="img/promo-1.png" />
-							</picture>
+						<div class="game-promo__item game-promo__item--note">
+							<div class="game-promo__wrapper">
+
+							</div>
 							<span class="game-promo__text">Реклама</span>
-						</a>
+						</div>
 					</div>
 				</div>
 			</section>
 			<!--Рекламный блок, есть только в мобильной версии-->
-			<section class="main__promo main-promo main-promo--game" id="promo-2">
-				<div class="main-promo__wrapper">
-					<a class="main-promo__link">
-						<picture class="main-promo__frame">
-							<source srcset="img/promo-2.webp" type="image/webp">
-							<img class="main-promo__img" src="img/promo-2.png" />
-						</picture>
-						<span class="main-promo__text">Реклама</span>
-					</a>
+			<section class="main__promo main-promo main-promo--second main-promo--secondgame" id="promo-2">
+				<!--320x50 не показывается на 480px-->
+				<div class="main-promo__wrapper main-promo__wrapper--mobile">
+					<div class="main-promo__content">
+
+					</div>
+					<span class="main-promo__text">Реклама</span>
+				</div>
+				<!--728x90-->
+				<div class="main-promo__wrapper main-promo__wrapper--desktop">
+					<div class="main-promo__content">
+
+					</div>
+					<span class="main-promo__text">Реклама</span>
 				</div>
 			</section>
 			<!--Слайдер с похожими играми-->
@@ -629,11 +637,28 @@
 				<div class="next-4"></div>
 			</div>
 			<!--Рекламный блок боковой панели ( моб версия )-->
-			<article class="main-sidebar__promo sidebar-promo">
-				<a class="sidebar-promo__link" href="#" target="_blank">
-					<img class="sidebar-promo__img" src="img/promo-3.png" alt="Promo-3" />
-					<span class="sidebar-promo__text">Реклама</span>
-				</a>
+			<article class="main-wrapper__promo main-promo main-promo--third main-promo--thirdgame" id="promo-3">
+				<!--От 320px до 768px 300х250px-->
+				<div class="main-promo__wrapper main-promo__wrapper--mobile">
+					<div class="main-promo__content">
+
+					</div>
+					<span class="main-promo__text">Реклама</span>
+				</div>
+				<!--От 768 до конца, 728х90-->
+				<div class="main-promo__wrapper main-promo__wrapper--desktop">
+					<div class="main-promo__content">
+
+					</div>
+					<span class="main-promo__text">Реклама</span>
+				</div>
+				<!--240x400-->
+				<div class="main-promo__wrapper main-promo__wrapper--hd">
+					<div class="main-promo__content">
+
+					</div>
+					<span class="main-promo__text">Реклама</span>
+				</div>
 			</article>
 			<!--Слайдер с другими играми-->
 			<div class="main-wrapper__carousel game-carousel game-carousel--other">
