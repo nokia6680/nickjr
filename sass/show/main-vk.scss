@@ -39,7 +39,9 @@
 @media only screen and (min-width: $tablets) {
   .main-vk {
     width: 50%;
+    max-width: 50%;
     margin-bottom: 50px;
+    align-self: flex-start;
 
     &__title {
       font: {

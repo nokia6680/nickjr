@@ -186,6 +186,7 @@
 
   /*Планка со временем*/
   &__duration {
+    visibility: hidden; /*Скрыто, ибо пока не нужно*/
     position: absolute;
 
     top: 8px;
@@ -217,7 +218,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
     bottom: 2px;
     left: 0;
@@ -225,7 +226,7 @@
 
   /*Плашки "новинка" и "полная серия"*/
   &__notes {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -234,6 +235,7 @@
     padding-left: 0;
   }
 
+  /*Плашки NOTES*/
   &__sign {
     font: {
       size: 0.5em;
@@ -266,6 +268,29 @@
     }
   }
 
+  /*Стилизация блока с названием игры*/
+  &__info {
+    max-width: 75%;
+
+    padding-left: 8px;
+    padding-bottom: 8px;
+
+    text-align: left;
+  }
+
+  &__name {
+    font: {
+      family: $base-font;
+      size: 0.625em;
+    }
+
+    color: $text-white;
+    line-height: 1;
+    text-transform: uppercase;
+
+    text-align: left;
+  }
+
   &__icon {
     &--game {
       width: 19px;
@@ -274,7 +299,7 @@
       margin-right: 8px;
       margin-bottom: 8px;
 
-      display: none;
+      display: block;
     }
 
     &--video {
@@ -283,6 +308,8 @@
 
       margin-right: 6px;
       margin-bottom: 6px;
+
+      display: none;
     }
   }
 }
@@ -658,6 +685,25 @@
         height: 23px;
         background-size: 163px 23px;
       }
+    }
+
+    /*Стилизация блока с названием игры*/
+    &__info {
+      padding-left: 15px;
+      padding-bottom: 15px;
+    }
+
+    &__name {
+      font: {
+        family: $base-font;
+        size: 1.125em;
+      }
+
+      color: $text-white;
+      line-height: 1;
+      text-transform: uppercase;
+
+      text-align: left;
     }
 
     &__icon {
