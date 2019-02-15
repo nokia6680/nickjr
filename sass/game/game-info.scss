@@ -104,5 +104,9 @@
 @media only screen and (min-width: $widebooks-hd) {
   .game-info {
     width: 930px;
+
+    &__description {
+      min-height: 150px;
+    }
   }
 }
