@@ -1,5 +1,19 @@
 .carousel-slider {
   position: relative;
+
+  /*Пока слайдер не инициализирован*/
+  &:not(.slick-initialized) {
+    visibility: hidden;
+    display: flex;
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    .slick-list {
+      height: 100px !important;
+    }
+  }
+
   /*Изображения*/
   &__cartoon {
     width: 70px !important;

@@ -88,6 +88,18 @@ $(document).ready(function() {
     ]
   });
 
+  /*Последовательная загрузка слайдов*/
+  $(function(){
+  $.fn.fadeInDelay = function(){
+      var init = function(){
+          $(this).hide().delay($(this).data('delay')).fadeIn();
+        };
+      return this.each(init);
+    };
+  }(jQuery));
+
+  $('.carousel-slider__cartoon').fadeInDelay();
+
   var timer;
     $(".slick-arrow").mouseleave(function() {
       window.clearTimeout(timer)
