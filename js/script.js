@@ -1,40 +1,11 @@
-function Selected(a) {
-  var label = a.value;
-    if (label=="enter") {
-      (document.getElementById("form-enter").style.display="block") &&
-      (document.getElementById("agreement").style.display="none") &&
-      (document.getElementById("enter-btn").style.display="block") &&
-      (document.getElementById("register-btn").style.display="none");
-    } else {
-      (document.getElementById("form-enter").style.display="none") &&
-      (document.getElementById("agreement").style.display="block") &&
-      (document.getElementById("register-btn").style.display="block") &&
-      (document.getElementById("enter-btn").style.display="none");
-  } if (label=="register") {
-      document.getElementById("form-register").style.display="block";
-  } else {
-      document.getElementById("form-register").style.display="none";
-  }
-}
-
-$(document).ready(function(){
-  $('.content-slider').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false
-  });
-});
-
 /*Измененный скрипт перелистывания слайдов*/
 
 $(document).ready(function() {
   $(".carousel-slider").slick({
     infinite: true,
-    slidesToShow: 16,
+    slidesToShow: 11,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
 
     prevArrow: '<div class="prev-1"></div>',
     nextArrow: '<div class="next-1"></div>',
@@ -43,16 +14,16 @@ $(document).ready(function() {
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 12,
+          slidesToShow: 8,
           slidesToScroll: 1,
           infinite: true,
-          arrows: false
+          arrows: true
         }
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 10,
+          slidesToShow: 7,
           slidesToScroll: 1,
           infinite: true,
           arrows: true
@@ -88,7 +59,24 @@ $(document).ready(function() {
     ]
   });
 
-  /*Последовательная загрузка слайдов*/
+  var slider = $(".carousel-slider");
+  var scrollCount = null;
+  var scroll= null;
+
+  slider.on('wheel', (function(e) {
+    e.preventDefault();
+
+    scroll = setTimeout(function(){scrollCount=0;}, 200);
+    if(scrollCount) return 0;
+    scrollCount=1;
+
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick('slickNext');
+    } else {
+      $(this).slick('slickPrev');
+    }
+  }));
+
   $(function(){
   $.fn.fadeInDelay = function(){
       var init = function(){

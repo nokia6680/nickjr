@@ -2,6 +2,12 @@
   position: relative;
   padding-right: 8px;
 
+  &--last {
+    .breadcrumbs-item__last {
+      display: block;
+    }
+  }
+
   &::after {
     position: absolute;
     content: '/';
@@ -32,7 +38,8 @@
     }
   }
 
-  &__link {
+  &__link,
+  &__last {
     text-decoration: none;
 
     font: {
@@ -66,7 +73,8 @@
 
 @media only screen and (min-width: $mobile-hd) {
   .breadcrumbs-item {
-    &__link {
+    &__link,
+    &__last {
       font: {
         size: 1em;
       }
@@ -81,7 +89,8 @@
 
 @media only screen and (min-width: $tablets) {
   .breadcrumbs-item {
-    &__link {
+    &__link,
+    &__last {
       font: {
         size: 1.125em;
       }
@@ -92,8 +101,4 @@
       right: -1px;
     }
   }
-}
-
-@media only screen and (min-width: $widebooks-hd) {
-
 }
