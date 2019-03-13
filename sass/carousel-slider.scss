@@ -204,8 +204,14 @@
   .carousel-slider {
     width: 100% !important;
 
+    &:not(.slick-initialized) {
+      .slick-list {
+        height: 130px !important;
+      }
+    }
+
     .slick-list {
-      height: 130px !important;
+      height: 110px !important;
     }
 
     &__cartoon {
@@ -251,11 +257,6 @@
       &:hover {
         right: -70px;
       }
-    }
-
-    .slick-list {
-      height: 100px;
-      width: auto;
     }
 
     .slick-slide {
