@@ -3,7 +3,7 @@
 $(document).ready(function() {
   $(".carousel-slider").slick({
     infinite: true,
-    slidesToShow: 11,
+    slidesToShow: 16,
     slidesToScroll: 1,
     arrows: true,
 
@@ -12,9 +12,18 @@ $(document).ready(function() {
 
     responsive: [
       {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 13,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true
+        }
+      },
+      {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 8,
+          slidesToShow: 9,
           slidesToScroll: 1,
           infinite: true,
           arrows: true
@@ -41,7 +50,7 @@ $(document).ready(function() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
           arrows: true
