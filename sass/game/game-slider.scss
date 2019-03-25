@@ -5,6 +5,10 @@
     display: none;
   }
 
+  .slick-list {
+    pointer-events: none;
+  }
+
   &__item {
     display: flex !important;
     flex-direction: row;
@@ -26,6 +30,8 @@
     border-radius: 15px;
 
     position: relative;
+
+    pointer-events: auto;
   }
 
   /*Планка со временем*/
@@ -395,7 +401,7 @@
       height: 150px;
 
       flex-direction: row !important;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
       margin-bottom: 23px;
     }

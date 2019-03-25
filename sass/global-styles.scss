@@ -25,6 +25,8 @@ body {
   padding: 0;
   height: 100%;
 
+  overflow-x: hidden;
+
   position: relative;
   color: $text-white;
 }

@@ -97,16 +97,21 @@ $(document).ready(function() {
 
   $('.carousel-slider__cartoon').fadeInDelay();
 
-  var timer;
-    $(".slick-arrow").mouseleave(function() {
-      window.clearTimeout(timer)
-    }).mouseenter(function() {
+  $(window).resize(function() {
+    if ( $(window).width() > 1023 ) {
+      var timer;
+        $(".slick-arrow").mouseleave(function() {
+          window.clearTimeout(timer)
+        }).mouseenter(function() {
 
-      var self = $(this).mouseleave();
-      timer = window.setTimeout(function() {
-        self.click().mouseenter()
-      }, 2)
-})});
+          var self = $(this).mouseleave();
+          timer = window.setTimeout(function() {
+            self.click().mouseenter()
+          }, 2)
+    });
+    }
+  });
+});
 /*Первый слайдер на странице INDEX*/
 $(document).ready(function(){
   $('.sidebar-slider--first').slick({
@@ -235,7 +240,7 @@ $(document).ready(function(){
     {
       breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           arrows: false,
@@ -286,7 +291,7 @@ $(document).ready(function(){
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           arrows: false,
@@ -339,7 +344,7 @@ $(document).ready(function(){
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           arrows: false,

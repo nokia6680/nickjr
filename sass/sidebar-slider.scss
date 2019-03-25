@@ -5,6 +5,10 @@
     display: none;
   }
 
+  .slick-list {
+    pointer-events: none;
+  }
+
   &__item {
     display: flex !important;
     flex-direction: row;
@@ -22,6 +26,8 @@
     border-radius: 15px;
 
     position: relative;
+
+    pointer-events: auto;
   }
 
   &__frame {
@@ -76,7 +82,7 @@
 
     display: none;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
 
     bottom: 0;
@@ -257,7 +263,7 @@
         width: 150px !important;
 
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: flex-start;
 
         margin-bottom: 0;
