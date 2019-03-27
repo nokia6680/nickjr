@@ -41,12 +41,13 @@ gulp.task("serve", function() {
 
   gulp.watch("sass/**/*.scss", ["style"]);
   gulp.watch("*.html", ["html"]);
+  gulp.watch("*.js", ["js"]);
 });
 
 gulp.task("images", function() {
   return gulp.src("img/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.optipng({optimizationLevel: 7}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
@@ -55,7 +56,7 @@ gulp.task("images", function() {
 
 gulp.task("webp", function() {
   return gulp.src("img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({quality: 25}))
     .pipe(gulp.dest("img"));
 });
 

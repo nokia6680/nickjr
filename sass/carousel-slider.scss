@@ -234,11 +234,6 @@
     .slick-slide div {
       width: 110px;
       height: 110px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
 
     &__cartoon {
@@ -335,8 +330,7 @@
 
         display: inline-flex;
 
-        width: 150px;
-        padding: 10px 0;
+        padding: 0.5em 0.75em;
         min-height: 20px;
         background-color: #ffffff;
         border-radius: 5px;

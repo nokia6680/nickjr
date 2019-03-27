@@ -62,7 +62,8 @@ $(document).ready(function() {
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          arrows: true
+          arrows: true,
+          lazyLoad: 'ondemand'
         }
       }
     ]
