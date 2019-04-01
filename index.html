@@ -1230,6 +1230,45 @@
 			<p class="footer-copyright__description footer-copyright__description--reserve">Nick и все связанные с ним товары, логотипы и персонажи являются торговыми марками Viacom International Inc.</p>
 		</div>
 	</footer>
+	<!--Попап клуба друзей-->
+	<div class="popup-club" style="display: none;">
+		<div class="popup-club__wrapper">
+			<button class="popup-club__close" type="button"></button>
+			<div class="popup-club__top">
+				<h2 class="popup-club__title">Вступайте в наш клуб друзей</h2>
+				<b class="popup-club__subtitle">Бесплатные игры и раскраски с любимыми персонажами каждый месяц!</b>
+			</div>
+			<div class="popup-club__middle">
+				<form class="popup-club__form club-form" action="#" method="post">
+					<ul class="club-form__list">
+						<!---->
+						<li class="club-form__item">
+							<label class="club-form__label" for="yourname">Ваше имя:</label>
+							<input class="club-form__input" type="text" id="yourname" name="name" required />
+							<span class="club-form__error">Это поле должно быть заполнено!</span>
+						</li>
+						<!---->
+						<li class="club-form__item">
+							<label class="club-form__label" for="yourmail">Ваш адрес электронной почты:</label>
+							<input class="club-form__input" type="text" id="yourmail" name="mail" required />
+							<span class="club-form__error">Это поле должно быть заполнено!</span>
+						</li>
+						<!---->
+						<li class="club-form__item club-form__item--checkbox">
+							<input class="club-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement" required checked />
+							<label class="club-form__label club-form__label--checkbox" for="agreement">Я согласен на <a class="club-form__label--link" href="#" target="_blank">обработку моих персональных данных</a></label>
+						</li>
+						<!---->
+						<li class="club-form__item">
+							<input class="club-form__checkbox visually-hidden" type="checkbox" name="wholesend" id="wholesend" required checked />
+							<label class="club-form__label club-form__label--checkbox" for="wholesend">Я согласен на получение e-mail рассылки</label>
+						</li>
+					</ul>
+					<button class="club-form__submit" type="submit">Подписаться</button>
+				</form>
+			</div>
+		</div>
+	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/fix.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>

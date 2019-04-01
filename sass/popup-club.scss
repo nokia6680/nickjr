@@ -1,0 +1,274 @@
+.popup-club {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: relative;
+
+    width: 300px;
+
+    border-radius: 20px;
+    background-color: #129efe;
+
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+  }
+
+  &__top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    background-color: #0d87e2;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    box-shadow: 0px 5px 21px 16px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 5px 0px 21px 16px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 5px 21px 16px rgba(0,0,0,0.3);
+
+    z-index: 5;
+  }
+
+  &__middle {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__close {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -20px;
+    right: -8px;
+
+    cursor: pointer;
+    outline: none;
+
+    background-color: red;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 63.55'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose-cross%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='Слой_1-2' data-name='Слой 1'%3E%3Cpath class='cls-1' d='M28.94,31.79.61,60.11A2,2,0,0,0,.61,63,2,2,0,0,0,2,63.55,2,2,0,0,0,3.46,63L32,34.42,60.54,63a2,2,0,0,0,2.85,0,2,2,0,0,0,0-2.85L35.06,31.79,63.41,3.44A2,2,0,0,0,60.56.59L32,29.15,3.44.59A2,2,0,0,0,.59,3.44Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+
+    z-index: 10;
+  }
+
+  &__title {
+    width: 274px;
+
+    font: {
+      family: $fat-font;
+      size: 1.125em;
+      weight: 700;
+    }
+
+    color: $text-white;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    display: inline-flex;
+    width: 274px;
+
+    font: {
+      family: $base-font;
+      size: 0.75em;
+      weight: 700;
+    }
+
+    color: $text-white;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: $iphone) {
+  .popup-club {
+    &__wrapper {
+      width: 360px;
+
+      border-radius: 30px;
+
+      padding-bottom: 40px;
+
+      background-image: url('../img/wawe-top.png'), url('../img/wawe-bottom.png');
+      background-position: right top 95px, left bottom;
+      background-repeat: no-repeat, no-repeat;
+    }
+
+    &__top {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &__close {
+      top: -20px;
+      right: -8px;
+    }
+
+    &__title {
+      width: 320px;
+
+      font: {
+        size: 1.25em;
+      }
+
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      width: 320px;
+
+      font: {
+        size: 0.875em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .popup-club {
+    &__wrapper {
+      width: 605px;
+
+      border-radius: 40px;
+
+      padding-bottom: 0;
+
+      background-image: url('../img/wawe-top.png'), url('../img/wawe-bottom.png');
+      background-position: right -60px top 95px, left -140px bottom -20px;
+      background-repeat: no-repeat, no-repeat;
+    }
+
+    &__top {
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &__close {
+      top: -25px;
+      right: -25px;
+    }
+
+    &__middle {
+      position: relative;
+
+      overflow: hidden;
+
+      z-index: 2;
+
+      padding-bottom: 25px;
+
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        left: 0;
+        bottom: 20px;
+
+        background-image: url('../img/left-stamp.png');
+        background-repeat: no-repeat;
+        background-size: 140px 313px;
+
+
+        width: 140px;
+        height: 313px;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        right: -10px;
+        bottom: -60px;
+
+        background-image: url('../img/right-stamp.png');
+        background-repeat: no-repeat;
+        background-size: 157px 378px;
+
+
+        width: 157px;
+        height: 378px;
+      }
+    }
+
+    &__title {
+      width: 420px;
+
+      font: {
+        size: 1.75em;
+      }
+
+      margin-bottom: 15px;
+    }
+
+    &__subtitle {
+      width: 420px;
+
+      font: {
+        size: 1.125em;
+        family: $fat-font;
+      }
+    }
+  }
+}

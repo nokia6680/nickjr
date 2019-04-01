@@ -1,6 +1,14 @@
 .sidebar-slider {
   width: 100%;
 
+  &:not(.slick-initialized) {
+    visibility: hidden;
+    display: flex;
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
   .slick-slide img {
     display: none;
   }

@@ -28,20 +28,22 @@
 		<!--Слайдер в шапке (надо чтобы переключал по наведению)-->
 		<div class="header__carousel header-carousel">
 			<div class="header-carousel__slider carousel-slider carousel-slider__first">
-				<div class="carousel-slider__cartoon" data-delay="100">
-				  <a class="carousel-slider__link" href="show.html" target="_self" data-tooltip="Вспыш&nbsp;и чудо&nbsp;-&nbsp;машинки (0+)">
+
+				<div itemscope itemtype="http://schema.org/Thing" class="carousel-slider__cartoon" data-delay="100">
+				  <a rel="url" itemprop="url" class="carousel-slider__link" href="show.html" target="_self" data-tooltip="Вспыш&nbsp;и чудо&nbsp;-&nbsp;машинки (0+)">
 				    <!--Статичное положение-->
 				    <picture class="carousel-slider__image carousel-slider__image--original">
 				      <source srcset="img/buttons/blaze_normal.webp" type="image/webp">
-				      <img src="img/buttons/blaze_normal.png" alt="Blaze">
+				      <img itemprop="image" src="img/buttons/blaze_normal.png" alt="Вспыш и чудо-машинки">
 				    </picture>
 				    <!--Нажатое положение-->
 				    <picture class="carousel-slider__image carousel-slider__image--hover">
 				      <source srcset="img/buttons/blaze_pushed.webp" type="image/webp">
-				      <img src="img/buttons/blaze_pushed.png" alt="Blaze">
+				      <img itemprop="image" src="img/buttons/blaze_pushed.png" alt="Вспыш и чудо-машинки">
 				    </picture>
 				  </a>
 				</div>
+
 				<div class="carousel-slider__cartoon" data-delay="500">
 				  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;-&nbsp;путешественница (0+)">
 				    <!--Статичное положение-->
@@ -221,65 +223,71 @@
 			</div>
 		</section>
 		<!--Основное содержание страницы для шоу-->
-		<div class="main__wrapper main-wrapper main-wrapper--show">
+		<div itemscope itemtype="http://schema.org/WebPage" class="main__wrapper main-wrapper main-wrapper--show">
 			<!--Breadcrumbs-->
 			<div class="main-wrapper__breadcrumbs main-breadcrumbs">
-				<ul class="main-breadcrumbs__list breadcrumbs-list">
-					<li class="breadcrumbs-list__item breadcrumbs-item">
-						<a class="breadcrumbs-item__link" href="#">Главная</a>
+				<ul itemscope itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumbs__list breadcrumbs-list">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item">
+						<a rel="url" itemprop="item" class="breadcrumbs-item__link" href="#">
+							<span itemprop="name" class="breadcrumbs-item__text">Главная</span>
+						</a>
+						<meta itemprop="position" content="1">
 					</li>
-					<li class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--last">
-						<span class="breadcrumbs-item__last">Игра Щенячий патруль</span>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--last">
+						<span itemprop="item" class="breadcrumbs-item__last">
+							<span itemprop="name" class="breadcrumbs-item__text">Игра Щенячий патруль</span>
+						</span>
+						<meta itemprop="position" content="2">
 					</li>
 				</ul>
 			</div>
 			<!--Шапка с логотипом шоу-->
 			<section class="main-wrapper__intro main-intro">
 				<!--Лого шоу-->
-				<div class="main-intro__logo" id="show-1">
+				<div itemscope itemtype="http://schema.org/Thing" class="main-intro__logo" id="show-1">
 					<picture class="main-intro__frame">
 						<source srcset="img/main-intro-bg.webp" type="image/webp">
-						<img class="main-intro__image" src="img/main-intro-bg.png" alt="Logo-show-name" />
+						<img itemprop="image" class="main-intro__image" src="img/main-intro-bg.png" alt="Щенячий патруль" />
 					</picture>
 				</div>
 			</section>
 			<!--Разделитель-->
-			<section class="main-wrapper__show main-show">
+			<section itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement" class="main-wrapper__show main-show">
 				<!--Title and filters-->
-				<h1 class="main-show__title" id="show-title-1">Щенячий патруль</h1>
+				<h1 itemprop="name" class="main-show__title" id="show-title-1">Щенячий патруль</h1>
 				<div class="main-show__filter main-filter">
 					<button class="main-filter__btn main-filter__btn--game" type="button">Игры</button>
 					<button class="main-filter__btn main-filter__btn--video" type="button">Видео</button>
 				</div>
 				<!--Description and slides-->
 				<div class="main-show__content show-content">
-					<p class="show-content__description" id="show-description-1">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития.</p>
+					<p itemprop="description" class="show-content__description" id="show-description-1">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития.</p>
 					<!--Список игр основной для конкретного шоу-->
-					<ul class="show-content__list show-list" id="show-list-1">
-						<li class="show-list__item show-list__item--first">
-								<a class="show-list__link" href="game.html" target="_self" id="game">
-									<span class="show-list__duration">24:24</span>
-									<picture class="show-list__frame">
-										<source srcset="img/video-1.webp" type="image/webp">
-										<img class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
-									</picture>
-									<!--Нижний ряд с планками-->
-									<div class="show-list__bottom">
-										<!--Блок планок для видео-->
-										<div class="show-list__notes">
-											<span class="show-list__sign show-list__sign--new">Новинка</span>
-											<span class="show-list__sign show-list__sign--full">Полная серия</span>
-										</div>
-										<!--Блок с названием игры-->
-										<div class="show-list__info">
-											<b class="show-list__name" id="swow-name-1">Приключение Даши в Волшебной Стране</b>
-										</div>
-										<!--Значки-->
-										<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
-										<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+					<ul itemscope itemtype="http://schema.org/ItemList" class="show-content__list show-list" id="show-list-1">
+						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Game" class="show-list__item show-list__item--first">
+							<a itemprop="gameLocation" rel="url" class="show-list__link" href="game.html" target="_self" id="game">
+								<span class="show-list__duration">24:24</span>
+								<picture class="show-list__frame">
+									<source srcset="img/video-1.webp" type="image/webp">
+									<img itemprop="image" class="show-list__preview" src="img/video-1.png" alt="name-of-game-1" />
+								</picture>
+								<!--Нижний ряд с планками-->
+								<div class="show-list__bottom">
+									<!--Блок планок для видео-->
+									<div class="show-list__notes">
+										<span class="show-list__sign show-list__sign--new">Новинка</span>
+										<span class="show-list__sign show-list__sign--full">Полная серия</span>
 									</div>
-								</a>
-							</li>
+									<!--Блок с названием игры-->
+									<div class="show-list__info">
+										<b class="show-list__name" id="swow-name-1">Приключение Даши в Волшебной Стране</b>
+									</div>
+									<!--Значки-->
+									<img class="show-list__icon show-list__icon--game" src="img/tile-games-icon.svg" alt="Game Icon" id="game-icon" />
+									<img class="show-list__icon show-list__icon--video" src="img/tile-video-icon.svg" alt="Video Icon" id="video-icon" />
+								</div>
+							</a>
+						</li>
 						<li class="show-list__item show-list__item--second">
 								<a class="show-list__link" href="game.html" target="_self" id="game">
 									<span class="show-list__duration">24:24</span>
