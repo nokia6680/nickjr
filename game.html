@@ -1157,6 +1157,20 @@
 			<p class="footer-copyright__description footer-copyright__description--reserve">Nick and all related titles, logos and characters are trademarks of Viacom International Inc.</p>
 		</div>
 	</footer>
+	<!--Попап сообщения об ошибке-->
+	<div class="popup-report" style="display: none;">
+		<div class="popup-report__wrapper">
+			<button class="popup-report__close" type="button"></button>
+			<h2 class="popup-report__title">Упс! Кажется, что-то<br />не работает!<br />Скоро починим.</h2>
+			<picture class="popup-report__frame">
+				<source media="(min-width: 1440px)" srcset="img/report-wd.png" />
+				<source media="(min-width: 1024px)" srcset="img/report-nb.png" />
+				<source media="(min-width: 768px)" srcset="img/report-tab.png" />
+				<source media="(min-width: 480px)" srcset="img/report-mob-hd.png" />
+				<img class="popup-report__image" src="img/report-sm.png" alt="Gabby Report!" />
+			</picture>
+		</div>
+	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/fix.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>

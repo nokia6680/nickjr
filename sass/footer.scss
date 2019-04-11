@@ -26,6 +26,11 @@
   &__metric {
     margin-bottom: 10px;
   }
+
+  &--empty {
+    margin-bottom: 0;
+    margin-top: auto;
+  }
 }
 
 @media only screen and (min-width: $mobile) {

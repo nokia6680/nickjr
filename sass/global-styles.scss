@@ -33,6 +33,10 @@ body {
   color: $text-white;
 }
 
+.body-404 {
+  background-color: $bg-404;
+}
+
 .body-index {
   background-color: $bg-body;
   background-image: url('../img/bg-tile.png');
@@ -66,6 +70,25 @@ body {
   background-size: 360px 360px;
   background-repeat: repeat;
   background-position: left top;
+
+  @media only screen and (min-width: 1366px) {
+    background-color: transparent;
+    background-image: url('../img/brand1366.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+  }
+
+  @media only screen and (min-width: $widebooks-hd) {
+    background-image: url('../img/brand1366.png');
+    background-size: cover;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    background-image: url('../img/brand1920.png');
+    background-size: cover;
+  }
 }
 
 .body-game {
@@ -74,6 +97,25 @@ body {
   background-size: 360px 360px;
   background-repeat: repeat;
   background-position: left top;
+
+  @media only screen and (min-width: 1366px) {
+    background-color: transparent;
+    background-image: url('../img/brand1366.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+  }
+
+  @media only screen and (min-width: $widebooks-hd) {
+    background-image: url('../img/brand1366.png');
+    background-size: cover;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    background-image: url('../img/brand1920.png');
+    background-size: cover;
+  }
 }
 
 img {
