@@ -8,3 +8,13 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+@media only screen and (min-width: $widebooks) {
+  .main {
+    position: relative;
+
+    margin: 0 auto;
+
+    pointer-events: all;
+  }
+}

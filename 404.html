@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 	<title>NickJR | Ой, тут ничего нет!</title>
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -28,174 +28,210 @@
 			</nav>
 			<!--Слайдер в шапке (надо чтобы переключал по наведению)-->
 			<div class="header__carousel header-carousel">
-				<div class="header-carousel__slider carousel-slider carousel-slider__first">
+				<div itemscope itemtype="https://schema.org/SiteNavigationElement" class="header-carousel__slider carousel-slider carousel-slider__first">
+
 					<div class="carousel-slider__cartoon" data-delay="100">
-					  <a class="carousel-slider__link" href="show.html" target="_self" data-tooltip="Вспыш&nbsp;и чудо&nbsp;-&nbsp;машинки (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/blaze_normal.webp" type="image/webp">
-					      <img src="img/buttons/blaze_normal.png" alt="Blaze">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/blaze_pushed.webp" type="image/webp">
-					      <img src="img/buttons/blaze_pushed.png" alt="Blaze">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="show.html" target="_self" data-tooltip="Вспыш&nbsp;и чудо&nbsp;-&nbsp;машинки (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Вспыш и чудо-машинки</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/blaze_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/blaze_normal.png" alt="Вспыш и чудо-машинки">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/blaze_pushed.webp" type="image/webp">
+								<img src="img/buttons/blaze_pushed.png" alt="Вспыш и чудо-машинки">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="500">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;-&nbsp;путешественница (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/dora_exp_normal.webp" type="image/webp">
-					      <img src="img/buttons/dora_exp_normal.png" alt="Dora">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/dora_exp_pushed.webp" type="image/webp">
-					      <img src="img/buttons/dora_exp_pushed.png" alt="Dora">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;-&nbsp;путешественница (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Даша-путешественница</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/dora_exp_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/dora_exp_normal.png" alt="Dora">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/dora_exp_pushed.webp" type="image/webp">
+								<img src="img/buttons/dora_exp_pushed.png" alt="Dora">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="900">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;и&nbsp;друзья (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/dora_friends_normal.webp" type="image/webp">
-					      <img src="img/buttons/dora_friends_normal.png" alt="Dora Friends">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/dora_friends_pushed.webp" type="image/webp">
-					      <img src="img/buttons/dora_friends_pushed.png" alt="Dora Friends">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;и&nbsp;друзья (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Даша и друзья</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/dora_friends_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/dora_friends_normal.png" alt="Dora Friends">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/dora_friends_pushed.webp" type="image/webp">
+								<img src="img/buttons/dora_friends_pushed.png" alt="Dora Friends">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="1300">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Гуппи&nbsp;и&nbsp;пузырики (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/guppies_normal.webp" type="image/webp">
-					      <img src="img/buttons/guppies_normal.png" alt="Guppies">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/guppies_pushed.webp" type="image/webp">
-					      <img src="img/buttons/guppies_pushed.png" alt="Guppies">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Гуппи&nbsp;и&nbsp;пузырики (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Гуппи и пузырики</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/guppies_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/guppies_normal.png" alt="Guppies">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/guppies_pushed.webp" type="image/webp">
+								<img src="img/buttons/guppies_pushed.png" alt="Guppies">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="1700">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Нелла, отважная&nbsp;принцесса (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/nella_normal.webp" type="image/webp">
-					      <img src="img/buttons/nella_normal.png" alt="Nella">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/nella_pushed.webp" type="image/webp">
-					      <img src="img/buttons/nella_pushed.png" alt="Nella">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Нелла, отважная&nbsp;принцесса (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Нелла, отважная принцесса</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/nella_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/nella_normal.png" alt="Nella">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/nella_pushed.webp" type="image/webp">
+								<img src="img/buttons/nella_pushed.png" alt="Nella">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="2100">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Игры&nbsp;NickJR (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/nickjr_normal.webp" type="image/webp">
-					      <img src="img/buttons/nickjr_normal.png" alt="NickJR">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/nickjr_pushed.webp" type="image/webp">
-					      <img src="img/buttons/nickjr_pushed.png" alt="NickJR">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Игры&nbsp;NickJR (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Игры NickJR</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/nickjr_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/nickjr_normal.png" alt="NickJR">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/nickjr_pushed.webp" type="image/webp">
+								<img src="img/buttons/nickjr_pushed.png" alt="NickJR">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="2500">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Щенячий&nbsp;патруль (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/pawpatrol_normal.webp" type="image/webp">
-					      <img src="img/buttons/pawpatrol_normal.png" alt="PAW">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/pawpatrol_pushed.webp" type="image/webp">
-					      <img src="img/buttons/pawpatrol_pushed.png" alt="PAW">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Щенячий&nbsp;патруль (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Щенячий патруль</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/pawpatrol_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/pawpatrol_normal.png" alt="PAW">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/pawpatrol_pushed.webp" type="image/webp">
+								<img src="img/buttons/pawpatrol_pushed.png" alt="PAW">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="2900">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Расти&nbsp;-&nbsp;механик (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/rusty_normal.webp" type="image/webp">
-					      <img src="img/buttons/rusty_normal.png" alt="Rusty">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/rusty_pushed.webp" type="image/webp">
-					      <img src="img/buttons/rusty_pushed.png" alt="Rusty">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Расти&nbsp;-&nbsp;механик (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Расти-механик</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/rusty_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/rusty_normal.png" alt="Rusty">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/rusty_pushed.webp" type="image/webp">
+								<img src="img/buttons/rusty_pushed.png" alt="Rusty">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="3300">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Шиммер&nbsp;и&nbsp;Шайн (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/shs_normal.webp" type="image/webp">
-					      <img src="img/buttons/shs_normal.png" alt="SHS">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/shs_pushed.webp" type="image/webp">
-					      <img src="img/buttons/shs_pushed.png" alt="SHS">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Шиммер&nbsp;и&nbsp;Шайн (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Шиммер и Шайн</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/shs_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/shs_normal.png" alt="SHS">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/shs_pushed.webp" type="image/webp">
+								<img src="img/buttons/shs_pushed.png" alt="SHS">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="3700">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Санни&nbsp;Дэй (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/sunny_day_normal.webp" type="image/webp">
-					      <img src="img/buttons/sunny_day_normal.png" alt="Sunny">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/sunny_day_pushed.webp" type="image/webp">
-					      <img src="img/buttons/sunny_day_pushed.png" alt="Sunny">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Санни&nbsp;Дэй (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Санни Дэй</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/sunny_day_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/sunny_day_normal.png" alt="Sunny">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/sunny_day_pushed.webp" type="image/webp">
+								<img src="img/buttons/sunny_day_pushed.png" alt="Sunny">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="4100">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Отважные&nbsp;птенцы (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/top_wings_normal.webp" type="image/webp">
-					      <img src="img/buttons/top_wings_normal.png" alt="Topwing">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/top_wings_pushed.webp" type="image/webp">
-					      <img src="img/buttons/top_wings_pushed.png" alt="Topwing">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Отважные&nbsp;птенцы (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Отважные птенцы</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/top_wings_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/top_wings_normal.png" alt="Topwing">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/top_wings_pushed.webp" type="image/webp">
+								<img src="img/buttons/top_wings_pushed.png" alt="Topwing">
+							</picture>
+						</a>
 					</div>
+
 					<div class="carousel-slider__cartoon" data-delay="4500">
-					  <a class="carousel-slider__link" href="#" target="_self" data-tooltip="Умизуми (0+)">
-					    <!--Статичное положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--original">
-					      <source srcset="img/buttons/umizoomi_normal.webp" type="image/webp">
-					      <img src="img/buttons/umizoomi_normal.png" alt="Umizoomi">
-					    </picture>
-					    <!--Нажатое положение-->
-					    <picture class="carousel-slider__image carousel-slider__image--hover">
-					      <source srcset="img/buttons/umizoomi_pushed.webp" type="image/webp">
-					      <img src="img/buttons/umizoomi_pushed.png" alt="Umizoomi">
-					    </picture>
-					  </a>
+						<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Умизуми (0+)">
+							<!--Для схемы-->
+							<span itemprop="name" class="visually-hidden">Умизуми</span>
+							<!--Статичное положение-->
+							<picture class="carousel-slider__image carousel-slider__image--original">
+								<source srcset="img/buttons/umizoomi_normal.webp" type="image/webp">
+								<img itemprop="image" src="img/buttons/umizoomi_normal.png" alt="Umizoomi">
+							</picture>
+							<!--Нажатое положение-->
+							<picture class="carousel-slider__image carousel-slider__image--hover">
+								<source srcset="img/buttons/umizoomi_pushed.webp" type="image/webp">
+								<img src="img/buttons/umizoomi_pushed.png" alt="Umizoomi">
+							</picture>
+						</a>
 					</div>
 				</div>
 				<div class="prev-1"></div>
@@ -209,11 +245,11 @@
 				<p class="empty__description">Вернитесь на главную страницу и поищите нужную&nbsp;страницу там</p>
 			</div>
 			<picture class="empty__frame">
-				<source media="(min-width: 1440px)" srcset="img/404-wd.png" />
-				<source media="(min-width: 1024px)" srcset="img/404-nb.png" />
-				<source media="(min-width: 768px)" srcset="img/404-tab.png" />
-				<source media="(min-width: 480px)" srcset="img/404-mob-hd.png" />
-				<img class="empty__image" src="img/404-mob-sm.png" alt="404" />
+				<source media="(min-width: 1440px)" data-srcset="img/404-wd.png" />
+				<source media="(min-width: 1024px)" data-srcset="img/404-nb.png" />
+				<source media="(min-width: 768px)" data-srcset="img/404-tab.png" />
+				<source media="(min-width: 480px)" data-srcset="img/404-mob-hd.png" />
+				<img class="empty__image lazyload" data-src="img/404-mob-sm.png" alt="404" />
 			</picture>
 			<a class="empty__link" href="index.html" target="_self">На главную</a>
 		</main>
@@ -222,10 +258,10 @@
 			<!--Блок с логотипами-->
 			<div class="footer__logos footer-logos">
 				<a class="footer-logos__link footer-logos__link--nick" href="#" target="_blank">
-					<img class="footer-logos__img footer-logos__img--nick" src="img/nick.svg" alt="Nickelodeon"/>
+					<img class="footer-logos__img footer-logos__img--nick lazyload" data-src="img/nick.svg" alt="Nickelodeon"/>
 				</a>
 				<a class="footer-logos__link footer-logos__link--nickjr" href="#" target="_blank">
-					<img class="footer-logos__img footer-logos__img--nickjr" src="img/nickjr.svg" alt="Nickelodeon Junior"/>
+					<img class="footer-logos__img footer-logos__img--nickjr lazyload" data-src="img/nickjr.svg" alt="Nickelodeon Junior"/>
 				</a>
 			</div>
 			<!--Блок ссылок на правила и тд-->
@@ -265,7 +301,7 @@
 			</div>
 			<!--Странный блок какой-то-->
 			<div class="footer__metric footer-metric">
-				<img class="footer-metric__logo" src="img/nick-logo-footer.png" alt="Nickelodeon Kids & Teens" />
+				<img class="footer-metric__logo lazyload" data-src="img/nick-logo-footer.png" alt="Nickelodeon Kids & Teens" />
 			</div>
 			<!--Блок копирайта-->
 			<div class="footer__copyright footer-copyright">
@@ -276,6 +312,7 @@
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/fix.js"></script>
+	<script src="js/lazysizes.min.js" async=""></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.min.js"></script>
 </body>
