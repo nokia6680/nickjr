@@ -13,6 +13,12 @@
 
   margin-bottom: 20px;
 
+  @for $i from 1 through 100 {
+    .content-list__item--#{$i} {
+      order: ($i + 3);
+    }
+  }
+
   &__item {
     width: 150px;
     height: 150px;
@@ -23,22 +29,24 @@
 
     margin-bottom: 7px;
 
-    &--first {
+    /*3-4 блока, которые всегда первые*/
+    /*Слайд с клубом друзей*/
+    &--club {
       order: 2;
 
       .content-list__frame--big {
         display: none;
       }
     }
-
-    &--second {
+    /*Слайд с текстом*/
+    &--text {
       order: 1;
       width: 100%;
 
       text-align: left;
     }
-
-    &--third {
+    /*Слайд NickJR в кино*/
+    &--cinema {
       order: 3;
 
       .content-list__frame--big {
@@ -48,70 +56,6 @@
 
     &--promo {
       display: none;
-    }
-
-    &--four {
-      order: 4;
-
-      .content-list__frame--big {
-        display: none;
-      }
-    }
-
-    &--five {
-      order: 5;
-
-      .content-list__frame--big {
-        display: none;
-      }
-    }
-
-    &--six {
-      order: 6;
-
-      .content-list__frame--big {
-        display: none;
-      }
-    }
-
-    &--seven {
-      order: 7;
-
-      .content-list__frame--big {
-        display: none;
-      }
-    }
-
-    &--eight {
-      order: 8;
-
-      .content-list__frame--big {
-        display: none;
-      }
-    }
-
-    &--nine {
-      order: 9;
-
-      .content-list__frame--big {
-        display: none;
-      }
-    }
-
-    &--ten {
-      order: 10;
-
-      .content-list__frame--big {
-        display: none;
-      }
-    }
-
-    &--eleven {
-      order: 11;
-
-      .content-list__frame--big {
-        display: none;
-      }
     }
   }
 
@@ -142,6 +86,10 @@
     line-height: 0;
 
     border-radius: 15px;
+
+    &--big {
+      display: none;
+    }
   }
 
   &__preview {
@@ -336,18 +284,30 @@
   .content-list {
     margin-bottom: 20px;
 
+    @for $i from 1 through 3 {
+      .content-list__item--#{$i} {
+        order: 4 + $i;
+      }
+    }
+
+    @for $i from 4 through 100 {
+      .content-list__item--#{$i} {
+        order: 3 + $i;
+      }
+    }
+
     &__item {
       margin-bottom: 16px;
 
-      &--first {
+      &--club {
         order: 2;
       }
 
-      &--second {
+      &--text {
         order: 1;
       }
 
-      &--third {
+      &--cinema {
         order: 3;
       }
 
@@ -420,38 +380,6 @@
           line-height: 1;
         }
       }
-
-      &--four {
-        order: 4;
-      }
-
-      &--five {
-        order: 5;
-      }
-
-      &--six {
-        order: 6;
-      }
-
-      &--seven {
-        order: 7;
-      }
-
-      &--eight {
-        order: 9;
-      }
-
-      &--nine {
-        order: 10;
-      }
-
-      &--ten {
-        order: 11;
-      }
-
-      &--eleven {
-        order: 12;
-      }
     }
 
     &__link {
@@ -484,34 +412,22 @@
     /*Стилизация и порядок следования элементов для шаблона страницы пагинации*/
     &--page {
       .content-list__item {
-        &--1 {
+        &--text {
           order: 1;
         }
 
-        &--2 {
+        &--club {
           order: 2;
         }
 
-        &--3 {
+        &--cinema {
           order: 3;
-        }
-
-        &--4 {
-          order: 4;
-        }
-
-        &--5 {
-          order: 5;
-        }
-
-        &--6 {
-          order: 6;
         }
 
         &--promo {
           display: block;
 
-          order: 6;
+          order: 8;
 
           width: 320px;
           min-height: 320px;
@@ -577,50 +493,6 @@
             line-height: 1;
           }
         }
-
-        &--7 {
-          order: 8;
-        }
-
-        &--8 {
-          order: 9;
-        }
-
-        &--9 {
-          order: 10;
-        }
-
-        &--10 {
-          order: 11;
-        }
-
-        &--11 {
-          order: 12;
-        }
-
-        &--12 {
-          order: 13;
-        }
-
-        &--13 {
-          order: 14;
-        }
-
-        &--14 {
-          order: 15;
-        }
-
-        &--15 {
-          order: 16;
-        }
-
-        &--16 {
-          order: 17;
-        }
-
-        &--17 {
-          order: 18;
-        }
       }
     }
   }
@@ -630,17 +502,23 @@
   .content-list {
     margin-top: 20px;
 
+    @for $i from 1 through 100 {
+      .content-list__item--#{$i} {
+        order: 4 + $i;
+      }
+    }
+
     &__item {
       width: 300px;
       height: 300px;
 
       margin-bottom: 26px;
 
-      &--first {
+      &--club {
         order: 1;
       }
 
-      &--second {
+      &--text {
         order: 2;
         width: 300px;
       }
@@ -721,7 +599,7 @@
         }
       }
 
-      &--third {
+      &--cinema {
         order: 3;
 
         width: 100%;
@@ -737,22 +615,11 @@
         }
       }
 
-      &--four {
-        order: 4;
-        margin-right: 59px;
+      &--1 {
+        margin-right: 0;
       }
 
-      &--five {
-        order: 6;
-      }
-
-      &--six {
-        order: 7;
-      }
-
-      &--seven {
-        order: 8;
-
+      &--4 {
         width: 100%;
 
         .content-list__frame--small {
@@ -764,22 +631,6 @@
 
           width: 100%;
         }
-      }
-
-      &--eight {
-        order: 9;
-      }
-
-      &--nine {
-        order: 10;
-      }
-
-      &--ten {
-        order: 11;
-      }
-
-      &--eleven {
-        order: 12;
       }
     }
 
@@ -879,28 +730,16 @@
     /*Стилизация и порядок следования элементов для шаблона страницы пагинации*/
     &--page {
       .content-list__item {
-        &--1 {
+        &--club {
           order: 1;
         }
 
-        &--2 {
+        &--text {
           order: 2;
         }
 
-        &--3 {
+        &--cinema {
           order: 3;
-        }
-
-        &--4 {
-          order: 4;
-        }
-
-        &--5 {
-          order: 5;
-        }
-
-        &--6 {
-          order: 7;
         }
 
         &--promo {
@@ -978,18 +817,6 @@
             }
           }
         }
-
-        &--7 {
-          order: 8;
-        }
-
-        &--8 {
-          order: 9;
-        }
-
-        &--9 {
-          order: 10;
-        }
       }
     }
   }
@@ -1000,14 +827,20 @@
     justify-content: flex-start;
     margin-top: 30px;
 
+    @for $i from 1 through 100 {
+      .content-list__item--#{$i} {
+        order: 3 + $i;
+      }
+    }
+
     &__item {
-      &--first {
+      &--club {
         order: 1;
 
         margin-right: 20px;
       }
 
-      &--second {
+      &--text {
         order: 2;
         width: 620px;
       }
@@ -1016,16 +849,14 @@
         display: none;
       }
 
-      &--third {
+      &--cinema {
         order: 3;
 
         width: 596px;
         margin-right: 100px;
       }
 
-      &--four {
-        order: 4;
-
+      &--1 {
         width: 596px;
         margin-right: 100px;
 
@@ -1040,8 +871,7 @@
         }
       }
 
-      &--five {
-        order: 5;
+      &--2 {
         width: 596px;
 
         .content-list__frame--small {
@@ -1057,21 +887,21 @@
         margin-right: 44px;
       }
 
-      &--six {
-        order: 6;
-      }
-
-      &--seven {
-        order: 7;
-
-        margin-right: 44px;
-
+      &--4 {
         width: 300px;
+        margin-right: 44px;
+
+        .content-list__frame--small {
+          display: block;
+          width: 100%;
+        }
+
+        .content-list__frame--big {
+          display: none;
+        }
       }
 
-      &--eight {
-        order: 8;
-
+      &--5 {
         width: 596px;
 
         .content-list__frame--small {
@@ -1085,104 +915,61 @@
         }
       }
 
-      &--nine {
-        order: 9;
-        display: none;
+      &:nth-of-type(n+10) {
+        margin-right: 20px;
       }
 
-      &--ten {
-        order: 10;
-        display: none;
-      }
-
-      &--eleven {
-        order: 11;
+      &:nth-of-type(3n+12) {
+        margin-right: 0;
       }
     }
 
     /*Стилизация и порядок следования элементов для шаблона страницы пагинации*/
     &--page {
+      @for $i from 1 through 100 {
+        .content-list__item--#{$i} {
+          order: 3 + $i;
+        }
+      }
+
       .content-list__item {
         margin-right: 20px;
 
-        &--1 {
+        &--club {
           order: 1;
         }
 
-        &--2 {
+        &--text {
           order: 2;
         }
 
-        &--3 {
+        &--cinema {
           order: 3;
           margin-right: 0;
         }
 
-        &--4 {
-          order: 4;
-        }
-
-        &--5 {
-          order: 5;
-
+        &--2 {
           margin-right: 100px;
-        }
-
-        &--6 {
-          order: 6;
         }
 
         &--promo {
           display: none;
         }
 
-        &--7 {
-          order: 7;
-
+        &--4 {
           margin-right: 100px;
         }
 
-        &--8 {
-          order: 8;
-        }
-
-        &--9 {
-          order: 9;
-        }
-
-        &--10 {
-          order: 10;
+        &--7 {
           margin-right: 0;
         }
 
-        &--11 {
-          order: 11;
+        &:nth-of-type(n+10) {
+          margin-right: 20px;
         }
 
-        &--12 {
-          order: 12;
-        }
-
-        &--13 {
-          order: 13;
+        &:nth-of-type(3n+12) {
           margin-right: 0;
-        }
-
-        &--14 {
-          order: 14;
-        }
-
-        &--15 {
-          order: 15;
-        }
-
-        &--16 {
-          order: 16;
-          margin-right: 0;
-        }
-
-        &--17 {
-          order: 17;
         }
       }
     }
@@ -1193,14 +980,35 @@
   .content-list {
     margin-top: 0;
 
+    @for $i from 1 through 100 {
+      .content-list__item--#{$i} {
+        order: 4 + $i;
+      }
+    }
+
+    @for $i from 5 through 100 {
+      .content-list__item--#{$i} {
+        width: 300px;
+
+        .content-list__frame--small {
+          display: block;
+          width: 100%;
+        }
+
+        .content-list__frame--big {
+          display: none;
+        }
+      }
+    }
+
     &__item {
-      &--first {
+      &--club {
         order: 1;
 
         margin-right: 48px;
       }
 
-      &--second {
+      &--text {
         order: 2;
       }
 
@@ -1213,7 +1021,7 @@
         margin-top: 16px;
       }
 
-      &--third {
+      &--cinema {
         order: 4;
 
         width: 646px;
@@ -1230,15 +1038,12 @@
         }
       }
 
-      &--four {
-        order: 5;
-
+      &--1 {
         width: 646px;
         margin-right: 48px;
       }
 
-      &--five {
-        order: 6;
+      &--2 {
         width: 300px;
 
         .content-list__frame--small {
@@ -1253,15 +1058,11 @@
         margin-right: 0;
       }
 
-      &--six {
-        order: 7;
-
+      &--3 {
         margin-right: 48px;
       }
 
-      &--seven {
-        order: 8;
-
+      &--4 {
         width: 646px;
 
         margin-right: 0;
@@ -1277,61 +1078,12 @@
         }
       }
 
-      &--eight {
-        order: 9;
-
-        width: 300px;
-
+      &:nth-of-type(n+9) {
         margin-right: 48px;
-
-        .content-list__frame--small {
-          display: block;
-          width: 100%;
-        }
-
-        .content-list__frame--big {
-          display: none;
-        }
       }
 
-      &--nine {
-        display: block;
-
-        order: 10;
-
-        width: 300px;
-
-        margin-right: 48px;
-
-        .content-list__frame--small {
-          display: block;
-          width: 100%;
-        }
-
-        .content-list_frame--big {
-          display: none;
-        }
-      }
-
-      &--ten {
-        display: block;
-
-        order: 11;
-
-        width: 300px;
-
-        .content-list__frame--small {
-          display: block;
-          width: 100%;
-        }
-
-        .content-list__frame--big {
-          display: none;
-        }
-      }
-
-      &--eleven {
-        order: 12;
+      &:nth-of-type(3n+11) {
+        margin-right: 0;
       }
     }
 

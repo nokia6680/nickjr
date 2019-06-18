@@ -34,8 +34,8 @@
     width: calc((100% - (980px)) / 2);
     height: 100%;
 
-    border: 1px solid red;
-    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    background-color: transparent;
 
     cursor: pointer;
     pointer-events: all;
@@ -60,11 +60,7 @@
     width: calc((100% - (1300px)) / 2);
     height: 100%;
 
-    border: 1px solid red;
-    background-color: rgba(0, 0, 0, 0.3);
-
     cursor: pointer;
     pointer-events: all;
-
   }
 }

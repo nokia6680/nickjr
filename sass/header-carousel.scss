@@ -1,3 +1,7 @@
 .header-carousel {
   width: 100%;
+
+  .slick-list {
+    z-index: 9;
+  }
 }
