@@ -1,28 +1,28 @@
 {
-  "name": "mishka",
+  "name": "nickcinema",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект «Мишка» от HTML Academy",
+  "description": "Wonderpark",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "7.1.x",
-    "browser-sync": "2.18.x",
-    "del": "3.0.0",
-    "gulp": "3.9.x",
-    "gulp-csso": "^3.0.0",
-    "gulp-imagemin": "^3.4.0",
-    "gulp-sass": "3.1.x",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "1.1.x",
     "gulp-postcss": "7.0.x",
-    "gulp-posthtml": "^3.0.0",
-    "gulp-rename": "1.2.2",
-    "gulp-svgstore": "^6.1.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-uglify": "^3.0.1",
     "gulp-uglyfly": "^1.4.2",
-    "gulp-webp": "^2.3.0",
-    "posthtml-include": "1.1.0",
-    "run-sequence": "^2.2.0",
-    "stylelint": "8.1.x",
+    "gulp-webp": "^3.0.0",
+    "posthtml-include": "^1.2.0",
+    "run-sequence": "^2.2.1",
+    "stylelint": "^9.9.0",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
@@ -54,8 +54,18 @@
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
-    "del": "^3.0.0",
-    "gulp-rename": "^1.2.2",
-    "posthtml-include": "^1.1.0"
-  }
+    "gulp-cli": "^2.2.0",
+    "gulp-sequence": "^1.0.0"
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nokia6680/nickcinema.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nokia6680/nickcinema/issues"
+  },
+  "homepage": "https://github.com/nokia6680/nickcinema#readme"
 }

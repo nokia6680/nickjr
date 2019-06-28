@@ -9,6 +9,11 @@
   padding-top: 10px;
 
   &__btn {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     background-color: $controls-bg;
     border: none;
     border-radius: 13px;
@@ -18,6 +23,8 @@
 
     width: auto;
     height: 26px;
+
+    text-decoration: none;
 
     cursor: pointer;
     outline: none;

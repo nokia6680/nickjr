@@ -7,6 +7,10 @@
   width: 100%;
 
   padding-bottom: 12px;
+
+  &__mark {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -44,6 +48,55 @@
     top: 328px;
     right: 0;
 
+    &__mark {
+      display: block;
+      align-self: flex-end;
+
+      background-color: $bg-mark-btn;
+
+      width: 140px;
+      height: 30px;
+
+      border-radius: 25px;
+      border: none;
+
+      cursor: pointer;
+      outline: none;
+
+      font: {
+        size: 1em;
+        family: $fat-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 30px;
+
+      margin-bottom: -30px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 18px;
+        height: 16px;
+
+        top: 50%;
+        left: 10px;
+
+        background-image: url('../img/like-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 18px 16px;
+
+        transform: translateY(-50%);
+      }
+    }
+
     &--page {
       top: 350px;
       right: -20px;
@@ -69,6 +122,52 @@
 
     top: auto;
     right: 0;
+
+    &__mark {
+      align-self: flex-start;
+
+      width: 180px;
+      height: 38px;
+
+      border-radius: 25px;
+      border: none;
+
+      cursor: pointer;
+      outline: none;
+
+      font: {
+        size: 1.25em;
+        family: $fat-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 20px;
+
+      margin-bottom: 20px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 26px;
+        height: 24px;
+
+        top: 50%;
+        left: 10px;
+
+        background-image: url('../img/like-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 26px 24px;
+
+        transform: translateY(-50%);
+      }
+    }
 
     &__promo {
       display: flex;

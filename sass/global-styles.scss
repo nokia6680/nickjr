@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow: -moz-scrollbars-none;
 }
 
 *,
@@ -26,6 +27,7 @@ body {
   height: 100%;
 
   overflow-x: hidden;
+  scrollbar-width: none;
 
   font-display: swap;
 
@@ -46,22 +48,12 @@ body {
   /*
   @media only screen and (min-width: 1366px) {
     background-color: transparent;
-    background-image: url('../img/blaze-1366.png');
+    background-image: url('../img/blaze-1920.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
-  }
-
-  @media only screen and (min-width: 1440px) {
-    background-image: url('../img/blaze-1920.png');
-    background-size: cover;
-  }
-
-  @media only screen and (min-width: 1920px) {
-    background-image: url('../img/blaze-1920.png');
-    background-size: cover;
-  } */
+  }*/
 }
 
 .body-show {

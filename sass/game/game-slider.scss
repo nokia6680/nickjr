@@ -33,6 +33,8 @@
 
     pointer-events: auto;
 
+    text-decoration: none;
+
     &:hover {
       .game-slider__preview {
         filter: brightness(100%);
@@ -469,6 +471,13 @@
 
       &:first-of-type {
         margin-right: 20px;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
       }
     }
 

@@ -68,6 +68,8 @@
     cursor: pointer;
     outline: none;
 
+    text-decoration: none;
+
     &:hover {
       .carousel-slider__image--original img {
         filter: brightness(100%);
@@ -331,13 +333,15 @@
 
         display: inline-flex;
 
-        padding: 0.5em 0.75em;
+        padding: 0.5em 0.875em;
         min-height: 20px;
         background-color: #ffffff;
         border-radius: 5px;
         top: 130px;
         left: 50%;
         transform: translateX(-50%);
+
+        width: 110%;
 
         text-align: center;
         align-items: center;

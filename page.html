@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	
+
 	<meta property="og:title" content="Игры Nick Jr." />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="Детские игры онлайн бесплатно на официальном сайте детского телеканала Nick Jr. Вспыш и чудо машинки, Щенячий патруль, Даша-путешественница и другие бесплатные игры." />
@@ -40,13 +40,31 @@
 					<img class="header-nav__img" src="img/logo.svg" alt="NickJR Official" />
 				</a>
 			</div>
+			<!--Меню-->
+			<ul class="header-nav__list nav-list">
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--kids" href="#" target="_self" title="Детские игры">Детские игры</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--boys" href="#" target="_self" title="Игры для мальчиков">Игры для мальчиков</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--girls" href="#" target="_self" title="Игры для девочек">Игры для девочек</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--race" href="#" target="_self" title="Игры гонки">Игры гонки</a>
+				</li>
+			</ul>
+			<!--Кнопка закрытия-->
+			<button class="nav-list__opener" type="button"><span class="visually-hidden">Меню</span></button>
+			<button class="nav-list__closer hidden" type="button"><span class="visually-hidden">Закрыть меню</span></button>
 		</nav>
 		<!--Слайдер в шапке (надо чтобы переключал по наведению)-->
 		<div class="header__carousel header-carousel" itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement">
 			<div itemprop="about" itemscope itemtype="http://schema.org/ItemList" class="header-carousel__slider carousel-slider carousel-slider__first">
 
 				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="100">
-					<a itemprop="url" class="carousel-slider__link" href="show.html" target="_self" data-tooltip="Вспыш&nbsp;и чудо&nbsp;-&nbsp;машинки (0+)" title="Вспыш и чудо - машинки">
+					<a itemprop="url" class="carousel-slider__link" href="show.html" target="_self" data-tooltip="Вспыш&nbsp;и&shy; чудо&nbsp;-&nbsp;машинки (0+)" title="Вспыш и чудо - машинки">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Вспыш и чудо-машинки</span>
 						<!--Статичное положение-->
@@ -62,8 +80,8 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="500">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;-&nbsp;путешественница (0+)" title="Даша-путешественница">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="300">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;-&shy; путешественница (0+)" title="Даша-путешественница">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Даша-путешественница</span>
 						<!--Статичное положение-->
@@ -79,8 +97,8 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="900">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;и&nbsp;друзья (0+)" title="Даша и друзья">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="500">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;и&shy; друзья (0+)" title="Даша и друзья">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Даша и друзья</span>
 						<!--Статичное положение-->
@@ -96,8 +114,8 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1300">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Гуппи&nbsp;и&nbsp;пузырики (0+)" title="Гуппи и пузырики">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="700">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Гуппи&nbsp;и&shy; пузырики (0+)" title="Гуппи и пузырики">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Гуппи и пузырики</span>
 						<!--Статичное положение-->
@@ -113,8 +131,8 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1700">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Нелла, отважная&nbsp;принцесса (0+)" title="Нелла, отважная принцесса">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="900">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Нелла,&shy; отважная&shy; принцесса (0+)" title="Нелла, отважная принцесса">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Нелла, отважная принцесса</span>
 						<!--Статичное положение-->
@@ -130,7 +148,7 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="2100">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1100">
 					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Игры&nbsp;NickJR (0+)" title="Игры Nick Jr.">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Игры Nick Jr.</span>
@@ -147,8 +165,8 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="2500">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Щенячий&nbsp;патруль (0+)" title="Щенячий патруль">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1300">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Щенячий&shy; патруль (0+)" title="Щенячий патруль">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Щенячий патруль</span>
 						<!--Статичное положение-->
@@ -164,8 +182,8 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="2900">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Расти&nbsp;-&nbsp;механик (0+)" title="Расти-механик">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1500">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Расти&nbsp;-&shy; механик (0+)" title="Расти-механик">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Расти-механик</span>
 						<!--Статичное положение-->
@@ -181,8 +199,8 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="3300">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Шиммер&nbsp;и&nbsp;Шайн (0+)" title="Шиммер и Шайн">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1700">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Шиммер&nbsp;и&shy; Шайн (0+)" title="Шиммер и Шайн">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Шиммер и Шайн</span>
 						<!--Статичное положение-->
@@ -198,7 +216,7 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="3700">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1900">
 					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Санни&nbsp;Дэй (0+)" title="Санни Дэй">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Санни Дэй</span>
@@ -215,8 +233,8 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="4100">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Отважные&nbsp;птенцы (0+)" title="Отважные птенцы">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="2100">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Отважные&shy; птенцы (0+)" title="Отважные птенцы">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Отважные птенцы</span>
 						<!--Статичное положение-->
@@ -232,7 +250,7 @@
 					</a>
 				</div>
 
-				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="4500">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="2300">
 					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Умизуми (0+)" title="Умизуми">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Умизуми</span>
@@ -1395,44 +1413,46 @@
 	<!--Подвал страницы-->
 	<footer class="footer">
 		<!--Блок с логотипами-->
+		<!--noindex-->
 		<div class="footer__logos footer-logos">
-			<a class="footer-logos__link footer-logos__link--nick" href="#" target="_blank">
-				<img class="footer-logos__img footer-logos__img--nick lazyload" data-src="img/nick.svg" alt="Nickelodeon"/>
+			<a class="footer-logos__link footer-logos__link--nick" href="#" target="_blank" rel="nofollow">
+				<img class="footer-logos__img footer-logos__img--nick lazyload" data-src="img/nick.svg" alt="Nickelodeon" />
 			</a>
-			<a class="footer-logos__link footer-logos__link--nickjr" href="#" target="_blank">
-				<img class="footer-logos__img footer-logos__img--nickjr lazyload" data-src="img/nickjr.svg" alt="Nickelodeon Junior"/>
+			<a class="footer-logos__link footer-logos__link--nickjr" href="#" target="_blank" rel="nofollow">
+				<img class="footer-logos__img footer-logos__img--nickjr lazyload" data-src="img/nickjr.svg" alt="Nickelodeon Junior" />
 			</a>
 		</div>
 		<!--Блок ссылок на правила и тд-->
 		<div class="footer__links footer-links">
 			<ul class="footer-links__list links-list">
+				<!--noindex-->
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
 						<span class="links-item__text">Политика конфиденциальности</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
 						<span class="links-item__text">Персональные данные</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
 						<span class="links-item__text">Cookie политика</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
 						<span class="links-item__text">Условия пользования сайтом</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
 						<span class="links-item__text">Контакты</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
+					<a class="links-item__link" href="#" target="_blank"rel="nofollow">
 						<span class="links-item__text">Карта сайта</span>
 					</a>
 				</li>
@@ -1447,6 +1467,7 @@
 			<p class="footer-copyright__description footer-copyright__description--copy">&copy;&nbsp;2019 Viacom International Inc. Все права защищены.</p>
 			<p class="footer-copyright__description footer-copyright__description--reserve">Nick и все связанные с ним товары, логотипы и персонажи являются торговыми марками Viacom International Inc.</p>
 		</div>
+		<!--/noindex-->
 	</footer>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/fix.js"></script>

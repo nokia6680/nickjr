@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media only screen and (min-width: $notebooks) {
+@media only screen and (min-width: 1366px) {
   .branding {
     display: flex;
     flex-direction: row;

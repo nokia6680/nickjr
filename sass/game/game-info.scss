@@ -39,6 +39,8 @@
 
     margin-top: 0;
     margin-bottom: 10px;
+
+    width: 100%;
   }
 }
 
@@ -78,6 +80,7 @@
   .game-info {
     &__description {
       min-height: auto;
+      max-width: 330px;
     }
   }
 }
@@ -97,6 +100,8 @@
       font: {
         size: 1.188em;
       }
+
+      max-width: 564px;
     }
   }
 }
@@ -107,6 +112,7 @@
 
     &__description {
       min-height: 150px;
+      max-width: 930px;
     }
   }
 }

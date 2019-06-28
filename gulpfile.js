@@ -22,7 +22,9 @@ gulp.task("style", function() {
   gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
-    .pipe(postcss([autoprefixer({ grid: 'autoplace' })]))
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream())
     .pipe(minify())
@@ -41,13 +43,12 @@ gulp.task("serve", function() {
 
   gulp.watch("sass/**/*.scss", ["style"]);
   gulp.watch("*.html", ["html"]);
-  gulp.watch("*.js", ["js"]);
 });
 
 gulp.task("images", function() {
   return gulp.src("img/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 7}),
+      imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
@@ -56,7 +57,7 @@ gulp.task("images", function() {
 
 gulp.task("webp", function() {
   return gulp.src("img/**/*.{png,jpg}")
-    .pipe(webp({quality: 50}))
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("img"));
 });
 

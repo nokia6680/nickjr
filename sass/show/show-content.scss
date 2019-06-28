@@ -11,6 +11,7 @@
       size: 0.75em;
       family: $fat-font;
     }
+    width: 100%;
 
     color: $text-white;
     line-height: 1.2;
@@ -54,6 +55,7 @@
 @media only screen and (min-width: $tablets) {
   .show-content {
     &__description {
+      align-self: flex-start;
       min-height: auto;
       margin-bottom: 40px;
     }
@@ -68,6 +70,8 @@
       }
       min-height: auto;
       margin-bottom: 45px;
+
+      max-width: 994px;
     }
   }
 }
@@ -76,5 +80,9 @@
   .show-content {
     width: 994px;
     align-self: flex-start;
+
+    &__description {
+      max-width: 994px;
+    }
   }
 }

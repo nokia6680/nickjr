@@ -79,6 +79,10 @@
   .game-content {
     width: 620px;
     align-self: flex-start;
+
+    &__frame {
+      width: 620px;
+    }
   }
 }
 
@@ -88,6 +92,7 @@
     align-self: flex-start;
 
     &__frame {
+      width: 930px;
       min-height: 555px;
     }
   }

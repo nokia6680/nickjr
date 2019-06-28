@@ -36,21 +36,40 @@
 		<!--Логотип + возможная навигация-->
 		<nav class="header__nav header-nav">
 			<div class="header-nav__logo">
-				<a class="header-nav__link" href="index.html" target="_self">
+				<a class="header-nav__link" href="#" target="_self">
 					<img class="header-nav__img" src="img/logo.svg" alt="NickJR Official" />
 				</a>
 			</div>
+			<!--Меню-->
+			<ul class="header-nav__list nav-list">
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--kids" href="#" target="_self" title="Детские игры">Детские игры</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--boys" href="#" target="_self" title="Игры для мальчиков">Игры для мальчиков</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--girls" href="#" target="_self" title="Игры для девочек">Игры для девочек</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--race" href="#" target="_self" title="Игры гонки">Игры гонки</a>
+				</li>
+			</ul>
+			<!--Кнопка закрытия-->
+			<button class="nav-list__opener" type="button"><span class="visually-hidden">Меню</span></button>
+			<button class="nav-list__closer hidden" type="button"><span class="visually-hidden">Закрыть меню</span></button>
 		</nav>
 		<!--Слайдер в шапке (надо чтобы переключал по наведению)-->
-		<div class="header__carousel header-carousel">
-			<div itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement" class="header-carousel__slider carousel-slider carousel-slider__first">
-				<div class="carousel-slider__cartoon" data-delay="100">
-					<a itemprop="url" class="carousel-slider__link" href="show.html" target="_self" data-tooltip="Вспыш&nbsp;и чудо&nbsp;-&nbsp;машинки (0+)">
+		<div class="header__carousel header-carousel" itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement">
+			<div itemprop="about" itemscope itemtype="http://schema.org/ItemList" class="header-carousel__slider carousel-slider carousel-slider__first">
+
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="100">
+					<a itemprop="url" class="carousel-slider__link" href="show.html" target="_self" data-tooltip="Вспыш&nbsp;и&shy; чудо&nbsp;-&nbsp;машинки (0+)" title="Вспыш и чудо - машинки">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Вспыш и чудо-машинки</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/blaze_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/blaze_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/blaze_normal.png" alt="Вспыш и чудо-машинки">
 						</picture>
 						<!--Нажатое положение-->
@@ -61,13 +80,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="500">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;-&nbsp;путешественница (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="300">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;-&shy; путешественница (0+)" title="Даша-путешественница">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Даша-путешественница</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/dora_exp_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/dora_exp_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/dora_exp_normal.png" alt="Dora">
 						</picture>
 						<!--Нажатое положение-->
@@ -78,13 +97,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="900">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;и&nbsp;друзья (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="500">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Даша&nbsp;и&shy; друзья (0+)" title="Даша и друзья">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Даша и друзья</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/dora_friends_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/dora_friends_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/dora_friends_normal.png" alt="Dora Friends">
 						</picture>
 						<!--Нажатое положение-->
@@ -95,13 +114,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="1300">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Гуппи&nbsp;и&nbsp;пузырики (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="700">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Гуппи&nbsp;и&shy; пузырики (0+)" title="Гуппи и пузырики">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Гуппи и пузырики</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/guppies_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/guppies_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/guppies_normal.png" alt="Guppies">
 						</picture>
 						<!--Нажатое положение-->
@@ -112,13 +131,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="1700">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Нелла, отважная&nbsp;принцесса (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="900">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Нелла,&shy; отважная&shy; принцесса (0+)" title="Нелла, отважная принцесса">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Нелла, отважная принцесса</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/nella_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/nella_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/nella_normal.png" alt="Nella">
 						</picture>
 						<!--Нажатое положение-->
@@ -129,13 +148,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="2100">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Игры&nbsp;NickJR (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1100">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Игры&nbsp;NickJR (0+)" title="Игры Nick Jr.">
 						<!--Для схемы-->
-						<span itemprop="name" class="visually-hidden">Игры NickJR</span>
+						<span itemprop="name" class="visually-hidden">Игры Nick Jr.</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/nickjr_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/nickjr_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/nickjr_normal.png" alt="NickJR">
 						</picture>
 						<!--Нажатое положение-->
@@ -146,13 +165,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="2500">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Щенячий&nbsp;патруль (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1300">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Щенячий&shy; патруль (0+)" title="Щенячий патруль">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Щенячий патруль</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/pawpatrol_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/pawpatrol_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/pawpatrol_normal.png" alt="PAW">
 						</picture>
 						<!--Нажатое положение-->
@@ -163,13 +182,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="2900">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Расти&nbsp;-&nbsp;механик (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1500">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Расти&nbsp;-&shy; механик (0+)" title="Расти-механик">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Расти-механик</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/rusty_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/rusty_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/rusty_normal.png" alt="Rusty">
 						</picture>
 						<!--Нажатое положение-->
@@ -180,13 +199,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="3300">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Шиммер&nbsp;и&nbsp;Шайн (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1700">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Шиммер&nbsp;и&shy; Шайн (0+)" title="Шиммер и Шайн">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Шиммер и Шайн</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/shs_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/shs_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/shs_normal.png" alt="SHS">
 						</picture>
 						<!--Нажатое положение-->
@@ -197,13 +216,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="3700">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Санни&nbsp;Дэй (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="1900">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Санни&nbsp;Дэй (0+)" title="Санни Дэй">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Санни Дэй</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/sunny_day_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/sunny_day_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/sunny_day_normal.png" alt="Sunny">
 						</picture>
 						<!--Нажатое положение-->
@@ -214,13 +233,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="4100">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Отважные&nbsp;птенцы (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="2100">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Отважные&shy; птенцы (0+)" title="Отважные птенцы">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Отважные птенцы</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/top_wings_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/top_wings_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/top_wings_normal.png" alt="Topwing">
 						</picture>
 						<!--Нажатое положение-->
@@ -231,13 +250,13 @@
 					</a>
 				</div>
 
-				<div class="carousel-slider__cartoon" data-delay="4500">
-					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Умизуми (0+)">
+				<div itemprop="itemListElement" class="carousel-slider__cartoon" data-delay="2300">
+					<a itemprop="url" class="carousel-slider__link" href="#" target="_self" data-tooltip="Умизуми (0+)" title="Умизуми">
 						<!--Для схемы-->
 						<span itemprop="name" class="visually-hidden">Умизуми</span>
 						<!--Статичное положение-->
 						<picture class="carousel-slider__image carousel-slider__image--original">
-							<source srcset="img/buttons/umizoomi_normal.webp" type="image/webp">
+							<source itemprop="image" srcset="img/buttons/umizoomi_normal.webp" type="image/webp">
 							<img itemprop="image" src="img/buttons/umizoomi_normal.png" alt="Umizoomi">
 						</picture>
 						<!--Нажатое положение-->
@@ -248,8 +267,8 @@
 					</a>
 				</div>
 			</div>
-			<div class="slick-arrow prev-1"></div>
-			<div class="slick-arrow next-1"></div>
+			<div class="prev-1"></div>
+			<div class="next-1"></div>
 		</div>
 	</header>
   <!--Основное содержание страницы-->
@@ -322,19 +341,19 @@
 							<b itemprop="ratingValue" class="main-rating__final" id="rating-result">4.1</b>
 							<div id="main-rating__stars reviewStars-input">
 								<input class="reviewStars-input__input" id="star-4" type="radio" name="reviewStars" />
-								<label class="reviewStars-input__label" title="gorgeous" for="star-4"></label>
+								<label class="reviewStars-input__label" title="Супер" for="star-4"></label>
 
 								<input class="reviewStars-input__input" id="star-3" type="radio" name="reviewStars" />
-								<label class="reviewStars-input__label" title="good" for="star-3"></label>
+								<label class="reviewStars-input__label" title="Хорошо" for="star-3"></label>
 
 								<input class="reviewStars-input__input" id="star-2" type="radio" name="reviewStars" />
-								<label class="reviewStars-input__label" title="regular" for="star-2"></label>
+								<label class="reviewStars-input__label" title="Средне" for="star-2"></label>
 
 								<input class="reviewStars-input__input" id="star-1" type="radio" name="reviewStars" />
-								<label class="reviewStars-input__label" title="poor" for="star-1"></label>
+								<label class="reviewStars-input__label" title="Плохо" for="star-1"></label>
 
 								<input class="reviewStars-input__input" id="star-0" type="radio" name="reviewStars" />
-								<label class="reviewStars-input__label" title="bad" for="star-0"></label>
+								<label class="reviewStars-input__label" title="Ужасно" for="star-0"></label>
 							</div>
 							<b class="main-rating__quantity">(<span itemprop="ratingCount" class="main-rating__nr" id="rating-counter">14</span>&nbsp;оценок)</b>
 						</div>
@@ -369,10 +388,12 @@
 					</div>
 					<!--Управляющие элементы игры-->
 					<div class="game-content__controls game-controls">
-						<button class="game-controls__btn game-controls__btn--report" type="button">Сообщить<br />о проблеме</button>
-						<button class="game-controls__btn game-controls__btn--prev" type="button">Назад</button>
-						<button class="game-controls__btn game-controls__btn--next" type="button">Вперед</button>
-						<button class="game-controls__btn game-controls__btn--expand" type="button"></button>
+						<a class="game-controls__btn game-controls__btn--report" href="#">Сообщить<br />о проблеме</a>
+						<!--noindex-->
+						<a class="game-controls__btn game-controls__btn--prev" href="#" rel="nofollow">Назад</a>
+						<a class="game-controls__btn game-controls__btn--next" href="#" rel="nofollow">Вперед</a>
+						<!--/noindex-->
+						<a class="game-controls__btn game-controls__btn--expand" href="#"></a>
 					</div>
 				</div>
 				<!--Боковой блок с рекламой-->
@@ -1149,65 +1170,47 @@
 	<!--Подвал страницы-->
 	<footer class="footer">
 		<!--Блок с логотипами-->
+		<!--noindex-->
 		<div class="footer__logos footer-logos">
-			<a class="footer-logos__link footer-logos__link--nick" href="#" target="_blank">
-				<img class="footer-logos__img footer-logos__img--nick lazyload" data-src="img/nick.svg" alt="Nickelodeon"/>
+			<a class="footer-logos__link footer-logos__link--nick" href="#" target="_blank" rel="nofollow">
+				<img class="footer-logos__img footer-logos__img--nick lazyload" data-src="img/nick.svg" alt="Nickelodeon" />
 			</a>
-			<a class="footer-logos__link footer-logos__link--nickjr" href="#" target="_blank">
-				<img class="footer-logos__img footer-logos__img--nickjr lazyload" data-src="img/nickjr.svg" alt="Nickelodeon Junior"/>
+			<a class="footer-logos__link footer-logos__link--nickjr" href="#" target="_blank" rel="nofollow">
+				<img class="footer-logos__img footer-logos__img--nickjr lazyload" data-src="img/nickjr.svg" alt="Nickelodeon Junior" />
 			</a>
 		</div>
 		<!--Блок ссылок на правила и тд-->
 		<div class="footer__links footer-links">
 			<ul class="footer-links__list links-list">
+				<!--noindex-->
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Privacy Policy (updated 6/21/2017)</span>
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
+						<span class="links-item__text">Политика конфиденциальности</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Terms of Use</span>
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
+						<span class="links-item__text">Персональные данные</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Safety</span>
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
+						<span class="links-item__text">Cookie политика</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Closed Captioning Contact</span>
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
+						<span class="links-item__text">Условия пользования сайтом</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Copyright Compliance</span>
+					<a class="links-item__link" href="#" target="_blank" rel="nofollow">
+						<span class="links-item__text">Контакты</span>
 					</a>
 				</li>
 				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Grownups</span>
-					</a>
-				</li>
-				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">TV Schedule</span>
-					</a>
-				</li>
-				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Sitemap</span>
-					</a>
-				</li>
-				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Work With Us</span>
-					</a>
-				</li>
-				<li class="links-list__item links-item">
-					<a class="links-item__link" href="#" target="_blank">
-						<span class="links-item__text">Ad Choicess</span>
+					<a class="links-item__link" href="#" target="_blank"rel="nofollow">
+						<span class="links-item__text">Карта сайта</span>
 					</a>
 				</li>
 			</ul>
@@ -1218,9 +1221,10 @@
 		</div>
 		<!--Блок копирайта-->
 		<div class="footer__copyright footer-copyright">
-			<p class="footer-copyright__description footer-copyright__description--copy">&copy;&nbsp;2018 Viacom International Inc. Все права защищены.</p>
-			<p class="footer-copyright__description footer-copyright__description--reserve">Nick and all related titles, logos and characters are trademarks of Viacom International Inc.</p>
+			<p class="footer-copyright__description footer-copyright__description--copy">&copy;&nbsp;2019 Viacom International Inc. Все права защищены.</p>
+			<p class="footer-copyright__description footer-copyright__description--reserve">Nick и все связанные с ним товары, логотипы и персонажи являются торговыми марками Viacom International Inc.</p>
 		</div>
+		<!--/noindex-->
 	</footer>
 	<!--Попап сообщения об ошибке-->
 	<div class="popup-report" style="display: none;">

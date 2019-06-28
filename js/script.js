@@ -1,5 +1,39 @@
-/*Измененный скрипт перелистывания слайдов*/
+var menuMobile = document.querySelector(".nav-list");
+var openButton = document.querySelector(".nav-list__opener");
+var closeButton = document.querySelector(".nav-list__closer");
 
+if (menuMobile) {
+  openButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    menuMobile.classList.add("nav-list--active");
+    openButton.classList.add("hidden");
+    closeButton.classList.remove("hidden");
+  });
+
+  menuMobile.addEventListener("click", function() {
+    menuMobile.classList.remove("nav-list--active");
+  });
+
+  menuMobile.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+
+  closeButton.addEventListener("click", function() {
+    menuMobile.classList.remove("nav-list--active");
+    openButton.classList.remove("hidden");
+    closeButton.classList.add("hidden");
+  });
+
+  window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+      menuMobile.classList.remove("nav-list--active");
+      openButton.classList.remove("hidden");
+      closeButton.classList.add("hidden");
+    }
+  });
+}
+
+/*Измененный скрипт перелистывания слайдов*/
 $(document).ready(function() {
   $(".carousel-slider").slick({
     infinite: true,
@@ -113,7 +147,6 @@ $(document).ready(function() {
     }
   });
 });
-
 /*Первый слайдер на странице INDEX*/
 $(document).ready(function(){
   $('.sidebar-slider--first').slick({
@@ -252,7 +285,6 @@ $(document).ready(function(){
     ]
   });
 });
-
 /*Первый слайдер на странице Game*/
 $(document).ready(function(){
   $('.game-slider--similar').slick({
@@ -305,7 +337,6 @@ $(document).ready(function(){
     ]
   });
 });
-
 /*Второй слайдер на странице Game*/
 $(document).ready(function(){
   $('.game-slider--other').slick({
