@@ -87,6 +87,8 @@
 
     border-radius: 15px;
 
+    overflow: hidden;
+
     &--big {
       display: none;
     }
@@ -637,9 +639,14 @@
       }
     }
 
+    &__frame {
+      min-height: 300px;
+    }
+
     &__link {
       width: 100%;
       height: 100%;
+      overflow: hidden;
     }
 
     &__preview {
@@ -648,6 +655,7 @@
 
       &--big {
         width: 100%;
+        height: 330px;
       }
     }
 
@@ -927,6 +935,12 @@
       }
     }
 
+    &__preview {
+      &--big {
+        height: 300px;
+      }
+    }
+
     /*Стилизация и порядок следования элементов для шаблона страницы пагинации*/
     &--page {
       @for $i from 1 through 100 {
@@ -1099,9 +1113,9 @@
       width: 300px;
       height: 300px;
 
-
       &--big {
         width: 100%;
+        height: 323px;
       }
     }
 

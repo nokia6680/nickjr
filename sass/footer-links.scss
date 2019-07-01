@@ -11,5 +11,6 @@
 @media only screen and (min-width: $notebooks) {
   .footer-links {
     width: 672px;
+    z-index: 10;
   }
 }
