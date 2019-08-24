@@ -2,6 +2,10 @@ var menuMobile = document.querySelector(".nav-list");
 var openButton = document.querySelector(".nav-list__opener");
 var closeButton = document.querySelector(".nav-list__closer");
 
+var menuText = document.querySelector(".tag-list");
+var menuOpen = document.querySelector(".header-tag__btn--open");
+var menuClose = document.querySelector(".header-tag__btn--close");
+
 if (menuMobile) {
   openButton.addEventListener("click", function(event) {
     event.preventDefault();
@@ -29,6 +33,33 @@ if (menuMobile) {
       menuMobile.classList.remove("nav-list--active");
       openButton.classList.remove("hidden");
       closeButton.classList.add("hidden");
+    }
+  });
+}
+
+if (menuText) {
+  menuOpen.addEventListener("click", function(event) {
+    event.preventDefault();
+    menuText.classList.add("tag-list--active");
+    menuOpen.classList.add("hidden");
+    menuClose.classList.remove("hidden");
+  });
+
+  menuText.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+
+  menuClose.addEventListener("click", function() {
+    menuText.classList.remove("tag-list--active");
+    menuOpen.classList.remove("hidden");
+    menuClose.classList.add("hidden");
+  });
+
+  window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+      menuText.classList.remove("tag-list--active");
+      menuOpen.classList.remove("hidden");
+      menuClose.classList.add("hidden");
     }
   });
 }
@@ -161,7 +192,7 @@ $(document).ready(function(){
 
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 1600,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -249,7 +280,7 @@ $(document).ready(function(){
 
     responsive: [
         {
-          breakpoint: 1440,
+          breakpoint: 1600,
           settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
@@ -299,7 +330,7 @@ $(document).ready(function(){
 
     responsive: [
           {
-            breakpoint: 1440,
+            breakpoint: 1600,
             settings: {
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -351,7 +382,7 @@ $(document).ready(function(){
 
     responsive: [
           {
-            breakpoint: 1440,
+            breakpoint: 1600,
             settings: {
             slidesToShow: 5,
             slidesToScroll: 1,

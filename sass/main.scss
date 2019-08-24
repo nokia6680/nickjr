@@ -9,6 +9,18 @@
   align-items: center;
 }
 
+@media only screen and (min-width: $mobile-hd) {
+  .main {
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .main {
+    padding-top: 0;
+  }
+}
+
 @media only screen and (min-width: $widebooks) {
   .main {
     position: relative;
@@ -16,5 +28,15 @@
     margin: 0 auto;
 
     pointer-events: all;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .main {
+    padding-top: 30px;
+
+    &--game-alt {
+      padding-top: 20px;
+    }
   }
 }

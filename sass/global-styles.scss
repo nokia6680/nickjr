@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
   overflow: -moz-scrollbars-none;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 *,
@@ -39,6 +41,7 @@ body {
   background-color: $bg-404;
 }
 
+
 .body-index {
   background-color: $bg-body;
   background-image: url('../img/bg-tile.png');
@@ -48,11 +51,16 @@ body {
   /*
   @media only screen and (min-width: 1366px) {
     background-color: transparent;
-    background-image: url('../img/blaze-1920.png');
+    background-image: url('../img/blaze-1366.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
+  }
+
+  @media only screen and (min-width: $widebooks-hd) {
+    background-image: url('../img/blaze-1920.png');
+    background-size: cover;
   }*/
 }
 
@@ -73,11 +81,6 @@ body {
   }
 
   @media only screen and (min-width: $widebooks-hd) {
-    background-image: url('../img/blaze-1366.png');
-    background-size: cover;
-  }
-
-  @media only screen and (min-width: 1920px) {
     background-image: url('../img/blaze-1920.png');
     background-size: cover;
   }*/
@@ -100,11 +103,6 @@ body {
   }
 
   @media only screen and (min-width: $widebooks-hd) {
-    background-image: url('../img/blaze-1366.png');
-    background-size: cover;
-  }
-
-  @media only screen and (min-width: 1920px) {
     background-image: url('../img/blaze-1920.png');
     background-size: cover;
   }*/

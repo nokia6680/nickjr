@@ -33,6 +33,33 @@
 
     width: 100%;
   }
+  /*Возрастной ценз*/
+  &__age {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    width: 26px;
+    height: 26px;
+
+    border: 2px solid #ffffff;
+    border-radius: 13px;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font: {
+        size: 1em;
+        family: $footer-font;
+      }
+
+      color: #ffffff;
+      text-align: center;
+    }
+  }
 
   &__mark {
     display: none;
@@ -46,6 +73,23 @@
         size: 1.875em;
       }
     }
+
+    /*Возрастной ценз*/
+    &__age {
+      top: 10px;
+      right: 0px;
+
+      width: 30px;
+      height: 30px;
+
+      border-radius: 15px;
+
+      span {
+        font: {
+          size: 1.125em;
+        }
+      }
+    }
   }
 }
 
@@ -56,6 +100,23 @@
         size: 2.125em;
       }
     }
+
+    /*Возрастной ценз*/
+    &__age {
+      top: 10px;
+      right: 0px;
+
+      width: 34px;
+      height: 34px;
+
+      border-radius: 17px;
+
+      span {
+        font: {
+          size: 1.125em;
+        }
+      }
+    }
   }
 }
 
@@ -63,6 +124,23 @@
   .main-show {
     &__title {
       margin-top: 0;
+    }
+
+    /*Возрастной ценз*/
+    &__age {
+      top: 0px;
+      right: 220px;
+
+      width: 34px;
+      height: 34px;
+
+      border-radius: 17px;
+
+      span {
+        font: {
+          size: 1.125em;
+        }
+      }
     }
 
     &__block {
@@ -123,6 +201,29 @@
   .main-show {
     &__title {
       font-size: 2.875em;
+      width: auto;
+    }
+
+    /*Возрастной ценз*/
+    &__age {
+      position: relative;
+      right: auto;
+      top: auto;
+
+      margin-left: auto;
+      margin-right: 40px;
+
+      min-width: 46px;
+      height: 46px;
+
+      border-radius: 23px;
+      border-width: 4px;
+
+      span {
+        font: {
+          size: 1.875em;
+        }
+      }
     }
 
     &__mark {

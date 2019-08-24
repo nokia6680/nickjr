@@ -6,6 +6,33 @@
 
   width: 100%;
 
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__title {
+    order: 2;
+
+    font: {
+      family: $fat-font;
+      size: 1.5em;
+    }
+
+    color: $text-white;
+    line-height: 1;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    width: 100%;
+  }
+
   &__intro--game {
     display: none;
   }
@@ -72,9 +99,46 @@
   }
 }
 
+@media only screen and (min-width: 414px) {
+  .main-wrapper {
+    &__title {
+      font-size: 1.625em;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .main-wrapper {
+
+    &--game {
+      .main-wrapper__details {
+        order: 2;
+      }
+
+      .main-wrapper__intro {
+        order: 1;
+      }
+    }
+
+    &__details {
+      width: 100%;
+      align-self: flex-start;
+    }
+
+    &__title {
+      font-size: 2em;
+      margin-top: 0;
+    }
+  }
+}
+
 @media only screen and (min-width: $notebooks) {
   .main-wrapper {
     position: relative;
+
+    &--game {
+      align-items: flex-start;
+    }
   }
 }
 
@@ -85,6 +149,33 @@
     align-items: flex-start;
 
     width: 100%;
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__title {
+      order: 2;
+
+      font: {
+        family: $fat-font;
+        size: 2.875em;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+      text-align: left;
+      text-transform: uppercase;
+
+      width: 100%;
+    }
 
     &__content {
       width: 994px;

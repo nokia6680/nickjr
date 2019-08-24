@@ -262,6 +262,9 @@
   }
 
   .main-rating--game {
+    .main-rating__quantity {
+      margin-bottom: 0;
+    }
     .main-rating__final {
       font: {
         size: 3em;
@@ -304,5 +307,9 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
-
+  .main-rating {
+    &--gamealt {
+      width: auto;
+    }
+  }
 }

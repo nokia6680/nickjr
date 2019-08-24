@@ -1,0 +1,146 @@
+.contacts {
+  width: 300px;
+
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  padding: 15px 15px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow:0px 0px 20px 1px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0px 0px 20px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow:0px 0px 20px 1px rgba(0,0,0,0.2);
+
+  &__title {
+    font: {
+      family: "Arial";
+      size: 1.375em;
+      weight: 700;
+    }
+
+    color: $text-black;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__notice {
+    font: {
+      family: "Arial";
+      size: 0.875em;
+      weight: 700;
+    }
+
+    color: $text-black;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .article-article-blocks {
+    font: {
+      size: 0.875em;
+      family: "Arial";
+      weight: 400;
+    }
+
+    color: $text-black;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    b {
+      font: {
+        size: 1em;
+        family: "Arial";
+        weight: 600;
+      }
+
+      color: $text-black;
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: $iphone) {
+  .contacts {
+    width: 320px;
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .contacts {
+    width: 600px;
+
+    &__title {
+      font-size: 1.75em;
+    }
+
+    &__notice {
+      font-size: 1.375em;
+    }
+
+    .article-article-blocks {
+      font: {
+        size: 1em;
+      }
+
+      b {
+        font: {
+          size: 1.125em;
+        }
+
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .contacts {
+    width: 920px;
+    padding: 25px 25px;
+    margin-bottom: 40px;
+
+    .article-article-blocks {
+      font: {
+        size: 1.125em;
+      }
+
+      b {
+        font: {
+          size: 1.25em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .contacts {
+    width: 1280px;
+    padding: 45px 45px;
+    margin-bottom: 40px;
+  }
+}

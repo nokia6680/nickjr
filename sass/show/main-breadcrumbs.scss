@@ -7,21 +7,32 @@
   width: 100%;
   align-self: flex-start;
 
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 @media only screen and (min-width: $tablets) {
   .main-breadcrumbs {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
 @media only screen and (min-width: $notebooks) {
   .main-breadcrumbs {
     margin-bottom: 20px;
+
+    &--alt {
+      display: flex;
+    }
   }
 }
 
-@media only screen and (min-width: $widebooks-hd) {
+@media only screen and (min-width: 1600px) {
+  .main-breadcrumbs {
+    margin-bottom: 20px;
 
+    &--alt {
+      display: flex;
+      margin-bottom: 10px;
+    }
+  }
 }

@@ -42,6 +42,10 @@
 
     width: 100%;
   }
+
+  &__link {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -66,6 +70,11 @@
       font: {
         size: 2.125em;
       }
+
+      &--alt {
+        font-size: 1.875em;
+        margin-top: 20px;
+      }
     }
 
     &__description {
@@ -89,6 +98,15 @@
   .game-info {
     width: 60%;
 
+    &--alt {
+      width: 100%;
+      align-items:flex-start;
+
+      .game-info__description {
+        max-width: 940px;
+      }
+    }
+
     &__title {
       font: {
         size: 2.875em;
@@ -110,9 +128,33 @@
   .game-info {
     width: 930px;
 
+    &--alt {
+      width: 930px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .game-info__description {
+        max-width: 930px;
+      }
+    }
+
     &__description {
       min-height: 150px;
       max-width: 930px;
+    }
+
+    &__link {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 300px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.2);
     }
   }
 }

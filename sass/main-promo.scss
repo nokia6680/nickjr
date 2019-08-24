@@ -330,7 +330,6 @@
 
 @media only screen and (min-width: $mobile-hd) {
   .main-promo {
-
     &--second {
       display: none;
     }
@@ -528,6 +527,10 @@
 
     &--first {
       margin-bottom: 30px;
+    }
+
+    &--first-alt {
+      margin-bottom: 20px;
     }
 
     &--hdmob {

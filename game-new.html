@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>NickJR | Название игры</title>
-	<link rel="stylesheet" href="css/style.min.css">
+	<title>NickJR | Альтернативная версия игры</title>
+	<link rel="stylesheet" href="css/style1.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
@@ -338,8 +338,8 @@
 		</div>
 	</header>
   <!--Основное содержание страницы-->
-  <main class="main main--game">
-    <!--Рекламная секция 1-->
+  <main class="main main--game main--game-alt">
+		<!--Рекламная секция 1-->
 		<section class="main__promo main-promo main-promo--first" id="promo-1">
 			<!--320x100-->
 			<div class="main-promo__wrapper main-promo__wrapper--mobile">
@@ -369,39 +369,102 @@
 				</div>
 			</section>
 			<!--Breadcrumbs-->
-			<div class="main-wrapper__breadcrumbs main-breadcrumbs">
-				<ul itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumbs__list breadcrumbs-list">
-					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item">
-						<a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__link" href="index.html" id="index.html">
-							<span itemprop="name" class="breadcrumbs-item__text">Главная</span>
-						</a>
-						<meta itemprop="position" content="1">
-					</li>
-					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--game" id="show-id">
-						<a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__link" href="show.html" id="show.html">
-							<span itemprop="name" class="breadcrumbs-item__text">Игра Щенячий патруль</span>
-						</a>
-						<meta itemprop="position" content="2">
-					</li>
-					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--game breadcrumbs-item--last" id="game-id">
-						<span itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__last" id="#">
-							<span itemprop="name" class="breadcrumbs-item__text">Игра Щенячий патруль - игра</span>
-						</span>
-						<meta itemprop="position" content="3">
-					</li>
-				</ul>
+			<div class="main-wrapper__details">
+				<div class="main-wrapper__breadcrumbs main-breadcrumbs main-breadcrumbs--alt">
+					<ul itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumbs__list breadcrumbs-list">
+						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item">
+							<a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__link" href="index.html" id="index.html">
+								<span itemprop="name" class="breadcrumbs-item__text">Главная</span>
+							</a>
+							<meta itemprop="position" content="1">
+						</li>
+						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--game" id="show-id">
+							<a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__link" href="show.html" id="show.html">
+								<span itemprop="name" class="breadcrumbs-item__text">Игра Щенячий патруль</span>
+							</a>
+							<meta itemprop="position" content="2">
+						</li>
+						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--game breadcrumbs-item--last" id="game-id">
+							<span itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__last" id="#">
+								<span itemprop="name" class="breadcrumbs-item__text">Игра Щенячий патруль - игра</span>
+							</span>
+							<meta itemprop="position" content="3">
+						</li>
+					</ul>
+				</div>
+				<h1 itemprop="name" class="main-wrapper__title main-wrapper__title--alt" id="game-name">Щенячий патруль - игра</h1>
 			</div>
 			<!--Контентная область-->
-			<section itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement" class="main-wrapper__game game-main">
-				<!--Инфо шапка-->
-				<header class="game-main__header game-header">
-					<div class="game-header__info game-info">
-						<h1 itemprop="name" class="game-info__title" id="game-name">Щенячий патруль - игра</h1>
+			<section itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement" class="main-wrapper__game game-main game-main--alt">
+				<div class="game-main__content game-content game-content--alt">
+					<!--Окно самой игры-->
+					<div class="game-content__wrapper">
+						<iframe class="game-content__frame lazyload" frameborder="none" align="center">
+
+						</iframe>
+					</div>
+					<!--Share block-->
+					<div class="game-content__share game-share game-share--alt">
+						<h3 class="game-share__title">Поделись игрой с друзьями</h3>
+						<ul class="game-share__list share-list">
+							<li class="share-list__item share-item share-item--ok">
+								<span class="share-item__counter share-item__counter--ok" id="share-ok"><i class="fab fa-odnoklassniki"></i>386</span>
+							</li>
+							<li class="share-list__item share-item share-item--vk">
+								<span class="share-item__counter share-item__counter--vk" id="share-vk"><i class="fab fa-vk"></i>123</span>
+							</li>
+							<li class="share-list__item share-item share-item--fb">
+								<span class="share-item__counter share-item__counter--fb" id="share-fb"><i class="fab fa-facebook-f"></i>456</span>
+							</li>
+							<li class="share-list__item share-item share-item--tw">
+								<span class="share-item__counter share-item__counter--tw" id="share-tw"><i class="fab fa-twitter"></i>789</span>
+							</li>
+						</ul>
+					</div>
+					<!--In bookmark-->
+					<div class="game-content__actions">
+						<button class="game-content__mark" type="button"><i class="fas fa-star"></i>В закладки</button>
+					</div>
+					<!--Управляющие элементы игры-->
+					<div class="game-content__controls game-controls">
+						<a class="game-controls__btn game-controls__btn--report" href="#">Сообщить<br />о проблеме</a>
+						<!--noindex-->
+						<a class="game-controls__btn game-controls__btn--prev" href="#" rel="nofollow">Назад</a>
+						<a class="game-controls__btn game-controls__btn--next" href="#" rel="nofollow">Вперед</a>
+						<!--/noindex-->
+						<a class="game-controls__btn game-controls__btn--expand" href="#"></a>
+					</div>
+				</div>
+				<!--Боковой блок с рекламой-->
+				<div class="game-content__promo game-promo game-promo--alt" id="promo-7">
+					<!---->
+					<div class="game-promo__content game-promo__content--first">
+						<div class="game-promo__item game-promo__item--note">
+							<div class="game-promo__wrapper">
+
+							</div>
+							<span class="game-promo__text">Реклама</span>
+						</div>
+					</div>
+					<div class="game-promo__content game-promo__content--second">
+						<div class="game-promo__item game-promo__item--note">
+							<div class="game-promo__wrapper">
+
+							</div>
+							<span class="game-promo__text">Реклама</span>
+						</div>
+					</div>
+				</div>
+				<div class="game-main__header game-header game-header--alt">
+					<div class="game-header__info game-info game-info--alt">
 						<p itemprop="description" class="game-info__description">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+						<a class="game-info__link game-info__link--video" href="#" target="_self">
+							Мультики <span class="game-info__name">Щенячий патруль</span>
+						</a>
 					</div>
 					<!--Rating and bookmark-->
-					<div class="game-header__service game-service">
-						<div  itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="game-service__rating main-rating main-rating--game">
+					<div class="game-header__service game-service game-service--alt">
+						<div  itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="game-service__rating game-service__rating--alt main-rating main-rating--game main-rating--gamealt">
 							<meta itemprop="worstRating" content="1" />
 							<meta itemprop="bestRating" content="5" />
 							<b itemprop="ratingValue" class="main-rating__final" id="rating-result">4.1</b>
@@ -424,67 +487,6 @@
 							<b class="main-rating__quantity">(<span itemprop="ratingCount" class="main-rating__nr" id="rating-counter">14</span>&nbsp;оценок)</b>
 						</div>
 
-					</div>
-				</header>
-				<!--Тело блока про игру-->
-				<div class="game-main__content game-content">
-					<!--Окно самой игры-->
-					<div class="game-content__wrapper">
-						<iframe class="game-content__frame lazyload" frameborder="none" align="center">
-
-						</iframe>
-					</div>
-					<!--Share block-->
-					<div class="game-content__share game-share">
-						<h3 class="game-share__title">Поделись игрой с друзьями</h3>
-						<ul class="game-share__list share-list">
-							<li class="share-list__item share-item share-item--ok">
-								<span class="share-item__counter share-item__counter--ok" id="share-ok"><i class="fab fa-odnoklassniki"></i>386</span>
-							</li>
-							<li class="share-list__item share-item share-item--vk">
-								<span class="share-item__counter share-item__counter--vk" id="share-vk"><i class="fab fa-vk"></i>123</span>
-							</li>
-							<li class="share-list__item share-item share-item--fb">
-								<span class="share-item__counter share-item__counter--fb" id="share-fb"><i class="fab fa-facebook-f"></i>456</span>
-							</li>
-							<li class="share-list__item share-item share-item--tw">
-								<span class="share-item__counter share-item__counter--tw" id="share-tw"><i class="fab fa-twitter"></i>789</span>
-							</li>
-						</ul>
-					</div>
-					<!--In bookmark-->
-					<div class="game-content__actions">
-						<button class="game-content__mark" type="button">В закладки</button>
-						<a class="game-content__video" href="#" target="_self">Видео</a>
-					</div>
-					<!--Управляющие элементы игры-->
-					<div class="game-content__controls game-controls">
-						<a class="game-controls__btn game-controls__btn--report" href="#">Сообщить<br />о проблеме</a>
-						<!--noindex-->
-						<a class="game-controls__btn game-controls__btn--prev" href="#" rel="nofollow">Назад</a>
-						<a class="game-controls__btn game-controls__btn--next" href="#" rel="nofollow">Вперед</a>
-						<!--/noindex-->
-						<a class="game-controls__btn game-controls__btn--expand" href="#"></a>
-					</div>
-				</div>
-				<!--Боковой блок с рекламой-->
-				<div class="game-content__promo game-promo" id="promo-7">
-					<!---->
-					<div class="game-promo__content game-promo__content--first">
-						<div class="game-promo__item game-promo__item--note">
-							<div class="game-promo__wrapper">
-
-							</div>
-							<span class="game-promo__text">Реклама</span>
-						</div>
-					</div>
-					<div class="game-promo__content game-promo__content--second">
-						<div class="game-promo__item game-promo__item--note">
-							<div class="game-promo__wrapper">
-
-							</div>
-							<span class="game-promo__text">Реклама</span>
-						</div>
 					</div>
 				</div>
 			</section>

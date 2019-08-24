@@ -53,6 +53,9 @@
 
 @media only screen and (min-width: $tablets) {
   .game-share {
+    align-self: flex-start;
+    width: 50%;
+
     &__title {
       font: {
         size: 1.25em;
@@ -67,9 +70,13 @@
   .game-share {
     position: absolute;
 
-    right: 0;
-    bottom: 0;
+    right: -350px;
+    bottom: 10px;
 
     width: 300px;
+
+    &--alt {
+      bottom: 15px;
+    }
   }
 }

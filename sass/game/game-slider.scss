@@ -209,6 +209,12 @@
       display: none;
     }
   }
+
+  &--other {
+    .game-slider__bottom {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -226,6 +232,9 @@
 
       padding-left: 17.5px;
       padding-right: 17.5px;
+
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 }
@@ -263,6 +272,14 @@
           }
         }
       }
+    }
+
+    &__link {
+      border-radius: 25px;
+    }
+
+    &__frame {
+      border-radius: 25px;
     }
 
     &__link:nth-of-type(odd) {
@@ -330,6 +347,15 @@
     }
 
     &--other {
+      position: relative;
+
+      &.slick-slider {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
       .game-slider__info {
         padding-left: 10px;
         padding-bottom: 10px;
@@ -353,7 +379,6 @@
         border-radius: 27px;
         background-color: #ffffff;
 
-        margin: 0 auto;
         position: relative;
 
         background-image: url('../img/arrow-down-blue.svg');
@@ -381,6 +406,8 @@
       margin: 0;
 
       padding: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .slick-track {
@@ -459,7 +486,7 @@
 
     &__item--similar {
       width: 627px !important;
-      height: 300px;
+      height: 320px;
 
       justify-content: center;
     }

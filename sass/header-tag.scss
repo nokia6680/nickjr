@@ -1,0 +1,78 @@
+.header-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  position: relative;
+
+  width: 100%;
+  background-color: #fff;
+
+  z-index: 11;
+
+  &__btn {
+    position: absolute;
+    content: '';
+
+    border: none;
+    cursor: pointer;
+
+    top: -2px;
+    right: 10px;
+
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+
+    background-color: #cdcdcd;
+    background-image: url('../img/tick-filter.png');
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+    background-position: 50% 50%;
+
+    &--close {
+      transform: rotate(180deg);
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+  .header-tag {
+    &__btn {
+      right: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .header-tag {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+    &__btn {
+      width: 32px;
+      height: 32px;
+
+      right: 20px;
+      top: 15px;
+
+      background-size: 20px 14px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .header-tag {
+    padding-bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+}

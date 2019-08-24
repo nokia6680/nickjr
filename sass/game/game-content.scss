@@ -6,6 +6,8 @@
 
   width: 100%;
 
+  position: relative;
+
   &__promo {
     display: none;
   }
@@ -15,6 +17,47 @@
 
     width: 100%;
     height: auto;
+
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &__actions {
+    position: absolute;
+
+    bottom: 15px;
+    right: 0;
+  }
+
+  &__mark {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    font-size: 0;
+
+    border: none;
+    background-color: $bg-mark-btn;
+
+    position: relative;
+
+    .fa-star::before {
+      position: absolute;
+      content: '\f005';
+
+      font-size: 1em;
+      color: #ffffff;
+
+      top: 50%;
+      left: 50%;
+
+      width: 20px;
+      height: 20px;
+
+      display: block;
+
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__frame {
@@ -63,14 +106,128 @@
     &__share {
       order: 3;
     }
+
+    &__actions {
+      display: none;
+    }
   }
 }
 
 @media only screen and (min-width: $tablets) {
   .game-content {
+    position: relative;
+
     &__frame {
       width: 100%;
       min-height: 390px;
+    }
+
+    &__wrapper {
+      background-color: rgba(255, 255, 255, 0.2);
+      order: 1;
+    }
+
+    &__share {
+      order: 3;
+    }
+
+    &__controls {
+      order: 2;
+    }
+
+    &__actions {
+      position: absolute;
+      bottom: 28px;
+      right: 0;
+
+      order: 4;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      width: 50%;
+    }
+
+    &__mark {
+      background-color: $bg-mark-btn;
+
+      width: 215px;
+      height: 50px;
+
+      border-radius: 25px;
+      border: none;
+
+      cursor: pointer;
+      outline: none;
+
+      position: relative;
+
+      font: {
+        size: 1.625em;
+        family: $fat-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 20px;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 26px;
+        height: 24px;
+
+        top: 50%;
+        left: 10px;
+
+        background-image: url('../img/like-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 26px 24px;
+
+        transform: translateY(-50%);
+      }
+
+      .fa-star::before {
+        display: none;
+      }
+    }
+
+    &__video {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      background-color: $bg-mark-btn;
+
+      width: auto;
+      height: 50px;
+
+      border-radius: 25px;
+      border: none;
+
+      cursor: pointer;
+      outline: none;
+
+      font: {
+        size: 1.25em;
+        family: $fat-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
     }
   }
 }
@@ -83,6 +240,12 @@
     &__frame {
       width: 620px;
     }
+
+    &--alt {
+      .game-content__wrapper {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
   }
 }
 
@@ -90,6 +253,14 @@
   .game-content {
     width: 930px;
     align-self: flex-start;
+
+    &--alt {
+      margin-top: 0;
+    }
+
+    &__actions {
+      bottom: 42px;
+    }
 
     &__frame {
       width: 930px;

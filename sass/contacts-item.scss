@@ -1,0 +1,191 @@
+.contacts-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+
+  &--first {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font: {
+      size: 1em;
+      family: "Arial";
+      weight: 600;
+    }
+
+    color: $text-black;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font: {
+      size: 0.875em;
+      family: "Arial";
+      weight: 400;
+    }
+
+    color: $text-black;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    margin-bottom: 10px;
+  }
+
+  &__link,
+  &__phone {
+    text-decoration: none;
+
+    font: {
+      size: 0.75em;
+      family: "Arial";
+      weight: 400;
+    }
+
+    color: $social-bg;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  &__description {
+    font: {
+      size: 0.75em;
+      family: "Arial";
+      weight: 400;
+    }
+
+    color: $text-black;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+    &--name {
+      font: {
+        size: 1.125em;
+        family: "Arial";
+        weight: 600;
+      }
+
+      color: $text-black;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .contacts-item {
+    &--first {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font: {
+        size: 1.125em;
+      }
+
+      margin-bottom: 7px;
+    }
+
+    &__wrap {
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      font: {
+        size: 1em;
+      }
+
+      margin-bottom: 10px;
+    }
+
+    &__link,
+    &__phone {
+      font: {
+        size: 1em;
+      }
+    }
+
+    &__description {
+      font: {
+        size: 0.875em;
+      }
+
+      margin-bottom: 10px;
+
+      &--name {
+        font: {
+          size: 1.25em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .contacts-item {
+    &--first {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font: {
+        size: 1.25em;
+      }
+
+      margin-bottom: 7px;
+    }
+
+    &__wrap {
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      font: {
+        size: 1.125em;
+      }
+
+      margin-bottom: 10px;
+    }
+
+    &__link,
+    &__phone {
+      font: {
+        size: 1em;
+      }
+    }
+
+    &__description {
+      font: {
+        size: 0.875em;
+      }
+
+      margin-bottom: 10px;
+
+      &--name {
+        font: {
+          size: 1.25em;
+        }
+      }
+    }
+  }
+}
