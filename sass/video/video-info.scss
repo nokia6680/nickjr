@@ -1,0 +1,141 @@
+.video-info {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__title {
+    font: {
+      family: $fat-font;
+      size: 1.625em;
+    }
+
+    color: $text-white;
+    line-height: 1;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    width: 100%;
+  }
+
+  &__description {
+    font: {
+      size: 0.75em;
+      family: $fat-font;
+    }
+
+    color: $text-white;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    display: block;
+    max-height: auto;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    width: 100%;
+  }
+
+  &__link {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .video-info {
+    &__title {
+      font: {
+        size: 1.875em;
+      }
+    }
+
+    &__description {
+      font: {
+        size: 0.813em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+  .video-info {
+    &__title {
+      font: {
+        size: 1.875em;
+      }
+
+      margin-top: 20px;
+    }
+
+    &__description {
+      font: {
+        size: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .video-info {
+    &__description {
+      min-height: auto;
+      max-width: 330px;
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .video-info {
+    width: 100%;
+    align-items: flex-start;
+
+    &__title {
+      font: {
+        size: 2.875em;
+      }
+
+      margin-top: 0;
+    }
+
+    &__description {
+      font: {
+        size: 1.188em;
+      }
+
+      max-width: 940px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .game-info {
+    width: 930px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__description {
+      min-height: 150px;
+      max-width: 930px;
+    }
+
+    &__link {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 300px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

@@ -1,0 +1,332 @@
+.video-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding-top: 10px;
+
+  &__btn {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $controls-bg;
+    border: none;
+    border-radius: 13px;
+
+    padding-top: 4px;
+    padding-bottom: 3px;
+
+    width: auto;
+    height: 26px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+    outline: none;
+
+    font: {
+      size: 0.813em;
+      family: $fat-font;
+    }
+
+    color: $controls-text;
+    line-height: 1;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    position: relative;
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+    }
+    /*Кнопка отправки проблемы*/
+    &--report {
+      font-size: 0.625em;
+      padding-left: 30px;
+      padding-right: 10px;
+
+      width: auto;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 19px;
+        height: 21px;
+
+        background-image: url('../img/report-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 19px 21px;
+
+        top: 50%;
+        left: 5px;
+
+        transform: translateY(-50%);
+      }
+    }
+    /*Кнопка - назад*/
+    &--prev {
+      padding-left: 20px;
+      padding-right: 6px;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 9px;
+        height: 14px;
+
+        background-image: url('../img/prev-icon.png');
+        background-repeat: no-repeat;
+        background-size: 9px 14px;
+
+        top: 50%;
+        left: 5px;
+
+        transform: translateY(-50%);
+      }
+    }
+
+    &--next {
+      padding-right: 20px;
+      padding-left: 5px;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 9px;
+        height: 14px;
+
+        background-image: url('../img/next-icon.png');
+        background-repeat: no-repeat;
+        background-size: 9px 14px;
+
+        top: 50%;
+        right: 5px;
+
+        transform: translateY(-50%);
+      }
+    }
+
+    &--expand {
+      background-color: transparent;
+      border-radius: 0;
+
+      width: 25px;
+      height: 27px;
+
+      background-image: url('../img/expand.svg');
+      background-size: 25px 27px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .video-controls {
+    padding-top: 13px;
+
+    &__btn {
+      border-radius: 25px;
+
+      padding-top: 4px;
+      padding-bottom: 3px;
+
+      height: 30px;
+
+      font-size: 0.875em;
+      /*Кнопка отправки проблемы*/
+      &--report {
+        font-size: 0.813em;
+        padding-right: 15px;
+        padding-left: 35px;
+
+        &::before {
+          width: 21px;
+          height: 23px;
+
+          background-size: 21px 23px;
+        }
+      }
+      /*Кнопка - назад*/
+      &--prev {
+        padding-left: 20px;
+        padding-right: 15px;
+        &::before {
+          width: 10px;
+          height: 16px;
+
+          background-size: 10px 16px;
+        }
+      }
+
+      &--next {
+        padding-left: 15px;
+        padding-right: 20px;
+        &::before {
+          width: 10px;
+          height: 16px;
+
+          background-size: 10px 16px;
+        }
+      }
+
+      &--expand {
+        border-radius: 0;
+
+        width: 28px;
+        height: 30px;
+
+        background-size: 28px 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+  .video-controls {
+    padding-top: 18px;
+
+    &__btn {
+      border-radius: 25px;
+
+      padding-top: 6px;
+      padding-bottom: 3px;
+
+      height: 35px;
+
+      font-size: 1.063em;
+      /*Кнопка отправки проблемы*/
+      &--report {
+        font-size: 0.938em;
+        padding-top: 5px;
+
+        width: 138px;
+
+        &::before {
+          width: 25px;
+          height: 27px;
+
+          background-size: 25px 27px;
+        }
+      }
+      /*Кнопка - назад*/
+      &--prev {
+        width: 99px;
+
+        &::before {
+          width: 12px;
+          height: 18px;
+
+          background-size: 12px 18px;
+        }
+      }
+
+      &--next {
+        width: 99px;
+
+        &::before {
+          width: 12px;
+          height: 18px;
+
+          background-size: 12px 18px;
+        }
+      }
+
+      &--expand {
+        border-radius: 0;
+
+        width: 33px;
+        height: 35px;
+
+        background-size: 33px 35px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .video-controls {
+    padding-top: 23px;
+    margin-bottom: 23px;
+
+    &__btn {
+      padding-top: 6px;
+      padding-bottom: 3px;
+
+      height: 50px;
+
+      font-size: 1.625em;
+      /*Кнопка отправки проблемы*/
+      &--report {
+        font-size: 1.438em;
+        padding-top: 5px;
+        padding-left: 50px;
+
+        width: 209px;
+
+        &::before {
+          width: 37px;
+          height: 37px;
+
+          background-size: 37px 37px;
+
+          left: 10px;
+        }
+      }
+      /*Кнопка - назад*/
+      &--prev {
+        width: 150px;
+        padding-right: 0;
+
+        &::before {
+          width: 17px;
+          height: 25px;
+
+          background-size: 17px 25px;
+          left: 10px;
+        }
+      }
+
+      &--next {
+        width: 150px;
+        padding-left: 0;
+
+        &::before {
+          width: 17px;
+          height: 25px;
+
+          background-size: 17px 25px;
+          right: 10px;
+        }
+      }
+
+      &--expand {
+        border-radius: 0;
+
+        width: 50px;
+        height: 50px;
+
+        background-size: 50px 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .video-controls {
+    width: 640px;
+    align-self: flex-start;
+
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+}

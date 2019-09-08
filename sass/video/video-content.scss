@@ -1,0 +1,266 @@
+.video-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  position: relative;
+
+  &__promo {
+    display: none;
+  }
+
+  &__wrapper {
+    order: 1;
+
+    width: 100%;
+    height: auto;
+
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &__actions {
+    position: absolute;
+
+    bottom: 15px;
+    right: 0;
+  }
+
+  &__mark {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    font-size: 0;
+
+    border: none;
+    background-color: $bg-mark-btn;
+
+    position: relative;
+
+    .fa-star::before {
+      position: absolute;
+      content: '\f005';
+
+      font-size: 1em;
+      color: #ffffff;
+
+      top: 50%;
+      left: 50%;
+
+      width: 20px;
+      height: 20px;
+
+      display: block;
+
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__frame {
+    width: 100%;
+    height: 180px;
+  }
+
+  &__share {
+    order: 3;
+  }
+
+  &__controls {
+    order: 2;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .video-content {
+    &__frame {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+  .video-content {
+    &__promo {
+      display: flex;
+      order: 4;
+    }
+
+    &__frame {
+      width: 100%;
+      min-height: 240px;
+    }
+
+    &__wrapper {
+      order: 1;
+    }
+
+    &__controls {
+      order: 2;
+    }
+
+    &__share {
+      order: 3;
+    }
+
+    &__actions {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .video-content {
+    position: relative;
+
+    &__frame {
+      width: 100%;
+      min-height: 390px;
+    }
+
+    &__wrapper {
+      background-color: rgba(255, 255, 255, 0.2);
+      order: 1;
+    }
+
+    &__share {
+      order: 3;
+    }
+
+    &__controls {
+      order: 2;
+    }
+
+    &__actions {
+      position: absolute;
+      bottom: 28px;
+      right: 0;
+
+      order: 4;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      width: 50%;
+    }
+
+    &__mark {
+      background-color: $bg-mark-btn;
+
+      width: 215px;
+      height: 50px;
+
+      border-radius: 25px;
+      border: none;
+
+      cursor: pointer;
+      outline: none;
+
+      position: relative;
+
+      font: {
+        size: 1.625em;
+        family: $fat-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 20px;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 26px;
+        height: 24px;
+
+        top: 50%;
+        left: 10px;
+
+        background-image: url('../img/like-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 26px 24px;
+
+        transform: translateY(-50%);
+      }
+
+      .fa-star::before {
+        display: none;
+      }
+    }
+
+    &__game {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      background-color: $bg-mark-btn;
+
+      width: auto;
+      height: 50px;
+
+      border-radius: 25px;
+      border: none;
+
+      cursor: pointer;
+      outline: none;
+
+      font: {
+        size: 1.25em;
+        family: $fat-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .video-content {
+    width: 620px;
+    align-self: flex-start;
+
+    &__wrapper {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &__frame {
+      width: 620px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .video-content {
+    width: 930px;
+    align-self: flex-start;
+
+    margin-top: 0;
+
+    &__actions {
+      bottom: 42px;
+    }
+
+    &__frame {
+      width: 930px;
+      min-height: 555px;
+    }
+  }
+}

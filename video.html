@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>NickJR | Альтернативная версия игры</title>
+	<title>NickJR | Видео</title>
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -29,9 +29,10 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
 </head>
 
-<body class="body-game" itemscope itemtype="http://schema.org/WebPage">
+<body class="body-video" itemscope itemtype="http://schema.org/WebPage">
 	<header class="header">
 		<!--Логотип + возможная навигация-->
 		<nav class="header__nav header-nav">
@@ -338,7 +339,7 @@
 		</div>
 	</header>
   <!--Основное содержание страницы-->
-  <main class="main main--game main--game-alt">
+  <main class="main main--video">
 		<!--Рекламная секция 1-->
 		<section class="main__promo main-promo main-promo--first" id="promo-1">
 			<!--320x100-->
@@ -357,9 +358,9 @@
 			</div>
 		</section>
 		<!---->
-		<div class="main__wrapper main-wrapper main-wrapper--game">
-			<!--Шапка с логотипом шоу-->
-			<section itemprop="hasPart" itemscope itemtype="http://schema.org/WebPageElement" class="main-wrapper__intro main-intro main-wrapper__intro--game main-intro--game">
+		<div class="main__wrapper main-wrapper main-wrapper--video">
+			<!--Шапка с логотипом видео-->
+			<section itemprop="hasPart" itemscope itemtype="http://schema.org/WebPageElement" class="main-wrapper__intro main-intro main-wrapper__intro--video main-intro--video">
 				<!--Лого шоу-->
 				<div class="main-intro__logo" id="show-1">
 					<picture itemscope itemtype="http://schema.org/Thing" class="main-intro__frame">
@@ -370,7 +371,7 @@
 			</section>
 			<!--Breadcrumbs-->
 			<div class="main-wrapper__details">
-				<div class="main-wrapper__breadcrumbs main-breadcrumbs main-breadcrumbs--alt">
+				<div class="main-wrapper__breadcrumbs main-breadcrumbs">
 					<ul itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" class="main-breadcrumbs__list breadcrumbs-list">
 						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item">
 							<a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__link" href="index.html" id="index.html">
@@ -380,33 +381,33 @@
 						</li>
 						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--game" id="show-id">
 							<a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__link" href="show.html" id="show.html">
-								<span itemprop="name" class="breadcrumbs-item__text">Игра Щенячий патруль</span>
+								<span itemprop="name" class="breadcrumbs-item__text">Видео Щенячий патруль</span>
 							</a>
 							<meta itemprop="position" content="2">
 						</li>
 						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs-list__item breadcrumbs-item breadcrumbs-item--game breadcrumbs-item--last" id="game-id">
 							<span itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs-item__last" id="#">
-								<span itemprop="name" class="breadcrumbs-item__text">Игра Щенячий патруль - игра</span>
+								<span itemprop="name" class="breadcrumbs-item__text">Видео Щенячий патруль - видео</span>
 							</span>
 							<meta itemprop="position" content="3">
 						</li>
 					</ul>
 				</div>
-				<h1 itemprop="name" class="main-wrapper__title main-wrapper__title--alt" id="game-name">Щенячий патруль - игра</h1>
+				<h1 itemprop="name" class="main-wrapper__title" id="video-name">Щенячий патруль - игра</h1>
 			</div>
 			<!--Контентная область-->
-			<section itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement" class="main-wrapper__game game-main game-main--alt">
-				<div class="game-main__content game-content game-content--alt">
+			<section itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement" class="main-wrapper__video video-main">
+				<div class="video-main__content video-content">
 					<!--Окно самой игры-->
-					<div class="game-content__wrapper">
-						<iframe class="game-content__frame lazyload" frameborder="none" align="center">
-
+					<div class="video-content__wrapper">
+						<iframe class="video-content__frame lazyload" frameborder="none" align="center">
+							<!--Тут видео-->
 						</iframe>
 					</div>
 					<!--Share block-->
-					<div class="game-content__share game-share game-share--alt">
-						<h3 class="game-share__title">Поделись игрой с друзьями</h3>
-						<ul class="game-share__list share-list">
+					<div class="video-content__share video-share">
+						<h3 class="video-share__title">Поделись игрой с друзьями</h3>
+						<ul class="video-share__list share-list">
 							<li class="share-list__item share-item share-item--ok">
 								<span class="share-item__counter share-item__counter--ok" id="share-ok"><i class="fab fa-odnoklassniki"></i>386</span>
 							</li>
@@ -422,49 +423,65 @@
 						</ul>
 					</div>
 					<!--In bookmark-->
-					<div class="game-content__actions">
-						<button class="game-content__mark" type="button"><i class="fas fa-star"></i>В закладки</button>
+					<div class="video-content__actions">
+						<button class="video-content__mark" type="button"><i class="fas fa-star"></i>В закладки</button>
 					</div>
 					<!--Управляющие элементы игры-->
-					<div class="game-content__controls game-controls">
-						<a class="game-controls__btn game-controls__btn--report" href="#">Сообщить<br />о проблеме</a>
-						<!--noindex-->
-						<a class="game-controls__btn game-controls__btn--prev" href="#" rel="nofollow">Назад</a>
-						<a class="game-controls__btn game-controls__btn--next" href="#" rel="nofollow">Вперед</a>
-						<!--/noindex-->
-						<a class="game-controls__btn game-controls__btn--expand" href="#"></a>
+					<div class="video-content__controls video-controls">
+						<a class="video-controls__btn video-controls__btn--report" href="#">Сообщить<br />о проблеме</a>
+						<!--Селект выбора сезона-->
+						<select class="video-controls__select video-select video-select--first" id="select-season">
+							<option class="video-select__item" name="season" value="0">Сезон</option>
+							<option class="video-select__item" name="season" value="1">Сезон 1</option>
+							<option class="video-select__item" name="season" value="2">Сезон 2</option>
+							<option class="video-select__item" name="season" value="3">Сезон 3</option>
+							<option class="video-select__item" name="season" value="4">Сезон 4</option>
+							<option class="video-select__item" name="season" value="5">Сезон 5</option>
+							<option class="video-select__item" name="season" value="6">Сезон 6</option>
+						</select>
+						<!--Селект выбора серии-->
+						<select class="video-controls__select video-select video-select--second" id="select-episode">
+							<option class="video-select__item" name="episode" value="0">Серия</option>
+							<option class="video-select__item" name="episode" value="1">Серия 1</option>
+							<option class="video-select__item" name="episode" value="2">Серия 2</option>
+							<option class="video-select__item" name="episode" value="3">Серия 3</option>
+							<option class="video-select__item" name="episode" value="4">Серия 4</option>
+							<option class="video-select__item" name="episode" value="5">Серия 5</option>
+							<option class="video-select__item" name="episode" value="6">Серия 6</option>
+						</select>
+						<a class="video-controls__btn video-controls__btn--expand" href="#"></a>
 					</div>
 				</div>
 				<!--Боковой блок с рекламой-->
-				<div class="game-content__promo game-promo game-promo--alt" id="promo-7">
+				<div class="video-content__promo video-promo" id="promo-7">
 					<!---->
-					<div class="game-promo__content game-promo__content--first">
-						<div class="game-promo__item game-promo__item--note">
-							<div class="game-promo__wrapper">
+					<div class="video-promo__content video-promo__content--first">
+						<div class="video-promo__item video-promo__item--note">
+							<div class="video-promo__wrapper">
 
 							</div>
-							<span class="game-promo__text">Реклама</span>
+							<span class="video-promo__text">Реклама</span>
 						</div>
 					</div>
-					<div class="game-promo__content game-promo__content--second">
-						<div class="game-promo__item game-promo__item--note">
-							<div class="game-promo__wrapper">
+					<div class="video-promo__content video-promo__content--second">
+						<div class="video-promo__item video-promo__item--note">
+							<div class="video-promo__wrapper">
 
 							</div>
-							<span class="game-promo__text">Реклама</span>
+							<span class="video-promo__text">Реклама</span>
 						</div>
 					</div>
 				</div>
-				<div class="game-main__header game-header game-header--alt">
-					<div class="game-header__info game-info game-info--alt">
-						<p itemprop="description" class="game-info__description">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-						<a class="game-info__link game-info__link--video" href="#" target="_self">
-							Мультики <span class="game-info__name">Щенячий патруль</span>
+				<div class="video-main__header video-header">
+					<div class="video-header__info video-info">
+						<p itemprop="description" class="video-info__description">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+						<a class="video-info__link video-info__link--game" href="#" target="_self">
+							Мультики <span class="video-info__name">Щенячий патруль</span>
 						</a>
 					</div>
 					<!--Rating and bookmark-->
-					<div class="game-header__service game-service game-service--alt">
-						<div  itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="game-service__rating game-service__rating--alt main-rating main-rating--game main-rating--gamealt">
+					<div class="video-header__service video-service">
+						<div  itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="video-service__rating main-rating main-rating--video">
 							<meta itemprop="worstRating" content="1" />
 							<meta itemprop="bestRating" content="5" />
 							<b itemprop="ratingValue" class="main-rating__final" id="rating-result">4.1</b>
@@ -491,7 +508,7 @@
 				</div>
 			</section>
 			<!--Рекламный блок, есть только в мобильной версии-->
-			<section class="main__promo main-promo main-promo--second main-promo--secondgame" id="promo-2">
+			<section class="main__promo main-promo main-promo--second main-promo--secondvideo" id="promo-2">
 				<!--320x50 не показывается на 480px-->
 				<div class="main-promo__wrapper main-promo__wrapper--mobile">
 					<div class="main-promo__content">
@@ -1045,6 +1062,7 @@
 	<script src="js/lazysizes.min.js" async=""></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.min.js"></script>
+	<script src="js/select.js"></script>
 </body>
 
 </html>

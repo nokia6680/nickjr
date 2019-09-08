@@ -1,0 +1,128 @@
+.video-service {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  margin-bottom: 10px;
+
+  &__mark {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .video-service {
+    margin-bottom: 17px;
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .video-service {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    margin-bottom: 15px;
+
+    &__mark {
+      display: block;
+
+      background-color: $bg-mark-btn;
+
+      width: 182px;
+      height: 42px;
+
+      border-radius: 25px;
+      border: none;
+
+      cursor: pointer;
+      outline: none;
+
+      font: {
+        size: 1.25em;
+        family: $fat-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 20px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 26px;
+        height: 24px;
+
+        top: 50%;
+        left: 10px;
+
+        background-image: url('../img/like-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 26px 24px;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .video-service {
+    width: 100%;
+    max-width: 600px;
+    align-self: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__rating {
+      order: 2;
+    }
+
+    &__mark {
+      width: 280px;
+      height: 50px;
+      margin-left: 0px;
+
+      font: {
+        size: 1.625em;
+      }
+
+      padding-left: 40px;
+
+      &::after {
+        width: 32px;
+        height: 29px;
+
+        left: 15px;
+
+        background-size: 32px 29px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .game-service {
+    width: 100%;
+    max-width: 930px;
+    align-self: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    &__mark {
+      width: 250px;
+      margin-left: 0px;
+    }
+  }
+}

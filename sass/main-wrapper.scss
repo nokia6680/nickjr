@@ -37,6 +37,10 @@
     display: none;
   }
 
+  &__intro--video {
+    display: none;
+  }
+
   &__bottom {
     display: flex;
     flex-direction: column;
@@ -96,6 +100,33 @@
         order: 4;
       }
     }
+
+    &--video {
+      .main__promo {
+        display: none;
+      }
+
+      .main-sidebar__promo {
+        display: none;
+      }
+
+      .main-wrapper__intro--video {
+        display: block;
+        order: 1;
+      }
+
+      .main-wrapper__video {
+        order: 3;
+      }
+
+      .main-wrapper__breadcrumbs {
+        order: 2;
+      }
+
+      .main-wrapper__bottom {
+        order: 4;
+      }
+    }
   }
 }
 
@@ -111,6 +142,16 @@
   .main-wrapper {
 
     &--game {
+      .main-wrapper__details {
+        order: 2;
+      }
+
+      .main-wrapper__intro {
+        order: 1;
+      }
+    }
+
+    &--video {
       .main-wrapper__details {
         order: 2;
       }
@@ -137,6 +178,10 @@
     position: relative;
 
     &--game {
+      align-items: flex-start;
+    }
+
+    &--video {
       align-items: flex-start;
     }
   }
@@ -197,6 +242,38 @@
       position: relative;
 
       .main-wrapper__intro--game {
+        display: none;
+      }
+
+      .main-wrapper__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        flex-wrap: wrap;
+
+        .main-wrapper__carousel--similar {
+          order: 1;
+        }
+
+        .main-wrapper__vk {
+          order: 2;
+        }
+
+        .main-wrapper__carousel--other {
+          order: 3;
+        }
+      }
+    }
+
+    &--video {
+      flex-direction: column;
+
+      padding-bottom: 100px;
+
+      position: relative;
+
+      .main-wrapper__intro--video {
         display: none;
       }
 

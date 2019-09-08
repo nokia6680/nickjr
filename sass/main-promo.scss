@@ -112,7 +112,8 @@
     }
   }
 
-  &--secondgame {
+  &--secondgame,
+  &--secondvideo {
     .main-promo__wrapper {
       display: flex;
       flex-direction: column;
@@ -290,7 +291,8 @@
     }
   }
 
-  &--game {
+  &--game,
+  &--video {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -371,7 +373,8 @@
       }
     }
 
-    &--secondgame {
+    &--secondgame,
+    &--secondvideo {
       display: flex;
       margin-bottom: 23px;
     }
@@ -509,6 +512,9 @@
     &--thirdgame {
       display: none;
     }
+    &--thrdvideo {
+      display: none;
+    }
     /*Рекламный блок только для размера 480px*/
     &--hdmob {
       display: none;
@@ -572,7 +578,8 @@
       }
     }
 
-    &--game {
+    &--game,
+    &--video {
       margin-bottom: 32px;
     }
   }
