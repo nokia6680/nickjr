@@ -78,8 +78,8 @@
 @media only screen and (min-width: $notebooks) {
   .video-service {
     width: 100%;
-    max-width: 600px;
-    align-self: flex-end;
+    max-width: 620px;
+
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -112,10 +112,10 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
-  .game-service {
+  .video-service {
     width: 100%;
     max-width: 930px;
-    align-self: flex-end;
+    align-self: flex-start;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;

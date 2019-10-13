@@ -14,8 +14,6 @@
     align-items: flex-start;
 
     max-width: 50%;
-
-    margin-bottom: 22px;
   }
 }
 
@@ -32,13 +30,13 @@
 }
 
 @media only screen and (min-width: $widebooks-hd) {
-  .game-header {
+  .video-header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
     margin-bottom: 0;
 
-    max-width: 930px;
+    max-width: 100%;
   }
 }

@@ -8,6 +8,158 @@
 
   padding-top: 10px;
 
+  &__selectors {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 190px;
+  }
+
+  &__wrap {
+    width: 90px;
+    z-index: 5;
+    position: absolute;
+
+    &--1 {
+      top: -13px;
+      left: 2px;
+    }
+
+    &--2 {
+      top: -13px;
+      right: 2px;
+    }
+
+    .select {
+      min-width: 90px;
+      max-width: 90px;
+      border-radius: 13px;
+      margin: 0 auto;
+    }
+
+    .select-wrap {
+      max-width: 90px;
+      min-width: 90px;
+      margin: 10px auto;
+
+      border-radius: 13px;
+    }
+
+    .select-wrap select {
+      margin: 10px;
+    }
+
+    .select__gap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      color: $bg-show-body;
+      border: 1px solid $bg-show-body;
+      border-radius: 13px;
+      text-transform: uppercase;
+      height: 26px;
+
+      font: {
+        size: 1em;
+        family: $fat-font;
+        weight: 300;
+      }
+
+      cursor: pointer;
+      position: relative;
+    }
+
+    .on.select__gap,
+    .select__gap:hover {
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .on.select__gap {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .select__list {
+      background-color: #ffffff;
+      border: 1px solid $bg-show-body;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: none;
+
+      position: relative;
+
+      max-height: 330px;
+      overflow-y: scroll;
+
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+    .select__list.on {
+      display: block;
+    }
+
+    .select__item {
+      border-bottom: 1px solid $bg-show-body;
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
+    .select__item span {
+      width: 100%;
+      display: block;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: $bg-show-body;
+
+      font: {
+        size: 0.75em;
+        family: $fat-font;
+        weight: 300;
+      }
+    }
+
+    .select__item.selected,
+    .select__item span:hover {
+      color: $bg-show-body;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .select__gap::after {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 11px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -5px;
+      background-image: url('../img/arrow-down.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all .27s ease-in-out;
+      transform: rotate(0deg);
+    }
+
+    .on.select__gap::after {
+      transform: rotate(180deg);
+    }
+  }
+
   &__btn {
     display: inline-flex;
     flex-direction: column;
@@ -48,7 +200,7 @@
     }
     /*Кнопка отправки проблемы*/
     &--report {
-      font-size: 0.625em;
+      font-size: 0.5em;
       padding-left: 30px;
       padding-right: 10px;
 
@@ -134,6 +286,58 @@
   .video-controls {
     padding-top: 13px;
 
+    &__selectors {
+      width: 190px;
+    }
+
+    &__wrap {
+      width: 90px;
+      z-index: 5;
+      position: absolute;
+
+      &--1 {
+        top: -15px;
+        left: 3px;
+      }
+
+      &--2 {
+        top: -15px;
+        right: 3px;
+      }
+
+      .select {
+        min-width: 90px;
+        max-width: 90px;
+        border-radius: 15px;
+      }
+
+      .select-wrap {
+        max-width: 90px;
+        min-width: 90px;
+
+        border-radius: 15px;
+      }
+
+      .select__gap {
+        border-radius: 15px;
+        height: 30px;
+
+        font: {
+          size: 1.125em;
+        }
+      }
+
+      .select__list {
+        max-height: 400px;
+      }
+
+      .select__item span {
+        font: {
+          size: 0.875em;
+        }
+      }
+    }
+
     &__btn {
       border-radius: 25px;
 
@@ -194,6 +398,56 @@
 @media only screen and (min-width: $mobile-hd) {
   .video-controls {
     padding-top: 18px;
+
+    &__selectors {
+      width: 190px;
+      height: auto;
+    }
+
+    &__wrap {
+      width: 100px;
+      z-index: 5;
+      position: absolute;
+
+      &--1 {
+        top: -18px;
+        left: -10px;
+      }
+
+      &--2 {
+        top: -18px;
+        right: -10px;
+      }
+
+      .select {
+        min-width: 100px;
+        max-width: 100px;
+      }
+
+      .select-wrap {
+        max-width: 100px;
+        min-width: 100px;
+      }
+
+      .select__gap {
+        border-radius: 15px;
+        height: 35px;
+
+        font: {
+          size: 1.25em;
+        }
+      }
+
+      .select__list {
+        max-height: 450px;
+      }
+
+      .select__item span {
+        font: {
+          size: 1em;
+        }
+      }
+    }
 
     &__btn {
       border-radius: 25px;
@@ -258,6 +512,61 @@
     padding-top: 23px;
     margin-bottom: 23px;
 
+    &__selectors {
+      width: 290px;
+      height: auto;
+    }
+
+    &__wrap {
+      width: 180px;
+      z-index: 5;
+      position: absolute;
+
+      &--1 {
+        top: -25px;
+        left: -40px;
+      }
+
+      &--2 {
+        top: -25px;
+        right: -40px;
+      }
+
+      .select {
+        min-width: 180px;
+        max-width: 180px;
+      }
+
+      .select-wrap {
+        max-width: 180px;
+        min-width: 180px;
+      }
+
+      .select__gap {
+        border-radius: 25px;
+        height: 50px;
+
+        font: {
+          size: 1.5em;
+        }
+      }
+
+      .select__list {
+        max-height: 750px;
+      }
+
+      .select__item span {
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+
+        font: {
+          size: 1.25em;
+        }
+      }
+    }
+
     &__btn {
       padding-top: 6px;
       padding-bottom: 3px;
@@ -316,6 +625,65 @@
         height: 50px;
 
         background-size: 50px 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .video-controls {
+    &__selectors {
+      width: 290px;
+      height: auto;
+    }
+
+    &__wrap {
+      width: 170px;
+      z-index: 5;
+      position: absolute;
+
+      &--1 {
+        top: -25px;
+        left: -27px;
+      }
+
+      &--2 {
+        top: -25px;
+        right: -27px;
+      }
+
+      .select {
+        min-width: 170px;
+        max-width: 170px;
+      }
+
+      .select-wrap {
+        max-width: 170px;
+        min-width: 170px;
+      }
+
+      .select__gap {
+        border-radius: 25px;
+        height: 50px;
+
+        font: {
+          size: 1.5em;
+        }
+      }
+
+      .select__list {
+        max-height: 750px;
+      }
+
+      .select__item span {
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+
+        font: {
+          size: 1.25em;
+        }
       }
     }
   }

@@ -10,21 +10,21 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-	<meta property="og:title" content=" | Игры Nick Jr." /> <!--Название игры | - Игры Nick Jr.-->
+	<meta property="og:title" content=" | Игры Nick Jr." /> <!--Название видео | - Игры Nick Jr.-->
 	<meta property="og:type" content="website" />
-	<meta property="og:description" content="" /> <!--Описание игры-->
-	<meta property="og:image" content="" /> <!--Изображение для игры-->
+	<meta property="og:description" content="" /> <!--Описание видео-->
+	<meta property="og:image" content="" /> <!--Изображение для видео-->
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:alt" content="" /> <!--Title для изображения-->
-	<meta property="og:url" content="" /> <!--Ссылка на конкретную игру-->
-	<meta property="og:site_name" content="Игры Nick Jr." /> <!--Название страницы с игрой-->
+	<meta property="og:url" content="" /> <!--Ссылка на конкретную видео-->
+	<meta property="og:site_name" content="Игры Nick Jr." /> <!--Название страницы с видео-->
 	<meta property="og:locale" content="ru_RU" />
 
 	<meta name="twitter:card" content="summary_large_image" /> <!--Тип карточки в твиттер-->
-	<meta name="twitter:title" content="Игры Nick Jr." /> <!--Название игры | - Игры Nick Jr-->
-	<meta name="twitter:description" content="" /> <!--Описание игры-->
-	<meta name="twitter:url" content="" /> <!--Ссылка на конкретную игру-->
-	<meta name="twitter:image" content="" /> <!--Изображение для игры-->
+	<meta name="twitter:title" content="Игры Nick Jr." /> <!--Название видео | - Игры Nick Jr-->
+	<meta name="twitter:description" content="" /> <!--Описание видео-->
+	<meta name="twitter:url" content="" /> <!--Ссылка на конкретную видео-->
+	<meta name="twitter:image" content="" /> <!--Изображение для видео-->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -393,7 +393,7 @@
 						</li>
 					</ul>
 				</div>
-				<h1 itemprop="name" class="main-wrapper__title" id="video-name">Щенячий патруль - игра</h1>
+				<h1 itemprop="name" class="main-wrapper__title" id="video-name">Щенячий патруль - видео</h1>
 			</div>
 			<!--Контентная область-->
 			<section itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement" class="main-wrapper__video video-main">
@@ -406,7 +406,7 @@
 					</div>
 					<!--Share block-->
 					<div class="video-content__share video-share">
-						<h3 class="video-share__title">Поделись игрой с друзьями</h3>
+						<h3 class="video-share__title">Поделись видео с друзьями</h3>
 						<ul class="video-share__list share-list">
 							<li class="share-list__item share-item share-item--ok">
 								<span class="share-item__counter share-item__counter--ok" id="share-ok"><i class="fab fa-odnoklassniki"></i>386</span>
@@ -430,25 +430,31 @@
 					<div class="video-content__controls video-controls">
 						<a class="video-controls__btn video-controls__btn--report" href="#">Сообщить<br />о проблеме</a>
 						<!--Селект выбора сезона-->
-						<select class="video-controls__select video-select video-select--first" id="select-season">
-							<option class="video-select__item" name="season" value="0">Сезон</option>
-							<option class="video-select__item" name="season" value="1">Сезон 1</option>
-							<option class="video-select__item" name="season" value="2">Сезон 2</option>
-							<option class="video-select__item" name="season" value="3">Сезон 3</option>
-							<option class="video-select__item" name="season" value="4">Сезон 4</option>
-							<option class="video-select__item" name="season" value="5">Сезон 5</option>
-							<option class="video-select__item" name="season" value="6">Сезон 6</option>
-						</select>
-						<!--Селект выбора серии-->
-						<select class="video-controls__select video-select video-select--second" id="select-episode">
-							<option class="video-select__item" name="episode" value="0">Серия</option>
-							<option class="video-select__item" name="episode" value="1">Серия 1</option>
-							<option class="video-select__item" name="episode" value="2">Серия 2</option>
-							<option class="video-select__item" name="episode" value="3">Серия 3</option>
-							<option class="video-select__item" name="episode" value="4">Серия 4</option>
-							<option class="video-select__item" name="episode" value="5">Серия 5</option>
-							<option class="video-select__item" name="episode" value="6">Серия 6</option>
-						</select>
+						<div class="video-controls__selectors">
+							<div class="video-controls__wrap stars-select video-controls__wrap--1">
+								<select class="video-controls__select select select--first" id="select-season">
+									<option class="select__item" name="season" value="0">Сезон 1</option>
+									<option class="select__item" name="season" value="1">Сезон 2</option>
+									<option class="select__item" name="season" value="2">Сезон 3</option>
+									<option class="select__item" name="season" value="3">Сезон 4</option>
+									<option class="select__item" name="season" value="4">Сезон 5</option>
+									<option class="select__item" name="season" value="5">Сезон 6</option>
+									<option class="select__item" name="season" value="6">Сезон 7</option>
+								</select>
+							</div>
+							<div class="video-controls__wrap stars-select video-controls__wrap--2">
+								<!--Селект выбора серии-->
+								<select class="video-controls__select select select--second" id="select-episode">
+									<option class="select__item" name="episode" value="0">Серия</option>
+									<option class="select__item" name="episode" value="1">Серия 1</option>
+									<option class="select__item" name="episode" value="2">Серия 2</option>
+									<option class="select__item" name="episode" value="3">Серия 3</option>
+									<option class="select__item" name="episode" value="4">Серия 4</option>
+									<option class="select__item" name="episode" value="5">Серия 5</option>
+									<option class="select__item" name="episode" value="6">Серия 6</option>
+								</select>
+							</div>
+						</div>
 						<a class="video-controls__btn video-controls__btn--expand" href="#"></a>
 					</div>
 				</div>
@@ -476,7 +482,8 @@
 					<div class="video-header__info video-info">
 						<p itemprop="description" class="video-info__description">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Разнообразный и богатый опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
 						<a class="video-info__link video-info__link--game" href="#" target="_self">
-							Мультики <span class="video-info__name">Щенячий патруль</span>
+							<span class="video-info__link-title">Игры</span>
+							<span class="video-info__link-name">Щенячий патруль</span>
 						</a>
 					</div>
 					<!--Rating and bookmark-->
@@ -503,7 +510,6 @@
 							</div>
 							<b class="main-rating__quantity">(<span itemprop="ratingCount" class="main-rating__nr" id="rating-counter">14</span>&nbsp;оценок)</b>
 						</div>
-
 					</div>
 				</div>
 			</section>
@@ -1061,7 +1067,7 @@
 	<script src="js/fix.js"></script>
 	<script src="js/lazysizes.min.js" async=""></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-	<script src="js/script.min.js"></script>
+	<script src="js/script.js"></script>
 	<script src="js/select.js"></script>
 </body>
 
