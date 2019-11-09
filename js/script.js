@@ -1,3 +1,11 @@
+const NavList = document.querySelector('.nav-list');
+const NavToggle = document.querySelector('.header-nav__toggle');
+
+document.querySelector('.header-nav__toggle').onclick = function(){
+	NavToggle.classList.toggle('open');
+	NavList.classList.toggle('active');
+};
+
 var menuMobile = document.querySelector(".nav-list");
 var openButton = document.querySelector(".nav-list__opener");
 var closeButton = document.querySelector(".nav-list__closer");

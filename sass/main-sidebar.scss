@@ -102,10 +102,6 @@
       right: -20px;
     }
 
-    &__promo {
-      display: none;
-    }
-
     &--show {
       position: relative;
       top: auto;
@@ -122,6 +118,8 @@
 
     top: auto;
     right: 0;
+
+    margin-top: 320px;
 
     &__mark {
       align-self: flex-start;

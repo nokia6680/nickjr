@@ -192,6 +192,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: nowrap;
 
     width: 100%;
 
@@ -224,10 +225,14 @@
 
     &__content {
       width: 994px;
+
+      order: 1;
     }
 
     &__sidebar {
       width: 246px;
+
+      order: 2;
     }
 
     &--show {

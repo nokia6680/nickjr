@@ -27,8 +27,9 @@
     display: none;
   }
 
-  &--active {
-    top: 159px;
+  &.active {
+    /*top: 159px;*/
+    top: 137px;
     display: flex;
 
     z-index: 10;
