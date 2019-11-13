@@ -119,12 +119,15 @@
       }
     }
 
-    .select__item span {
+    .select__item span,
+    .select__item a {
       width: 100%;
       display: block;
       padding: 5px 10px;
       cursor: pointer;
       color: $bg-show-body;
+
+      text-decoration: none;
 
       font: {
         size: 0.75em;
@@ -134,7 +137,8 @@
     }
 
     .select__item.selected,
-    .select__item span:hover {
+    .select__item span:hover,
+    .select__item a:hover {
       color: $bg-show-body;
       background-color: rgba(0, 0, 0, 0.1);
     }
@@ -331,7 +335,8 @@
         max-height: 400px;
       }
 
-      .select__item span {
+      .select__item span,
+      .select__item a {
         font: {
           size: 0.875em;
         }
@@ -442,7 +447,8 @@
         max-height: 450px;
       }
 
-      .select__item span {
+      .select__item span,
+      .select__item a {
         font: {
           size: 1em;
         }
@@ -564,6 +570,10 @@
         font: {
           size: 1.25em;
         }
+      }
+
+      .select-item a {
+        font-size: 1.25em;
       }
     }
 

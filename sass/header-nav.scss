@@ -28,7 +28,7 @@
     height: auto;
   }
 
-  /*Открывашка*/
+  /*Открывашка
   &__toggle {
     width: 33px;
     height: 30px;
@@ -108,6 +108,9 @@
     left: 4px;
     width: 33px;
   }
+  */
+
+
 }
 
 @media only screen and (min-width: $mobile) {
@@ -155,10 +158,6 @@
       height: 31px;
 
       margin-right: 5%;
-    }
-
-    &__toggle {
-      display: none;
     }
   }
 }

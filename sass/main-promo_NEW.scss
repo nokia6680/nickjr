@@ -14,68 +14,108 @@
       justify-content: flex-start;
       align-items: stretch;
 
-      &--mobile {
-        width: 100%;
+      width: 320px;
+      height: 115px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
 
-        min-width: 320px;
-        max-width: 320px;
-        min-height: 115px;
+      overflow: hidden;
+    }
 
-        .main-promo__content {
-          display: flex;
-          flex-direction: column;
-          justify-content: stretch;
-          align-content: stretch;
+    .main-promo__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-content: stretch;
 
-          min-width: 320px;
-          max-width: 320px;
+      width: 100%;
+      height: 100px;
+      max-height: 100px;
 
-          min-height: 100px;
-          max-height: 100px;
+      background-color: rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+    }
+  }
 
-          overflow-x: hidden;
-        }
-      }
-      &--desktop {
-        display: none;
-      }
+  &--third {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    margin-bottom: 30px;
+
+    height: 265px;
+    width: 300px;
+
+    overflow: hidden;
+
+    .main-promo__content {
+      width: 300px;
+      height: 250px;
+      max-height: 250px;
+
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.2)
     }
   }
   /*Стилизация блока рекламы после пагинации 320х50 и 728х90* id=promo-2*/
-  &--second {
+  &--fourth {
+    .main-promo__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      width: 320px;
+      height: 65px;
+
+      overflow: hidden;
+    }
+
+    .main-promo__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-content: stretch;
+
+      width: 100%;
+      height: 50px;
+      max-height: 50px;
+
+      background-color: rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+    }
+  }
+  /*Стили промо-5*/
+  &--fifth {
     .main-promo__wrapper {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: stretch;
 
-      &--mobile {
-        width: 100%;
+      margin-bottom: 20px;
+      width: 300px;
+      height: 265px;
 
-        min-width: 320px;
-        max-width: 320px;
-        min-height: 65px;
+      overflow: hidden;
+    }
 
-        .main-promo__content {
-          display: flex;
-          flex-direction: column;
-          justify-content: stretch;
-          align-content: stretch;
+    .main-promo__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-content: stretch;
 
-          min-width: 320px;
-          max-width: 320px;
+      width: 100%;
+      height: 250px;
+      max-height: 250px;
 
-          min-height: 50px;
-          max-height: 50px;
-
-          overflow-x: hidden;
-        }
-      }
-      &--desktop {
-        display: none;
-      }
+      background-color: rgba(255, 255, 255, 0.2);
+      overflow: hidden;
     }
   }
+
   /*Стилизация блока рекламы на странице шоу*/
   &--secondshow {
     .main-promo__wrapper {
@@ -111,7 +151,6 @@
       }
     }
   }
-
   &--secondgame,
   &--secondvideo {
     .main-promo__wrapper {
@@ -147,47 +186,6 @@
       }
     }
   }
-  /*Стилизация блока рекламы после первого слайдера игр 300х250 и 728х90* id=promo-3*/
-  &--third {
-    .main-promo__wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: stretch;
-
-      margin-bottom: 20px;
-
-      &--mobile {
-        width: 100%;
-
-        min-width: 300px;
-        max-width: 300px;
-        min-height: 250px;
-        max-height: 250px;
-
-        .main-promo__content {
-          display: flex;
-          flex-direction: column;
-          justify-content: stretch;
-          align-content: stretch;
-
-          min-width: 300px;
-          max-width: 300px;
-          min-height: 250px;
-          max-height: 250px;
-        }
-      }
-
-      &--desktop {
-        display: none;
-      }
-
-      &--hd {
-        display: none;
-      }
-    }
-  }
-
   &--thirdshow {
     .main-promo__wrapper {
       display: flex;
@@ -236,8 +234,6 @@
 
     width: 100%;
 
-    margin-top: -1px;
-
     text-align: center;
     text-transform: uppercase;
 
@@ -251,44 +247,6 @@
     }
     color: $text-white;
     line-height: 1;
-  }
-
-  /*Скрытый промоблоки для 480px*/
-
-  &--hdmob,
-  &--hdmob2 {
-    display: none;
-  }
-
-  /*Промоблок-2 только для мобильных*/
-
-  &--mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    .main-promo__wrapper {
-      width: 100%;
-      min-width: 320px;
-      max-width: 320px;
-      min-height: 65px;
-    }
-
-    .main-promo__link {
-      height: 65px;
-    }
-
-    .main-promo__frame {
-      height: 50px;
-      max-height: 50px;
-      min-height: 50px;
-    }
-
-    .main-promo__img {
-      max-height: 50px;
-      min-height: 50px;
-    }
   }
 
   &--game,
@@ -332,9 +290,6 @@
 
 @media only screen and (min-width: $mobile-hd) {
   .main-promo {
-    &--second {
-      display: none;
-    }
     /*320x50px*/
     &--secondshow {
       display: flex;
@@ -379,30 +334,6 @@
       margin-bottom: 23px;
     }
 
-    /*Рекламный блок только для размера 480px*/
-    &--hdmob {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: stretch;
-
-      margin-bottom: 30px;
-
-      max-height: 265px;
-      min-height: 265px;
-      width: 300px;
-      min-width: 300px;
-      max-width: 300px;
-
-      .main-promo__content {
-        width: 100%;
-        min-width: 300px;
-        max-width: 300px;
-        min-height: 250px;
-        max-height: 250px;
-      }
-    }
-
     &--show {
       display: block;
       margin-bottom: 15px;
@@ -417,55 +348,47 @@
     /*Стилизация блока рекламы под хедером 320х100 и 728х90* id=promo-1*/
     &--first {
       .main-promo__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+        width: 728px;
+        height: 105px;
+        margin-top: 20px;
+      }
 
-        &--mobile {
-          display: none;
-        }
-        &--desktop {
-          display: block;
-
-          width: 100%;
-          min-width: 728px;
-          max-width: 728px;
-
-          min-height: 105px;
-          max-height: 105px;
-
-          margin-top: 20px;
-
-          .main-promo__content {
-            min-width: 728px;
-            max-width: 728px;
-
-            min-height: 90px;
-            max-height: 90px;
-
-            overflow-x: visible;
-            background-color: transparent;
-            opacity: 1;
-          }
-        }
+      .main-promo__content {
+        height: 90px;
+        max-height: 90px;
       }
     }
-    /*Стилизация блока рекламы после пагинации 320х50 и 728х90* id=promo-2*/
-    &--second {
+
+    &--third {
+      margin-bottom: 1.25rem;
+    }
+
+    &--fourth {
       .main-promo__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+        width: 728px;
+        height: 90px;
+      }
 
-        &--mobile {
-          display: none;
-        }
+      .main-promo__content {
+        width: 100%;
+        max-height: 90px;
+        height: 90px;
+      }
 
-        &--desktop {
-          display: none;
-        }
+      margin-top: 0.625rem;
+      margin-bottom: 1.25rem;
+    }
+
+    &--fifth {
+      .main-promo__wrapper {
+        width: 728px;
+        height: 105px;
+      }
+
+      .main-promo__content {
+        width: 100%;
+        height: 90px;
+        max-height: 90px;
       }
     }
 
@@ -473,38 +396,6 @@
       display: none;
     }
     /*Стилизация блока рекламы после первого слайдера игр 300х250 и 728х90* id=promo-3*/
-    &--third {
-      .main-promo__wrapper {
-
-        &--mobile {
-          display: none;
-        }
-
-        &--desktop {
-          display: block;
-
-          width: 100%;
-          min-width: 728px;
-          max-width: 728px;
-
-          min-height: 105px;
-          max-height: 105px;
-
-          .main-promo__content {
-            min-width: 728px;
-            max-width: 728px;
-
-            min-height: 90px;
-            max-height: 90px;
-
-            overflow-x: visible;
-            background-color: transparent;
-            opacity: 1;
-          }
-        }
-      }
-    }
-
     &--thirdshow {
       display: none;
     }
@@ -515,14 +406,26 @@
     &--thrdvideo {
       display: none;
     }
-    /*Рекламный блок только для размера 480px*/
-    &--hdmob {
-      display: none;
-    }
 
     &--show {
       display: none;
       margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .main-promo {
+    &--fifth {
+      .main-promo__wrapper {
+        width: 300px;
+        height: 250px;
+      }
+
+      .main-promo__content {
+        max-height: 250px;
+        height: 250px;
+      }
     }
   }
 }
@@ -535,49 +438,54 @@
       margin-bottom: 30px;
     }
 
+    &--third {
+      width: 728px;
+
+      .main-promo__wrapper {
+        width: 728px;
+        height: 90px;
+      }
+
+      .main-promo__content {
+        width: 100%;
+        max-height: 90px;
+        height: 90px;
+      }
+    }
+
+    &--fourth {
+      position: absolute;
+
+      right: -30px;
+
+      .main-promo__wrapper {
+        width: 300px;
+        height: 250px;
+      }
+
+      .main-promo__content {
+        max-height: 250px;
+        height: 250px;
+      }
+    }
+
+    &--fifth {
+      .main-promo__wrapper {
+        width: 240px;
+        height: 400px;
+      }
+
+      .main-promo__content {
+        max-height: 400px;
+        height: 400px;
+      }
+    }
+
     &--first-alt {
       margin-bottom: 20px;
     }
 
-    &--hdmob {
-      display: none;
-    }
-
     /*Стилизация блока рекламы после первого слайдера игр 300х250 и 728х90* id=promo-3*/
-    &--third {
-      .main-promo__wrapper {
-
-        &--mobile {
-          display: none;
-        }
-
-        &--desktop {
-          display: none;
-        }
-
-        &--hd {
-          display: block;
-
-          width: 100%;
-          min-width: 240px;
-          max-width: 240px;
-
-          min-height: 415px;
-          max-height: 415px;
-
-          margin-top: 30px;
-
-          .main-promo__content {
-            min-width: 240px;
-            max-width: 240px;
-
-            min-height: 400px;
-            max-height: 400px;
-          }
-        }
-      }
-    }
-
     &--game,
     &--video {
       margin-bottom: 32px;

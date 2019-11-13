@@ -77,12 +77,8 @@
 
 @media only screen and (min-width: $tablets) {
   .video-main {
-    flex-direction: row;
-    justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
-
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 
     &__promo {
       .video-main__wrapper {

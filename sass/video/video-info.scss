@@ -44,58 +44,7 @@
   }
 
   &__link {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    background-color: #f4ca0f;
-    box-shadow: inset 0 5px 10px #ffe057, inset 0 -5px 10px #e3ba03;
-    border-radius: 10px;
-
-    width: 100%;
-    padding: 0.625rem 0.625rem;
-    margin-bottom: 1.25rem;
-
-    text-decoration: none;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: #ffffff;
-      transition: 0.1s ease-in;
-      box-shadow: none;
-
-      .video-info__link-title,
-      .video-info__link-name {
-        color: #27c0d7;
-      }
-    }
-
-    &-title {
-      font: {
-        size: 2.5rem;
-        family: $fat-font;
-        weight: 700;
-      }
-
-      line-height: normal;
-      color: $text-white;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
-    }
-
-    &-name {
-      font: {
-        size: 1.25rem;
-        family: $fat-font;
-        weight: 700;
-      }
-
-      line-height: normal;
-      color: $text-white;
-      text-transform: uppercase;
-    }
+    display: none;
   }
 }
 
@@ -130,27 +79,6 @@
         size: 1em;
       }
     }
-
-    &__link {
-      width: 100%;
-      max-width: 400px;
-      padding: 1.25rem 1.25rem;
-      margin-bottom: 1.25rem;
-
-      text-decoration: none;
-
-      &-title {
-        font: {
-          size: 3.5rem;
-        }
-      }
-
-      &-name {
-        font: {
-          size: 2rem;
-        }
-      }
-    }
   }
 }
 
@@ -160,24 +88,13 @@
       min-height: auto;
       max-width: 330px;
     }
-
-    &__link {
-      max-width: 300px;
-
-      &-name {
-        font-size: 1.25rem;
-      }
-    }
   }
 }
 
 @media only screen and (min-width: $notebooks) {
   .video-info {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-
     width: 100%;
+    align-items: flex-start;
 
     &__title {
       font: {
@@ -192,19 +109,33 @@
         size: 1.188em;
       }
 
-      max-width: 620px;
+      max-width: 940px;
     }
   }
 }
 
 @media only screen and (min-width: $widebooks-hd) {
-  .video-info {
-    width: 100%;
+  .game-info {
+    width: 930px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 
     &__description {
       min-height: 150px;
       max-width: 930px;
+    }
+
+    &__link {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 300px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.2);
     }
   }
 }
