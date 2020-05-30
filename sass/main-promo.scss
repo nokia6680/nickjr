@@ -475,13 +475,12 @@
     /*Стилизация блока рекламы после первого слайдера игр 300х250 и 728х90* id=promo-3*/
     &--third {
       .main-promo__wrapper {
-
         &--mobile {
           display: none;
         }
 
         &--desktop {
-          display: block;
+          display: none;
 
           width: 100%;
           min-width: 728px;
