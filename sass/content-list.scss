@@ -5,64 +5,45 @@
   padding: 0;
   list-style: none;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-gap: 0.625rem;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 20px;
 
-  @for $i from 1 through 100 {
-    .content-list__item--#{$i} {
-      order: ($i + 3);
-    }
-  }
-
   &__item {
-    width: 150px;
-    height: 150px;
-
+    @include flex-setting(column, center, center);
     text-align: center;
-
     position: relative;
+    margin-bottom: 0;
+    border-radius: 15px;
 
-    margin-bottom: 7px;
+    padding-bottom: 100%;
 
-    /*3-4 блока, которые всегда первые*/
-    /*Слайд с клубом друзей*/
-    &--club {
-      order: 2;
-
-      .content-list__frame--big {
-        display: none;
-      }
-    }
     /*Слайд с текстом*/
-    &--text {
-      order: 1;
-      width: 100%;
+    &.text {
+      place-items: start;
+      grid-column: span 2;
+      grid-row: 1 / 2;
 
-      text-align: left;
-    }
-    /*Слайд NickJR в кино*/
-    &--cinema {
-      order: 3;
-
-      .content-list__frame--big {
-        display: none;
-      }
+      padding-bottom: 0;
+      padding-top: 0;
     }
 
-    &--promo {
+    &.promo {
       display: none;
     }
   }
 
   &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: block;
-    width: 150px;
-    height: 150px;
+
+    width: 100%;
+    height: 100%;
 
     border-radius: 15px;
 
@@ -79,14 +60,11 @@
   }
 
   &__frame {
-    width: 150px;
-    height: 150px;
-
-    font-size: 0;
-    line-height: 0;
+    @include flex-setting(column, center, center);
+    width: 100%;
+    height: 100%;
 
     border-radius: 15px;
-
     overflow: hidden;
 
     &--big {
@@ -95,47 +73,31 @@
   }
 
   &__preview {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
 
-    font-size: 0;
-    line-height: 0;
-
+    object-fit: cover;
     border-radius: 15px;
 
     filter: brightness(90%);
   }
 
   &__title {
+    @include font-setting($primary-font, 1.625rem, 1.1, 700, $text-white);
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-    margin: 0;
     text-transform: uppercase;
 
-    font: {
-      family: $fat-font;
-      size: 1.625em;
-    }
-
-    color: $text-white;
-    line-height: 1;
+    margin: 0;
   }
 
   &__description {
+    @include font-setting($primary-font, 0.625rem, 1.3, 400, $text-white);
     margin: 0;
 
     width: 100%;
     overflow-y: scroll;
 
     max-height: 115px;
-
-    font: {
-      family: $base-font;
-      size: 0.625em;
-      weight: 600;
-    }
-
-    color: $text-white;
-    line-height: 1.3;
 
     text-transform: uppercase;
     text-align: left;
@@ -150,137 +112,51 @@
     }
   }
 
-  /*Планка со временем*/
-  &__duration {
-    visibility: hidden; /*Скрыто, ибо пока не нужно*/
-    position: absolute;
-
-    top: 8px;
-    left: 8px;
-
-    width: 42px;
-    height: 24px;
-
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-
-    font: {
-      size: 0.875em;
-      family: $footer-font;
-      weight: 100;
-    }
-
-    color: $text-white;
-    line-height: 1;
-
-    padding-top: 5px;
-  }
-
   /*Низ слайда*/
   &__bottom {
     position: absolute;
     width: 100%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    @include flex-setting(row, flex-start, center);
 
     bottom: 0;
-    left: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
 
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
   }
 
-  /*Плашки "новинка" и "полная серия"*/
-  &__notes {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    padding-bottom: 8px;
-    padding-left: 0;
-  }
-
-  /*Плашки NOTES*/
-  &__sign {
-    font: {
-      size: 0.5em;
-      family: $fat-font;
-    }
-
-    color: $text-white;
-    line-height: 1;
-
+  &__name {
+    @include font-setting($primary-font, 0.625rem, 1.1, 400, $text-white);
     text-transform: uppercase;
     text-align: left;
-
-    display: block;
-
-    padding-left: 2px;
-    padding-right: 2px;
-
-    &--new {
-      background-image: url('../img/new-bg.png');
-      background-size: 38.5px 11.5px;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-
-    &--full {
-      background-image: url('../img/full-bg.png');
-      background-size: 81.5px 11.5px;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  /*Стилизация блока с названием игры*/
-  &__info {
     max-width: 75%;
 
-    padding-left: 8px;
-    padding-bottom: 4px;
-
-    text-align: left;
+    padding-left: 0.625rem;
   }
+}
 
-  &__name {
-    font: {
-      family: $base-font;
-      size: 0.625em;
+@media only screen and (min-width: 414px) {
+  .content-list {
+    grid-gap: 1.25rem;
+
+    &__title {
+      font-size: 1.75rem;
+      margin-bottom: 0.625rem;
     }
 
-    color: $text-white;
-    line-height: 1;
-    text-transform: uppercase;
+    &__description {
+      font-size: 0.75rem;
 
-    text-align: left;
-  }
-
-  &__icon {
-    &--game {
-      width: 19px;
-      height: 19px;
-
-      margin-right: 8px;
-      margin-bottom: 8px;
-
-      display: block;
-      visibility: hidden;
+      max-height: 135px;
     }
 
-    &--video {
-      width: 25px;
-      height: 25px;
-
-      margin-right: 6px;
-      margin-bottom: 6px;
-
-      display: none;
+    &__name {
+      font-size: 0.75rem;
+      padding-bottom: 0.25rem;
     }
   }
 }
@@ -289,57 +165,21 @@
   .content-list {
     margin-bottom: 20px;
 
-    @for $i from 1 through 3 {
-      .content-list__item--#{$i} {
-        order: 4 + $i;
-      }
-    }
-
-    @for $i from 4 through 100 {
-      .content-list__item--#{$i} {
-        order: 3 + $i;
-      }
-    }
-
     &__item {
-      margin-bottom: 16px;
+      &.promo {
+        @include flex-setting(column, center, center);
 
-      &--club {
-        order: 2;
-      }
+        grid-row: 4 / 5;
+        grid-column: span 2;
 
-      &--text {
-        order: 1;
-      }
-
-      &--cinema {
-        order: 3;
-      }
-
-      &--promo {
-        display: block;
-
-        order: 8;
-
-        width: 320px;
-        min-height: 320px;
-        max-width: 320px;
-        min-height: 65px;
-        max-height: 65px;
-
-        margin: 0 auto;
-
-        margin-bottom: 16px;
+        padding-bottom: 0;
 
         .content-list__wrapper {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: stretch;
+          @include flex-setting(column, flex-start, stretch);
 
           &--mobile {
             width: 320px;
-            min-height: 320px;
+            min-width: 320px;
             max-width: 320px;
             min-height: 65px;
             max-height: 65px;
@@ -349,154 +189,26 @@
             display: none;
           }
         }
-
         .content-list__promo {
-          width: 320px;
-          min-height: 320px;
-          max-width: 320px;
+          width: 100%;
           min-height: 50px;
           max-height: 50px;
           background-color: #ffffff;
           opacity: 0.3;
         }
-
         .content-list__text {
-          width: 320px;
+          @include font-setting($promo-font, 0.5rem, 1, 700, $text-white);
+          @include flex-setting(column, center, center);
+          width: 100%;
 
           background-color: $bg-black;
           border-radius: 0 0 8px 8px;
 
-          display: block;
-
           margin-top: 0px;
-
-          text-align: center;
           text-transform: uppercase;
 
           padding-top: 4px;
           padding-bottom: 4px;
-
-          font: {
-            family: $promo-font;
-            size: 0.5em;
-            weight: 700;
-          }
-          color: $text-white;
-          line-height: 1;
-        }
-      }
-    }
-
-    &__link {
-      display: block;
-      width: 150px;
-      height: 150px;
-
-      border-radius: 15px;
-    }
-
-    &__frame {
-      width: 150px;
-      height: 150px;
-
-      font-size: 0;
-      line-height: 0;
-
-      border-radius: 15px;
-    }
-
-    &__preview {
-      width: 150px;
-      height: 150px;
-
-      font-size: 0;
-      line-height: 0;
-
-      border-radius: 15px;
-    }
-    /*Стилизация и порядок следования элементов для шаблона страницы пагинации*/
-    &--page {
-      .content-list__item {
-        &--text {
-          order: 1;
-        }
-
-        &--club {
-          order: 2;
-        }
-
-        &--cinema {
-          order: 3;
-        }
-
-        &--promo {
-          display: block;
-
-          order: 8;
-
-          width: 320px;
-          min-height: 320px;
-          max-width: 320px;
-          min-height: 65px;
-          max-height: 65px;
-
-          margin: 0 auto;
-
-          margin-bottom: 16px;
-
-          .content-list__wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: stretch;
-
-            &--mobile {
-              width: 320px;
-              min-height: 320px;
-              max-width: 320px;
-              min-height: 65px;
-              max-height: 65px;
-            }
-
-            &--desktop {
-              display: none;
-            }
-          }
-
-          .content-list__promo {
-            width: 320px;
-            min-height: 320px;
-            max-width: 320px;
-            min-height: 50px;
-            max-height: 50px;
-            background-color: #ffffff;
-            opacity: 0.3;
-          }
-
-          .content-list__text {
-            width: 320px;
-
-            background-color: $bg-black;
-            border-radius: 0 0 8px 8px;
-
-            display: block;
-
-            margin-top: 0px;
-
-            text-align: center;
-            text-transform: uppercase;
-
-            padding-top: 4px;
-            padding-bottom: 4px;
-
-            font: {
-              family: $promo-font;
-              size: 0.5em;
-              weight: 700;
-            }
-            color: $text-white;
-            line-height: 1;
-          }
         }
       }
     }
@@ -505,52 +217,34 @@
 
 @media only screen and (min-width: $tablets) {
   .content-list {
-    margin-top: 30px;
+    justify-self: center;
 
-    @for $i from 1 through 100 {
-      .content-list__item--#{$i} {
-        order: 4 + $i;
-      }
-    }
+    max-width: 660px;
+    margin: 0 auto;
+
+    grid-template-rows: 300px;
+    grid-auto-flow: dense;
+    grid-column-gap: 3.75rem;
+    grid-row-gap: 1.875rem;
 
     &__item {
-      width: 300px;
-      height: 300px;
+      padding-bottom: 0;
 
-      margin-bottom: 26px;
-
-      &--club {
-        order: 1;
+      &.text {
+        grid-column: 2 / 2;
       }
 
-      &--text {
-        order: 2;
-        width: 300px;
-      }
-
-      &--promo {
-        display: block;
-
-        order: 5;
-
-        height: 265px;
-        width: 300px;
-
-        margin: 0;
-        margin-top: 16px;
+      &.promo {
+        grid-column: span 1;
+        grid-row: 3 / 4;
 
         .content-list__wrapper {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: stretch;
-
           &--mobile {
             display: none;
           }
 
           &--desktop {
-            display: block;
+            display: flex;
             width: 300px;
             max-width: 300px;
             min-width: 300px;
@@ -559,11 +253,7 @@
             height: 250px;
 
             .content-list__promo {
-              display: flex;
-              justify-content: stretch;
-              align-content: stretch;
-
-              width: 300px;
+              width: 100%;
               max-width: 300px;
               min-width: 300px;
               max-height: 250px;
@@ -572,102 +262,62 @@
 
               border-radius: 15px 15px 0 0;
 
-              background-color: transparent;
-              opacity: 1;
+              background-color: #fff;
+              opacity: 0.3;
             }
 
             .content-list__text {
-              width: 300px;
-
-              background-color: $bg-black;
               border-radius: 0 0 8px 8px;
-
-              display: block;
-
-              margin-top: 0px;
-
-              text-align: center;
-              text-transform: uppercase;
-
-              padding-top: 4px;
-              padding-bottom: 4px;
-
-              font: {
-                family: $promo-font;
-                size: 0.5em;
-                weight: 700;
-              }
-              color: $text-white;
-              line-height: 1;
             }
           }
         }
       }
 
-      &--cinema {
-        order: 3;
-
-        width: 100%;
+      &.cinema {
+        grid-column: span 2;
 
         .content-list__frame--small {
           display: none;
         }
 
         .content-list__frame--big {
-          display: block;
-
+          display: flex;
           width: 100%;
+          max-height: 300px;
         }
       }
 
-      &--1 {
-        margin-right: 0;
-      }
-
-      &--4 {
-        width: 100%;
+      &.span-2 {
+        grid-column: span 2;
 
         .content-list__frame--small {
           display: none;
         }
 
         .content-list__frame--big {
-          display: block;
-
-          width: 100%;
+          display: flex;
+          max-height: 300px;
         }
       }
-    }
-
-    &__frame {
-      min-height: 300px;
     }
 
     &__link {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    &__preview {
-      width: 300px;
-      height: 300px;
-
-      &--big {
-        width: 100%;
-        height: 330px;
-      }
+      position: relative;
+      top: auto;
+      left: auto;
+      bottom: auto;
+      right: auto;
     }
 
     &__title {
       font: {
-        size: 2.125em;
+        size: 2.125rem;
       }
     }
 
     &__description {
       font: {
-        size: 1em;
+        size: 1rem;
       }
 
       max-height: 250px;
@@ -676,158 +326,14 @@
     /*Низ слайда*/
     &__bottom {
       bottom: 0px;
-      padding-top: 10px;
-    }
-
-    /*Плашки "новинка" и "полная серия"*/
-    &__notes {
-      padding-bottom: 22px;
-    }
-
-    &__sign {
-      font: {
-        size: 1em;
-      }
-
-      &--new {
-        padding-top: 4px;
-
-        width: 77px;
-        height: 23px;
-        background-size: 77px 23px;
-      }
-
-      &--full {
-        padding-top: 5px;
-
-        text-align: center;
-
-        width: 163px;
-        height: 23px;
-        background-size: 163px 23px;
-      }
-    }
-
-    /*Стилизация блока с названием игры*/
-    &__info {
-      padding-left: 15px;
-      padding-bottom: 10px;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      padding-left: 1rem;
     }
 
     &__name {
       font: {
-        size: 1.125em;
-      }
-    }
-
-    &__icon {
-      &--game {
-        width: 47px;
-        height: 47px;
-
-        padding-right: 8px;
-        padding-bottom: 8px;
-      }
-
-      &--video {
-        width: 47px;
-        height: 47px;
-
-        padding-right: 6px;
-        padding-bottom: 6px;
-      }
-    }
-
-    /*Стилизация и порядок следования элементов для шаблона страницы пагинации*/
-    &--page {
-      .content-list__item {
-        &--club {
-          order: 1;
-        }
-
-        &--text {
-          order: 2;
-        }
-
-        &--cinema {
-          order: 3;
-        }
-
-        &--promo {
-          display: block;
-
-          order: 6;
-
-          height: 265px;
-          width: 300px;
-
-          margin: 0;
-          margin-top: 16px;
-
-          .content-list__wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: stretch;
-
-            &--mobile {
-              display: none;
-            }
-
-            &--desktop {
-              display: block;
-              width: 300px;
-              max-width: 300px;
-              min-width: 300px;
-              max-height: 250px;
-              min-height: 250px;
-              height: 250px;
-
-              .content-list__promo {
-                display: flex;
-                justify-content: stretch;
-                align-content: stretch;
-
-                width: 300px;
-                max-width: 300px;
-                min-width: 300px;
-                max-height: 250px;
-                min-height: 250px;
-                height: 250px;
-
-                border-radius: 15px 15px 0 0;
-
-                background-color: transparent;
-                opacity: 1;
-              }
-
-              .content-list__text {
-                width: 300px;
-
-                background-color: $bg-black;
-                border-radius: 0 0 8px 8px;
-
-                display: block;
-
-                margin-top: 0px;
-
-                text-align: center;
-                text-transform: uppercase;
-
-                padding-top: 4px;
-                padding-bottom: 4px;
-
-                font: {
-                  family: $promo-font;
-                  size: 0.5em;
-                  weight: 700;
-                }
-                color: $text-white;
-                line-height: 1;
-              }
-            }
-          }
-        }
+        size: 1.125rem;
       }
     }
   }
@@ -835,159 +341,23 @@
 
 @media only screen and (min-width: $notebooks) {
   .content-list {
-    justify-content: flex-start;
+    max-width: 100%;
     margin-top: 30px;
-
-    @for $i from 1 through 100 {
-      .content-list__item--#{$i} {
-        order: 3 + $i;
-      }
-    }
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
 
     &__item {
-      &--club {
-        order: 1;
-
-        margin-right: 20px;
+      &.club {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+      &.text {
+        grid-column: span 2;
       }
 
-      &--text {
-        order: 2;
-        width: 620px;
-      }
-
-      &--promo {
+      &.promo {
         display: none;
-      }
-
-      &--cinema {
-        order: 3;
-
-        width: 596px;
-        margin-right: 100px;
-      }
-
-      &--1 {
-        width: 596px;
-        margin-right: 100px;
-
-        .content-list__frame--small {
-          display: none;
-        }
-
-        .content-list__frame--big {
-          display: block;
-
-          width: 100%;
-        }
-      }
-
-      &--2 {
-        width: 596px;
-
-        .content-list__frame--small {
-          display: none;
-        }
-
-        .content-list__frame--big {
-          display: block;
-
-          width: 100%;
-        }
-
-        margin-right: 44px;
-      }
-
-      &--4 {
-        width: 300px;
-        margin-right: 44px;
-
-        .content-list__frame--small {
-          display: block;
-          width: 100%;
-        }
-
-        .content-list__frame--big {
-          display: none;
-        }
-      }
-
-      &--5 {
-        width: 596px;
-
-        .content-list__frame--small {
-          display: none;
-        }
-
-        .content-list__frame--big {
-          display: block;
-
-          width: 100%;
-        }
-      }
-
-      &:nth-of-type(n+10) {
-        margin-right: 20px;
-      }
-
-      &:nth-of-type(3n+12) {
-        margin-right: 0;
-      }
-    }
-
-    &__preview {
-      &--big {
-        height: 300px;
-      }
-    }
-
-    /*Стилизация и порядок следования элементов для шаблона страницы пагинации*/
-    &--page {
-      @for $i from 1 through 100 {
-        .content-list__item--#{$i} {
-          order: 3 + $i;
-        }
-      }
-
-      .content-list__item {
-        margin-right: 20px;
-
-        &--club {
-          order: 1;
-        }
-
-        &--text {
-          order: 2;
-        }
-
-        &--cinema {
-          order: 3;
-          margin-right: 0;
-        }
-
-        &--2 {
-          margin-right: 100px;
-        }
-
-        &--promo {
-          display: none;
-        }
-
-        &--4 {
-          margin-right: 100px;
-        }
-
-        &--7 {
-          margin-right: 0;
-        }
-
-        &:nth-of-type(n+10) {
-          margin-right: 20px;
-        }
-
-        &:nth-of-type(3n+12) {
-          margin-right: 0;
-        }
       }
     }
   }
@@ -995,236 +365,37 @@
 
 @media only screen and (min-width: $widebooks-hd) {
   .content-list {
+    justify-self: start;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 966px;
     margin-top: 0px;
-
-    @for $i from 1 through 100 {
-      .content-list__item--#{$i} {
-        order: 4 + $i;
-      }
-    }
-
-    @for $i from 5 through 100 {
-      .content-list__item--#{$i} {
-        width: 300px;
-
-        .content-list__frame--small {
-          display: block;
-          width: 100%;
-        }
-
-        .content-list__frame--big {
-          display: none;
-        }
-      }
-    }
+    grid-template-columns: repeat(3, 322px);
+    grid-template-rows: 322px;
+    grid-column-gap: 1.375rem;
 
     &__item {
-      &--club {
-        order: 1;
-
-        margin-right: 48px;
+      &.promo {
+        display: flex;
       }
 
-      &--text {
-        order: 2;
-      }
-
-      &--promo {
-        display: block;
-        order: 3;
-
-        margin-right: 48px;
-        margin-bottom: 0;
-        margin-top: 16px;
-      }
-
-      &--cinema {
-        order: 4;
-
-        width: 646px;
-        margin-right: 0;
-
-        .content-list__frame--small {
-          display: none;
-        }
-
+      &.cinema {
         .content-list__frame--big {
-          display: block;
-
-          width: 100%;
+          max-height: 322px;
         }
       }
 
-      &--1 {
-        width: 646px;
-        margin-right: 48px;
-      }
-
-      &--2 {
-        width: 300px;
-
-        .content-list__frame--small {
-          display: block;
-          width: 100%;
-        }
-
+      &.span-2 {
         .content-list__frame--big {
-          display: none;
+          display: flex;
+          max-height: 322px;
         }
-
-        margin-right: 0;
-      }
-
-      &--3 {
-        margin-right: 48px;
-      }
-
-      &--4 {
-        width: 646px;
-
-        margin-right: 0;
-
-        .content-list__frame--small {
-          display: none;
-        }
-
-        .content-list__frame--big {
-          display: block;
-
-          width: 100%;
-        }
-      }
-
-      &:nth-of-type(n+9) {
-        margin-right: 48px;
-      }
-
-      &:nth-of-type(3n+11) {
-        margin-right: 0;
       }
     }
 
     &__link {
       width: 100%;
       height: 100%;
-    }
-
-    &__preview {
-      width: 300px;
-      height: 300px;
-
-      &--big {
-        width: 100%;
-        height: 323px;
-      }
-    }
-
-    &__title {
-      font: {
-        size: 2.125em;
-      }
-    }
-
-    &__description {
-      font: {
-        size: 1em;
-      }
-
-      max-height: 250px;
-    }
-
-    /*Стилизация и порядок следования элементов для шаблона страницы пагинации*/
-    &--page {
-      .content-list__item {
-        margin-right: 20px;
-
-        &--1 {
-          order: 1;
-        }
-
-        &--2 {
-          order: 2;
-        }
-
-        &--3 {
-          order: 3;
-          margin-right: 0;
-        }
-
-        &--4 {
-          order: 5;
-        }
-
-        &--5 {
-          order: 6;
-
-          margin-right: 0;
-        }
-
-        &--6 {
-          order: 7;
-        }
-
-        &--promo {
-          display: block;
-          order: 4;
-
-          margin-right: 20px;
-          margin-bottom: 0;
-          margin-top: 16px;
-        }
-
-        &--7 {
-          order: 8;
-
-          margin-right: 20px;
-        }
-
-        &--8 {
-          order: 9;
-          margin-right: 0;
-        }
-
-        &--9 {
-          order: 10;
-        }
-
-        &--10 {
-          order: 11;
-          margin-right: 20px;
-        }
-
-        &--11 {
-          order: 12;
-          margin-right: 0;
-        }
-
-        &--12 {
-          order: 13;
-        }
-
-        &--13 {
-          order: 14;
-          margin-right: 20px;
-        }
-
-        &--14 {
-          order: 14;
-        }
-
-        &--15 {
-          order: 15;
-        }
-
-        &--16 {
-          order: 16;
-          margin-right: 20px;
-        }
-
-        &--17 {
-          order: 17;
-        }
-      }
     }
   }
 }

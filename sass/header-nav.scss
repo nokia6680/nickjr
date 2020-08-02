@@ -1,18 +1,12 @@
 .header-nav {
   width: 100%;
+  @include flex-setting(row, space-between, center);
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0.5rem 0.433rem;
 
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 7px;
-  padding-right: 7px;
-
-  .hidden {
-    display: none;
+  &__logo {
+    width: 98px;
+    height: 26px;
   }
 
   &__link {
@@ -28,125 +22,90 @@
     height: auto;
   }
 
-  /*Открывашка
   &__toggle {
-    width: 33px;
-    height: 30px;
+    @include flex-setting(column, center, center);
     position: relative;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    display: block;
-
-    span {
-      display: block;
-      position: absolute;
-      height: 6px;
-      width: 100%;
-      background: #ff6700;
-      border-radius: 4px;
-      opacity: 1;
-      left: 0;
-      transform: rotate(0deg);
-      transition: .25s ease-in-out;
-    }
-
-    span:nth-child(1) {
-      top: 0px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center;
-    }
-
-    span:nth-child(2) {
-      top: 12px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center;
-    }
-
-    span:nth-child(3) {
-      top: 24px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center;
-    }
-  }
-
-  &__toggle.inactive {
-    display: none;
-  }
-
-  &__toggle.open span {
+    width: 34px;
+    height: 6px;
     background-color: #ff6700;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      width: 34px;
+      height: 6px;
+      background-color: #ff6700;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+      border: none;
+    }
+
+    &::after {
+      transform: translateY(0.688rem);
+    }
+
+    &::before {
+      transform: translateY(-0.688rem);
+    }
+
+    &.open {
+      transform: translateX(-50px);
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(35px, -35px);
+        background-color: #ff6700;
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+        background-color: #ff6700;
+      }
+    }
   }
-
-  &__toggle.open span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: -1px;
-    left: 4px;
-    width: 33px;
-  }
-
-  &__toggle.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
-
-  &__toggle.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    top: 22px;
-    left: 4px;
-    width: 33px;
-  }
-  */
-
-
 }
 
 @media only screen and (min-width: $mobile) {
   .header-nav {
-    padding-left: 11px;
-    padding-right: 11px;
+    padding-left: 0.688rem;
+    padding-right: 0.688rem;
   }
 }
 
 @media only screen and (min-width: $iphone) {
   .header-nav {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 1.375rem;
+    padding-right: 1.375rem;
   }
 }
 
 @media only screen and (min-width: $mobile-hd) {
   .header-nav {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 4px;
-    padding-top: 7px;
-
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.433rem;
+    padding-bottom: 0.25rem;
     max-width: 100%;
+
+    &__toggle {
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
 }
 
 @media only screen and (min-width: $tablets) {
   .header-nav {
     justify-content: flex-start;
+    padding: 0.688rem 1.25rem 1.063rem;
 
     width: 100%;
-    padding-top: 11px;
-    padding-bottom: 17px;
-    margin-left: 30px;
-    margin-right: 30px;
 
     &__img {
       width: 114px;
@@ -156,8 +115,11 @@
     &__logo {
       width: 114px;
       height: 31px;
+      margin-right: 3%;
+    }
 
-      margin-right: 5%;
+    &__toggle {
+      display: none;
     }
   }
 }

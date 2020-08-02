@@ -18,16 +18,9 @@
     padding: 0 22px;
   }
 
-  @media only screen and (min-width: $mobile-hd) {
-    width: auto;
-    max-width: 404px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
   @media only screen and (min-width: $tablets) {
     width: auto;
-    max-width: 660px;
+    max-width: 728px;
     margin: 0 auto;
     padding: 0;
   }

@@ -1,0 +1,104 @@
+.intro {
+  width: 100%;
+
+  display: grid;
+  grid-template-areas:
+    'breadcrumbs'
+    'info'
+  ;
+
+  grid-row-gap: 1.25rem;
+
+  &__breadcrumbs {
+    grid-area: breadcrumbs;
+  }
+
+  &__info {
+    grid-area: info;
+
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+  }
+
+  &__frame {
+    @include flex-setting(column, center, center);
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 0.625rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__details {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      'title mark'
+      'intro-d intro-d'
+    ;
+
+    grid-template-columns: 1fr 30px;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @include font-setting($primary-font, 1.625rem, 1, 900, $text-white);
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    grid-area: intro-d;
+
+    @include font-setting($primary-font, 0.75rem, 1.2, 400, $text-white);
+    margin: 0;
+    margin-bottom: 0.625rem;
+    text-align: left;
+  }
+
+  &__mark {
+    grid-area: mark;
+
+    @include flex-setting(column, center, center);
+    width: 30px;
+    height: 30px;
+
+    font-size: 0;
+
+    position: relative;
+    background-color: #ff6700;
+
+    border: none;
+    border-radius: 50%;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url('../img/like-icon.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+  }
+}

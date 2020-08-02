@@ -1,0 +1,40 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-bottom: 17px;
+}
+
+@media only screen and (min-width: $mobile) {
+  .main-content {
+    padding-bottom: 19px;
+  }
+}
+
+@media only screen and (min-width: $mobile-hd) {
+  .main-content {
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .main-content {
+    padding-bottom: 12px;
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .main-content {
+    width: 100%;
+    
+    padding-bottom: 49px;
+  }
+}
+
+@media only screen and (min-width: $widebooks-hd) {
+  .main-content {
+    padding-bottom: 39px;
+  }
+}

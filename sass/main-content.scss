@@ -1,40 +1,45 @@
 .main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  display: grid;
+  grid-template-areas:
+    'content-list'
+    'pagination'
+  ;
 
-  padding-bottom: 17px;
-}
+  grid-row-gap: 1.875rem;
 
-@media only screen and (min-width: $mobile) {
-  .main-content {
-    padding-bottom: 19px;
+  &__list {
+    grid-area: content-list;
+  }
+
+  &__pagination {
+    grid-area: pagination;
   }
 }
 
-@media only screen and (min-width: $mobile-hd) {
+@media only screen and (min-width: 414px) {
   .main-content {
-    padding-bottom: 25px;
-  }
-}
+    grid-template-areas:
+      'content-list'
+      'pagination'
+      'promo-6'
+    ;
 
-@media only screen and (min-width: $tablets) {
-  .main-content {
-    padding-bottom: 12px;
+    &__promo {
+      justify-self: center;
+      grid-area: promo-6;
+    }
   }
 }
 
 @media only screen and (min-width: $notebooks) {
   .main-content {
     width: 100%;
-    
-    padding-bottom: 49px;
+
   }
 }
 
 @media only screen and (min-width: $widebooks-hd) {
   .main-content {
-    padding-bottom: 39px;
+
   }
 }

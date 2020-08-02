@@ -9,10 +9,11 @@
 @import "nav-list.scss";
 @import "header-carousel.scss";
 @import "header-tag.scss";
-@import "tag-list.scss";
+
 @import "carousel-slider.scss";
 @import "main.scss";
 @import "main-promo.scss";
+@import "filter.scss";
 @import "main-wrapper.scss";
 @import "main-content.scss";
 @import "text.scss";
@@ -42,13 +43,14 @@
 @import "empty.scss";
 @import "contacts.scss";
 @import "contacts-item.scss";
-@import "sass/show/main-breadcrumbs.scss";
-@import "sass/show/breadcrumbs-list.scss";
-@import "sass/show/breadcrumbs-item.scss";
+
+@import "sass/show/intro.scss";
+@import "sass/show/breadcrumbs.scss";
+
 @import "sass/show/main-intro.scss";
 @import "sass/show/main-filter.scss";
 @import "sass/show/show-content.scss";
-@import "sass/show/show-list.scss";
+@import "sass/show/show.scss";
 @import "sass/show/show-item.scss";
 @import "sass/show/show-block.scss";
 @import "sass/show/main-service.scss";

@@ -1,0 +1,233 @@
+.show {
+  display: grid;
+  grid-template-areas:
+    'show-list'
+    'pagination'
+    'rating'
+  ;
+
+  grid-row-gap: 1.25rem;
+
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  &__pagination {
+    grid-area: pagination;
+  }
+
+  &__rating {
+    grid-area: rating;
+  }
+
+  &__list {
+    grid-area: show-list;
+
+    width: 100%;
+    @include ul-nostyle;
+
+    display: grid;
+    grid-gap: 0.625rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    @include flex-setting(column, center, center);
+    text-align: center;
+    position: relative;
+    margin-bottom: 0;
+    border-radius: 15px;
+
+    padding-bottom: 100%;
+
+    &.promo {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 15px;
+
+    box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.4);
+
+    &:hover {
+      .show__preview {
+        filter: brightness(100%);
+        transition: 0.1s ease-in;
+      }
+    }
+  }
+
+  &__frame {
+    @include flex-setting(column, center, center);
+    width: 100%;
+    height: 100%;
+
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  &__preview {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 15px;
+
+    filter: brightness(90%);
+  }
+
+  /*Низ слайда*/
+  &__bottom {
+    position: absolute;
+    width: 100%;
+
+    @include flex-setting(row, flex-start, center);
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  &__name {
+    @include font-setting($primary-font, 0.625rem, 1.1, 400, $text-white);
+    text-transform: uppercase;
+    text-align: left;
+    max-width: 75%;
+
+    padding-left: 0.625rem;
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .show {
+    &__list {
+      justify-self: center;
+
+      max-width: 660px;
+      margin: 0 auto;
+
+      grid-template-rows: 300px;
+      grid-auto-flow: dense;
+      grid-column-gap: 3.75rem;
+      grid-row-gap: 1.875rem;
+    }
+    
+    &__item {
+      &.promo {
+        @include flex-setting(column, center, center);
+        grid-row: 4 / 5;
+        padding-bottom: 0;
+
+        .show__wrapper {
+          @include flex-setting(column, flex-start, stretch);
+
+          width: 300px;
+          min-width: 300px;
+          max-width: 300px;
+
+          min-height: 265px;
+          max-height: 265px;
+        }
+
+        .show__content {
+          width: 300px;
+          min-width: 300px;
+          max-width: 300px;
+
+          min-height: 250px;
+          max-height: 250px;
+        }
+
+        .show__text {
+          @include font-setting($promo-font, 0.5rem, 1, 700, $text-white);
+          @include flex-setting(column, center, center);
+          width: 100%;
+
+          background-color: $bg-black;
+          border-radius: 0 0 8px 8px;
+
+          margin-top: 0px;
+          text-transform: uppercase;
+
+          padding-top: 4px;
+          padding-bottom: 4px;
+        }
+      }
+    }
+
+    /*Низ слайда*/
+    &__bottom {
+      bottom: 0px;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      padding-left: 1rem;
+    }
+
+    &__name {
+      font: {
+        size: 1.125rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $notebooks) {
+  .show-list {
+    &__item {
+      margin-bottom: 18px;
+
+      &--third {
+        order: 4;
+      }
+
+      &--promo {
+        display: block;
+
+        order: 3;
+      }
+
+      &--four {
+        order: 5;
+      }
+
+      &--five {
+        order: 6;
+      }
+
+      &--six {
+        order: 7;
+      }
+
+      &--seven {
+        order: 8;
+      }
+
+      &--eight {
+        order: 9;
+      }
+
+      &--nine {
+        order: 10;
+      }
+    }
+  }
+}

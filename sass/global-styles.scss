@@ -41,6 +41,18 @@ body {
   background-color: $bg-404;
 }
 
+.test-navi {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+
+  width: 100px;
+  height: 100px;
+  background-color: $purple;
+
+  z-index: 9999;
+}
+
 
 .body-index {
   background-color: $bg-body;

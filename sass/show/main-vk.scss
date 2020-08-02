@@ -1,25 +1,12 @@
 .main-vk {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-
+  @include flex-setting(column, flex-start, stretch);
   width: 100%;
-
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
 
   &__title {
-    font: {
-      size: 1.375em;
-      family: $fat-font;
-    }
-
-    color: $text-white;
-    line-height: 1;
-
+    @include font-setting($primary-font, 1.375rem, 1, 900, $text-white);
     text-transform: uppercase;
     text-align: left;
-
     margin-top: 0;
   }
 }

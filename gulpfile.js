@@ -4,7 +4,7 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
+var autoprefixer = require('autoprefixer');
 var server = require("browser-sync").create();
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
@@ -23,7 +23,7 @@ gulp.task("style", function() {
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer({ grid: 'autoplace' })
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream())

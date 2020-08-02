@@ -6,23 +6,42 @@
 
   width: 100%;
 
+  &--index {
+    display: grid;
+    grid-template-areas:
+      'main__content'
+      'main__promo'
+      'main__sidebar'
+    ;
+
+    grid-row-gap: 1.25rem;
+  }
+
+  &__content {
+    grid-area: main__content;
+  }
+
+  &__promo {
+    grid-area: main__promo;
+  }
+
+  &__sidebar {
+    grid-area: main__sidebar;
+  }
+
   &__details {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    width: 100%;
   }
 
   &__title {
     order: 2;
 
-    font: {
-      family: $fat-font;
-      size: 1.5em;
-    }
-
-    color: $text-white;
-    line-height: 1;
+    @include font-setting($primary-font, 1.5rem, 1.1, 700, $text-white);
 
     margin-top: 10px;
     margin-bottom: 10px;
@@ -53,6 +72,7 @@
 
 @media only screen and (min-width: $tablets) {
   .main-wrapper {
+
     &__breadcrumbs {
       order: 2;
     }
@@ -176,6 +196,11 @@
 @media only screen and (min-width: $notebooks) {
   .main-wrapper {
     position: relative;
+
+    grid-template-areas:
+      'main__sidebar'
+      'main__content'
+    ;
 
     &--game {
       align-items: flex-start;

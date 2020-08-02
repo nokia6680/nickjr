@@ -1,4 +1,5 @@
 .pagination-item {
+  @include flex-setting(column, center, center);
   width: 36px;
   height: 36px;
 
@@ -9,10 +10,9 @@
   box-shadow: inset 0 -2px 6px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.2);
 
   text-align: center;
-
   position: relative;
 
-  margin-right: 6px;
+  margin: 0 0.188rem;
 
   cursor: pointer;
   outline: none;
@@ -54,14 +54,12 @@
   }
 
   &__link {
-    display: block;
+    @include flex-setting(column, center, center);
     width: 100%;
     height: 100%;
     text-decoration: none;
 
     border-radius: 50%;
-
-    padding-top: 5px;
 
     cursor: pointer;
     outline: none;
@@ -70,14 +68,7 @@
   }
 
   &__text {
-    font: {
-      size: 1.875em;
-      family: $fat-font;
-    }
-
-    color: $text-white;
-    line-height: 1;
-
+    @include font-setting($primary-font, 1.875rem, 1, 900, $text-white);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     outline: none;
     /*Активная кнопка*/
@@ -100,7 +91,7 @@
 
     &__text {
       font: {
-        size: 1.875em;
+        size: 1.875rem;
       }
     }
   }
@@ -112,9 +103,5 @@
     height: 48px;
 
     margin-right: 11px;
-
-    &__link {
-      padding-top: 10px;
-    }
   }
 }

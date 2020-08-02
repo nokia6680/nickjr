@@ -7,17 +7,96 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-}
 
-@media only screen and (min-width: $mobile-hd) {
-  .main {
-    padding-top: 20px;
+  &--index {
+    display: grid;
+    grid-template-areas:
+      'promo-1'
+      'category'
+      'content'
+      'promo-2'
+      'promo-3'
+      'text'
+    ;
+
+    grid-row-gap: 0.625rem;
+  }
+
+  &--show {
+    display: grid;
+    grid-template-areas:
+      'promo-1'
+      'intro'
+      'show'
+      'promo-2'
+      'category'
+      'promo-3'
+      'vk'
+    ;
+
+    grid-row-gap: 1.25rem;
+  }
+
+  &__promo--first {
+    grid-area: promo-1;
+  }
+
+  &__promo--second {
+    grid-area: promo-2;
+  }
+
+  &__promo--third {
+    grid-area: promo-3;
+  }
+
+  &__filter {
+    grid-area: category;
+  }
+
+  &__content {
+    grid-area: content;
+  }
+
+  &__text {
+    grid-area: text;
+  }
+
+  &__intro {
+    grid-area: intro;
+  }
+
+  &__show {
+    grid-area: show;
+  }
+
+  &__vk {
+    grid-area: vk;
   }
 }
 
 @media only screen and (min-width: $tablets) {
   .main {
-    padding-top: 0;
+    &--index {
+      grid-template-areas:
+        'promo-1'
+        'category'
+        'content'
+        'text'
+      ;
+      grid-row-gap: 1.875rem;
+    }
+
+    &--show {
+      grid-template-areas:
+        'promo-1'
+        'intro'
+        'show'
+        'category'
+        'vk'
+      ;
+
+      grid-row-gap: 1.875rem;
+    }
   }
 }
 
@@ -33,7 +112,25 @@
 
 @media only screen and (min-width: 1600px) {
   .main {
-    padding-top: 30px;
+    &--index {
+      display: grid;
+      grid-template-areas:
+        'promo-1 promo-1'
+        'category category'
+        'content promo-3'
+        'text text'
+      ;
+      grid-template-columns: 1fr 240px;
+      grid-column-gap: 1.875rem;
+      grid-row-gap: 1.875rem;
+      align-items: start;
+    }
+
+    &__promo--third {
+      max-width: 240px;
+      max-height: 400px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
 
     &--video {
       padding-top: 20px;

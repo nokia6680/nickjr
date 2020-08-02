@@ -5,7 +5,7 @@
   "description": "Wonderpark",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "7.1.x",
+    "autoprefixer": "^9.8.5",
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -38,6 +38,7 @@
   },
   "browserslist": [
     "last 2 versions",
+    "IE 10",
     "IE 11",
     "Firefox ESR"
   ],
@@ -54,7 +55,7 @@
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
-    "gulp-cli": "^2.2.0",
+    "gulp-cli": "^2.3.0",
     "gulp-sequence": "^1.0.0"
   },
   "main": "gulpfile.js",

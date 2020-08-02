@@ -8,6 +8,10 @@
 
   padding-top: 10px;
 
+  a {
+    text-decoration: none;
+  }
+
   &__btn {
     display: inline-flex;
     flex-direction: column;
@@ -43,9 +47,6 @@
     position: relative;
     text-decoration: none;
 
-    a {
-      text-decoration: none;
-    }
     /*Кнопка отправки проблемы*/
     &--report {
       font-size: 0.625em;

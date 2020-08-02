@@ -1,68 +1,33 @@
-var menuMobile = document.querySelector(".nav-list");
-var openButton = document.querySelector(".nav-list__opener");
-var closeButton = document.querySelector(".nav-list__closer");
+var menuOpener = document.querySelector('.header-nav__toggle');
+var menu = document.querySelector('.nav-list');
+var menuLayer = document.querySelector('body');
 
-var menuText = document.querySelector(".tag-list");
-var menuOpen = document.querySelector(".header-tag__btn--open");
-var menuClose = document.querySelector(".header-tag__btn--close");
+var menuText = document.querySelector(".header-tag__list");
+var menuOpen = document.querySelector(".header-tag__btn");
 
-if (menuMobile) {
-  openButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    menuMobile.classList.add("nav-list--active");
-    openButton.classList.add("hidden");
-    closeButton.classList.remove("hidden");
-  });
+menuOpener.addEventListener('click', function () {
+  menu.classList.toggle('active');
+  menuOpener.classList.toggle('open');
+  menuLayer.classList.toggle('no-scroll');
 
-  menuMobile.addEventListener("click", function() {
-    menuMobile.classList.remove("nav-list--active");
-  });
+  return false;
+});
 
-  menuMobile.addEventListener("click", function(event) {
-    event.stopPropagation();
-  });
+menuOpen.addEventListener('click', function () {
+  menuText.classList.toggle('active');
 
-  closeButton.addEventListener("click", function() {
-    menuMobile.classList.remove("nav-list--active");
-    openButton.classList.remove("hidden");
-    closeButton.classList.add("hidden");
-  });
+  return false;
+});
 
-  window.addEventListener("keydown", function(event) {
-    if (event.keyCode === 27) {
-      menuMobile.classList.remove("nav-list--active");
-      openButton.classList.remove("hidden");
-      closeButton.classList.add("hidden");
-    }
-  });
-}
+var filterOpener = document.querySelector('.filter__expand');
+var filter = document.querySelector('.filter__list');
 
-if (menuText) {
-  menuOpen.addEventListener("click", function(event) {
-    event.preventDefault();
-    menuText.classList.add("tag-list--active");
-    menuOpen.classList.add("hidden");
-    menuClose.classList.remove("hidden");
-  });
+filterOpener.addEventListener('click', function() {
+  filter.classList.toggle('active');
 
-  menuText.addEventListener("click", function(event) {
-    event.stopPropagation();
-  });
+  return false;
+});
 
-  menuClose.addEventListener("click", function() {
-    menuText.classList.remove("tag-list--active");
-    menuOpen.classList.remove("hidden");
-    menuClose.classList.add("hidden");
-  });
-
-  window.addEventListener("keydown", function(event) {
-    if (event.keyCode === 27) {
-      menuText.classList.remove("tag-list--active");
-      menuOpen.classList.remove("hidden");
-      menuClose.classList.add("hidden");
-    }
-  });
-}
 
 /*Измененный скрипт перелистывания слайдов*/
 $(document).ready(function() {
@@ -114,6 +79,15 @@ $(document).ready(function() {
       },
       {
         breakpoint: 480,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 375,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -546,3 +520,17 @@ $('.select--second').each(function() {
     }
   });
 });
+
+var moreExpand = document.querySelector('.text__expand');
+var more = document.querySelector('.text__description');
+
+moreExpand.addEventListener('click', function () {
+  more.classList.toggle('active');
+  return false;
+});
+
+// Смена текста кнопки развернуть-свернуть
+function toggleText(button_id)  {
+   var text = document.getElementById('btn-expand').firstChild;
+   text.data = text.data == "Читать далее" ? "Свернуть" : "Читать далее";
+};

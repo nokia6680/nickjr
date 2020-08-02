@@ -81,8 +81,7 @@
 				</li>
 			</ul>
 			<!--Кнопка закрытия-->
-			<button class="nav-list__opener" type="button"><span class="visually-hidden">Меню</span></button>
-			<button class="nav-list__closer hidden" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+			<button class="header-nav__toggle" type="button"></button>
 		</nav>
 		<!--Слайдер в шапке (надо чтобы переключал по наведению)-->
 		<div class="header__carousel header-carousel" itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement">
@@ -344,8 +343,7 @@
 					<a class="tag-list__link" href="#" title="" target="_self">Даша-путешественница</a>
 				</li>
 			</ul>
-			<button class="header-tag__btn header-tag__btn--open" type="button"></button>
-			<button class="header-tag__btn header-tag__btn--close hidden" type="button"></button>
+			<button class="header-tag__btn" type="button"></button>
 		</div>
 	</header>
 	<!--Основное содержание страницы-->
@@ -368,7 +366,7 @@
 			</div>
 		</section>
 		<!--Блоки-->
-		<div class="main__wrapper main-wrapper">
+		<div class="main__wrapper main-wrapper main-wrapper--index">
 			<!--Контентная область-->
 			<section class="main-wrapper__content main-content">
 				<h2 class="main-content__title visually-hidden"></h2>
@@ -869,7 +867,7 @@
 				</ul>
 			</section>
 			<!--Рекламный блок, есть только в мобильной версии-->
-			<section class="main__promo main-promo main-promo--second" id="promo-2">
+			<section class="main-wrapper__promo main-promo main-promo--second" id="promo-2">
 				<!--320x50 не показывается на 480px-->
 				<div class="main-promo__wrapper main-promo__wrapper--mobile">
 					<div class="main-promo__content">
@@ -887,9 +885,6 @@
 			</section>
 			<!--Боковая панель-->
 			<aside class="main-wrapper__sidebar main-sidebar">
-				<!--Кнопка добавления в избранное-->
-				<!--
-				<button class="main-sidebar__mark" type="button">В закладки</button>-->
 				<!--Первый вертикальный слайдер-->
 				<div class="main-sidebar__carousel sidebar-carousel sidebar-carousel--first main-sidebar__carousel--first">
 					<h2 class="sidebar-carousel__title">Категории:</h2>
@@ -1512,8 +1507,9 @@
 		</div>
 		<!--Блок текста-->
 		<div class="main__text text">
-			<p class="text__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
+			<p class="text__description">Lorem ipsum dolor sit amet, consectetur adipisicin Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. g elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button class="text__expand pink" id="btn-expand" onClick="toggleText(this.id);" type="button">Читать далее</button>
+    </div>
 	</main>
 	<!--Подвал страницы-->
 	<footer class="footer">

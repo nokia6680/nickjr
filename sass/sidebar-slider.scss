@@ -297,7 +297,8 @@
         margin-bottom: 0;
 
         padding-left: 0;
-        padding-right: 0px;
+        padding-right: 0;
+        padding-bottom: 2.875rem;
 
         &:not(:nth-of-type(4n)) {
           margin-right: 0;
@@ -521,7 +522,8 @@
 
         flex-direction: row;
 
-        margin-bottom: 22px;
+        margin-bottom: 0;
+        padding-bottom: 1.375rem;
 
         &:not(:nth-of-type(4n)) {
           margin-left: 0;

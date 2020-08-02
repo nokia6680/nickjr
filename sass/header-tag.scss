@@ -1,8 +1,5 @@
 .header-tag {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-setting(row, flex-start, center);
   flex-wrap: nowrap;
 
   position: relative;
@@ -11,6 +8,68 @@
   background-color: #fff;
 
   z-index: 11;
+
+  &__list {
+    @include ul-nostyle;
+    @include flex-setting(row, flex-start, center);
+
+    flex-wrap: wrap;
+
+    padding-left: 0.625rem;
+    padding-right: 1.875rem;
+
+    width: auto;
+
+    max-height: 20px;
+    transition: 0.5s ease-in-out;
+
+    &.active {
+      max-height: 42px;
+      transition: 0.5s ease-in-out;
+      position: relative;
+    }
+
+    &.active + .header-tag__btn {
+      transform: rotate(180deg);
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  &__item {
+    width: auto;
+    @include flex-setting(column, center, center);
+    display: inline-flex;
+
+    margin: 0 0.313rem 0.313rem 0;
+
+    &--first {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__title {
+    @include font-setting($primary-font, 0.625rem, 1, 400, rgba(0, 0, 0, 0.5));
+  }
+
+  &__link {
+    @include font-setting($primary-font, 0.625rem, 1, 400, #cdcdcd);
+    width: 100%;
+    height: 100%;
+
+    padding: 0.125rem 0.313rem;
+    border: 1px solid #d8d8d8;
+    border-radius: 14px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: #ff6700;
+      border-color: #ff6700;
+      transition: 0.2s ease-in;
+    }
+  }
 
   &__btn {
     position: absolute;
@@ -32,14 +91,8 @@
     background-size: 15px 10px;
     background-position: 50% 50%;
 
-    &--close {
-      transform: rotate(180deg);
-      transition: 0.5s ease-in-out;
-    }
-  }
-
-  .hidden {
-    display: none;
+    outline: none;
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -48,14 +101,68 @@
     &__btn {
       right: 20px;
     }
+
+    &__list {
+      padding-left: 1.25rem;
+      max-height: 23px;
+
+      &.active {
+        max-height: 48px;
+      }
+    }
+
+    &__title {
+      font-size: 0.75rem;
+    }
+
+    &__link {
+      padding-top: 0.188rem;
+      font-size: 0.75rem;
+    }
   }
 }
 
 @media only screen and (min-width: $tablets) {
   .header-tag {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 1.25rem;
+    padding-bottom: 0.625rem;
     overflow: hidden;
+
+    &__list {
+      max-height: 23px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+
+        width: 100%;
+        height: 10px;
+
+        background-color: #ffffff;
+
+        bottom: -10px;
+        left: 0;
+      }
+
+      &.active {
+        max-height: 42px;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    &__link {
+      font-size: 0.875rem;
+    }
 
     &__btn {
       width: 32px;
@@ -71,8 +178,38 @@
 
 @media only screen and (min-width: $widebooks-hd) {
   .header-tag {
-    padding-bottom: 0;
-    overflow: hidden;
+    padding-bottom: 0.625rem;
     z-index: 0;
+
+    &__list {
+      padding-left: 5rem;
+      padding-right: 5rem;
+
+      max-height: 30px;
+
+      &::before {
+        display: none;
+      }
+
+      &.active {
+        max-height: 70px;
+      }
+    }
+
+    &__item {
+      margin-right: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      margin-right: 0.938rem;
+    }
+
+    &__link {
+      padding: 0.188rem 0.625rem;
+
+      font-size: 1rem;
+    }
   }
 }
