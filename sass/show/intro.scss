@@ -102,3 +102,66 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    grid-row-gap: 1.5rem;
+
+    &__frame {
+      margin-bottom: 1.25rem;
+    }
+
+    &__details {
+      grid-template-columns: 1fr 200px;
+    }
+
+    &__title {
+      @include font-setting($primary-font, 1.625rem, 1, 900, $text-white);
+      margin-top: 0.625rem;
+      margin-bottom: 0.625rem;
+
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      grid-area: intro-d;
+
+      @include font-setting($primary-font, 0.75rem, 1.2, 400, $text-white);
+      margin: 0;
+      margin-bottom: 0.625rem;
+      text-align: left;
+    }
+
+    &__mark {
+      width: 200px;
+      height: 40px;
+
+      $include font-setting($primary-font, 1.5rem, 1, 900, #fff);
+
+      position: relative;
+      border-radius: 10px;
+      filter: drop-shadow(0 6px 3px rgba(0, 0, 0, 0.3));
+
+      padding-left: 2.5rem;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 16px;
+        height: 16px;
+
+        background-image: url('../img/like-icon.svg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        top: 50%;
+        left: 0;
+
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}
