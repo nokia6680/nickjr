@@ -130,7 +130,7 @@
       grid-column-gap: 3.75rem;
       grid-row-gap: 1.875rem;
     }
-    
+
     &__item {
       &.promo {
         @include flex-setting(column, center, center);

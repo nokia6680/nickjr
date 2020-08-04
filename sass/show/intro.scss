@@ -83,6 +83,9 @@
     border: none;
     border-radius: 50%;
 
+    cursor: pointer;
+    outline: none;
+
     &::after {
       position: absolute;
       content: '';
@@ -106,6 +109,8 @@
 @media only screen and (min-width: 768px) {
   .intro {
     grid-row-gap: 1.5rem;
+    max-width: 660px;
+    justify-self: center;
 
     &__frame {
       margin-bottom: 1.25rem;
@@ -113,52 +118,36 @@
 
     &__details {
       grid-template-columns: 1fr 200px;
+      grid-row-gap: 1rem;
     }
 
     &__title {
-      @include font-setting($primary-font, 1.625rem, 1, 900, $text-white);
-      margin-top: 0.625rem;
-      margin-bottom: 0.625rem;
-
-      text-align: left;
-      text-transform: uppercase;
+      font-size: 2.125rem;
     }
 
     &__description {
-      grid-area: intro-d;
-
-      @include font-setting($primary-font, 0.75rem, 1.2, 400, $text-white);
-      margin: 0;
-      margin-bottom: 0.625rem;
-      text-align: left;
+      font-size: 1rem;
     }
 
     &__mark {
       width: 200px;
-      height: 40px;
+      height: 50px;
 
-      $include font-setting($primary-font, 1.5rem, 1, 900, #fff);
+      @include font-setting($primary-font, 1.5rem, 1, 900, #fff);
 
       position: relative;
-      border-radius: 10px;
+      text-transform: uppercase;
+      border-radius: 20px;
+      box-shadow: 0px -8px 0px 1px rgba(222, 103, 0, 1)inset;
       filter: drop-shadow(0 6px 3px rgba(0, 0, 0, 0.3));
 
       padding-left: 2.5rem;
 
       &::after {
-        position: absolute;
-        content: '';
-
-        width: 16px;
-        height: 16px;
-
-        background-image: url('../img/like-icon.svg');
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: contain;
-
+        width: 24px;
+        height: 24px;
         top: 50%;
-        left: 0;
+        left: 1rem;
 
         transform: translate(0, -50%);
       }
