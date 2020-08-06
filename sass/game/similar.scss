@@ -1,0 +1,38 @@
+.similar {
+  width: 100%;
+
+  @include flex-setting(column, flex-start, center);
+
+  &__title {
+    @include font-setting($primary-font, 1.375rem, 1, 900, $text-white);
+    margin: 0;
+    margin-bottom: 0.5rem;
+
+    text-transform: uppercase;
+    text-align: left;
+
+    align-self: flex-start;
+  }
+
+  &__slider {
+    width: 100%;
+
+    position: relative;
+
+    &:not(.slick-initialized) {
+      visibility: hidden;
+      display: flex;
+      max-width: 100%;
+      overflow-y: hidden;
+      overflow-x: auto;
+
+      .slick-list {
+        height: 340px !important;
+      }
+    }
+  }
+
+  &__item {
+    
+  }
+}

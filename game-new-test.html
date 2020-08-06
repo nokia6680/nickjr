@@ -6,6 +6,8 @@
 	<title>NickJR | Альтернативная версия игры</title>
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -396,28 +398,33 @@
 		    <a class="game__btn game__btn--prev" href="#" rel="nofollow">Назад</a>
 		    <a class="game__btn game__btn--next" href="#" rel="nofollow">Вперед</a>
 		    <!--/noindex-->
-		    <a class="game__btn game__btn--expand" href="#"></a>
+        <a class="game__btn game__btn--expand" href="#"></a>
 		  </div>
 		  <!--Share block-->
 		  <div class="game__share share">
 		    <h3 class="share__title">Поделись игрой с друзьями</h3>
 		    <ul class="share__list">
 		      <li class="share__item share__item--ok">
-		        <span class="share__counter share__counter--ok" id="share-ok"><i class="fab fa-odnoklassniki"></i>386</span>
+            <span class="share__icon" id="share-ok"><i class="fab fa-odnoklassniki"></i></span>
+		        <span class="share__counter share__counter--ok">386</span>
 		      </li>
 		      <li class="share__item share__item--vk">
-		        <span class="share__counter share__counter--vk" id="share-vk"><i class="fab fa-vk"></i>123</span>
+            <span class="share__icon" id="share-vk"><i class="fab fa-vk"></i></span>
+		        <span class="share__counter share__counter--vk">123</span>
 		      </li>
 		      <li class="share__item share__item--fb">
-		        <span class="share__counter share__counter--fb" id="share-fb"><i class="fab fa-facebook-f"></i>456</span>
+            <span class="share__icon" id="share-fb"><i class="fab fa-facebook-f"></i></span>
+		        <span class="share__counter share__counter--fb">456</span>
 		      </li>
 		      <li class="share__item share__item--tw">
-		        <span class="share__counter share__counter--tw" id="share-tw"><i class="fab fa-twitter"></i>789</span>
+            <span class="share__icon" id="share-tw"><i class="fab fa-twitter"></i></span>
+		        <span class="share__counter share__counter--tw">789</span>
 		      </li>
+          <li class="share__item share__item--mark">
+            <button class="share__mark" type="button">В закладки</button>
+          </li>
 		    </ul>
 		  </div>
-		  <!--В закладки-->
-		  <button class="game__mark" type="button">В закладки</button>
 		  <!--Описание игры-->
 		  <p itemprop="description" class="game__description">Разнообразный и богатый опыт начало повседневной работы по формированию позиции играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также консультация с
 		    широким активом позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании
@@ -504,7 +511,7 @@
 					</a>
 				</div>
 				<!--Slide-->
-				<div class="similar__item" id="similar-game-1">
+				<div class="similar__item" id="similar-game-2">
 					<a class="similar__link" href="#" target="_self">
 						<picture class="similar__frame">
 							<source data-srcset="img/other-game.webp" type="image/webp">
@@ -518,7 +525,7 @@
 					</a>
 				</div>
 				<!--Slide-->
-				<div class="similar__item" id="similar-game-1">
+				<div class="similar__item" id="similar-game-3">
 					<a class="similar__link" href="#" target="_self">
 						<picture class="similar__frame">
 							<source data-srcset="img/other-game.webp" type="image/webp">
@@ -532,7 +539,7 @@
 					</a>
 				</div>
 				<!--Slide-->
-				<div class="similar__item" id="similar-game-1">
+				<div class="similar__item" id="similar-game-4">
 					<a class="similar__link" href="#" target="_self">
 						<picture class="similar__frame">
 							<source data-srcset="img/other-game.webp" type="image/webp">
@@ -545,6 +552,62 @@
 						</div>
 					</a>
 				</div>
+        <!--Slide-->
+        <div class="similar__item" id="similar-game-5">
+          <a class="similar__link" href="#" target="_self">
+            <picture class="similar__frame">
+              <source data-srcset="img/other-game.webp" type="image/webp">
+              <img class="similar__preview lazyload" data-src="img/other-game.png" alt="name" />
+            </picture>
+            <!--Нижний ряд с планками-->
+            <div class="similar__bottom">
+            <!--Блок названия игры-->
+              <b class="similar__name">Приключение Даши в Волшебной Стране</b>
+            </div>
+          </a>
+        </div>
+        <!--Slide-->
+        <div class="similar__item" id="similar-game-6">
+          <a class="similar__link" href="#" target="_self">
+            <picture class="similar__frame">
+              <source data-srcset="img/other-game.webp" type="image/webp">
+              <img class="similar__preview lazyload" data-src="img/other-game.png" alt="name" />
+            </picture>
+            <!--Нижний ряд с планками-->
+            <div class="similar__bottom">
+            <!--Блок названия игры-->
+              <b class="similar__name">Приключение Даши в Волшебной Стране</b>
+            </div>
+          </a>
+        </div>
+        <!--Slide-->
+        <div class="similar__item" id="similar-game-7">
+          <a class="similar__link" href="#" target="_self">
+            <picture class="similar__frame">
+              <source data-srcset="img/other-game.webp" type="image/webp">
+              <img class="similar__preview lazyload" data-src="img/other-game.png" alt="name" />
+            </picture>
+            <!--Нижний ряд с планками-->
+            <div class="similar__bottom">
+            <!--Блок названия игры-->
+              <b class="similar__name">Приключение Даши в Волшебной Стране</b>
+            </div>
+          </a>
+        </div>
+        <!--Slide-->
+        <div class="similar__item" id="similar-game-8">
+          <a class="similar__link" href="#" target="_self">
+            <picture class="similar__frame">
+              <source data-srcset="img/other-game.webp" type="image/webp">
+              <img class="similar__preview lazyload" data-src="img/other-game.png" alt="name" />
+            </picture>
+            <!--Нижний ряд с планками-->
+            <div class="similar__bottom">
+            <!--Блок названия игры-->
+              <b class="similar__name">Приключение Даши в Волшебной Стране</b>
+            </div>
+          </a>
+        </div>
 			</div>
 			<div class="next-4"></div>
 		</div>
