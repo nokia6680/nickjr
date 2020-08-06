@@ -33,12 +33,9 @@
 
 @media only screen and (min-width: $widebooks-hd) {
   .content-pagination {
-    justify-content: flex-start;
-
-    max-width: 660px;
+    justify-content: flex-end;
 
     &--index {
-      justify-content: center;
       max-width: 994px;
     }
   }

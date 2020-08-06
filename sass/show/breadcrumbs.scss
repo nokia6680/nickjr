@@ -30,11 +30,15 @@
         display: none;
       }
     }
+
+    &:first-of-type {
+      display: none;
+    }
   }
 
   &__link,
   &__last {
-    @include font-setting($primary-font, 0.75rem, 1, 400, $text-white);
+    @include font-setting($primary-font, 0.75rem, 1, 900, $text-white);
     text-decoration: none;
     text-transform: uppercase;
 
@@ -74,6 +78,10 @@
         width: 16px;
 
         right: -8px;
+      }
+
+      &:first-of-type {
+        display: inline-flex;
       }
     }
 

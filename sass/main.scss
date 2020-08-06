@@ -126,9 +126,24 @@
       align-items: start;
     }
 
+    &--show {
+      grid-template-areas:
+        'promo-1 promo-1 promo-1'
+        'intro intro promo-3'
+        'show show show'
+        'category category category'
+        'vk vk ...'
+      ;
+
+      grid-row-gap: 2.875rem;
+      grid-column-gap: 2.875rem;
+    }
+
     &__promo--third {
+      align-self: start;
       max-width: 240px;
       max-height: 400px;
+      margin: 0;
       background-color: rgba(255, 255, 255, 0.2);
     }
 

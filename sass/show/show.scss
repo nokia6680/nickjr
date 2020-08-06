@@ -119,6 +119,13 @@
 
 @media only screen and (min-width: $tablets) {
   .show {
+    max-width: 660px;
+    justify-self: center;
+    grid-template-areas:
+      'show-list show-list'
+      'pagination rating'
+    ;
+
     &__list {
       justify-self: center;
 
@@ -191,43 +198,51 @@
 }
 
 @media only screen and (min-width: $notebooks) {
-  .show-list {
+  .show {
+    max-width: 940px;
+
+    &__list {
+      max-width: 940px;
+
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 300px;
+      grid-auto-flow: dense;
+      grid-column-gap: 1.25rem;
+      grid-row-gap: 1.25rem;
+    }
+
     &__item {
-      margin-bottom: 18px;
-
-      &--third {
-        order: 4;
+      &.promo {
+        grid-row: 2 / 3;
       }
+    }
+  }
+}
 
-      &--promo {
-        display: block;
+@media only screen and (min-width: 1600px) {
+  .show {
+    max-width: 1280px;
+    grid-row-gap: 2.25rem;
+    grid-template-areas:
+      'show-list show-list show-list'
+      'pagination pagination rating'
+    ;
 
-        order: 3;
+    &__list {
+      max-width: 1280px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 1.667rem;
+      grid-row-gap: 1.667rem;
+    }
+
+    &__item {
+      &.promo {
+        grid-row: 2 / 3;
       }
+    }
 
-      &--four {
-        order: 5;
-      }
-
-      &--five {
-        order: 6;
-      }
-
-      &--six {
-        order: 7;
-      }
-
-      &--seven {
-        order: 8;
-      }
-
-      &--eight {
-        order: 9;
-      }
-
-      &--nine {
-        order: 10;
-      }
+    &__pagination {
+      justify-self: end;
     }
   }
 }

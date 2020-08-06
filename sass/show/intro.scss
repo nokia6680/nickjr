@@ -4,7 +4,8 @@
   display: grid;
   grid-template-areas:
     'breadcrumbs'
-    'info'
+    'poster'
+    'details'
   ;
 
   grid-row-gap: 1.25rem;
@@ -13,15 +14,9 @@
     grid-area: breadcrumbs;
   }
 
-  &__info {
-    grid-area: info;
-
-    width: 100%;
-
-    @include flex-setting(column, flex-start, center);
-  }
-
   &__frame {
+    grid-area: poster;
+
     @include flex-setting(column, center, center);
     width: 100%;
     height: auto;
@@ -37,6 +32,7 @@
   }
 
   &__details {
+    grid-area: details;
     width: 100%;
     display: grid;
     grid-template-areas:
@@ -112,8 +108,14 @@
     max-width: 660px;
     justify-self: center;
 
+    grid-template-areas:
+      'poster'
+      'breadcrumbs'
+      'details'
+    ;
+
     &__frame {
-      margin-bottom: 1.25rem;
+      margin-bottom: 0;
     }
 
     &__details {
@@ -127,6 +129,8 @@
 
     &__description {
       font-size: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
     }
 
     &__mark {
@@ -151,6 +155,75 @@
 
         transform: translate(0, -50%);
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .intro {
+    grid-row-gap: 1.875rem;
+    max-width: 940px;
+
+    &__frame {
+      margin-bottom: 0;
+      max-height: 206px;
+    }
+
+    &__image {
+      object-fit: contain;
+      max-height: 206px;
+    }
+
+    &__details {
+      grid-template-columns: 1fr 240px;
+      grid-row-gap: 1rem;
+    }
+
+    &__title {
+      font-size: 2.875rem;
+      margin: 0;
+    }
+
+    &__description {
+      font-size: 1.188rem;
+    }
+
+    &__mark {
+      width: 240px;
+      height: 50px;
+
+      font-size: 1.625rem;
+
+      border-radius: 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .intro {
+    grid-row-gap: 1.875rem;
+    max-width: 994px;
+
+    &__frame {
+      max-height: 280px;
+    }
+
+    &__image {
+      max-height: 280px;
+    }
+
+    &__details {
+      grid-template-columns: 1fr 240px;
+      grid-row-gap: 2rem;
+    }
+
+    &__mark {
+      width: 240px;
+      height: 50px;
+
+      font-size: 1.625rem;
+
+      border-radius: 25px;
     }
   }
 }

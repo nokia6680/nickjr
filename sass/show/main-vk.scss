@@ -17,7 +17,7 @@
 
     &__title {
       font: {
-        size: 1.875em;
+        size: 1.875rem;
       }
     }
   }
@@ -32,7 +32,17 @@
 
     &__title {
       font: {
-        size: 1.875em;
+        size: 1.875rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablets) {
+  .main-vk {
+    &__title {
+      font: {
+        size: 2.25rem;
       }
     }
   }
@@ -45,7 +55,7 @@
 
     &__title {
       font: {
-        size: 2.188em;
+        size: 2.188rem;
       }
     }
   }
