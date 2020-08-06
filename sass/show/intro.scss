@@ -8,6 +8,13 @@
     'details'
   ;
 
+  &--game {
+    grid-template-areas:
+      'breadcrumbs'
+      'title'
+    ;
+  }
+
   grid-row-gap: 1.25rem;
 
   &__breadcrumbs {
@@ -48,9 +55,7 @@
 
   &__title {
     @include font-setting($primary-font, 1.625rem, 1, 900, $text-white);
-    margin-top: 0.625rem;
-    margin-bottom: 0.625rem;
-
+    margin: 0;
     text-align: left;
     text-transform: uppercase;
   }

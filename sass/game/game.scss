@@ -1,0 +1,103 @@
+.game {
+  width: 100%;
+
+  display: grid;
+  grid-template-areas:
+    'player player'
+    'controls controls'
+    'share mark'
+    'description description'
+    'rating rating'
+  ;
+
+  grid-row-gap: 1.25rem;
+
+  // Окно игры
+  &__content {
+    grid-area: player;
+
+    width: 100%;
+
+    position: relative;
+    padding-bottom: 56.25%;
+  }
+
+  &__frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+  // Кнопки для игры
+  &__controls {
+    grid-area: controls;
+
+    @include flex-setting(row, space-between, center);
+  }
+
+  &__btn {
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 0.813rem, 1, 900, $controls-text);
+
+    width: auto;
+    height: 32px;
+
+    background-color: $controls-bg;
+
+    border: none;
+    border-radius: 15px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    position: relative;
+
+    cursor: pointer;
+    outline: none;
+
+    &--report {
+      padding-left: 1.875rem;
+      padding-right: 0.625rem;
+
+      font-size: 0.625rem;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='19' height='21'%3E%3Cdefs%3E%3Cpath id='a' d='M31.02 743.32c1.575 0 2.856 1.364 2.856 3.04v9.556c0 1.529-1.066 2.798-2.448 3.01v3.94c0 .175-.1.334-.252.401a.395.395 0 01-.444-.094l-3.96-4.216h-8.806c-1.575 0-2.856-1.364-2.856-3.04v-9.557c0-1.676 1.281-3.04 2.856-3.04zm-6.527 13.03c.675 0 1.224-.584 1.224-1.303 0-.718-.55-1.303-1.224-1.303-.675 0-1.224.585-1.224 1.303 0 .719.55 1.303 1.224 1.303zm1.628-9.027a1.36 1.36 0 00-.324-.98 1.195 1.195 0 00-.896-.417h-.816c-.339 0-.665.151-.897.416-.23.263-.347.621-.323.986l.344 4.28c.047.71.608 1.268 1.284 1.268.668 0 1.23-.557 1.277-1.26z'/%3E%3C/defs%3E%3Cg clip-path='url(%23clip-77C9E7AF-2018-4EC1-8C68-BE5F40292EB4)' transform='translate(-15 -743)'%3E%3Cuse fill='%233abdcb' xlink:href='%23a'/%3E%3C/g%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        left: 0.375rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--prev {
+      padding-left: 1.25rem;
+      padding-right: 0.625rem;
+    }
+  }
+
+  &__share {
+    grid-area: share;
+  }
+
+  &__mark {
+    grid-area: mark;
+  }
+
+  &__description {
+    grid-area: description;
+  }
+}

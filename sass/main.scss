@@ -37,6 +37,22 @@
     grid-row-gap: 1.25rem;
   }
 
+  &--game {
+    display: grid;
+    grid-template-areas:
+      'promo-1'
+      'intro'
+      'game'
+      'promo-2'
+      'similar'
+      'category'
+      'promo-3'
+      'vk'
+    ;
+
+    grid-row-gap: 1.25rem;
+  }
+
   &__promo--first {
     grid-area: promo-1;
   }
@@ -71,6 +87,14 @@
 
   &__vk {
     grid-area: vk;
+  }
+
+  &__game {
+    grid-area: game;
+  }
+
+  &__similar {
+    grid-area: similar;
   }
 }
 
