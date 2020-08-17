@@ -107,6 +107,14 @@
   }
 }
 
+@media only screen and (min-width: 414px) {
+  .intro {
+    &__title {
+      font-size: 1.875rem;
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .intro {
     grid-row-gap: 1.5rem;
@@ -118,6 +126,13 @@
       'breadcrumbs'
       'details'
     ;
+
+    &--game {
+      grid-template-areas:
+        'breadcrumbs'
+        'title'
+      ;
+    }
 
     &__frame {
       margin-bottom: 0;
@@ -208,6 +223,10 @@
   .intro {
     grid-row-gap: 1.875rem;
     max-width: 994px;
+
+    &--game {
+      max-width: 1280px;
+    }
 
     &__frame {
       max-height: 280px;

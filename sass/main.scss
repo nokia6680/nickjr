@@ -50,7 +50,7 @@
       'vk'
     ;
 
-    grid-row-gap: 1.25rem;
+    grid-row-gap: 1.625rem;
   }
 
   &__promo--first {
@@ -100,6 +100,7 @@
 
 @media only screen and (min-width: $tablets) {
   .main {
+
     &--index {
       grid-template-areas:
         'promo-1'
@@ -120,6 +121,21 @@
       ;
 
       grid-row-gap: 1.875rem;
+    }
+
+    &--game {
+      justify-self: center;
+      justify-content: center;
+      grid-template-areas:
+        'promo-1'
+        'intro'
+        'game'
+        'similar'
+        'category'
+        'vk'
+      ;
+
+      grid-row-gap: 2rem;
     }
   }
 }
@@ -161,6 +177,23 @@
 
       grid-row-gap: 2.875rem;
       grid-column-gap: 2.875rem;
+    }
+
+    &--game {
+      grid-template-areas:
+        'promo-1'
+        'intro'
+        'game'
+        'similar'
+        'category'
+        'vk'
+      ;
+
+      grid-row-gap: 2rem;
+
+      .main__promo--third {
+        display: none;
+      }
     }
 
     &__promo--third {

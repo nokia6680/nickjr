@@ -172,6 +172,145 @@
   }
 
   &__rating {
+    grid-area: rating;
     justify-self: end;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .game {
+    grid-row-gap: 1.5rem;
+
+    &__btn {
+      font-size: 1rem;
+      height: 32px;
+
+      &--report {
+        padding-left: 2rem;
+        font-size: 0.625rem;
+      }
+
+      &--prev {
+        padding-left: 1.5rem;
+      }
+
+      &--next {
+        padding-right: 1.5rem;
+      }
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .game {
+    grid-template-areas:
+      'player player'
+      'controls controls'
+      'promo-g promo-g'
+      'share share'
+      'description description'
+      'rating rating'
+    ;
+
+    grid-row-gap: 1.875rem;
+    max-width: 660px;
+    justify-self: center;
+
+    &__promo {
+      grid-area: promo-g;
+    }
+
+    &__btn {
+      font-size: 1.625rem;
+      height: 50px;
+
+      border-radius: 25px;
+
+      &--report {
+        padding-left: 2.875rem;
+        padding-right: 2rem;
+
+        font-size: 1.25rem;
+
+        &::before {
+          width: 30px;
+          height: 30px;
+          left: 0.5rem;
+        }
+      }
+
+      &--prev {
+        padding-left: 2.25rem;
+        padding-right: 1.625rem;
+
+        margin-left: auto;
+        margin-right: 0.625rem;
+
+        &::before {
+          width: 21px;
+          height: 27px;
+
+          left: 0.375rem;
+        }
+      }
+
+      &--next {
+        padding-left: 1.625rem;
+        padding-right: 2.25rem;
+
+        &::before {
+          width: 21px;
+          height: 27px;
+
+          right: 0.375rem;
+        }
+      }
+
+      &--expand {
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+      }
+    }
+
+    &__description {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .game {
+    grid-template-areas:
+      'player promo-g'
+      'controls promo-g'
+      'share promo-g'
+      'description description'
+      'rating rating'
+    ;
+
+    grid-template-columns: 1fr 300px;
+    grid-column-gap: 1.25rem;
+    max-width: 940px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .game {
+    grid-template-areas:
+      'player promo-g'
+      'controls promo-g'
+      'share promo-g'
+      'description rating'
+    ;
+
+    grid-template-columns: 1fr 300px;
+    grid-column-gap: 1rem;
+    max-width: 1280px;
+    width: 100%;
   }
 }

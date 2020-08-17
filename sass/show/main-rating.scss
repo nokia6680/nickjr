@@ -375,6 +375,9 @@
 
 @media only screen and (min-width: $widebooks-hd) {
   .main-rating {
+    justify-content: flex-start;
+    align-content: start;
+    
     &--video {
       width: auto;
     }
